@@ -1,2 +1,3 @@
 # dotfiles
 My dotfiles for my Linux rice
+Better README coming soon...

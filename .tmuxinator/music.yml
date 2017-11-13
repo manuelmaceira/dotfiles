@@ -1,0 +1,9 @@
+name: music
+root: ~/
+
+windows:
+    - music:
+        layout:  1762,213x56,0,0[213x43,0,0,19,213x12,0,44,20]
+        panes:
+            - gpymusic
+            - cava

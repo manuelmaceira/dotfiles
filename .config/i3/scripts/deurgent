@@ -1,0 +1,4 @@
+#!/bin/bash
+
+sleep 5;
+wmctrl -r "Skype" -b remove,demands_attention;
