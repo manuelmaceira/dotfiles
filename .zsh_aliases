@@ -27,9 +27,10 @@ alias ether='sudo umount /media/micah/ETHEREUM; sudo mount /dev/sdc1 /home/micah
 alias messenger='fb-messenger-cli'
 
 # google calendar aliases
-alias gcala='gcalcli agenda'
-alias gcalw='gcalcli calw'
-alias gcalm='gcalcli calm'
+alias gcal='gcalcli'
+alias gcala='gcal agenda'
+alias gcalw='gcal calw'
+alias gcalm='gcal calm'
 
 # convenience aliases for editing configs
 alias ev='vim ~/.vimrc'
