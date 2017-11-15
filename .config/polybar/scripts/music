@@ -2,13 +2,13 @@
 
 full=`cat ~/.nowplaying`
 if [ "$full" != "" ]; then
-    title=`echo $full|cut -d '-' -f 1|cut -d ' ' -f 2-|xargs`
-    artist=`echo $full|cut -d '-' -f 2|xargs`
-    output=`echo "$title by $artist"`
+    title=`echo "$full"|cut -d '-' -f 1|cut -d ' ' -f 2-|xargs -0`
+    artist=`echo "$full"|cut -d '-' -f 2|xargs -0`
+    output=`echo "${title} by ${artist}"`
     if [ ${#output} -gt 50 ]; then
-        output=`echo $output|cut -c 1-50`
+        output=`echo "$output"|cut -c 1-50`
         echo "$output..."
     else
-        echo $output
+        echo "$output"
     fi
 fi
