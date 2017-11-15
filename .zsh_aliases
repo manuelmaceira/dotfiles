@@ -19,8 +19,6 @@ alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias mux='tmuxinator'
 
-alias godark='/media/veracrypt1/start.sh'
-
 alias ether='sudo umount /media/micah/ETHEREUM; sudo mount /dev/sdc1 /home/micah/ETHERDRIVE'
 
 # facebook messenger
@@ -32,11 +30,26 @@ alias gcala='gcal agenda'
 alias gcalw='gcal calw'
 alias gcalm='gcal calm'
 
+# dotfile sync and push
+syncconfigs() {
+    if [[ "$1" != "" ]]; then
+        cd /home/micah/git/dotfiles;
+        ./sync.sh;
+        git commit -am "$1";
+        git push;
+        cd -;
+    else
+        echo "Must include commit a message."
+    fi
+}
+
 # convenience aliases for editing configs
 alias ev='vim ~/.vimrc'
 alias et='vim ~/.tmux.conf'
 alias ez='vim ~/.zshrc'
-alias awm='vim ~/.config/awesome/rc.lua'
+alias ea='vim ~/.zsh_aliases'
+alias e3='vim ~/.config/i3/config'
+alias ep='vim ~/.config/polybar/config'
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
