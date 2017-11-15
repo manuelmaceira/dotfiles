@@ -97,10 +97,7 @@ alias aptclean="sudo apt autoremove ; sudo apt autoclean; sudo apt install -f ; 
 alias aptupgrade="sudo apt update ; sudo apt -y upgrade ; sudo apt -y dist-upgrade ; sudo apt -y autoremove ; sudo apt -y autoclean; sudo apt -y install -f ; sudo apt -y clean"
 
 alias setCurrentProject='pwd > ~/.current_project'
-alias currentProject='cd `cat ~/.current_project`'
-
-alias vsxu='optirun /usr/bin/env LD_LIBRARY_PATH=/usr/lib /usr/bin/vsxu_player'
-alias vsxufull='optirun /usr/bin/env LD_LIBRARY_PATH=/usr/lib /usr/bin/vsxu_player -f'
+alias currentProject='cd `cat ~/.current_project`; ls'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
