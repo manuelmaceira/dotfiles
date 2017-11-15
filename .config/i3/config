@@ -1,20 +1,3 @@
-# Installed Applications
-# polybar
-# i3lock
-# j4-dmenu-desktop
-# feh
-# arandr
-# lsappearance
-# infinality
-# arc gtk theme
-# numix icon theme
-# compton
-# scrot
-#
-# Fonts Used
-# YosemiteSanFranciscoFont
-# FontAwesome 4.7
-
 # $mod = Alt
 set $mod Mod1
 
