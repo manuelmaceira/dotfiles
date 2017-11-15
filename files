@@ -2,10 +2,12 @@
 ~/.bashrc
 ~/.config/cava
 ~/.config/compton.conf
+~/.config/gtk-3.0
 ~/.config/i3
 ~/.config/neofetch
 ~/.config/polybar
 ~/.config/ranger
+~/.gtkrc-2.0
 ~/.tmux.conf
 ~/.tmuxinator
 ~/.vimrc
