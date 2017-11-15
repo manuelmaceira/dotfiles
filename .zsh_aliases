@@ -23,7 +23,13 @@ alias godark='/media/veracrypt1/start.sh'
 
 alias ether='sudo umount /media/micah/ETHEREUM; sudo mount /dev/sdc1 /home/micah/ETHERDRIVE'
 
+# facebook messenger
 alias messenger='fb-messenger-cli'
+
+# google calendar aliases
+alias gcala='gcalcli agenda'
+alias gcalw='gcalcli calw'
+alias gcalm='gcalcli calm'
 
 # convenience aliases for editing configs
 alias ev='vim ~/.vimrc'
