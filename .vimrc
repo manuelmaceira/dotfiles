@@ -11,9 +11,9 @@ catch
 endtry
 
 " 1 tab == 4 spaces
-set shiftwidth=4
-set ts=4
-set sts=4
+set shiftwidth=2
+set ts=2
+set sts=2
 
 imap jk <Esc>
 set number
@@ -28,3 +28,6 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+nnoremap <leader>ll :w<CR>:!rubber --pdf --warn all %<CR><CR>
+nnoremap <leader>lv :!xreader %:r.pdf &> /dev/null &<CR><CR>
