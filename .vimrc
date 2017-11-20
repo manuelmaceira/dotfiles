@@ -31,3 +31,4 @@ noremap <Right> <NOP>
 
 nnoremap <leader>ll :w<CR>:!rubber --pdf --warn all %<CR><CR>
 nnoremap <leader>lv :!xreader %:r.pdf &> /dev/null &<CR><CR>
+nnoremap <leader>lp :!xreader -s %:r.pdf &> /dev/null &<CR><CR>
