@@ -13,7 +13,6 @@ shell
 shell  %s
 find ao
 find a
-open_with 
 open_with 13
 open_with 14
 open_with 1
@@ -21,3 +20,4 @@ open_with 11
 cd git/School-Work/
 search F
 delete
+open_with 
