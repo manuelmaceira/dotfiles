@@ -98,7 +98,7 @@ bindsym $mod+d focus child
 ##############
 
 # wokspace names
-set $workspace1  "1: "
+set $workspace1  "1: "
 set $workspace2  "2: "
 set $workspace3  "3: "
 set $workspace4  "4: "
@@ -217,7 +217,7 @@ bindsym $mod+Shift+g workspace $workspace4; exec $term -e ~/.config/i3/scripts/m
 ########################
 
 # chrome
-exec --no-startup-id google-chrome-stable
+exec --no-startup-id firefox
 # skype
 exec --no-startup-id skypeforlinux
 # google play music
@@ -227,6 +227,7 @@ exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $works
 
 # application placements
 assign [class="Google-chrome"] $workspace1
+assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace3
 assign [class="Google Play Music Desktop Player"] $workspace4
 
