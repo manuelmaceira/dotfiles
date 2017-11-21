@@ -66,7 +66,9 @@ format-connected-prefix-foreground = ${colors.foreground-alt}
 format-connected = %{A1:cinnamon-settings network:}<label-connected>%{A}
 label-connected = %essid%
 
-format-disconnected = %{A1:cinnamon-settings network:} <label-disconnected>%{A}
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${colors.foreground-alt}
+format-disconnected = %{A1:cinnamon-settings network:}<label-disconnected>%{A}
 label-disconnected = Not Connected
 
 [module/eth]
