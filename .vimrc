@@ -38,3 +38,9 @@ noremap <Right> <NOP>
 nnoremap <leader>ll :w<CR>:!rubber --pdf --warn all %<CR><CR>
 nnoremap <leader>lc :w<CR>:!rubber --pdf --warn all %<CR>
 nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+
+" md to pdf keybindings
+nnoremap <leader>mp :w<CR>:!pandoc % -t beamer -o %:r.pdf<CR><CR>
+nnoremap <leader>mm :w<CR>:!pandoc % -o %:r.pdf<CR><CR>
+nnoremap <leader>mc :w<CR>:!pandoc % -o %:r.pdf<CR>
+nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
