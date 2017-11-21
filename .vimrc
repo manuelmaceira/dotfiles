@@ -37,4 +37,4 @@ noremap <Right> <NOP>
 " latex keybindings
 nnoremap <leader>ll :w<CR>:!rubber --pdf --warn all %<CR><CR>
 nnoremap <leader>lc :w<CR>:!rubber --pdf --warn all %<CR>
-nnoremap <leader>lv :!mupdf %:r.pdf &> /dev/null &<CR><CR>
+nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
