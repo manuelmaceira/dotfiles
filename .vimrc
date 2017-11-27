@@ -35,9 +35,10 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " latex keybindings
-nnoremap <leader>ll :w<CR>:!rubber --pdf --warn all %<CR><CR>
-nnoremap <leader>lc :w<CR>:!rubber --pdf --warn all %<CR>
+nnoremap <leader>ll :w<CR>:!rubber -m xelatex --warn all %<CR><CR>
+nnoremap <leader>lc :w<CR>:!rubber -m xelatex --warn all %<CR>
 nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+nnoremap <leader>lp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
 
 " md to pdf keybindings
 nnoremap <leader>mp :w<CR>:!pandoc % -t beamer -o %:r.pdf<CR><CR>
