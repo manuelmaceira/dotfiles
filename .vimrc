@@ -41,7 +41,8 @@ nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
 nnoremap <leader>lp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
 
 " md to pdf keybindings
-nnoremap <leader>mp :w<CR>:!pandoc % -t beamer -o %:r.pdf<CR><CR>
-nnoremap <leader>mm :w<CR>:!pandoc % -o %:r.pdf<CR><CR>
-nnoremap <leader>mc :w<CR>:!pandoc % -o %:r.pdf<CR>
+nnoremap <leader>ml :w<CR>:!pandoc % --latex-engine=xelatex -o %:r.pdf<CR><CR>
+nnoremap <leader>mb :w<CR>:!pandoc % --latex-engine=xelatex -t beamer -o %:r.pdf<CR>
+nnoremap <leader>mc :w<CR>:!pandoc % --latex-engine=xelatex -o %:r.pdf<CR>
 nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+nnoremap <leader>mp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
