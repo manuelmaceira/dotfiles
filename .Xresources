@@ -52,7 +52,7 @@ URxvt.cursorUnderline:      false
 URxvt.pointerBlank:         true
 
 ! base16_google-dark
-*background: #33393b
+*background: #1e1f21
 *foreground: white
 *fading: 0
 *fadeColor: #33393b
