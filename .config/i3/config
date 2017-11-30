@@ -243,6 +243,8 @@ exec --no-startup-id ~/.config/i3/scripts/deurgent
 # LOOK & FEEL #
 ###############
 
+new_window pixel 3
+
 # colors
 set $bg-color 	         #2f343f
 set $inactive-bg-color   #2f343f
@@ -267,4 +269,3 @@ exec --no-startup-id compton -f
 
 # hide edge borders
 hide_edge_borders both
-
