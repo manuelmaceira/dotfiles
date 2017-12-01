@@ -1,9 +1,9 @@
 # dotfiles
 My dotfiles for my Linux rice.
 
-##Applications
+## Applications
 
-###Window Management
+### Window Management
 
 - i3
 - i3lock
@@ -18,7 +18,7 @@ My dotfiles for my Linux rice.
   - scrot
   - base16
 
-###Command Line Applications
+### Command Line Applications
 
 - zsh
 - tmux
@@ -31,7 +31,7 @@ My dotfiles for my Linux rice.
 - cava
 - vim
 
-##Look and Feel
+## Look and Feel
 
 ### Themes
 
