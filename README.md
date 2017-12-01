@@ -9,7 +9,7 @@ My dotfiles for my Linux rice.
 - i3lock
 - polybar
 - j4-dmenu-desktop
-- ####Utilities
+- #### Utilities
   - feh
   - arandr
   - lxappearance
