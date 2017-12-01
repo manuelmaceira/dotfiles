@@ -1,5 +1,3 @@
-# vim filetype=config
-# Here are settings for all accounts.
 [general]
 accounts = gmail, gatech
 starttls = yes
@@ -8,7 +6,6 @@ autorefresh = 1
 pythonfile = ~/.offlineimap.py
 
 
-# Here's an example Gmail account, just add in a username and password to use your own.
 [Account gmail]
 localrepository = gmail-local
 remoterepository = gmail-remote
@@ -25,7 +22,7 @@ sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 type = Maildir
 localfolders = ~/.Mail/Gmail
 
-# Here's an other more general example. Add your username, password and IMAP server information, which you can look this up on your email host's website.
+
 [Account gatech]
 
 localrepository = gatech-local
