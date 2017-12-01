@@ -1,0 +1,20 @@
+#Change these for your gatech Outlook 365:
+
+set realname = "Micah Halter"                                  
+set from = "mehalter@gatech.edu"
+set mbox_type = Maildir
+set sendmail = "/usr/bin/msmtp -a gatech"
+set folder = "~/.Mail/Gatech"
+
+
+set spoolfile = "+INBOX"                                      
+set record = "+Sent Items"
+set postponed = "+Drafts"                             
+
+macro index,pager A "<save-message>=Archive<enter>" "Archive Message"
+
+macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index ga "<change-folder>=Archive<enter>" "Go to archive"
+macro index gs "<change-folder>=Sent Items<enter>" "Go to sent mail"
+macro index gt "<change-folder>=Deleted Items<enter>" "Go to trash"
+macro index gd "<change-folder>=Drafts<enter>" "Go to drafts"

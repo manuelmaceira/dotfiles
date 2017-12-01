@@ -1,0 +1,43 @@
+# vim filetype=config
+# Here are settings for all accounts.
+[general]
+accounts = gmail, gatech
+starttls = yes
+ssl = yes
+autorefresh = 1
+pythonfile = ~/.offlineimap.py
+
+
+# Here's an example Gmail account, just add in a username and password to use your own.
+[Account gmail]
+localrepository = gmail-local
+remoterepository = gmail-remote
+
+[Repository gmail-remote]
+type = Gmail
+remoteuser = mhalter3378@gmail.com
+remotepasseval = mailpasswd("gmailunsecure")
+#Note that the line below will not sync Gmail's redundant "All Mail" box. You can add other inboxes here you don't want to sync.
+folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository gmail-local]
+type = Maildir
+localfolders = ~/.Mail/Gmail
+
+# Here's an other more general example. Add your username, password and IMAP server information, which you can look this up on your email host's website.
+[Account gatech]
+
+localrepository = gatech-local
+remoterepository = gatech-remote
+
+[Repository gatech-remote]
+type = IMAP
+remoteuser = mhalter3@gatech.edu
+remotepasseval = mailpasswd("gatech")
+remotehost = outlook.office365.com
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+
+[Repository gatech-local]
+type = Maildir
+localfolders = ~/.Mail/Gatech
