@@ -17,7 +17,7 @@ do
         if eval "test -f $file"; then
             eval "rsync $file $repo$filepath$filename"
         elif eval "test -d $file"; then
-            eval "rsync -r $file/ $repo$filepath$filename"
+            eval "rsync -r $file/ $repo$filepath$filename --delete"
         fi
     fi
 done < $files
