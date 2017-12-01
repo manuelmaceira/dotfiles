@@ -1,25 +1,44 @@
 # dotfiles
 My dotfiles for my Linux rice.
 
-#### Applications
+##Applications
+
+###Window Management
 
 - i3
 - i3lock
 - polybar
 - j4-dmenu-desktop
-- feh
-- arandr
-- lxappearance
-- infinality
-- compton
-- scrot
+- ####Utilities
+  - feh
+  - arandr
+  - lxappearance
+  - infinality
+  - compton
+  - scrot
+  - base16
 
-#### Themes
+###Command Line Applications
+
+- zsh
+- tmux
+- tmuxinator
+- neofetch
+- ranger
+- neomutt
+- offlineimap
+- msmtp
+- cava
+- vim
+
+##Look and Feel
+
+### Themes
 
 - arc gtk theme
 - numix icon theme
 
-#### Fonts
+### Fonts
 
 - Yosemite San Francisco Font
 - Font Awesome 4.7
