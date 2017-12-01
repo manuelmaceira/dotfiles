@@ -21,6 +21,7 @@ My dotfiles for my Linux rice.
 ### Command Line Applications
 
 - zsh
+- urxvt
 - tmux
 - tmuxinator
 - neofetch
