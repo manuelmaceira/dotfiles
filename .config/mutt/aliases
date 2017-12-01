@@ -1,13 +1,15 @@
-#Here you can put email aliases. Here's an example:
+# Me
+alias micah micah@mehalter.com
 
-#alias luke luke@lukesmith.xyz
+# Family
+alias chloe chloe.fang97@gmail.com
+alias dad jonathan@haltersweb.com
+alias mom virginia@leighsells.com
 
-#When you put "luke" as the recipient in mutt, it will automatically direct it to my email address.
+# Georgia Tech
+alias registrar comments@registrar.gatech.edu
 
-#You can also put multiple emails under one aliases:
+# GTRI
+alias trevor trevor.goodyear@gtri.gatech.edu
 
 #alias project_members billy@gmail.com, sally@gmail.com, amanda@gmail.com, chad@gmail.com
-
-#With the above alias, if you put "project_members" as the recipient, mutt will fill in all the emails above as the recipients.
-#
-#This is extremely useful, so take advantage of it!
