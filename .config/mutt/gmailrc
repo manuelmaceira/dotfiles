@@ -11,10 +11,10 @@ set record = /dev/null
 set mbox = "+[Gmail].All Mail"
 set postponed = "+[Gmail].Drafts"                             
 
-macro index,pager A "<save-message>=[Gmail].All Mail<enter>" "Archive Message"
+macro index,pager A ":set confirmappend=no delete=yes\n<clear-flag>N<tag-prefix><save-message>=other<enter>\n<sync-mailbox>:setconfirmappend=yes delete=yes\n<next-undeleted>" "Archive Message"
 
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
-macro index ga "<change-folder>=[Gmail].All Mail<enter>" "Go to all mail"
+macro index ga "<change-folder>=[Gmail].other<enter>" "Go to all mail"
 macro index gs "<change-folder>=[Gmail].Sent Mail<enter>" "Go to sent mail"
 macro index gt "<change-folder>=[Gmail].Trash<enter>" "Go to trash"
 macro index gd "<change-folder>=[Gmail].Drafts<enter>" "Go to drafts"

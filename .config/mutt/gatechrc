@@ -11,7 +11,7 @@ set spoolfile = "+INBOX"
 set record = "+Sent Items"
 set postponed = "+Drafts"                             
 
-macro index,pager A "<save-message>=Archive<enter>" "Archive Message"
+macro index,pager A ":set confirmappend=no delete=yes\n<clear-flag>N<tag-prefix><save-message>=Archive<enter>\n<sync-mailbox>:setconfirmappend=yes delete=yes\n<next-undeleted>" "Archive Message"
 
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=Archive<enter>" "Go to archive"
