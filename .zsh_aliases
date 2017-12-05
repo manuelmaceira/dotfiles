@@ -30,6 +30,10 @@ alias gcala='gcal agenda'
 alias gcalw='gcal calw'
 alias gcalm='gcal calm'
 
+# goobook alias
+alias gbk='goobook'
+alias gbkq='goobook query'
+
 # dotfile sync and push
 syncconfigs() {
     if [[ "$1" != "" ]]; then
