@@ -12,6 +12,7 @@ set record = "+Sent Items"
 set postponed = "+Drafts"                             
 
 macro index i "<shell-escape>offlineimap -q -a gatech -f INBOX<enter>" "sync current inbox"
+macro index I "<shell-escape>offlineimap -q -a gatech<enter>" "sync current inbox"
 
 macro index,pager A ":set confirmappend=no delete=yes resolve=no\n<clear-flag>N<tag-prefix><save-message>=Archive<enter><sync-mailbox>:set confirmappend=yes delete=ask-yes resolve=yes\n" "Archive Message"
 
