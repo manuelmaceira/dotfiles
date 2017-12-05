@@ -13,6 +13,7 @@
 ~/.muttrc
 ~/.offlineimap.py
 ~/.offlineimaprc
+~/.offlineimapsync.sh
 ~/.tmux.conf
 ~/.tmuxinator
 ~/.vimrc
