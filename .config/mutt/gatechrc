@@ -13,7 +13,7 @@ set postponed = "+Drafts"
 
 macro index i "<shell-escape>offlineimap -q -a gatech -f INBOX<enter>" "sync current inbox"
 
-macro index,pager A ":set confirmappend=no delete=yes\n<clear-flag>N<tag-prefix><save-message>=Archive<enter>\n<sync-mailbox>:setconfirmappend=yes delete=yes\n<next-undeleted>" "Archive Message"
+macro index,pager A ":set confirmappend=no delete=yes resolve=no\n<clear-flag>N<tag-prefix><save-message>=Archive<enter><sync-mailbox>:set confirmappend=yes delete=ask-yes resolve=yes\n" "Archive Message"
 
 macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
 macro index ga "<change-folder>=Archive<enter>" "Go to archive"
