@@ -14,7 +14,6 @@ remoterepository = gmail-remote
 type = Gmail
 remoteuser = mhalter3378@gmail.com
 remotepasseval = mailpasswd("gmailunsecure")
-#Note that the line below will not sync Gmail's redundant "All Mail" box. You can add other inboxes here you don't want to sync.
 folderfilter = lambda foldername: foldername not in ['[Gmail]/All Mail']
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
