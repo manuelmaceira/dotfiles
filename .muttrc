@@ -38,7 +38,7 @@ bind index U undelete-message
 bind index F search 
 bind index R group-reply
 
-macro index O "<shell-escape>offlineimap<enter>" "sync all mail"
+macro index I "<shell-escape>offlineimap<enter>" "sync all mail"
 
 macro index X '<sync-mailbox><enter-command>source ~/.config/mutt/gmailrc<enter><change-folder>!<enter>'
 macro index S '<sync-mailbox><enter-command>source ~/.config/mutt/gatechrc<enter><change-folder>!<enter>'

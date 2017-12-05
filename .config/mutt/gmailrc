@@ -11,7 +11,7 @@ set record = /dev/null
 set mbox = "+[Gmail].All Mail"
 set postponed = "+[Gmail].Drafts"                             
 
-macro index o "<shell-escape>offlineimap -q -a gmail -f INBOX<enter>" "sync current inbox"
+macro index i "<shell-escape>offlineimap -q -a gmail -f INBOX<enter>" "sync current inbox"
 
 macro index,pager A ":set confirmappend=no delete=yes\n<clear-flag>N<tag-prefix><save-message>=other<enter>\n<sync-mailbox>:setconfirmappend=yes delete=yes\n<next-undeleted>" "Archive Message"
 
