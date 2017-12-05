@@ -29,6 +29,7 @@ My dotfiles for my Linux rice.
 - neomutt
 - offlineimap
 - msmtp
+- goobook
 - cava
 - vim
 
