@@ -156,8 +156,8 @@ for_window [instance="math"] floating enable
 for_window [instance="math"] resize set 825 600
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
-exec --no-startup-id $term -name math -e bc
-bindsym $mod+Control+m exec --no-startup-id $term -name math -e bc
+exec --no-startup-id $term -name math -e /home/micah/.config/i3/scripts/runner "bc"
+bindsym $mod+Control+m exec --no-startup-id $term -name math -e /home/micah/.config/i3/scripts/runner "bc"
 bindsym $mod+m [instance="math"] scratchpad show; move position center
 
 # ranger scratchpad
@@ -165,8 +165,8 @@ for_window [instance="files"] floating enable
 for_window [instance="files"] resize set 825 600
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
-exec --no-startup-id $term -name files -e ranger ~
-bindsym $mod+Control+r exec --no-startup-id $term -name files -e ranger ~
+exec --no-startup-id $term -name files -e /home/micah/.config/i3/scripts/runner "ranger /home/micah"
+bindsym $mod+Control+r exec --no-startup-id $term -name files -e /home/micah/.config/i3/scripts/runner "ranger /home/micah/"
 bindsym $mod+r [instance="files"] scratchpad show; move position center
 
 
