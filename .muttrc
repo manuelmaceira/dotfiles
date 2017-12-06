@@ -36,7 +36,7 @@ bind index F search
 bind index R group-reply
 
 # address book settings
-set query_command="khard email --parsable --search-in-source-files %s"
+set query_command="khard email --parsable %s"
 bind editor <Tab> complete-query
 bind editor ^T complete
 macro index,pager ac "<pipe-message>khard add-email<return>" "Add sender to Khard"
