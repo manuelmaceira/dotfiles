@@ -1,0 +1,48 @@
+[default]
+default_calendar = GT Schedule
+timedelta = 7d
+highlight_event_days = True
+
+[calendars]
+  [[Chloe]]
+    path = ~/.Calendar/Gcal/chloe.fang97@gmail.com
+    color = brown
+    readonly = True
+
+  [[GT Schedule]]
+    path = ~/.Calendar/Gcal/kqa17ut755b56qk9c887nenh2c@group.calendar.google.com
+    color = dark green
+
+  [[Family]]
+    path = ~/.Calendar/Gcal/family13611266242384238142@group.calendar.google.com
+    color = dark cyan
+    readonly = True
+
+  [[Tribe]]
+    path = ~/.Calendar/Gcal/euo2u43omi9i1emci84sdgcq78@group.calendar.google.com
+    color = dark blue
+    readonly = True
+
+  [[Micah]]
+    path = ~/.Calendar/Gcal/mhalter3378@gmail.com
+    color = light blue
+
+  [[Holidays]]
+    path = ~/.Calendar/Gcal/cln2stbjc4hmgrrcd5i62ua0ctp6utbg5pr2sor1dhimsp31e8n6errfctm6abj3dtmg@virtual
+    color = dark magenta
+    readonly = True
+
+  [[Georgia Tech Academic Calendar]]
+    path = ~/.Calendar/Gcal/k183h47bi8p0494t36spls4bn2q74kk6@import.calendar.google.com
+    color = light gray
+    readonly = True
+
+[locale]
+timeformat = %H:%M
+dateformat = %m/%d/%Y
+longdateformat = %m/%d/%Y
+datetimeformat = %m/%d/%Y %H:%M
+longdatetimeformat = %m/%d/%Y %H:%M
+
+[view]
+frame = color

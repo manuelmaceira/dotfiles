@@ -30,6 +30,7 @@ My dotfiles for my Linux rice.
 - offlineimap
 - msmtp
 - khard
+- khal
 - cava
 - vim
 
