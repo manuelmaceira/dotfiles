@@ -23,3 +23,5 @@ case $netactive in
   :
 ;;
 esac
+
+echo "FINISHED"
