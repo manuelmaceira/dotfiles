@@ -1,0 +1,34 @@
+[general]
+status_path = "~/.config/vdirsyncer/status/"
+
+[pair gcal]
+a = "gcal_local"
+b = "gcal_remote"
+collections = ["from a", "from b"]
+
+[storage gcal_local]
+type = "filesystem"
+path = "~/.Calendar/Gcal"
+fileext = ".ics"
+
+[storage gcal_remote]
+type = "google_calendar"
+token_file = "~/.config/vdirsyncer/calauth"
+client_id = "910634841614-48gren4lsaltp3cotf9lkkhf26vt3vb8.apps.googleusercontent.com"
+client_secret.fetch = ["command", "/home/micah/.config/vdirsyncer/password.sh"]
+
+[pair gaddr]
+a = "gaddr_local"
+b = "gaddr_remote"
+collections = ["from a", "from b"]
+
+[storage gaddr_local]
+type = "filesystem"
+path = "~/.Contacts/Gaddr"
+fileext = ".vcf"
+
+[storage gaddr_remote]
+type = "google_contacts"
+token_file = "~/.config/vdirsyncer/addrauth"
+client_id = "910634841614-48gren4lsaltp3cotf9lkkhf26vt3vb8.apps.googleusercontent.com"
+client_secret.fetch = ["command", "/home/micah/.config/vdirsyncer/password.sh"]

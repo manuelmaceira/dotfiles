@@ -10,6 +10,8 @@
 ~/.config/neofetch
 ~/.config/polybar
 ~/.config/ranger
+~/.config/vdirsyncer/password.sh
+~/.config/vdirsyncer/config
 ~/.gtkrc-2.0
 ~/.msmtprc
 ~/.muttrc
