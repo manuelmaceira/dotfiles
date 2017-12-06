@@ -36,6 +36,7 @@ My dotfiles for my Linux rice.
 - cava
 - gpymusic
 - mps-youtube
+- rtv
 
 ## Look and Feel
 
