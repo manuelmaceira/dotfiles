@@ -10,9 +10,6 @@ set mailcap_path = ~/.config/mutt/mailcap
 set date_format="%m/%d %I:%M"
 set index_format="%2C %Z %d %-15.15F %s (%-4.4c)"
 
-set query_command="goobook query %s"
-bind editor <Tab> complete-query
-
 auto_view text/html
 alternative_order text/plain text/enriched text/html
 
@@ -37,6 +34,13 @@ bind index D delete-message
 bind index U undelete-message
 bind index F search 
 bind index R group-reply
+
+# address book settings
+set query_command="khard email --parsable --search-in-source-files %s"
+bind editor <Tab> complete-query
+bind editor ^T complete
+macro index,pager ac "<pipe-message>khard add-email<return>" "Add sender to Khard"
+macro index,pager sc "<shell-escape>vdirsyncer sync gaddr<return>" "sync contacts"
 
 macro index Z "<shell-escape>offlineimap<enter>" "sync all mail"
 
