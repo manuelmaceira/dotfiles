@@ -11,6 +11,8 @@ alias -s py=vim
 alias -s java=vim
 alias -s log="less -MN"
 
+alias yt="mpsyt"
+
 # aliases for Tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
@@ -18,11 +20,6 @@ alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias mux='tmuxinator'
-
-alias ether='sudo umount /media/micah/ETHEREUM; sudo mount /dev/sdc1 /home/micah/ETHERDRIVE'
-
-# facebook messenger
-alias messenger='fb-messenger-cli'
 
 # google calendar aliases
 alias gcal='gcalcli'

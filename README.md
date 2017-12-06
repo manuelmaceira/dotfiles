@@ -22,6 +22,7 @@ My dotfiles for my Linux rice.
 
 - zsh
 - urxvt
+- vim
 - tmux
 - tmuxinator
 - neofetch
@@ -33,7 +34,8 @@ My dotfiles for my Linux rice.
 - khard
 - khal
 - cava
-- vim
+- gpymusic
+- mps-youtube
 
 ## Look and Feel
 
