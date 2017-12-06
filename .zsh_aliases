@@ -34,6 +34,10 @@ alias gcalm='gcal calm'
 alias gbk='goobook'
 alias gbkq='goobook query'
 
+# email aliases
+alias m='mutt'
+alias oimap='offlineimap'
+
 # dotfile sync and push
 syncconfigs() {
     if [[ "$1" != "" ]]; then
