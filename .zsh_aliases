@@ -37,6 +37,8 @@ alias vd='vdirsyncer'
 alias vds='vdirsyncer sync'
 alias kl='khal'
 alias ikl='ikhal'
+alias kla='khal -c ~/.config/khal/academicconfig'
+alias ikla='ikhal -c ~/.config/khal/academicconfig'
 alias kd='khard'
 
 
