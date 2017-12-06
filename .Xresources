@@ -12,7 +12,7 @@ xft.rgba:                   rgb
 ! URxvt settings
 !-------------------------------------------------------------------------------
 
-URxvt.termName:             xterm-256color
+URxvt.termName:             tmux-256color
 !URxvt.depth:                32
 URxvt.geometry:             90x30
 URxvt.transparent:          false

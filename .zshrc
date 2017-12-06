@@ -4,7 +4,7 @@ ZSH=$HOME/.oh-my-zsh
 
 plugins=(ant common-aliases cp extract git git-extras mvn python scala sbt tmux tmuxinator ubuntu vi-mode wd)
 
-export TERM="xterm-256color"
+export TERM="tmux-256color"
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
