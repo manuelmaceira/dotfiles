@@ -31,6 +31,7 @@ remoterepository = gatech-remote
 type = IMAP
 remoteuser = mhalter3@gatech.edu
 remotepasseval = mailpasswd("gatech")
+folderfilter = lambda foldername: foldername not in ['Calendar', 'Calendar/Birthdays', 'Calendar/United States holidays', 'Contacts', 'Conversation History', 'Journal', 'Notes', 'Tasks']
 remotehost = outlook.office365.com
 sslcacertfile = /etc/ssl/certs/ca-certificates.crt
 
