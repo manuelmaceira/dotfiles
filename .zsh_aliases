@@ -35,6 +35,10 @@ alias m='mutt'
 alias oimap='offlineimap'
 alias vd='vdirsyncer'
 alias vds='vdirsyncer sync'
+alias kl='khal'
+alias ikl='ikhal'
+alias kd='khard'
+
 
 # dotfile sync and push
 syncconfigs() {
