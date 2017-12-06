@@ -30,13 +30,11 @@ alias gcala='gcal agenda'
 alias gcalw='gcal calw'
 alias gcalm='gcal calm'
 
-# goobook alias
-alias gbk='goobook'
-alias gbkq='goobook query'
-
 # email aliases
 alias m='mutt'
 alias oimap='offlineimap'
+alias vd='vdirsyncer'
+alias vds='vdirsyncer sync'
 
 # dotfile sync and push
 syncconfigs() {
