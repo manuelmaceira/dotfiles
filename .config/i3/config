@@ -156,7 +156,7 @@ for_window [instance="math"] resize set 825 600
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
 exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
-bindsym $mod+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
+bindsym $mod+Shift+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
 
 # ranger scratchpad
 for_window [instance="files"] floating enable
@@ -176,7 +176,7 @@ for_window [instance="email"] floating enable
 for_window [instance="email"] resize set 825 600
 for_window [instance="email"] move position center
 for_window [instance="email"] move scratchpad
-bindsym $mod+Shift+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog email "mutt"
+bindsym $mod+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog email "mutt"
 
 # start khal in floating window
 for_window [instance="cal"] floating enable
