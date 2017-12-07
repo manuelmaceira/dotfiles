@@ -129,7 +129,7 @@ interval = 5
 
 [module/mail]
 type = custom/script
-exec = cat /home/micah/.Mail/newmail
+exec = find ~/.Mail/Gatech/INBOX/new ~/.Mail/Gmail/INBOX/new -type f|wc -l
 interval = 5
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
