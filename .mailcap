@@ -1,6 +1,6 @@
-image/x-imgur-album; feh -g 640x480 %s; test=test -n "$DISPLAY"
+image/x-imgur-album; feh --scale-down --auto-zoom %s; test=test -n "$DISPLAY"
 image/gif; mpv '%s' --autofit 640x480 --loop=inf; test=test -n "$DISPLAY"
-image/*; feh -g 640x480 '%s'; test=test -n "$DISPLAY"
+image/*; feh --scale-down --auto-zoom '%s'; test=test -n "$DISPLAY"
 
 video/x-youtube; mpv --ytdl-format=best '%s' --autofit 640x480; test=test -n "$DISPLAY"
 video/*; mpv '%s' --autofit 640x480 --loop=inf; test=test -n "$DISPLAY"
