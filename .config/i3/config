@@ -147,27 +147,24 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 825 600
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id $term -name dropdown -e ~/.config/i3/scripts/mux scratchpad
-bindsym $mod+Control+u exec --no-startup-id $term -name dropdown -e ~/.config/i3/scripts/mux scratchpad
-bindsym $mod+u [instance="dropdown"] scratchpad show; move position center
+exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog dropdown "tmuxinator scratchpad"
+bindsym $mod+u exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog dropdown "tmuxinator scratchpad"
 
 # bc scratchpad
 for_window [instance="math"] floating enable
 for_window [instance="math"] resize set 825 600
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
-exec --no-startup-id $term -name math -e /home/micah/.config/i3/scripts/runner "bc"
-bindsym $mod+Control+m exec --no-startup-id $term -name math -e /home/micah/.config/i3/scripts/runner "bc"
-bindsym $mod+m [instance="math"] scratchpad show; move position center
+exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
+bindsym $mod+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
 
 # ranger scratchpad
 for_window [instance="files"] floating enable
 for_window [instance="files"] resize set 825 600
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
-exec --no-startup-id $term -name files -e /home/micah/.config/i3/scripts/runner "ranger /home/micah"
-bindsym $mod+Control+r exec --no-startup-id $term -name files -e /home/micah/.config/i3/scripts/runner "ranger /home/micah/"
-bindsym $mod+r [instance="files"] scratchpad show; move position center
+exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog files "ranger /home/micah"
+bindsym $mod+r exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog files "ranger /home/micah"
 
 
 #################
@@ -178,13 +175,15 @@ bindsym $mod+r [instance="files"] scratchpad show; move position center
 for_window [instance="email"] floating enable
 for_window [instance="email"] resize set 825 600
 for_window [instance="email"] move position center
-bindsym $mod+Shift+m exec --no-startup-id $term -name email -e /home/micah/.config/i3/scripts/runner "mutt"
+for_window [instance="email"] move scratchpad
+bindsym $mod+Shift+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog email "mutt"
 
 # start khal in floating window
 for_window [instance="cal"] floating enable
 for_window [instance="cal"] resize set 825 600
 for_window [instance="cal"] move position center
-bindsym $mod+Shift+c exec --no-startup-id $term -name cal -e /home/micah/.config/i3/scripts/runner "ikhal"
+for_window [instance="cal"] move scratchpad
+bindsym $mod+c exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog cal "ikhal"
 
 # start rtv (reddit)
 bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
@@ -229,7 +228,7 @@ bindsym $mod+Control+Return exec $term
 bindsym $mod+Shift+f exec --no-startup-id $term -e ranger ~
 
 # google play music
-bindsym $mod+Shift+g workspace $workspace4; exec $term -e ~/.config/i3/scripts/mux music
+bindsym $mod+Shift+g workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"
 
 # browser
 bindsym $mod+Shift+w exec --no-startup-id $browser
@@ -244,7 +243,7 @@ exec --no-startup-id $browser
 # skype
 exec --no-startup-id skypeforlinux
 # google play music
-exec --no-startup-id i3-msg 'workspace $workspace4; exec $term -e ~/.config/i3/scripts/mux music; workspace $workspace1'
+exec --no-startup-id i3-msg 'workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"; workspace $workspace1'
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $workspace1'
 

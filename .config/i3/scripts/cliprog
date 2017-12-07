@@ -1,0 +1,11 @@
+#!/bin/bash
+
+INSTANCE=$1
+COMMAND=$2
+
+if ! xdotool search --classname "$INSTANCE" > /dev/null; then
+  i3-msg "exec urxvt -name $INSTANCE -e /home/micah/.config/i3/scripts/runner \"$COMMAND\""
+  sleep .06
+fi
+
+i3-msg "[instance="$INSTANCE"] scratchpad show; move position center"
