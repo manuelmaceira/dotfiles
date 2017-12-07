@@ -20,6 +20,7 @@ alias tnew='tmux new -s'
 alias tls='tmux ls'
 alias tkill='tmux kill-session -t'
 alias mux='tmuxinator'
+alias tmuxlayout='tmux list-windows|sed "s/^.*\[layout \(.*\)\] @.*$/\1/"'
 
 # google calendar aliases
 alias gcal='gcalcli'
