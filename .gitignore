@@ -1,2 +1,6 @@
+# log files
 **/logs/
 **/*.log
+
+# ranger history
+**/ranger/history
