@@ -193,7 +193,7 @@ bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/script
 ###################
 
 # keyboard layout toggle
-bindsym $mod+Control+space exec "~/.config/i3/scripts/toggleKeyboard"
+bindsym $mod+Control+space exec "~/.config/polybar/scripts/toggleKeyboard"
 
 # lock screen
 bindsym $mod+Shift+x exec "~/.config/i3/scripts/lock/lock.sh ~/.config/i3/scripts/lock/lock.png"
