@@ -18,6 +18,7 @@
 ~/.msmtprc
 ~/.muttrc
 ~/.offlineimap.py
+~/.offlineimapnotify.sh
 ~/.offlineimaprc
 ~/.offlineimapsync.sh
 ~/.tmux.conf

@@ -30,7 +30,7 @@ font-1 = FontAwesome:size=13;0
 
 modules-left = i3
 modules-center = music
-modules-right = layout volume wlan eth battery date powermenu
+modules-right = mail layout volume wlan eth battery date powermenu
 
 [module/i3]
 type = internal/i3
@@ -126,6 +126,15 @@ label = %output%
 type = custom/script
 exec = /home/micah/.config/polybar/scripts/music
 interval = 5
+
+[module/mail]
+type = custom/script
+exec = cat /home/micah/.Mail/newmail
+interval = 5
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+label = %output%
 
 [module/battery]
 type = internal/battery
