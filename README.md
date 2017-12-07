@@ -16,6 +16,7 @@ My dotfiles for my Linux rice.
   - infinality
   - compton
   - scrot
+  - xdotool
   - base16
 
 ### Command Line Applications
