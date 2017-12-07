@@ -1,0 +1,1104 @@
+2017-12-06 14:32:35		Plugins loaded: alias, charset, irc, logger, xfer
+2017-12-06 14:33:00		[core]
+2017-12-06 14:33:00		  away     command  filter   key      plugin   reload   set      version
+2017-12-06 14:33:00		  bar      cursor   help     layout   print    repeat   unset    wait   
+2017-12-06 14:33:00		  buffer   debug    history  mouse    proxy    save     upgrade  window 
+2017-12-06 14:33:00		  color    eval     input    mute     quit     secure   uptime 
+2017-12-06 14:33:00		[alias]
+2017-12-06 14:33:00		  AAWAY    BEEP     CLOSE    KB       N        T        WC     
+2017-12-06 14:33:00		  alias    BYE      EXIT     LEAVE    Q        UB       WI     
+2017-12-06 14:33:00		  AME      C        IG       M        REDRAW   UMODE    WII    
+2017-12-06 14:33:00		  AMSG     CHAT     J        MSGBUF   SAY      V        WW     
+2017-12-06 14:33:00		  ANICK    CL       K        MUB      SIGNOFF  W      
+2017-12-06 14:33:00		[charset]
+2017-12-06 14:33:00		  charset
+2017-12-06 14:33:00		[logger]
+2017-12-06 14:33:00		  logger
+2017-12-06 14:33:00		[irc]
+2017-12-06 14:33:00		  admin       die         lusers      ping        saquit      userhost  
+2017-12-06 14:33:00		  allchan     disconnect  map         pong        server      users     
+2017-12-06 14:33:00		  allpv       halfop      me          query       service     version   
+2017-12-06 14:33:00		  allserv     ignore      mode        quiet       servlist    voice     
+2017-12-06 14:33:00		  ban         info        motd        quote       squery      wallchops 
+2017-12-06 14:33:00		  cap         invite      msg         reconnect   squit       wallops   
+2017-12-06 14:33:00		  connect     ison        names       rehash      stats       who       
+2017-12-06 14:33:00		  ctcp        join        nick        remove      summon      whois     
+2017-12-06 14:33:00		  cycle       kick        notice      restart     time        whowas    
+2017-12-06 14:33:00		  dcc         kickban     notify      sajoin      topic     
+2017-12-06 14:33:00		  dehalfop    kill        op          samode      trace     
+2017-12-06 14:33:00		  deop        links       oper        sanick      unban     
+2017-12-06 14:33:00		  devoice     list        part        sapart      unquiet   
+2017-12-06 14:33:00		[xfer]
+2017-12-06 14:33:00		  me  xfer
+2017-12-06 14:33:38		Plugins loaded: alias, charset, irc, logger, xfer
+2017-12-06 14:35:00		Plugins loaded: alias, charset, irc, logger, xfer
+2017-12-06 14:35:13	=!=	Error: unknown command "/python" (type /help for help)
+2017-12-06 14:42:35		Plugins loaded: alias, charset, irc, logger, xfer
+2017-12-06 14:42:49		Option created: plugins.var.python.slack.slack_api_token = "xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a"
+2017-12-06 14:42:58		Options saved to sec.conf
+2017-12-06 14:42:58		Options saved to weechat.conf
+2017-12-06 14:42:58		Options saved to plugins.conf
+2017-12-06 14:42:58		Options saved to charset.conf
+2017-12-06 14:42:58		Options saved to logger.conf
+2017-12-06 14:42:58		Options saved to alias.conf
+2017-12-06 14:42:58		Options saved to xfer.conf
+2017-12-06 14:42:58		Options saved to irc.conf
+2017-12-06 14:43:02	=!=	Error: unknown command "/python" (type /help for help)
+2017-12-06 14:43:39		Plugins loaded: alias, charset, irc, logger, xfer
+2017-12-06 14:44:09	=!=	Error: unknown command "/python" (type /help for help)
+2017-12-06 14:44:12		[core]
+2017-12-06 14:44:12		  away     command  filter   key      plugin   reload   set      version
+2017-12-06 14:44:12		  bar      cursor   help     layout   print    repeat   unset    wait   
+2017-12-06 14:44:12		  buffer   debug    history  mouse    proxy    save     upgrade  window 
+2017-12-06 14:44:12		  color    eval     input    mute     quit     secure   uptime 
+2017-12-06 14:44:12		[alias]
+2017-12-06 14:44:12		  AAWAY    BEEP     CLOSE    KB       N        T        WC     
+2017-12-06 14:44:12		  alias    BYE      EXIT     LEAVE    Q        UB       WI     
+2017-12-06 14:44:12		  AME      C        IG       M        REDRAW   UMODE    WII    
+2017-12-06 14:44:12		  AMSG     CHAT     J        MSGBUF   SAY      V        WW     
+2017-12-06 14:44:12		  ANICK    CL       K        MUB      SIGNOFF  W      
+2017-12-06 14:44:12		[charset]
+2017-12-06 14:44:12		  charset
+2017-12-06 14:44:12		[logger]
+2017-12-06 14:44:12		  logger
+2017-12-06 14:44:12		[irc]
+2017-12-06 14:44:12		  admin       die         lusers      ping        saquit      userhost  
+2017-12-06 14:44:12		  allchan     disconnect  map         pong        server      users     
+2017-12-06 14:44:12		  allpv       halfop      me          query       service     version   
+2017-12-06 14:44:12		  allserv     ignore      mode        quiet       servlist    voice     
+2017-12-06 14:44:12		  ban         info        motd        quote       squery      wallchops 
+2017-12-06 14:44:12		  cap         invite      msg         reconnect   squit       wallops   
+2017-12-06 14:44:12		  connect     ison        names       rehash      stats       who       
+2017-12-06 14:44:12		  ctcp        join        nick        remove      summon      whois     
+2017-12-06 14:44:12		  cycle       kick        notice      restart     time        whowas    
+2017-12-06 14:44:12		  dcc         kickban     notify      sajoin      topic     
+2017-12-06 14:44:12		  dehalfop    kill        op          samode      trace     
+2017-12-06 14:44:12		  deop        links       oper        sanick      unban     
+2017-12-06 14:44:12		  devoice     list        part        sapart      unquiet   
+2017-12-06 14:44:12		[xfer]
+2017-12-06 14:44:12		  me  xfer
+2017-12-06 14:45:42		Plugins loaded:
+2017-12-06 14:45:42		  alias: Alias commands
+2017-12-06 14:45:42		  charset: Charset conversions
+2017-12-06 14:45:42		  logger: Log buffers to files
+2017-12-06 14:45:42		  irc: IRC (Internet Relay Chat) protocol
+2017-12-06 14:45:42		  xfer: DCC file transfer and direct chat
+2017-12-06 14:45:51		Plugins loaded:
+2017-12-06 14:45:51		  alias: Alias commands
+2017-12-06 14:45:51		  charset: Charset conversions
+2017-12-06 14:45:51		  logger: Log buffers to files
+2017-12-06 14:45:51		  irc: IRC (Internet Relay Chat) protocol
+2017-12-06 14:45:51		  xfer: DCC file transfer and direct chat
+2017-12-06 14:46:21	=!=	You can not write text in this buffer
+2017-12-06 14:46:23	=!=	Error: unknown command "/load" (type /help for help)
+2017-12-06 14:46:26		[core]
+2017-12-06 14:46:26		  away     command  filter   key      plugin   reload   set      version
+2017-12-06 14:46:26		  bar      cursor   help     layout   print    repeat   unset    wait   
+2017-12-06 14:46:26		  buffer   debug    history  mouse    proxy    save     upgrade  window 
+2017-12-06 14:46:26		  color    eval     input    mute     quit     secure   uptime 
+2017-12-06 14:46:26		[alias]
+2017-12-06 14:46:26		  AAWAY    BEEP     CLOSE    KB       N        T        WC     
+2017-12-06 14:46:26		  alias    BYE      EXIT     LEAVE    Q        UB       WI     
+2017-12-06 14:46:26		  AME      C        IG       M        REDRAW   UMODE    WII    
+2017-12-06 14:46:26		  AMSG     CHAT     J        MSGBUF   SAY      V        WW     
+2017-12-06 14:46:26		  ANICK    CL       K        MUB      SIGNOFF  W      
+2017-12-06 14:46:26		[charset]
+2017-12-06 14:46:26		  charset
+2017-12-06 14:46:26		[logger]
+2017-12-06 14:46:26		  logger
+2017-12-06 14:46:26		[irc]
+2017-12-06 14:46:26		  admin       die         lusers      ping        saquit      userhost  
+2017-12-06 14:46:26		  allchan     disconnect  map         pong        server      users     
+2017-12-06 14:46:26		  allpv       halfop      me          query       service     version   
+2017-12-06 14:46:26		  allserv     ignore      mode        quiet       servlist    voice     
+2017-12-06 14:46:26		  ban         info        motd        quote       squery      wallchops 
+2017-12-06 14:46:26		  cap         invite      msg         reconnect   squit       wallops   
+2017-12-06 14:46:26		  connect     ison        names       rehash      stats       who       
+2017-12-06 14:46:26		  ctcp        join        nick        remove      summon      whois     
+2017-12-06 14:46:26		  cycle       kick        notice      restart     time        whowas    
+2017-12-06 14:46:26		  dcc         kickban     notify      sajoin      topic     
+2017-12-06 14:46:26		  dehalfop    kill        op          samode      trace     
+2017-12-06 14:46:26		  deop        links       oper        sanick      unban     
+2017-12-06 14:46:26		  devoice     list        part        sapart      unquiet   
+2017-12-06 14:46:26		[xfer]
+2017-12-06 14:46:26		  me  xfer
+2017-12-06 14:47:16		Plugins loaded:
+2017-12-06 14:47:16		  alias: Alias commands
+2017-12-06 14:47:16		  charset: Charset conversions
+2017-12-06 14:47:16		  logger: Log buffers to files
+2017-12-06 14:47:16		  irc: IRC (Internet Relay Chat) protocol
+2017-12-06 14:47:16		  xfer: DCC file transfer and direct chat
+2017-12-06 14:47:23	=!=	Error with command "/plugin python" (help on command: /help plugin)
+2017-12-06 14:47:29		[core]  /plugin  list|listfull [<name>]
+2017-12-06 14:47:29		                 load <filename> [<arguments>]
+2017-12-06 14:47:29		                 autoload [<arguments>]
+2017-12-06 14:47:29		                 reload [<name>|* [<arguments>]]
+2017-12-06 14:47:29		                 unload [<name>]
+2017-12-06 14:47:29		list/load/unload plugins
+2017-12-06 14:47:29		     list: list loaded plugins
+2017-12-06 14:47:29		 listfull: list loaded plugins (verbose)
+2017-12-06 14:47:29		     load: load a plugin
+2017-12-06 14:47:29		 autoload: autoload plugins in system or user directory
+2017-12-06 14:47:29		   reload: reload a plugin (if no name given, unload all plugins, then autoload plugins)
+2017-12-06 14:47:29		   unload: unload a plugin (if no name given, unload all plugins)
+2017-12-06 14:47:29		 filename: plugin (file) to load
+2017-12-06 14:47:29		     name: a plugin name
+2017-12-06 14:47:29		arguments: arguments given to plugin on load
+2017-12-06 14:47:29		Without argument, this command lists loaded plugins.
+2017-12-06 14:47:39	=!=	Error: unable to load plugin "python": python: cannot open shared object file: No such file or directory
+2017-12-06 14:47:39	=!=	If you're trying to load a script and not a C plugin, try command to load scripts (/perl, /python, ...)
+2017-12-06 14:47:45	=!=	Error: unknown command "/python" (type /help for help)
+2017-12-06 14:49:11		Plugins loaded: alias, charset, irc, logger, xfer
+2017-12-06 14:49:44		Plugins loaded: alias, charset, irc, logger, xfer
+2017-12-06 14:50:18	=!=	Error: unknown command "/script" (type /help for help)
+2017-12-06 14:51:31		python scripts loaded: slack
+2017-12-06 14:51:31		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 14:51:45	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 14:51:45		fifo: pipe closed
+2017-12-06 14:51:47		python scripts loaded: slack
+2017-12-06 14:51:47		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 14:52:15	=!=	irc: command "join" must be executed on irc buffer (server or channel)
+2017-12-06 14:52:38		Command not found: 
+2017-12-06 14:52:43		python: unloading script "slack"
+2017-12-06 14:52:43		python: loading script "/home/micah/.weechat/python/autoload/wee_slack.py"
+2017-12-06 14:52:43		python: registered script "slack", version 1.99 (Extends weechat for typing notification/search/etc on slack.com)
+2017-12-06 14:52:47		Command not found: 
+2017-12-06 14:52:50	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 14:52:50		fifo: pipe closed
+2017-12-06 14:52:51		python scripts loaded: slack
+2017-12-06 14:52:51		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 14:53:24	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 14:53:24		fifo: pipe closed
+2017-12-06 14:53:43		python scripts loaded: slack
+2017-12-06 14:53:43		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 14:53:53	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 14:53:53		fifo: pipe closed
+2017-12-06 14:54:00		python scripts loaded: slack
+2017-12-06 14:54:00		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 14:54:18	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 14:54:18		fifo: pipe closed
+2017-12-06 14:55:01		python scripts loaded: slack
+2017-12-06 14:55:01		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 14:55:12	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 14:55:12		fifo: pipe closed
+2017-12-06 14:56:54		python scripts loaded: slack
+2017-12-06 14:56:54		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 14:57:09	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 14:57:09		fifo: pipe closed
+2017-12-06 14:59:20		python scripts loaded: slack
+2017-12-06 14:59:20		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 14:59:44		Command not found: 
+2017-12-06 14:59:48		Command not found: help
+2017-12-06 14:59:50		[python/slack]  /slack  [command] [command options]
+2017-12-06 14:59:50		Plugin to allow typing notification and sync of read markers for slack.com
+2017-12-06 14:59:50		Commands:
+2017-12-06 14:59:50		status
+2017-12-06 14:59:50		nodistractions
+2017-12-06 14:59:50		showmuted
+2017-12-06 14:59:50		mute
+2017-12-06 14:59:50		away
+2017-12-06 14:59:50		upload
+2017-12-06 14:59:50		p
+2017-12-06 14:59:50		back
+2017-12-06 14:59:50		channels
+2017-12-06 14:59:50		distracting
+2017-12-06 14:59:50		openweb
+2017-12-06 14:59:50		slash
+2017-12-06 14:59:50		talk
+2017-12-06 14:59:50		users
+2017-12-06 14:59:50		Use /slack help [command] to find out more
+2017-12-06 15:00:11		Command not found: help
+2017-12-06 15:01:56		python: stdout/stderr: WS ERROR
+2017-12-06 15:01:56		python: stdout/stderr: WS ERROR
+2017-12-06 15:01:56		python: stdout/stderr: WS ERROR
+2017-12-06 15:02:05	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 15:02:05		fifo: pipe closed
+2017-12-06 15:02:06		python scripts loaded: slack
+2017-12-06 15:02:06		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 15:02:37	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 15:02:37		fifo: pipe closed
+2017-12-06 15:02:37		python scripts loaded: slack
+2017-12-06 15:02:37		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 15:03:27	=!=	irc: command "join" must be executed on irc buffer (server or channel)
+2017-12-06 15:03:49	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 15:03:49		fifo: pipe closed
+2017-12-06 15:03:50		python scripts loaded: slack
+2017-12-06 15:03:50		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 15:04:23		Command not found: help
+2017-12-06 15:04:25		[python/slack]  /slack  [command] [command options]
+2017-12-06 15:04:25		Plugin to allow typing notification and sync of read markers for slack.com
+2017-12-06 15:04:25		Commands:
+2017-12-06 15:04:25		status
+2017-12-06 15:04:25		nodistractions
+2017-12-06 15:04:25		showmuted
+2017-12-06 15:04:25		mute
+2017-12-06 15:04:25		away
+2017-12-06 15:04:25		upload
+2017-12-06 15:04:25		p
+2017-12-06 15:04:25		back
+2017-12-06 15:04:25		channels
+2017-12-06 15:04:25		distracting
+2017-12-06 15:04:25		openweb
+2017-12-06 15:04:25		slash
+2017-12-06 15:04:25		talk
+2017-12-06 15:04:25		users
+2017-12-06 15:04:25		Use /slack help [command] to find out more
+2017-12-06 15:04:41	=!=	irc: command "join" must be executed on irc buffer (server or channel)
+2017-12-06 15:04:44	=!=	irc: command "join" must be executed on irc buffer (server or channel)
+2017-12-06 15:05:12	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 15:05:12		fifo: pipe closed
+2017-12-06 15:05:24		python scripts loaded: slack
+2017-12-06 15:05:24		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 15:06:58		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:01		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:04		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:07		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:10		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:13		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:16		Option changed: plugins.var.python.slack.slack_api_token = "xoxp-281854860961-282297003075-283248466694-d8cc1b12e088d08f0ea5360cfc30a335"
+2017-12-06 15:07:16		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:18		Options saved to sec.conf
+2017-12-06 15:07:18		Options saved to weechat.conf
+2017-12-06 15:07:18		Options saved to plugins.conf
+2017-12-06 15:07:18		Options saved to charset.conf
+2017-12-06 15:07:18		Options saved to logger.conf
+2017-12-06 15:07:18		Options saved to exec.conf
+2017-12-06 15:07:18		Options saved to trigger.conf
+2017-12-06 15:07:18		Options saved to aspell.conf
+2017-12-06 15:07:18		Options saved to alias.conf
+2017-12-06 15:07:18		Options saved to xfer.conf
+2017-12-06 15:07:18		Options saved to irc.conf
+2017-12-06 15:07:18		Options saved to relay.conf
+2017-12-06 15:07:18		Options saved to script.conf
+2017-12-06 15:07:19		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:22		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:25		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:25		ERROR: Failed connecting to Slack with token xoxp-281854860961-282297003075-282371116850-36aa59f36505c54a2de982f71941d85a: token_revoked
+2017-12-06 15:07:27		python: unloading script "slack"
+2017-12-06 15:07:27		python: loading script "/home/micah/.weechat/python/autoload/wee_slack.py"
+2017-12-06 15:07:27		python: registered script "slack", version 1.99 (Extends weechat for typing notification/search/etc on slack.com)
+2017-12-06 15:09:14	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 15:09:14		fifo: pipe closed
+2017-12-06 15:09:16		python scripts loaded: slack
+2017-12-06 15:09:16		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 15:11:54		[python/slack]  /slack  [command] [command options]
+2017-12-06 15:11:54		Plugin to allow typing notification and sync of read markers for slack.com
+2017-12-06 15:11:54		Commands:
+2017-12-06 15:11:54		status
+2017-12-06 15:11:54		nodistractions
+2017-12-06 15:11:54		showmuted
+2017-12-06 15:11:54		mute
+2017-12-06 15:11:54		away
+2017-12-06 15:11:54		upload
+2017-12-06 15:11:54		p
+2017-12-06 15:11:54		back
+2017-12-06 15:11:54		channels
+2017-12-06 15:11:54		distracting
+2017-12-06 15:11:54		openweb
+2017-12-06 15:11:54		slash
+2017-12-06 15:11:54		talk
+2017-12-06 15:11:54		users
+2017-12-06 15:11:54		Use /slack help [command] to find out more
+2017-12-06 15:12:11		Command not found: help
+2017-12-06 15:13:08	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 15:13:08		fifo: pipe closed
+2017-12-06 15:13:09		python scripts loaded: slack
+2017-12-06 15:13:09		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 15:13:11	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 15:13:11		fifo: pipe closed
+2017-12-06 15:13:13		python scripts loaded: slack
+2017-12-06 15:13:13		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 15:20:02		[python/slack]  /slack  [command] [command options]
+2017-12-06 15:20:02		Plugin to allow typing notification and sync of read markers for slack.com
+2017-12-06 15:20:02		Commands:
+2017-12-06 15:20:02		status
+2017-12-06 15:20:02		nodistractions
+2017-12-06 15:20:02		showmuted
+2017-12-06 15:20:02		mute
+2017-12-06 15:20:02		away
+2017-12-06 15:20:02		upload
+2017-12-06 15:20:02		p
+2017-12-06 15:20:02		back
+2017-12-06 15:20:02		channels
+2017-12-06 15:20:02		distracting
+2017-12-06 15:20:02		openweb
+2017-12-06 15:20:02		slash
+2017-12-06 15:20:02		talk
+2017-12-06 15:20:02		users
+2017-12-06 15:20:02		Use /slack help [command] to find out more
+2017-12-06 15:20:08		Command not found: help
+2017-12-06 15:21:43		Buffers list:
+2017-12-06 15:21:43		  [1] core.weechat (notify: all)
+2017-12-06 15:21:43		  [1] python.mhalter3378.slack.com (notify: all)
+2017-12-06 15:21:43		  [2] python.mhalter3378.slack.com.#general (notify: all)
+2017-12-06 15:21:43		  [3] python.mhalter3378.slack.com.slackbot (notify: all)
+2017-12-06 15:21:43		  [4] python.mhalter3378.slack.com.micah (notify: all)
+2017-12-06 15:21:43		  [5] python.mhalter3378.slack.com.#random (notify: all)
+2017-12-06 15:22:32		python: stdout/stderr: WS ERROR
+2017-12-06 15:22:32		python: stdout/stderr: WS ERROR
+2017-12-06 15:23:42	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 15:23:42		fifo: pipe closed
+2017-12-06 15:23:43		python scripts loaded: slack
+2017-12-06 15:23:43		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 15:24:08		Buffers list:
+2017-12-06 15:24:08		  [1] core.weechat (notify: all)
+2017-12-06 15:24:08		  [1] python.mhalter3378.slack.com (notify: all)
+2017-12-06 15:24:08		  [2] python.mhalter3378.slack.com.#general (notify: all)
+2017-12-06 15:24:08		  [3] python.mhalter3378.slack.com.slackbot (notify: all)
+2017-12-06 15:24:08		  [4] python.mhalter3378.slack.com.micah (notify: all)
+2017-12-06 15:24:08		  [5] python.mhalter3378.slack.com.#random (notify: all)
+2017-12-06 15:25:17		[core]
+2017-12-06 15:25:17		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2017-12-06 15:25:17		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2017-12-06 15:25:17		[alias]
+2017-12-06 15:25:17		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2017-12-06 15:25:17		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2017-12-06 15:25:17		[guile]
+2017-12-06 15:25:17		  guile
+2017-12-06 15:25:17		[charset]
+2017-12-06 15:25:17		  charset
+2017-12-06 15:25:17		[perl]
+2017-12-06 15:25:17		  perl
+2017-12-06 15:25:17		[ruby]
+2017-12-06 15:25:17		  ruby
+2017-12-06 15:25:17		[tcl]
+2017-12-06 15:25:17		  tcl
+2017-12-06 15:25:17		[exec]
+2017-12-06 15:25:17		  exec
+2017-12-06 15:25:17		[relay]
+2017-12-06 15:25:17		  relay
+2017-12-06 15:25:17		[aspell]
+2017-12-06 15:25:17		  aspell
+2017-12-06 15:25:17		[lua]
+2017-12-06 15:25:17		  lua
+2017-12-06 15:25:17		[python]
+2017-12-06 15:25:17		  python  slack
+2017-12-06 15:25:17		[logger]
+2017-12-06 15:25:17		  logger
+2017-12-06 15:25:17		[javascript]
+2017-12-06 15:25:17		  javascript
+2017-12-06 15:25:17		[fifo]
+2017-12-06 15:25:17		  fifo
+2017-12-06 15:25:17		[trigger]
+2017-12-06 15:25:17		  trigger
+2017-12-06 15:25:17		[irc]
+2017-12-06 15:25:17		  admin       connect     devoice     invite      links       motd        op          quiet       sajoin      service     time        users       whois     
+2017-12-06 15:25:17		  allchan     ctcp        die         ison        list        msg         oper        quote       samode      servlist    topic       version     whowas    
+2017-12-06 15:25:17		  allpv       cycle       disconnect  join        lusers      names       part        reconnect   sanick      squery      trace       voice     
+2017-12-06 15:25:17		  allserv     dcc         halfop      kick        map         nick        ping        rehash      sapart      squit       unban       wallchops 
+2017-12-06 15:25:17		  ban         dehalfop    ignore      kickban     me          notice      pong        remove      saquit      stats       unquiet     wallops   
+2017-12-06 15:25:17		  cap         deop        info        kill        mode        notify      query       restart     server      summon      userhost    who       
+2017-12-06 15:25:17		[script]
+2017-12-06 15:25:17		  script
+2017-12-06 15:25:17		[xfer]
+2017-12-06 15:25:17		  me  xfer
+2017-12-06 15:25:29		[python/slack]  /slack  [command] [command options]
+2017-12-06 15:25:29		Plugin to allow typing notification and sync of read markers for slack.com
+2017-12-06 15:25:29		Commands:
+2017-12-06 15:25:29		status
+2017-12-06 15:25:29		nodistractions
+2017-12-06 15:25:29		showmuted
+2017-12-06 15:25:29		mute
+2017-12-06 15:25:29		away
+2017-12-06 15:25:29		upload
+2017-12-06 15:25:29		p
+2017-12-06 15:25:29		back
+2017-12-06 15:25:29		channels
+2017-12-06 15:25:29		distracting
+2017-12-06 15:25:29		openweb
+2017-12-06 15:25:29		slash
+2017-12-06 15:25:29		talk
+2017-12-06 15:25:29		users
+2017-12-06 15:25:29		Use /slack help [command] to find out more
+2017-12-06 15:25:41		Command not found: help
+2017-12-06 15:25:53		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:25:53		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:25:53		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:25:53		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 3080, in slack_command_cb
+2017-12-06 15:25:53		python: stdout/stderr:     EVENTROUTER.cmds[function_name]("", current_buffer, args)
+2017-12-06 15:25:53		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 101, in wrapper
+2017-12-06 15:25:53		python: stdout/stderr:     return f(data, current_buffer, *args, **kwargs)
+2017-12-06 15:25:53		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 3121, in command_slash
+2017-12-06 15:25:53		python: stdout/stderr:     s = SlackRequest(team.token, "chat.command", {"command": command, "text": text, 'channel': channel.identifier}, team_hash=team.team_hash, channel_identifier=channel.identifier)
+2017-12-06 15:25:53		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'identifier'
+2017-12-06 15:25:53	=!=	python: error in function "slack_command_cb"
+2017-12-06 15:25:58		Command not found: user
+2017-12-06 15:28:29		Option changed: plugins.var.python.slack.show_reaction_nicks = "on"
+2017-12-06 15:32:26		script: downloading list of scripts...
+2017-12-06 15:32:28		script: 347 scripts for WeeChat 1.4
+2017-12-06 15:32:28		script: script "vimmode.py" not found
+2017-12-06 15:32:38		python: loading script "/home/micah/.weechat/python/vimode.py"
+2017-12-06 15:32:38		python: registered script "vimode", version 0.5 (Add vi/vim-like modes and keybindings to WeeChat.)
+2017-12-06 15:32:38		[vimode.py] Problematic keybindings detected:
+2017-12-06 15:32:38		[vimode.py]     meta-jmeta-f -> /buffer -
+2017-12-06 15:32:38		[vimode.py]     meta-jmeta-l -> /buffer +
+2017-12-06 15:32:38		[vimode.py]     meta-jmeta-r -> /server raw
+2017-12-06 15:32:38		[vimode.py]     meta-jmeta-s -> /server jump
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta-meta2-A -> /window up
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta-meta2-B -> /window down
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta-meta2-C -> /window right
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta-meta2-D -> /window left
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta2-1;3A -> /window up
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta2-1;3B -> /window down
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta2-1;3C -> /window right
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta2-1;3D -> /window left
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta-b -> /window balance
+2017-12-06 15:32:38		[vimode.py]     meta-wmeta-s -> /window swap
+2017-12-06 15:32:38		[vimode.py] These keybindings may conflict with vimode.
+2017-12-06 15:32:38		[vimode.py] You can remove problematic key bindings and add recommended ones by using /vimode bind_keys, or only list them with /vimode bind_keys --list
+2017-12-06 15:32:38		[vimode.py] For help, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ#problematic-key-bindings.md
+2017-12-06 15:32:38		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2017-12-06 15:33:39		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:33:39		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:33:39		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:33:39		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:33:39		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:33:39		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:33:39	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:33:39		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:33:39		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:33:39		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:33:39		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:33:39		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:33:39		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:33:39	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:33:43		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:33:43		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:33:43		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:33:43		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:33:43		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:33:43		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:33:43	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:33:44		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:33:44		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:33:44		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:33:44		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:33:44		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:33:44		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:33:44	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:33:44		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:33:44		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:33:44		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:33:44		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:33:44		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:33:44		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:33:44	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:33:44		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:33:44		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:33:44		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:33:44		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:33:44		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:33:44		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:33:44	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:33:47	=!=	Error: unknown command "/q!" (type /help for help)
+2017-12-06 15:35:17		Option changed: weechat.bar.vi_line_numbers.hidden = on
+2017-12-06 15:35:20		Option changed: weechat.bar.vi_line_numbers.hidden = off  (default: on)
+2017-12-06 15:35:37		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:37		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:37		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:37		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:37		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:37		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:37	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:35:37		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:37		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:37		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:37		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:37		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:37		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:37	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:35:38		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:38		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:38		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:38		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:38		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:38		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:38	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:35:38		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:38		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:38		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:38		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:38		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:38		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:38	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:35:38		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:38		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:38		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:38		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:38		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:38		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:38	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:35:39		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:39		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:39		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:39		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:39		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:39		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:39	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:35:40		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:40		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:40		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:40		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:40		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:40		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:40	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:35:40		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:40		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:40		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:40		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:40		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:40		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:40	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:35:40		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:35:40		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:35:40		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:35:40		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 749, in typing_notification_cb
+2017-12-06 15:35:40		python: stdout/stderr:     if channel and channel.type != "thread":
+2017-12-06 15:35:40		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'type'
+2017-12-06 15:35:40	=!=	python: error in function "typing_notification_cb"
+2017-12-06 15:37:29		[core]
+2017-12-06 15:37:29		  away     buffer   command  debug    filter   history  key      mouse    plugin   proxy    reload   save     set      upgrade  version  window 
+2017-12-06 15:37:29		  bar      color    cursor   eval     help     input    layout   mute     print    quit     repeat   secure   unset    uptime   wait   
+2017-12-06 15:37:29		[alias]
+2017-12-06 15:37:29		  AAWAY    AME      ANICK    BYE      CHAT     CLOSE    IG       K        LEAVE    MSGBUF   N        REDRAW   SIGNOFF  UB       V        WC       WII    
+2017-12-06 15:37:29		  alias    AMSG     BEEP     C        CL       EXIT     J        KB       M        MUB      Q        SAY      T        UMODE    W        WI       WW     
+2017-12-06 15:37:29		[guile]
+2017-12-06 15:37:29		  guile
+2017-12-06 15:37:29		[charset]
+2017-12-06 15:37:29		  charset
+2017-12-06 15:37:29		[perl]
+2017-12-06 15:37:29		  perl
+2017-12-06 15:37:29		[ruby]
+2017-12-06 15:37:29		  ruby
+2017-12-06 15:37:29		[tcl]
+2017-12-06 15:37:29		  tcl
+2017-12-06 15:37:29		[exec]
+2017-12-06 15:37:29		  exec
+2017-12-06 15:37:29		[relay]
+2017-12-06 15:37:29		  relay
+2017-12-06 15:37:29		[aspell]
+2017-12-06 15:37:29		  aspell
+2017-12-06 15:37:29		[lua]
+2017-12-06 15:37:29		  lua
+2017-12-06 15:37:29		[python]
+2017-12-06 15:37:29		  python  slack  vimode
+2017-12-06 15:37:29		[logger]
+2017-12-06 15:37:29		  logger
+2017-12-06 15:37:29		[javascript]
+2017-12-06 15:37:29		  javascript
+2017-12-06 15:37:29		[fifo]
+2017-12-06 15:37:29		  fifo
+2017-12-06 15:37:29		[trigger]
+2017-12-06 15:37:29		  trigger
+2017-12-06 15:37:29		[irc]
+2017-12-06 15:37:29		  admin       connect     devoice     invite      links       motd        op          quiet       sajoin      service     time        users       whois     
+2017-12-06 15:37:29		  allchan     ctcp        die         ison        list        msg         oper        quote       samode      servlist    topic       version     whowas    
+2017-12-06 15:37:29		  allpv       cycle       disconnect  join        lusers      names       part        reconnect   sanick      squery      trace       voice     
+2017-12-06 15:37:29		  allserv     dcc         halfop      kick        map         nick        ping        rehash      sapart      squit       unban       wallchops 
+2017-12-06 15:37:29		  ban         dehalfop    ignore      kickban     me          notice      pong        remove      saquit      stats       unquiet     wallops   
+2017-12-06 15:37:29		  cap         deop        info        kill        mode        notify      query       restart     server      summon      userhost    who       
+2017-12-06 15:37:29		[script]
+2017-12-06 15:37:29		  script
+2017-12-06 15:37:29		[xfer]
+2017-12-06 15:37:29		  me  xfer
+2017-12-06 15:38:58		script: script "iset.py" not found
+2017-12-06 15:39:00		script: script "iset" not found
+2017-12-06 15:40:09		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:40:09		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:40:09		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:40:09		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 818, in nick_completion_cb
+2017-12-06 15:40:09		python: stdout/stderr:     if current_channel is None or current_channel.members is None:
+2017-12-06 15:40:09		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'members'
+2017-12-06 15:40:09	=!=	python: error in function "nick_completion_cb"
+2017-12-06 15:40:10		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:40:10		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:40:10		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:40:10		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 818, in nick_completion_cb
+2017-12-06 15:40:10		python: stdout/stderr:     if current_channel is None or current_channel.members is None:
+2017-12-06 15:40:10		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'members'
+2017-12-06 15:40:10	=!=	python: error in function "nick_completion_cb"
+2017-12-06 15:40:10		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:40:10		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:40:10		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:40:10		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 818, in nick_completion_cb
+2017-12-06 15:40:10		python: stdout/stderr:     if current_channel is None or current_channel.members is None:
+2017-12-06 15:40:10		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'members'
+2017-12-06 15:40:10	=!=	python: error in function "nick_completion_cb"
+2017-12-06 15:40:11		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:40:11		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:40:11		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:40:11		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 818, in nick_completion_cb
+2017-12-06 15:40:11		python: stdout/stderr:     if current_channel is None or current_channel.members is None:
+2017-12-06 15:40:11		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'members'
+2017-12-06 15:40:11	=!=	python: error in function "nick_completion_cb"
+2017-12-06 15:40:12		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:40:12		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:40:12		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:40:12		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 818, in nick_completion_cb
+2017-12-06 15:40:12		python: stdout/stderr:     if current_channel is None or current_channel.members is None:
+2017-12-06 15:40:12		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'members'
+2017-12-06 15:40:12	=!=	python: error in function "nick_completion_cb"
+2017-12-06 15:40:12		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:40:12		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:40:12		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:40:12		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 818, in nick_completion_cb
+2017-12-06 15:40:12		python: stdout/stderr:     if current_channel is None or current_channel.members is None:
+2017-12-06 15:40:12		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'members'
+2017-12-06 15:40:12	=!=	python: error in function "nick_completion_cb"
+2017-12-06 15:40:23		Option changed: weechat.bar.input.items = "[mode_indicator]+[input_prompt]+(away),[input_search], [input_paste],input_text,[vi_buffer]"  (default: "[input_prompt]+(away),[input_search],[input_paste],input_text")
+2017-12-06 15:42:59		perl: loading script "/home/micah/.weechat/perl/buffers.pl"
+2017-12-06 15:42:59		perl: registered script "buffers", version 5.6 (Sidebar with list of buffers)
+2017-12-06 15:42:59		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2017-12-06 15:42:59		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2017-12-06 15:42:59		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2017-12-06 15:42:59		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2017-12-06 15:45:05	=!=	Error: unknown command "/scripts" (type /help for help)
+2017-12-06 15:45:21		perl: loading script "/home/micah/.weechat/perl/iset.pl"
+2017-12-06 15:45:21		perl: registered script "iset", version 4.3 (Interactive Set for configuration options)
+2017-12-06 15:45:21		New key binding (context "mouse"): @chat(perl.iset):button1 => hsignal:iset_mouse
+2017-12-06 15:45:21		New key binding (context "mouse"): @chat(perl.iset):button2* => hsignal:iset_mouse
+2017-12-06 15:45:21		New key binding (context "mouse"): @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2017-12-06 15:45:21		New key binding (context "mouse"): @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2017-12-06 15:46:15		python: loading script "/home/micah/.weechat/python/colorize_nicks.py"
+2017-12-06 15:46:15		python: registered script "colorize_nicks", version 24 (Use the weechat nick colors in the chat area)
+2017-12-06 15:46:37	=!=	Error: unknown command "/go" (type /help for help)
+2017-12-06 15:46:39		python: stdout/stderr: Traceback (most recent call last):
+2017-12-06 15:46:39		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 112, in wrapper
+2017-12-06 15:46:39		python: stdout/stderr:     return f(*decode_from_utf8(args), **decode_from_utf8(kwargs))
+2017-12-06 15:46:39		python: stdout/stderr:   File "/home/micah/.weechat/python/autoload/wee_slack.py", line 818, in nick_completion_cb
+2017-12-06 15:46:39		python: stdout/stderr:     if current_channel is None or current_channel.members is None:
+2017-12-06 15:46:39		python: stdout/stderr: AttributeError: 'SlackTeam' object has no attribute 'members'
+2017-12-06 15:46:39	=!=	python: error in function "nick_completion_cb"
+2017-12-06 15:47:14		Option changed: weechat.look.prefix_same_nick = "⤷"  (default: "")
+2017-12-06 15:47:18		Option changed: weechat.look.prefix_same_nick = ""
+2017-12-06 17:16:26		fifo: removing old fifo pipe "/home/micah/.weechat/weechat_fifo_31177"
+2017-12-06 17:16:26		New key binding (context "mouse"): @bar(buffers):ctrl-wheeldown => hsignal:buffers_mouse
+2017-12-06 17:16:26		New key binding (context "mouse"): @bar(buffers):ctrl-wheelup => hsignal:buffers_mouse
+2017-12-06 17:16:26		New key binding (context "mouse"): @item(buffers):button2* => hsignal:buffers_mouse
+2017-12-06 17:16:26		New key binding (context "mouse"): @item(buffers):button1* => hsignal:buffers_mouse
+2017-12-06 17:16:26		New key binding (context "mouse"): @chat(perl.iset):button1 => hsignal:iset_mouse
+2017-12-06 17:16:26		New key binding (context "mouse"): @chat(perl.iset):button2* => hsignal:iset_mouse
+2017-12-06 17:16:26		New key binding (context "mouse"): @chat(perl.iset):wheeldown => /repeat 5 /iset **down
+2017-12-06 17:16:26		New key binding (context "mouse"): @chat(perl.iset):wheelup => /repeat 5 /iset **up
+2017-12-06 17:16:26		perl scripts loaded: buffers, iset
+2017-12-06 17:16:26		[vimode.py] Problematic keybindings detected:
+2017-12-06 17:16:26		[vimode.py]     meta-jmeta-f -> /buffer -
+2017-12-06 17:16:26		[vimode.py]     meta-jmeta-l -> /buffer +
+2017-12-06 17:16:26		[vimode.py]     meta-jmeta-r -> /server raw
+2017-12-06 17:16:26		[vimode.py]     meta-jmeta-s -> /server jump
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta-meta2-A -> /window up
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta-meta2-B -> /window down
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta-meta2-C -> /window right
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta-meta2-D -> /window left
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta2-1;3A -> /window up
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta2-1;3B -> /window down
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta2-1;3C -> /window right
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta2-1;3D -> /window left
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta-b -> /window balance
+2017-12-06 17:16:26		[vimode.py]     meta-wmeta-s -> /window swap
+2017-12-06 17:16:26		[vimode.py] These keybindings may conflict with vimode.
+2017-12-06 17:16:26		[vimode.py] You can remove problematic key bindings and add recommended ones by using /vimode bind_keys, or only list them with /vimode bind_keys --list
+2017-12-06 17:16:26		[vimode.py] For help, see: https://github.com/GermainZ/weechat-vimode/blob/master/FAQ#problematic-key-bindings.md
+2017-12-06 17:16:26		[vimode.py] To force disable warnings, you can set plugins.var.python.vimode.no_warn to 'on'
+2017-12-06 17:16:26		python scripts loaded: colorize_nicks, slack, vimode
+2017-12-06 17:16:26		script: 347 scripts for WeeChat 1.4
+2017-12-06 17:16:26		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 17:17:17		Option changed: plugins.var.python.vimode.no_warn = "on"
+2017-12-06 17:17:19	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:17:19		fifo: pipe closed
+2017-12-06 17:17:20		perl scripts loaded: buffers, iset
+2017-12-06 17:17:20		python scripts loaded: colorize_nicks, slack, vimode
+2017-12-06 17:17:20		script: 347 scripts for WeeChat 1.4
+2017-12-06 17:17:20		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 17:18:44		Option changed: weechat.bar.input.items = "[mode_indicator]+[input_prompt]+(away),[input_search], [input_paste],input_text,[vi_buffer]"  (default: "[input_prompt]+(away),[input_search],[input_paste],input_text")
+2017-12-06 17:19:29	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:19:29		fifo: pipe closed
+2017-12-06 17:19:30		perl scripts loaded: buffers, iset
+2017-12-06 17:19:31		python scripts loaded: colorize_nicks, slack, vimode
+2017-12-06 17:19:31		script: 347 scripts for WeeChat 1.4
+2017-12-06 17:19:31		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 17:19:45	=!=	Error: WeeChat main buffer can't be closed
+2017-12-06 17:20:40		Option changed: weechat.bar.vi_line_numbers.hidden = off  (default: on)
+2017-12-06 17:22:23		[core]
+2017-12-06 17:22:23		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2017-12-06 17:22:23		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2017-12-06 17:22:23		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2017-12-06 17:22:23		[alias]
+2017-12-06 17:22:23		  AAWAY    AMSG     BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WW     
+2017-12-06 17:22:23		  alias    ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI     
+2017-12-06 17:22:23		  AME      BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2017-12-06 17:22:23		[guile]
+2017-12-06 17:22:23		  guile
+2017-12-06 17:22:23		[charset]
+2017-12-06 17:22:23		  charset
+2017-12-06 17:22:23		[perl]
+2017-12-06 17:22:23		  buffers_detach  buffers_whitelist  iset  perl
+2017-12-06 17:22:23		[ruby]
+2017-12-06 17:22:23		  ruby
+2017-12-06 17:22:23		[tcl]
+2017-12-06 17:22:23		  tcl
+2017-12-06 17:22:23		[exec]
+2017-12-06 17:22:23		  exec
+2017-12-06 17:22:23		[relay]
+2017-12-06 17:22:23		  relay
+2017-12-06 17:22:23		[aspell]
+2017-12-06 17:22:23		  aspell
+2017-12-06 17:22:23		[lua]
+2017-12-06 17:22:23		  lua
+2017-12-06 17:22:23		[python]
+2017-12-06 17:22:23		  python  slack  vimode
+2017-12-06 17:22:23		[logger]
+2017-12-06 17:22:23		  logger
+2017-12-06 17:22:23		[javascript]
+2017-12-06 17:22:23		  javascript
+2017-12-06 17:22:23		[fifo]
+2017-12-06 17:22:23		  fifo
+2017-12-06 17:22:23		[trigger]
+2017-12-06 17:22:23		  trigger
+2017-12-06 17:22:23		[irc]
+2017-12-06 17:22:23		  admin       ctcp        disconnect  kick        me          notify      quiet       samode      squery      unban       wallops   
+2017-12-06 17:22:23		  allchan     cycle       halfop      kickban     mode        op          quote       sanick      squit       unquiet     who       
+2017-12-06 17:22:23		  allpv       dcc         ignore      kill        motd        oper        reconnect   sapart      stats       userhost    whois     
+2017-12-06 17:22:23		  allserv     dehalfop    info        links       msg         part        rehash      saquit      summon      users       whowas    
+2017-12-06 17:22:23		  ban         deop        invite      list        names       ping        remove      server      time        version   
+2017-12-06 17:22:23		  cap         devoice     ison        lusers      nick        pong        restart     service     topic       voice     
+2017-12-06 17:22:23		  connect     die         join        map         notice      query       sajoin      servlist    trace       wallchops 
+2017-12-06 17:22:23		[script]
+2017-12-06 17:22:23		  script
+2017-12-06 17:22:23		[xfer]
+2017-12-06 17:22:23		  me  xfer
+2017-12-06 17:23:11	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:23:11		fifo: pipe closed
+2017-12-06 17:23:12		perl scripts loaded: buffers, iset
+2017-12-06 17:23:12		python scripts loaded: colorize_nicks, slack, vimode
+2017-12-06 17:23:12		script: 347 scripts for WeeChat 1.4
+2017-12-06 17:23:12		Plugins loaded: alias, aspell, charset, exec, fifo, guile, irc, javascript, logger, lua, perl, python, relay, ruby, script, tcl, trigger, xfer
+2017-12-06 17:24:09		python: loading script "/home/micah/.weechat/python/go.py"
+2017-12-06 17:24:09		python: registered script "go", version 2.5 (Quick jump to buffers)
+2017-12-06 17:24:31		python: loading script "/home/micah/.weechat/python/autosort.py"
+2017-12-06 17:24:31		python: registered script "autosort", version 3.3 (Flexible automatic (or manual) buffer sorting based on eval expressions.)
+2017-12-06 17:24:59		python: loading script "/home/micah/.weechat/python/zerotab.py"
+2017-12-06 17:24:59		python: registered script "zerotab", version 1.5 (Will tab complete the last nick in channel without typing anything first. This is good for rapid conversations.)
+2017-12-06 17:25:31		Option changed: weechat.bar.status.color_bg = 0  (default: blue)
+2017-12-06 17:25:41		Option changed: weechat.bar.title.color_bg = 0  (default: blue)
+2017-12-06 17:25:58		Option changed: weechat.bar.title.color_bg = 1  (default: blue)
+2017-12-06 17:26:01		Option changed: weechat.bar.title.color_bg = 2  (default: blue)
+2017-12-06 17:26:03		Option changed: weechat.bar.title.color_bg = 1  (default: blue)
+2017-12-06 17:26:07		Option changed: weechat.bar.title.color_bg = 3  (default: blue)
+2017-12-06 17:26:09		Option changed: weechat.bar.title.color_bg = 4  (default: blue)
+2017-12-06 17:26:11		Option changed: weechat.bar.title.color_bg = 5  (default: blue)
+2017-12-06 17:26:12		Option changed: weechat.bar.title.color_bg = 6  (default: blue)
+2017-12-06 17:26:13		Option changed: weechat.bar.title.color_bg = 7  (default: blue)
+2017-12-06 17:26:15		Option changed: weechat.bar.title.color_bg = 8  (default: blue)
+2017-12-06 17:26:17		Option changed: weechat.bar.title.color_bg = 9  (default: blue)
+2017-12-06 17:26:20		Option changed: weechat.bar.title.color_bg = 10  (default: blue)
+2017-12-06 17:26:21		Option changed: weechat.bar.title.color_bg = 11  (default: blue)
+2017-12-06 17:26:22		Option changed: weechat.bar.title.color_bg = 12  (default: blue)
+2017-12-06 17:26:23		Option changed: weechat.bar.title.color_bg = 13  (default: blue)
+2017-12-06 17:26:25		Option changed: weechat.bar.title.color_bg = 14  (default: blue)
+2017-12-06 17:26:26		Option changed: weechat.bar.title.color_bg = 15  (default: blue)
+2017-12-06 17:26:28		Option changed: weechat.bar.title.color_bg = 16  (default: blue)
+2017-12-06 17:26:30		Option changed: weechat.bar.title.color_bg = 17  (default: blue)
+2017-12-06 17:26:32		Option changed: weechat.bar.title.color_bg = 1  (default: blue)
+2017-12-06 17:26:34		Option changed: weechat.bar.title.color_bg = 0  (default: blue)
+2017-12-06 17:26:47		Option changed: weechat.color.chat_nick_colors = "1,2,3,4,5,6"  (default: "cyan,magenta,green,brown,lightblue,default,lightcyan,lightmagenta,lightgreen,blue")
+2017-12-06 17:27:12	=!=	Error: option "buflist.format.hotlist_message" not found
+2017-12-06 17:27:38	=!=	Error: option "buflist.format.buffer_current" not found
+2017-12-06 17:28:08	=!=	Error: WeeChat main buffer can't be closed
+2017-12-06 17:28:10	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:28:10		fifo: pipe closed
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/aspell.conf, line 7: unknown option for section "color": suggestions = default
+2017-12-06 17:31:15		New key binding (context "default"): meta-meta-OQ => /bar scroll buflist * e
+2017-12-06 17:31:15		New key binding (context "default"): meta-meta-OP => /bar scroll buflist * b
+2017-12-06 17:31:15		New key binding (context "default"): meta-OQ => /bar scroll buflist * +100%
+2017-12-06 17:31:15		New key binding (context "default"): meta-OP => /bar scroll buflist * -100%
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/irc.conf, line 30: unknown option for section "look": item_away_message = on
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/irc.conf, line 39: unknown option for section "look": nick_color_force = ""
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/irc.conf, line 40: unknown option for section "look": nick_color_hash = sum
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/irc.conf, line 41: unknown option for section "look": nick_color_stop_chars = "_|["
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/irc.conf, line 68: unknown option for section "color": item_away = yellow
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/irc.conf, line 122: unknown option for section "server_default": default_msg_kick = ""
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/irc.conf, line 123: unknown option for section "server_default": default_msg_part = "WeeChat %v"
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/irc.conf, line 124: unknown option for section "server_default": default_msg_quit = "WeeChat %v"
+2017-12-06 17:31:15	=!=	Warning: /home/micah/.weechat/script.conf, line 50: unknown option for section "scripts": url_force_https = on
+2017-12-06 17:31:15		script: 351 scripts for WeeChat 2.0
+2017-12-06 17:31:15		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, relay, script, trigger, xfer
+2017-12-06 17:31:53		fifo: pipe closed
+2017-12-06 17:32:41		script: 351 scripts for WeeChat 2.0
+2017-12-06 17:32:41		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, relay, script, trigger, xfer
+2017-12-06 17:33:03	=!=	Error: unknown command "/python" (type /help for help)
+2017-12-06 17:33:06	=!=	Error: unknown command "/python" (type /help for help)
+2017-12-06 17:34:15		Option changed: plugins.var.python.slack.slack_api_token = "xoxp-281854860961-282297003075-283248466694-d8cc1b12e088d08f0ea5360cfc30a335"
+2017-12-06 17:34:23		Unknown configuration file "python"
+2017-12-06 17:34:28	=!=	Error: unknown command "/python" (type /help for help)
+2017-12-06 17:34:32		fifo: pipe closed
+2017-12-06 17:35:04	=!=	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2017-12-06 17:35:04		perl scripts loaded: buffers, iset
+2017-12-06 17:35:04		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 17:35:04		script: 351 scripts for WeeChat 2.0
+2017-12-06 17:35:04		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 17:35:13	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:35:13		fifo: pipe closed
+2017-12-06 17:35:14	=!=	buflist: warning: the script buffers.pl is loaded and provides a bar with list of buffers similar to the buflist plugin; you may want to uninstall the script buffers.pl (/script remove buffers.pl) or disable/unload the buflist plugin; see WeeChat release notes for more information
+2017-12-06 17:35:14		perl scripts loaded: buffers, iset
+2017-12-06 17:35:14		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 17:35:14		script: 351 scripts for WeeChat 2.0
+2017-12-06 17:35:14		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 17:35:41	=!=	Error with command "/script uninstall buffers.pl" (help on command: /help script)
+2017-12-06 17:36:29	=!=	Error with command "/script help" (help on command: /help script)
+2017-12-06 17:36:31		[core]
+2017-12-06 17:36:31		  away     color    debug    help     key      mute     proxy    repeat   set      uptime   window 
+2017-12-06 17:36:31		  bar      command  eval     history  layout   plugin   quit     save     unset    version
+2017-12-06 17:36:31		  buffer   cursor   filter   input    mouse    print    reload   secure   upgrade  wait   
+2017-12-06 17:36:31		[alias]
+2017-12-06 17:36:31		  AAWAY    AMSG     BYE      CL       IG       KB       MSGBUF   Q        SIGNOFF  UMODE    WC       WW     
+2017-12-06 17:36:31		  alias    ANICK    C        CLOSE    J        LEAVE    MUB      REDRAW   T        V        WI     
+2017-12-06 17:36:31		  AME      BEEP     CHAT     EXIT     K        M        N        SAY      UB       W        WII    
+2017-12-06 17:36:31		[charset]
+2017-12-06 17:36:31		  charset
+2017-12-06 17:36:31		[perl]
+2017-12-06 17:36:31		  buffers_detach  buffers_whitelist  iset  perl
+2017-12-06 17:36:31		[buflist]
+2017-12-06 17:36:31		  buflist
+2017-12-06 17:36:31		[exec]
+2017-12-06 17:36:31		  exec
+2017-12-06 17:36:31		[fset]
+2017-12-06 17:36:31		  fset
+2017-12-06 17:36:31		[relay]
+2017-12-06 17:36:31		  relay
+2017-12-06 17:36:31		[aspell]
+2017-12-06 17:36:31		  aspell
+2017-12-06 17:36:31		[python]
+2017-12-06 17:36:31		  autosort  go  python  slack  vimode
+2017-12-06 17:36:31		[logger]
+2017-12-06 17:36:31		  logger
+2017-12-06 17:36:31		[fifo]
+2017-12-06 17:36:31		  fifo
+2017-12-06 17:36:31		[trigger]
+2017-12-06 17:36:31		  trigger
+2017-12-06 17:36:31		[irc]
+2017-12-06 17:36:31		  admin       cycle       ignore      links       names       pong        sajoin      squery      unquiet     whois     
+2017-12-06 17:36:31		  allchan     dcc         info        list        nick        query       samode      squit       userhost    whowas    
+2017-12-06 17:36:31		  allpv       dehalfop    invite      lusers      notice      quiet       sanick      stats       users     
+2017-12-06 17:36:31		  allserv     deop        ison        map         notify      quote       sapart      summon      version   
+2017-12-06 17:36:31		  ban         devoice     join        me          op          reconnect   saquit      time        voice     
+2017-12-06 17:36:31		  cap         die         kick        mode        oper        rehash      server      topic       wallchops 
+2017-12-06 17:36:31		  connect     disconnect  kickban     motd        part        remove      service     trace       wallops   
+2017-12-06 17:36:31		  ctcp        halfop      kill        msg         ping        restart     servlist    unban       who       
+2017-12-06 17:36:31		[script]
+2017-12-06 17:36:31		  script
+2017-12-06 17:36:31		[xfer]
+2017-12-06 17:36:31		  me  xfer
+2017-12-06 17:36:34		[script]  /script  list [-o|-i]
+2017-12-06 17:36:34		                   search <text>
+2017-12-06 17:36:34		                   show <script>
+2017-12-06 17:36:34		                   load|unload|reload <script> [<script>...]
+2017-12-06 17:36:34		                   autoload|noautoload|toggleautoload <script> [<script>...]
+2017-12-06 17:36:34		                   install|remove|installremove|hold [-q] <script> [<script>...]
+2017-12-06 17:36:34		                   upgrade
+2017-12-06 17:36:34		                   update
+2017-12-06 17:36:34		WeeChat scripts manager
+2017-12-06 17:36:34		          list: list loaded scripts (all languages)
+2017-12-06 17:36:34		            -o: send list of loaded scripts to buffer
+2017-12-06 17:36:34		            -i: copy list of loaded scripts in command line (for sending to buffer)
+2017-12-06 17:36:34		        search: search scripts by tags, language (python, perl, ...), filename extension (py, pl, ...) or text; result is displayed on scripts buffer
+2017-12-06 17:36:34		          show: show detailed info about a script
+2017-12-06 17:36:34		          load: load script(s)
+2017-12-06 17:36:34		        unload: unload script(s)
+2017-12-06 17:36:34		        reload: reload script(s)
+2017-12-06 17:36:34		      autoload: autoload the script
+2017-12-06 17:36:34		    noautoload: do not autoload the script
+2017-12-06 17:36:34		toggleautoload: toggle autoload
+2017-12-06 17:36:34		       install: install/upgrade script(s)
+2017-12-06 17:36:34		        remove: remove script(s)
+2017-12-06 17:36:34		 installremove: install or remove script(s), depending on current state
+2017-12-06 17:36:34		          hold: hold/unhold script(s) (a script held will not be upgraded any more and cannot be removed)
+2017-12-06 17:36:34		            -q: quiet mode: do not display messages
+2017-12-06 17:36:34		       upgrade: upgrade all installed scripts which are obsolete (new version available)
+2017-12-06 17:36:34		        update: update local scripts cache
+2017-12-06 17:36:34		Without argument, this command opens a buffer with list of scripts.
+2017-12-06 17:36:34		On script buffer, the possible status for each script are:
+2017-12-06 17:36:34		  * i a H r N
+2017-12-06 17:36:34		  | | | | | |
+2017-12-06 17:36:34		  | | | | | obsolete (new version available)
+2017-12-06 17:36:34		  | | | | running (loaded)
+2017-12-06 17:36:34		  | | | held
+2017-12-06 17:36:34		  | | autoloaded
+2017-12-06 17:36:34		  | installed
+2017-12-06 17:36:34		  popular script
+2017-12-06 17:36:34		Keys on script buffer:
+2017-12-06 17:36:34		  alt+i  install script
+2017-12-06 17:36:34		  alt+r  remove script
+2017-12-06 17:36:34		  alt+l  load script
+2017-12-06 17:36:34		  alt+L  reload script
+2017-12-06 17:36:34		  alt+u  unload script
+2017-12-06 17:36:34		  alt+A  autoload script
+2017-12-06 17:36:34		  alt+h  (un)hold script
+2017-12-06 17:36:34		  alt+v  view script
+2017-12-06 17:36:34		Input allowed on script buffer:
+2017-12-06 17:36:34		  i/r/l/L/u/h  action on script (same as keys above)
+2017-12-06 17:36:34		  q            close buffer
+2017-12-06 17:36:34		  $            refresh buffer
+2017-12-06 17:36:34		  s:x,y        sort buffer using keys x and y (see /help script.look.sort)
+2017-12-06 17:36:34		  s:           reset sort (use default sort)
+2017-12-06 17:36:34		  word(s)      filter scripts: search word(s) in scripts (description, tags, ...)
+2017-12-06 17:36:34		  *            remove filter
+2017-12-06 17:36:34		Mouse actions on script buffer:
+2017-12-06 17:36:34		  wheel         scroll list
+2017-12-06 17:36:34		  left button   select script
+2017-12-06 17:36:34		  right button  install/remove script
+2017-12-06 17:36:34		Examples:
+2017-12-06 17:36:34		  /script search url
+2017-12-06 17:36:34		  /script install go.py urlserver.py
+2017-12-06 17:36:34		  /script remove go.py
+2017-12-06 17:36:34		  /script hold urlserver.py
+2017-12-06 17:36:34		  /script reload urlserver
+2017-12-06 17:36:34		  /script upgrade
+2017-12-06 17:36:39		perl: unloading script "buffers"
+2017-12-06 17:36:39		perl: script removed: /home/micah/.weechat/perl/autoload/buffers.pl
+2017-12-06 17:36:39		perl: script removed: /home/micah/.weechat/perl/buffers.pl
+2017-12-06 17:36:44	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:36:44		fifo: pipe closed
+2017-12-06 17:36:45		perl scripts loaded: iset
+2017-12-06 17:36:45		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 17:36:45		script: 351 scripts for WeeChat 2.0
+2017-12-06 17:36:45		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 17:37:23	=!=	Error: option "remove" not found
+2017-12-06 17:37:30		perl: unloading script "iset"
+2017-12-06 17:37:30		perl: script removed: /home/micah/.weechat/perl/autoload/iset.pl
+2017-12-06 17:37:30		perl: script removed: /home/micah/.weechat/perl/iset.pl
+2017-12-06 17:37:50		Option changed: buflist.format.hotlist_message = "${color:7}"  (default: "${color:brown}")
+2017-12-06 17:37:57		Option changed: buflist.format.buffer_current = "${color:,7}${format_buffer}"  (default: "${color:,blue}${format_buffer}")
+2017-12-06 17:38:29		Option changed: buflist.format.buffer_current = "${color:,blue}${format_buffer}"
+2017-12-06 17:38:42		Option changed: buflist.format.buffer_current = "${color:,7}${format_buffer}"  (default: "${color:,blue}${format_buffer}")
+2017-12-06 17:39:01		Option changed: buflist.format.hotlist_message = "${color:2}"  (default: "${color:brown}")
+2017-12-06 17:39:04		Option changed: buflist.format.hotlist_message = "${color:3}"  (default: "${color:brown}")
+2017-12-06 17:39:08		Option changed: buflist.format.hotlist_message = "${color:7}"  (default: "${color:brown}")
+2017-12-06 17:39:11		Option changed: buflist.format.hotlist_message = "${color:8}"  (default: "${color:brown}")
+2017-12-06 17:42:59		Option changed: buflist.format.buffer_current = "${color:,7}${format_buffer}"  (default: "${color:,blue}${format_buffer}")
+2017-12-06 17:43:07		Option changed: buflist.format.buffer_current = "${color:,blue}${format_buffer}"
+2017-12-06 17:43:15		Option changed: buflist.format.hotlist_message = "${color:blue}"  (default: "${color:brown}")
+2017-12-06 17:45:49		Option changed: weechat.look.prefix_align_max = 15  (default: 0)
+2017-12-06 17:46:11		Option changed: weechat.look.buffer_time_format = "${253}%H:${245}%M"  (default: "%H:%M:%S")
+2017-12-06 17:46:59		New key binding (context "default"): ctrl-g => /go
+2017-12-06 17:49:16		Key:
+2017-12-06 17:49:16		  ctrl-g => /go
+2017-12-06 17:50:59	=!=	Error: unknown command "/g" (type /help for help)
+2017-12-06 17:51:42		Option created: plugins.var.python.urlserver.http_port = "60211"
+2017-12-06 17:52:02	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:52:02		fifo: pipe closed
+2017-12-06 17:52:02		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 17:52:02		script: 351 scripts for WeeChat 2.0
+2017-12-06 17:52:02		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 17:55:40	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:55:40		fifo: pipe closed
+2017-12-06 17:55:42		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 17:55:42		script: 351 scripts for WeeChat 2.0
+2017-12-06 17:55:42		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 17:56:11	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 17:56:11		fifo: pipe closed
+2017-12-06 18:29:27		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 18:29:27		script: 351 scripts for WeeChat 2.0
+2017-12-06 18:29:27		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 18:29:43	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 18:29:43		fifo: pipe closed
+2017-12-06 19:22:54		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 19:22:54		script: 351 scripts for WeeChat 2.0
+2017-12-06 19:22:54		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 19:23:49	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 19:23:49		fifo: pipe closed
+2017-12-06 22:15:56		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 22:15:56		script: 351 scripts for WeeChat 2.0
+2017-12-06 22:15:56		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 22:20:37	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2017-12-06 22:20:48	=!=	irc: command "part" must be executed on irc buffer (server or channel)
+2017-12-06 22:30:35	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 22:30:35		fifo: pipe closed
+2017-12-06 22:30:39		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 22:30:39		script: 351 scripts for WeeChat 2.0
+2017-12-06 22:30:39		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 22:32:37		python: loading script "/home/micah/.weechat/python/urlgrab.py"
+2017-12-06 22:32:37		python: registered script "urlgrab", version 2.8 (Url functionality Loggin, opening of browser, selectable links)
+2017-12-06 22:33:48		[python/urlgrab]  /url  [open <url> | <url> | show | copy [n] | [n] | list]
+2017-12-06 22:33:48		Url Grabber
+2017-12-06 22:33:48		open or <url>: opens the url
+2017-12-06 22:33:48		show: Opens the select buffer to allow for url selection
+2017-12-06 22:33:48		copy: Copies the nth url to the system clipboard
+2017-12-06 22:33:48		list: Lists the urls in the current buffer
+2017-12-06 22:34:19		[urlgrab] Unknown command 'open'.  Try '/help url' for usage
+2017-12-06 22:34:36		[urlgrab] Unknown command 'google'.  Try '/help url' for usage
+2017-12-06 22:35:07		[urlgrab] #general: no entries
+2017-12-06 22:35:53		python: unloading script "urlgrab"
+2017-12-06 22:35:53		python: script removed: /home/micah/.weechat/python/autoload/urlgrab.py
+2017-12-06 22:35:53		python: script removed: /home/micah/.weechat/python/urlgrab.py
+2017-12-06 22:36:02		script: script "urlselect.lua" can not be installed because plugin "lua" is not loaded
+2017-12-06 22:36:46		python: loading script "/home/micah/.weechat/python/urlbar.py"
+2017-12-06 22:36:46		python: registered script "urlbar", version 12 (Bar with URLs. For easy clicking or selecting.)
+2017-12-06 22:37:19		[python/urlbar]  /urlbar  [list | hide | show | toggle | url URL]
+2017-12-06 22:37:19		URL bar control
+2017-12-06 22:37:19		   list: list all URL and show URL bar
+2017-12-06 22:37:19		   hide: hide URL bar
+2017-12-06 22:37:19		   show: show URL bar
+2017-12-06 22:37:19		   toggle: toggle showing of URL bar
+2017-12-06 22:37:30		URL list empty.
+2017-12-06 22:37:30		[python/urlbar]  /urlbar  [list | hide | show | toggle | url URL]
+2017-12-06 22:37:30		URL bar control
+2017-12-06 22:37:30		   list: list all URL and show URL bar
+2017-12-06 22:37:30		   hide: hide URL bar
+2017-12-06 22:37:30		   show: show URL bar
+2017-12-06 22:37:30		   toggle: toggle showing of URL bar
+2017-12-06 22:37:59		URL list empty.
+2017-12-06 22:37:59		[python/urlbar]  /urlbar  [list | hide | show | toggle | url URL]
+2017-12-06 22:37:59		URL bar control
+2017-12-06 22:37:59		   list: list all URL and show URL bar
+2017-12-06 22:37:59		   hide: hide URL bar
+2017-12-06 22:37:59		   show: show URL bar
+2017-12-06 22:37:59		   toggle: toggle showing of URL bar
+2017-12-06 22:38:11		python: unloading script "urlbar"
+2017-12-06 22:38:11		python: script removed: /home/micah/.weechat/python/autoload/urlbar.py
+2017-12-06 22:38:11		python: script removed: /home/micah/.weechat/python/urlbar.py
+2017-12-06 22:38:17	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 22:38:17		fifo: pipe closed
+2017-12-06 22:38:18		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-06 22:38:18		script: 351 scripts for WeeChat 2.0
+2017-12-06 22:38:18		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-06 23:36:34	=!=	python: unable to run function "quit_notification_cb"
+2017-12-06 23:36:34		fifo: pipe closed
+2017-12-07 21:20:06		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-07 21:20:06		script: downloading list of scripts...
+2017-12-07 21:20:06		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-07 21:20:13		script: 351 scripts for WeeChat 2.0
+2017-12-07 21:20:34	=!=	python: unable to run function "quit_notification_cb"
+2017-12-07 21:20:34		fifo: pipe closed
+2017-12-07 21:41:43		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-07 21:41:43		script: 351 scripts for WeeChat 2.0
+2017-12-07 21:41:43		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-07 21:42:00		Secured data "slackapi" set
+2017-12-07 21:42:00		Options saved to sec.conf
+2017-12-07 21:42:38	=!=	Error: option "python.slack.slack_api_token" not found
+2017-12-07 21:43:09		Option changed: plugins.var.python.slack.slack_api_token = "${sec.data.slackapi}"
+2017-12-07 21:43:14	=!=	python: unable to run function "quit_notification_cb"
+2017-12-07 21:43:14		fifo: pipe closed
+2017-12-07 21:43:16		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-07 21:43:16		script: 351 scripts for WeeChat 2.0
+2017-12-07 21:43:16		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-07 21:45:24		Passphrase added
+2017-12-07 21:45:24		Options saved to sec.conf
+2017-12-07 21:45:37		Secured data "slackapi" set
+2017-12-07 21:45:37		Options saved to sec.conf
+2017-12-07 21:45:49	=!=	python: unable to run function "quit_notification_cb"
+2017-12-07 21:45:49		fifo: pipe closed
+2017-12-07 21:45:56		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-07 21:45:56		script: 351 scripts for WeeChat 2.0
+2017-12-07 21:45:56		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-07 21:46:23		Passphrase changed
+2017-12-07 21:46:23		Options saved to sec.conf
+2017-12-07 21:46:30		Secured data "slackapi" set
+2017-12-07 21:46:30		Options saved to sec.conf
+2017-12-07 21:46:33	=!=	python: unable to run function "quit_notification_cb"
+2017-12-07 21:46:33		fifo: pipe closed
+2017-12-07 21:46:35		python scripts loaded: autosort, colorize_nicks, go, slack, vimode, zerotab
+2017-12-07 21:46:35		script: 351 scripts for WeeChat 2.0
+2017-12-07 21:46:35		Plugins loaded: alias, aspell, buflist, charset, exec, fifo, fset, irc, logger, perl, python, relay, script, trigger, xfer
+2017-12-07 21:46:56	=!=	python: unable to run function "quit_notification_cb"
+2017-12-07 21:46:56		fifo: pipe closed

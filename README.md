@@ -33,6 +33,7 @@ My dotfiles for my Linux rice.
 - vdirsyncer
 - khard
 - khal
+- weechat
 - cava
 - gpymusic
 - mps-youtube
