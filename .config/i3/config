@@ -13,9 +13,9 @@ font pango:System San Francisco Display, FontAwesome 13
 floating_modifier $mod
 
 # reload the configuration file
-bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
-bindsym $mod+Shift+r restart
+bindsym $mod+Shift+Ctrl+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
@@ -169,6 +169,25 @@ exec --no-startup-id $term -name files -e /home/micah/.config/i3/scripts/runner 
 bindsym $mod+Control+r exec --no-startup-id $term -name files -e /home/micah/.config/i3/scripts/runner "ranger /home/micah/"
 bindsym $mod+r [instance="files"] scratchpad show; move position center
 
+
+#################
+# TERMINAL APPS #
+#################
+
+# start mutt in floating window
+for_window [instance="email"] floating enable
+for_window [instance="email"] resize set 825 600
+for_window [instance="email"] move position center
+bindsym $mod+Shift+m exec --no-startup-id $term -name email -e /home/micah/.config/i3/scripts/runner "mutt"
+
+# start khal in floating window
+for_window [instance="cal"] floating enable
+for_window [instance="cal"] resize set 825 600
+for_window [instance="cal"] move position center
+bindsym $mod+Shift+c exec --no-startup-id $term -name cal -e /home/micah/.config/i3/scripts/runner "ikhal"
+
+# start rtv (reddit)
+bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
 
 ###################
 # CUSTOM CONTROLS #
