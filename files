@@ -10,9 +10,11 @@
 ~/.config/neofetch
 ~/.config/polybar
 ~/.config/ranger
+~/.config/rtv/rtv.cfg
 ~/.config/vdirsyncer/password.sh
 ~/.config/vdirsyncer/config
 ~/.gtkrc-2.0
+~/.mailcap
 ~/.msmtprc
 ~/.muttrc
 ~/.offlineimap.py
