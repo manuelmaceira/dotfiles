@@ -1,0 +1,7 @@
+#!/bin/bash
+
+out=$(find ~/.Mail/Gatech/INBOX/new ~/.Mail/Gmail/INBOX/new -type f|wc -l)
+
+if [ "$out" != "0" ]; then
+  echo $out
+fi

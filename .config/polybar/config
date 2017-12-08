@@ -28,9 +28,9 @@ module-margin-right = 1
 font-0 = System San Francisco Display:size=13;0
 font-1 = FontAwesome:size=13;0
 
-modules-left = i3
-modules-center = music
-modules-right = mail layout volume wlan eth battery date powermenu
+modules-left = i3 music
+modules-center =
+modules-right = updates mail layout volume wlan eth battery date powermenu
 
 [module/i3]
 type = internal/i3
@@ -126,12 +126,25 @@ label = %output%
 type = custom/script
 exec = /home/micah/.config/polybar/scripts/music
 interval = 5
+format-prefix = "Now Playing: "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+label = %output%
 
 [module/mail]
 type = custom/script
-exec = find ~/.Mail/Gatech/INBOX/new ~/.Mail/Gmail/INBOX/new -type f|wc -l
+exec = /home/micah/.config/polybar/scripts/mail
 interval = 5
 format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+label = %output%
+
+[module/updates]
+type = custom/script
+exec = /home/micah/.config/polybar/scripts/updates
+interval = 5
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format = <label>
 label = %output%
