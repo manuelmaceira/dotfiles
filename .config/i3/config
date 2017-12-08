@@ -224,9 +224,6 @@ bindsym $mod+Shift+Return exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -
 # terminal
 bindsym $mod+Control+Return exec $term
 
-# ranger file manager
-bindsym $mod+Shift+f exec --no-startup-id $term -e ranger ~
-
 # google play music
 bindsym $mod+Shift+g workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"
 
