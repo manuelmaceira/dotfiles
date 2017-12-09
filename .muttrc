@@ -57,3 +57,6 @@ macro index Z "<shell-escape>offlineimap<enter>" "sync all mail"
 
 macro index X '<sync-mailbox><enter-command>source ~/.config/mutt/gmailrc<enter><change-folder>!<enter>'
 macro index S '<sync-mailbox><enter-command>source ~/.config/mutt/gatechrc<enter><change-folder>!<enter>'
+macro index,pager \cb "<pipe-message> urlview<Enter>" "call urlscan to extract URLs out of a message"
+macro attach,compose \cb "<pipe-entry> urlview<Enter>" "call urlscan to extract URLs out of a message"
+

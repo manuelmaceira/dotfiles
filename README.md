@@ -31,6 +31,7 @@ My dotfiles for my Linux rice.
 - neomutt
 - offlineimap
 - msmtp
+- urlview
 - vdirsyncer
 - khard
 - khal
