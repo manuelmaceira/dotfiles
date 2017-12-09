@@ -147,7 +147,6 @@ for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 825 600
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog dropdown "tmuxinator scratchpad"
 bindsym $mod+u exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog dropdown "tmuxinator scratchpad"
 
 # bc scratchpad
@@ -155,7 +154,6 @@ for_window [instance="math"] floating enable
 for_window [instance="math"] resize set 825 600
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
-exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
 bindsym $mod+Shift+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
 
 # ranger scratchpad
@@ -163,7 +161,6 @@ for_window [instance="files"] floating enable
 for_window [instance="files"] resize set 825 600
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
-exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog files "ranger /home/micah"
 bindsym $mod+r exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog files "ranger /home/micah"
 
 
@@ -247,21 +244,16 @@ bindsym $mod+Shift+w exec --no-startup-id $browser
 
 # browser
 exec --no-startup-id $browser
-# skype
-exec --no-startup-id skypeforlinux
-# google play music
-exec --no-startup-id i3-msg 'workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"; workspace $workspace1'
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $workspace1'
+# google play music
+exec --no-startup-id i3-msg 'workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"; workspace $workspace1'
 
 # application placements
 assign [class="Google-chrome"] $workspace1
 assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace3
 assign [class="Google Play Music Desktop Player"] $workspace4
-
-# remove urgency of opened applications
-exec --no-startup-id ~/.config/i3/scripts/deurgent
 
 
 ###############
