@@ -39,6 +39,7 @@ My dotfiles for my Linux rice.
 - gpymusic
 - mps-youtube
 - rtv
+- newsbeuter
 
 ## Look and Feel
 

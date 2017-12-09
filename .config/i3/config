@@ -185,8 +185,11 @@ for_window [instance="cal"] move position center
 for_window [instance="cal"] move scratchpad
 bindsym $mod+c exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog cal "ikhal"
 
-# start rtv (reddit)
+# start rtv
 bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
+
+# start newsbeuter
+bindsym $mod+n exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "newsbeuter"
 
 ###################
 # CUSTOM CONTROLS #
