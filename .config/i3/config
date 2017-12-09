@@ -185,6 +185,13 @@ for_window [instance="cal"] move position center
 for_window [instance="cal"] move scratchpad
 bindsym $mod+c exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog cal "ikhal"
 
+# start ddgr in floating window
+for_window [instance="ddgr"] floating enable
+for_window [instance="ddgr"] resize set 825 600
+for_window [instance="ddgr"] move position center
+for_window [instance="ddgr"] move scratchpad
+bindsym $mod+Shift+d exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog ddgr "ddgr -n 8"
+
 # start rtv
 bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
 

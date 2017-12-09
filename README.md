@@ -41,6 +41,7 @@ My dotfiles for my Linux rice.
 - mps-youtube
 - rtv
 - newsbeuter
+- ddgr
 
 ## Look and Feel
 
