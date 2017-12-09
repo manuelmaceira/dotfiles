@@ -39,6 +39,7 @@ alias kla='khal -c ~/.config/khal/academicconfig'
 alias ikla='ikhal -c ~/.config/khal/academicconfig'
 alias kd='khard'
 
+alias nb='newsbeuter'
 
 # dotfile sync and push
 syncconfigs() {
