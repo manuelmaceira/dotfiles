@@ -9,15 +9,6 @@ My dotfiles for my Linux rice.
 - i3lock
 - polybar
 - j4-dmenu-desktop
-- #### Utilities
-  - feh
-  - arandr
-  - lxappearance
-  - infinality
-  - compton
-  - scrot
-  - xdotool
-  - base16
 
 ### Command Line Applications
 
@@ -26,22 +17,31 @@ My dotfiles for my Linux rice.
 - vim
 - tmux
 - tmuxinator
-- neofetch
 - ranger
 - neomutt
-- offlineimap
-- msmtp
-- urlview
-- vdirsyncer
 - khard
 - khal
 - weechat
-- cava
 - gpymusic
+- cava
 - mps-youtube
 - rtv
 - newsbeuter
 - ddgr
+- #### Utilities
+  - neofetch
+  - feh
+  - arandr
+  - lxappearance
+  - infinality
+  - compton
+  - scrot
+  - xdotool
+  - base16
+  - offlineimap
+  - msmtp
+  - vdirsyncer
+  - urlview
 
 ## Look and Feel
 
