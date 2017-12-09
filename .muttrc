@@ -34,7 +34,7 @@ color index red  default "~T" #tagged
 color normal default default
 color body brightred default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
 color body brightblue default (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+
-color indicator magenta default
+color indicator blue default
 
 bind editor <space> noop
 bind index G last-entry
