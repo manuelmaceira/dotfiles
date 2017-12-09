@@ -5,19 +5,21 @@ files="./files"
 
 while read file
 do
+  if [[ $file != "" && $file != \#* ]]; then
     filepath=`dirname $file|cut -d'/' -f2-`
     filename=`basename "$file"`
     if eval "test -e $file"; then
-        if [[ $filepath != "~" ]]; then
-            filepath=$filepath/
-            mkdir -p $repo$filepath
-        else
-            filepath=""
-        fi
-        if eval "test -f $file"; then
-            eval "rsync --links $file $repo$filepath$filename"
-        elif eval "test -d $file"; then
-            eval "rsync --links -r $file/ $repo$filepath$filename --delete"
-        fi
+      if [[ $filepath != "~" ]]; then
+        filepath=$filepath/
+        mkdir -p $repo$filepath
+      else
+        filepath=""
+      fi
+      if eval "test -f $file"; then
+        eval "rsync --links $file $repo$filepath$filename"
+      elif eval "test -d $file"; then
+        eval "rsync --links -r $file/ $repo$filepath$filename --delete"
+      fi
     fi
+  fi
 done < $files

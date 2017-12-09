@@ -1,31 +1,74 @@
+# bash
 ~/.bash_aliases
 ~/.bashrc
+
+# zsh
+~/.zsh_aliases
+~/.zshrc
+
+# cava
 ~/.config/cava
+
+# compton
 ~/.config/compton.conf
+
+# gtk
 ~/.config/gtk-3.0
+~/.gtkrc-2.0
+
+# i3
 ~/.config/i3
-~/.config/khal
-~/.config/khard
-~/.config/mutt
-~/.config/neofetch
+
+#polybar
 ~/.config/polybar
-~/.config/ranger
-~/.config/rtv/rtv.cfg
+
+# khal
+~/.config/khal
+
+# khard
+~/.config/khard
+
+# vdirsyncer
 ~/.config/vdirsyncer/password.sh
 ~/.config/vdirsyncer/config
-~/.gtkrc-2.0
-~/.mailcap
-~/.msmtprc
+
+# mutt
+~/.config/mutt
 ~/.muttrc
+
+# offlineimap
 ~/.offlineimap.py
 ~/.offlineimaprc
 ~/.offlineimapsync.sh
+
+# msmtp
+~/.msmtprc
+
+# neofetch
+~/.config/neofetch
+
+# ranger
+~/.config/ranger
+
+# rtv
+~/.config/rtv/rtv.cfg
+~/.mailcap
+
+# newsbeuter
+~/.newsbeuter/config
+~/.newsbeuter/urls
+
+# tmux
 ~/.tmux.conf
 ~/.tmuxinator
+
+# weechat
 ~/.weechat
+
+# vim
 ~/.vimrc
 ~/.vimrc_background
 ~/.vimScripts
+
+# urxvt
 ~/.Xresources
-~/.zsh_aliases
-~/.zshrc
