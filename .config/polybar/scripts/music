@@ -6,10 +6,6 @@ if [ "$full" != "" ]; then
     artist=`echo "$full"|cut -d '-' -f 2|xargs -0`
     output=`echo "${title} by ${artist}"`
     echo $output
-    #if [ ${#output} -gt 50 ]; then
-        #output=`echo "$output"|cut -c 1-50`
-        #echo "$output..."
-    #else
-        #echo "$output"
-    #fi
+else
+  echo ""
 fi
