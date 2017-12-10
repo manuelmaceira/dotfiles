@@ -225,8 +225,8 @@ bindsym XF86AudioPause exec --no-startup-id echo "cycle pause" > ~/.config/mpv/c
 bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
 bindsym XF86AudioPrev exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 bindsym $mod+Shift+Control+space exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
-bindsym $mod+Shift+Control+Right exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
-bindsym $mod+Shift+Control+Left exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
+bindsym $mod+Shift+Control+h exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
+bindsym $mod+Shift+Control+l exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 
 
 #########################
