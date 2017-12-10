@@ -16,7 +16,7 @@ macro index I "<shell-escape>offlineimap -q -a gatech<enter>" "sync current inbo
 
 macro index,pager A ":set confirmappend=no delete=yes resolve=no\n<clear-flag>N<tag-prefix><save-message>=Archive<enter><sync-mailbox>:set confirmappend=yes delete=ask-yes resolve=yes\n" "Archive Message"
 
-macro index gi "<change-folder>=INBOX<enter>" "Go to inbox"
+macro index gi "<change-folder>=INBOX<enter><collapse-all>" "Go to inbox"
 macro index ga "<change-folder>=Archive<enter>" "Go to archive"
 macro index gs "<change-folder>=Sent Items<enter>" "Go to sent mail"
 macro index gt "<change-folder>=Deleted Items<enter>" "Go to trash"
