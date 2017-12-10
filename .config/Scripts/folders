@@ -4,6 +4,8 @@ D	~/data/Downloads
 p	~/data/Pictures
 v	~/data/Videos
 m	~/data/Music
-s	~/.config/Scripts
+S	~/.config/Scripts
 r	/
 cf	~/.config
+s	~/git/School-Work
+b	-
