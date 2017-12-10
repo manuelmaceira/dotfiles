@@ -189,6 +189,14 @@ for_window [instance="ddgr"] move position center
 for_window [instance="ddgr"] move scratchpad
 bindsym $mod+Shift+d exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog ddgr "ddgr -n 8"
 
+# start ddgr in floating window
+for_window [instance="weather"] floating enable
+for_window [instance="weather"] resize set 1200 800
+for_window [instance="weather"] move position center
+for_window [instance="weather"] move scratchpad
+bindsym $mod+Shift+Control+w exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog weather "wttr && read -k1 -s"
+
+
 # start rtv
 bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
 
@@ -200,7 +208,7 @@ bindsym $mod+n exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runn
 ###################
 
 # keyboard layout toggle
-bindsym $mod+Control+Space exec "~/.config/polybar/scripts/toggleKeyboard"
+bindsym $mod+Control+space exec "~/.config/polybar/scripts/toggleKeyboard"
 
 # lock screen
 bindsym $mod+Shift+x exec "~/.config/i3/scripts/lock/lock.sh ~/.config/i3/scripts/lock/lock.png"
