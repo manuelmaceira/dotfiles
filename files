@@ -13,6 +13,9 @@
 # cava
 ~/.config/cava
 
+# mpv
+~/.config/mpv/mpv.conf
+
 # compton
 ~/.config/compton.conf
 

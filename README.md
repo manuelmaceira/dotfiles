@@ -42,6 +42,7 @@ My dotfiles for my Linux rice.
   - msmtp
   - vdirsyncer
   - urlview
+  - mpv
 
 ## Look and Feel
 

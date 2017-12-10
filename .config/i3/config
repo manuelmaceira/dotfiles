@@ -200,7 +200,7 @@ bindsym $mod+n exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runn
 ###################
 
 # keyboard layout toggle
-bindsym $mod+Control+space exec "~/.config/polybar/scripts/toggleKeyboard"
+bindsym $mod+Control+Space exec "~/.config/polybar/scripts/toggleKeyboard"
 
 # lock screen
 bindsym $mod+Shift+x exec "~/.config/i3/scripts/lock/lock.sh ~/.config/i3/scripts/lock/lock.png"
@@ -219,6 +219,14 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10
 bindsym Print       exec --no-startup-id scrot '%Y-%m-%d_%H:%M:%S_screenshot.png'
 # current window
 bindsym Shift+Print exec --no-startup-id scrot -u '%Y-%m-%d_%H:%M:%S_screenshot.png'
+
+# media keys
+bindsym XF86AudioPause exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
+bindsym XF86AudioNext exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
+bindsym XF86AudioPrev exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
+bindsym $mod+Shift+Control+space exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
+bindsym $mod+Shift+Control+Right exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
+bindsym $mod+Shift+Control+Left exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 
 
 #########################
