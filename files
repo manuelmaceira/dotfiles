@@ -1,10 +1,14 @@
 # bash
-~/.bash_aliases
 ~/.bashrc
+~/.bash_aliases
 
 # zsh
-~/.zsh_aliases
 ~/.zshrc
+~/.zsh_aliases
+~/.zsh_shortcuts
+
+# scripts
+~/.config/Scripts
 
 # cava
 ~/.config/cava

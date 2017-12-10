@@ -26,6 +26,7 @@ setopt CORRECT
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
+source ~/.zsh_shortcuts
 
 # terminal vim
 export KEYTIMEOUT=10

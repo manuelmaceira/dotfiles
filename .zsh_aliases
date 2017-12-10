@@ -40,6 +40,7 @@ alias ikla='ikhal -c ~/.config/khal/academicconfig'
 alias kd='khard'
 
 alias nb='newsbeuter'
+alias ss='python /home/micah/.config/Scripts/shortcuts.py'
 
 # dotfile sync and push
 syncconfigs() {
@@ -53,14 +54,6 @@ syncconfigs() {
         echo "Must include commit a message."
     fi
 }
-
-# convenience aliases for editing configs
-alias ev='vim ~/.vimrc'
-alias et='vim ~/.tmux.conf'
-alias ez='vim ~/.zshrc'
-alias ea='vim ~/.zsh_aliases'
-alias e3='vim ~/.config/i3/config'
-alias ep='vim ~/.config/polybar/config'
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
