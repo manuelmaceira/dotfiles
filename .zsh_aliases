@@ -170,6 +170,9 @@ gcclm() {
 }
 wttr()
 {
-    # change Paris to your default location
-    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"${1:-Paris}"
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"$1"
+}
+wt()
+{
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"$1?0"
 }
