@@ -61,6 +61,9 @@
 ~/.config/rtv/rtv.cfg
 ~/.mailcap
 
+# zathura
+~/.config/zathura
+
 # newsbeuter
 ~/.newsbeuter/config
 ~/.newsbeuter/urls

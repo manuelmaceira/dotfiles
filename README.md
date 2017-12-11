@@ -28,6 +28,7 @@ My dotfiles for my Linux rice.
 - rtv
 - newsbeuter
 - ddgr
+- zathura
 - #### Utilities
   - neofetch
   - feh
