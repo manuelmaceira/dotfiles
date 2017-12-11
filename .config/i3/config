@@ -79,7 +79,7 @@ bindsym $mod+f fullscreen toggle
 
 # change container layout
 bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
@@ -149,24 +149,12 @@ for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 bindsym $mod+u exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog dropdown "tmuxinator scratchpad"
 
-# bc scratchpad
-for_window [instance="math"] floating enable
-for_window [instance="math"] resize set 825 600
-for_window [instance="math"] move position center
-for_window [instance="math"] move scratchpad
-bindsym $mod+Shift+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
-
 # ranger scratchpad
 for_window [instance="files"] floating enable
 for_window [instance="files"] resize set 825 600
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
 bindsym $mod+r exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog files "ranger /home/micah"
-
-
-#################
-# TERMINAL APPS #
-#################
 
 # start mutt in floating window
 for_window [instance="email"] floating enable
@@ -175,12 +163,22 @@ for_window [instance="email"] move position center
 for_window [instance="email"] move scratchpad
 bindsym $mod+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog email "mutt"
 
+# browser
+bindsym $mod+w exec --no-startup-id $browser
+
+# bc scratchpad
+for_window [instance="math"] floating enable
+for_window [instance="math"] resize set 825 600
+for_window [instance="math"] move position center
+for_window [instance="math"] move scratchpad
+bindsym $mod+Shift+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
+
 # start khal in floating window
 for_window [instance="cal"] floating enable
 for_window [instance="cal"] resize set 825 600
 for_window [instance="cal"] move position center
 for_window [instance="cal"] move scratchpad
-bindsym $mod+c exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog cal "ikhal"
+bindsym $mod+Shift+c exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog cal "ikhal"
 
 # start ddgr in floating window
 for_window [instance="ddgr"] floating enable
@@ -194,14 +192,18 @@ for_window [instance="weather"] floating enable
 for_window [instance="weather"] resize set 1200 800
 for_window [instance="weather"] move position center
 for_window [instance="weather"] move scratchpad
-bindsym $mod+Shift+Control+w exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog weather "wttr && read -k1 -s"
+bindsym $mod+Shift+w exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog weather "wttr && read -k1 -s"
 
 
 # start rtv
 bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
 
 # start newsbeuter
-bindsym $mod+n exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "newsbeuter"
+bindsym $mod+Shift+n exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "newsbeuter"
+
+# google play music
+bindsym $mod+Shift+g workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"
+
 
 ###################
 # CUSTOM CONTROLS #
@@ -252,12 +254,6 @@ bindsym $mod+Shift+Return exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -
 
 # terminal
 bindsym $mod+Control+Return exec $term
-
-# google play music
-bindsym $mod+Shift+g workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"
-
-# browser
-bindsym $mod+Shift+w exec --no-startup-id $browser
 
 
 ########################
