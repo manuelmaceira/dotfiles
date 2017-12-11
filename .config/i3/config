@@ -194,6 +194,12 @@ for_window [instance="weather"] move position center
 for_window [instance="weather"] move scratchpad
 bindsym $mod+Shift+w exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog weather "wttr && read -k1 -s"
 
+# start glances in floating window
+for_window [instance="glances"] floating enable
+for_window [instance="glances"] resize set 1800 960
+for_window [instance="glances"] move position center
+for_window [instance="glances"] move scratchpad
+bindsym $mod+Shift+t exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog glances "glances"
 
 # start rtv
 bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
