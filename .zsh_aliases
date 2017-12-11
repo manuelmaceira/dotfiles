@@ -28,6 +28,24 @@ alias gcala='gcal agenda'
 alias gcalw='gcal calw'
 alias gcalm='gcal calm'
 
+# wttr
+wttrf()
+{
+    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"$1"
+}
+wttr()
+{
+    wttrf "$1?u"
+}
+wttrm()
+{
+    wttrf "$1?m"
+}
+wt()
+{
+    wttr "$1?0"
+}
+
 # email aliases
 alias m='mutt'
 alias oimap='offlineimap'
@@ -167,12 +185,4 @@ gcclm() {
     else
         echo "$1 is not a c file"
     fi
-}
-wttr()
-{
-    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"$1"
-}
-wt()
-{
-    curl -H "Accept-Language: ${LANG%_*}" wttr.in/"$1?0"
 }
