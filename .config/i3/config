@@ -218,6 +218,9 @@ bindsym $mod+Shift+g workspace $workspace4; exec $term -e ~/.config/i3/scripts/r
 # keyboard layout toggle
 bindsym $mod+Control+space exec "~/.config/polybar/scripts/toggleKeyboard"
 
+# powersaver toggle
+bindsym $mod+Shift+Control+s exec "~/.config/i3/scripts/powersaver"
+
 # lock screen
 bindsym $mod+Shift+x exec "~/.config/i3/scripts/lock/lock.sh ~/.config/i3/scripts/lock/lock.png"
 
