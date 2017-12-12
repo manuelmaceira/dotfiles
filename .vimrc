@@ -6,6 +6,27 @@ source ~/.vim_runtime/vimrcs/filetypes.vim
 source ~/.vim_runtime/vimrcs/plugins_config.vim
 source ~/.vim_runtime/vimrcs/extended.vim
 
+" add personal pathogen plugins
+call pathogen#infect('~/.vim_pathogen/{}')
+call pathogen#helptags()
+
+""""""""""""""""""""""""""""
+" => Nerd Tree
+""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "left"
+
+""""""""""""""""""""""""""""
+" => Tagbar
+""""""""""""""""""""""""""""
+nmap <F8> :TagbarToggle<CR>
+
+" Colorscheme
+let base16colorspace=256
+if filereadable(expand("~/.vimrc_background"))
+  source ~/.vimrc_background
+endif
+colorscheme base16-default-dark
+
 " 1 tab == 4 spaces
 set shiftwidth=2
 set ts=2
