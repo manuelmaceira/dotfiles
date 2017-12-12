@@ -235,6 +235,8 @@ bindsym $mod+Shift+Control+m exec --no-startup-id amixer -D pulse sset Master to
 # brightness keys
 bindsym XF86MonBrightnessUp   exec xbacklight -inc 10
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10
+bindsym $mod+Shift+Control+bracketright exec xbacklight -inc 10
+bindsym $mod+Shift+Control+bracketleft  exec xbacklight -dec 10
 
 ## screenshot keys
 # fullscreen
