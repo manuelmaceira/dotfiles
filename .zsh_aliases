@@ -60,6 +60,8 @@ alias kd='khard'
 alias nb='newsbeuter'
 alias ss='python /home/micah/.config/Scripts/shortcuts.py'
 
+alias arc='aria2c'
+
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'

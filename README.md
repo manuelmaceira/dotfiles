@@ -45,6 +45,7 @@ My dotfiles for my Linux rice.
   - vdirsyncer
   - urlview
   - mpv
+  - aria2c
 
 ## Look and Feel
 
