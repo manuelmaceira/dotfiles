@@ -144,21 +144,21 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 # scratchpad terminal
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 825 600
+for_window [instance="dropdown"] resize set 900 650
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 bindsym $mod+u exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog dropdown "tmuxinator scratchpad"
 
 # ranger scratchpad
 for_window [instance="files"] floating enable
-for_window [instance="files"] resize set 825 600
+for_window [instance="files"] resize set 900 650
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
 bindsym $mod+r exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog files "ranger /home/micah"
 
 # start mutt in floating window
 for_window [instance="email"] floating enable
-for_window [instance="email"] resize set 825 600
+for_window [instance="email"] resize set 900 650
 for_window [instance="email"] move position center
 for_window [instance="email"] move scratchpad
 bindsym $mod+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog email "mutt"
@@ -168,21 +168,21 @@ bindsym $mod+w exec --no-startup-id $browser
 
 # bc scratchpad
 for_window [instance="math"] floating enable
-for_window [instance="math"] resize set 825 600
+for_window [instance="math"] resize set 900 650
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
 bindsym $mod+Shift+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
 
 # start khal in floating window
 for_window [instance="cal"] floating enable
-for_window [instance="cal"] resize set 825 600
+for_window [instance="cal"] resize set 900 650
 for_window [instance="cal"] move position center
 for_window [instance="cal"] move scratchpad
 bindsym $mod+Shift+c exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog cal "ikhal"
 
 # start ddgr in floating window
 for_window [instance="ddgr"] floating enable
-for_window [instance="ddgr"] resize set 825 600
+for_window [instance="ddgr"] resize set 900 650
 for_window [instance="ddgr"] move position center
 for_window [instance="ddgr"] move scratchpad
 bindsym $mod+Shift+d exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog ddgr "ddgr -n 8"
