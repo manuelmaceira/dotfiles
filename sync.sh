@@ -2,24 +2,21 @@
 
 repo="/home/micah/git/dotfiles/"
 files="./files"
+oldfiles="./oldfiles"
+echo "" > $oldfiles
 
 while read file
 do
   if [[ $file != "" && $file != \#* ]]; then
-    filepath=`dirname $file|cut -d'/' -f2-`
-    filename=`basename "$file"`
-    if eval "test -e $file"; then
-      if [[ $filepath != "~" ]]; then
-        filepath=$filepath/
-        mkdir -p $repo$filepath
-      else
-        filepath=""
+    if [ ! -L ~/$file ]; then
+      if [ -e ~/$file ]; then
+        echo ""
+        echo "~/$file >> ~/$file-old"
+        echo "~/$file-old" >> $oldfiles
+        mv ~/$file ~/$file-old
       fi
-      if eval "test -f $file"; then
-        eval "rsync --links $file $repo$filepath$filename"
-      elif eval "test -d $file"; then
-        eval "rsync --links -r $file/ $repo$filepath$filename --delete"
-      fi
+      echo "$repo$file >> ~/$file"
+      ln -s $repo$file ~/$file
     fi
   fi
 done < $files
