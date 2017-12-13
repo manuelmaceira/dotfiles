@@ -60,19 +60,6 @@ alias kd='khard'
 alias nb='newsbeuter'
 alias ss='python /home/micah/.config/Scripts/shortcuts.py'
 
-# dotfile sync and push
-syncconfigs() {
-    if [[ "$1" != "" ]]; then
-        cd /home/micah/git/dotfiles;
-        ./sync.sh;
-        git commit -am "$1";
-        git push;
-        cd -;
-    else
-        echo "Must include commit a message."
-    fi
-}
-
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
