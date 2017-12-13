@@ -82,7 +82,6 @@
 ~/.vimrc
 ~/.vimrc_background
 ~/.vimScripts
-~/.vim_runtime
 
 # urxvt
 ~/.Xresources
