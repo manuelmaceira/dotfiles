@@ -201,6 +201,13 @@ for_window [instance="glances"] move position center
 for_window [instance="glances"] move scratchpad
 bindsym $mod+Shift+t exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog glances "glances"
 
+# rtorrent terminal
+for_window [instance="rtorrent"] floating enable
+for_window [instance="rtorrent"] resize set 1800 960
+for_window [instance="rtorrent"] move position center
+for_window [instance="rtorrent"] move scratchpad
+bindsym $mod+Shift+u exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog rtorrent "tmuxinator rtorrent"
+
 # start rtv
 bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
 

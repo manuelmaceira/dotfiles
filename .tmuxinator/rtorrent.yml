@@ -1,0 +1,5 @@
+name: rtorrent
+root: ~/
+
+windows:
+    - default: rtorrent

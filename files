@@ -64,6 +64,9 @@
 # zathura
 ~/.config/zathura
 
+# rtorrent
+~/.rtorrent.rc
+
 # newsbeuter
 ~/.newsbeuter/config
 ~/.newsbeuter/urls
