@@ -80,8 +80,7 @@
 
 # vim
 ~/.vimrc
-~/.vimrc_background
-~/.vimScripts
+~/.vim
 
 # urxvt
 ~/.Xresources

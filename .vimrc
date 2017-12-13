@@ -1,13 +1,13 @@
-set runtimepath+=~/.vim_runtime
+set runtimepath+=~/.vim/runtime
 
 " add ultimate vimrc config and plugins
-source ~/.vim_runtime/vimrcs/basic.vim
-source ~/.vim_runtime/vimrcs/filetypes.vim
-source ~/.vim_runtime/vimrcs/plugins_config.vim
-source ~/.vim_runtime/vimrcs/extended.vim
+source ~/.vim/runtime/vimrcs/basic.vim
+source ~/.vim/runtime/vimrcs/filetypes.vim
+source ~/.vim/runtime/vimrcs/plugins_config.vim
+source ~/.vim/runtime/vimrcs/extended.vim
 
 " add personal pathogen plugins
-call pathogen#infect('~/.vim_pathogen/{}')
+call pathogen#infect('~/.vim/pathogen/{}')
 call pathogen#helptags()
 
 """"""""""""""""""""""""""""
@@ -22,8 +22,8 @@ nmap <F8> :TagbarToggle<CR>
 
 " Colorscheme
 let base16colorspace=256
-if filereadable(expand("~/.vimrc_background"))
-  source ~/.vimrc_background
+if filereadable(expand("~/.vim/vimrc_background"))
+  source ~/.vim/vimrc_background
 endif
 colorscheme base16-default-dark
 
@@ -46,8 +46,8 @@ set nofoldenable
 set foldlevel=2  
 
 " commands to retab document to different tab width
-command TTF :source ~/.vimScripts/2to4.vim
-command FTT :source ~/.vimScripts/4to2.vim
+command TTF :source ~/.vim/scripts/2to4.vim
+command FTT :source ~/.vim/scripts/4to2.vim
 
 " disable arrow keys
 noremap <Up> <NOP>
