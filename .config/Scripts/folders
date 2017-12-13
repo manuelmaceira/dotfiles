@@ -8,4 +8,7 @@ S	~/.config/Scripts
 r	/
 cf	~/.config
 s	~/git/School-Work
+df	~/git/dotfiles
+ws	~/git/mehalter.github.io
+cv	~/git/mehalter.github.io/resume
 b	-

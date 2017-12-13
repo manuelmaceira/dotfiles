@@ -62,6 +62,8 @@ alias ss='python /home/micah/.config/Scripts/shortcuts.py'
 
 alias arc='aria2c'
 
+alias gohome='sudo openvpn --script-security 2 --config /home/micah/.openvpn/halter_home.ovpn'
+
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'

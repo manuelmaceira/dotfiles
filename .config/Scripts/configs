@@ -10,3 +10,4 @@ cfc	~/.config/Scripts/configs
 cfT	~/.tmux.conf
 cfp	~/.config/polybar/config
 cfd	~/.Xresources
+cfcv	~/git/mehalter.github.io/resume/resume.tex
