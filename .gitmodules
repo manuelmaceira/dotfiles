@@ -1,0 +1,12 @@
+[submodule ".vim/runtime"]
+	path = .vim/runtime
+	url = https://github.com/amix/vimrc.git
+[submodule ".vim/pathogen/haskell-vim"]
+	path = .vim/pathogen/haskell-vim
+	url = https://github.com/neovimhaskell/haskell-vim.git
+[submodule ".vim/pathogen/base16-vim"]
+	path = .vim/pathogen/base16-vim
+	url = https://github.com/chriskempson/base16-vim.git
+[submodule ".vim/pathogen/tagbar"]
+	path = .vim/pathogen/tagbar
+	url = https://github.com/majutsushi/tagbar.git
