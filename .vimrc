@@ -19,6 +19,10 @@ let g:NERDTreeWinPos = "left"
 " => Tagbar
 """"""""""""""""""""""""""""
 nmap <F8> :TagbarToggle<CR>
+nmap <leader>bb :TagbarToggle<CR>
+
+" IDE Mode
+nmap <leader>i :TagbarToggle<CR>:NERDTreeToggle<CR>:wincmd p<CR>
 
 " Colorscheme
 let base16colorspace=256
