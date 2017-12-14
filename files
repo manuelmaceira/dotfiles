@@ -84,3 +84,6 @@
 
 # urxvt
 .Xdefaults
+
+# sc-im
+.scimrc

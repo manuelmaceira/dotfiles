@@ -1,0 +1,8 @@
+set autocalc
+set numeric
+set numeric_decimal=0
+set overlap
+set xlsx_readformulas
+set newline_action=l
+set ignorecase
+color "type=HEADINGS fg=DEFAULT_COLOR bg=DEFAULT_COLOR"

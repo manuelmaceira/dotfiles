@@ -30,6 +30,7 @@ My dotfiles for my Linux rice.
 - ddgr
 - zathura
 - rtorrent
+- sc-im
 - #### Utilities
   - neofetch
   - feh
