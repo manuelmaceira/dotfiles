@@ -2,7 +2,7 @@ cfb	~/.bashrc
 cfz	~/.zshrc
 cfa	~/.zsh_aliases
 cfv	~/.vimrc
-cfr	~/.config/ranger/rc.conf.base
+cfr	~/.config/ranger/rc.conf
 cfi	~/.config/i3/config
 cfm	~/.muttrc
 cff	~/.config/Scripts/folders
