@@ -58,7 +58,6 @@ alias ikla='ikhal -c ~/.config/khal/academicconfig'
 alias kd='khard'
 
 alias nb='newsbeuter'
-alias ss='python /home/micah/.config/Scripts/shortcuts.py'
 
 alias arc='aria2c'
 

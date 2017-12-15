@@ -49,6 +49,9 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2  
 
+" Auto build configs on edit
+autocmd BufWritePost ~/git/dotfiles/.config/Scripts/folders,~/git/dotfiles/.config/Scripts/configs !python ~/.config/Scripts/shortcuts.py
+
 " commands to retab document to different tab width
 command TTF :source ~/.vim/scripts/2to4.vim
 command FTT :source ~/.vim/scripts/4to2.vim
