@@ -47,7 +47,7 @@ with open(home+".config/Scripts/folders") as fold:
         # Adds the zsh_shortcuts shortcuts:
         zsh_shortcuts += ("alias " + line[0]
                            + "=\"cd " + line[1]
-                           + " && ls -a\""
+                           + "; echo \$PWD\""
                            + "\n")
 
 
