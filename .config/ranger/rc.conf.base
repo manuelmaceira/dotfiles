@@ -362,7 +362,7 @@ map yn shell -f echo -n %f    | xsel -i; xsel -o | xsel -i -b
 map =  chmod
 
 map cw console rename%space
-map a  rename_append
+map aa  rename_append
 map A  eval fm.open_console('rename ' + fm.thisfile.relative_path.replace("%", "%%"))
 map I  eval fm.open_console('rename ' + fm.thisfile.relative_path.replace("%", "%%"), position=7)
 
@@ -611,6 +611,28 @@ tmap <C-l> redraw_window
 tmap <ESC> taskview_close
 copytmap <ESC> q Q w <C-c>
 
+
 # ===================================================================
-# == Folder Keybindings
+# == Custom Keybindings
 # ===================================================================
+
+# General
+map vi console shell vim%space
+map mkd console mkdir%space
+map x shell ~/.config/Scripts/extract %f
+map Z shell tar -cvzf %f.tar.gz %f
+
+# Document
+map MP shell pandoc %f --latex-engine=xelatex -o %f.pdf
+map ML shell rubber -m xelatex %f
+
+# Image
+map C shell convert -rotate 90 %s %s
+map F shell convert -flop %s %s
+
+# Download
+map ytv console shell youtube-dl -ic%space
+map yta console shell youtube-dl -xic%space
+map arc console shell aria2c%space
+
+# Folders

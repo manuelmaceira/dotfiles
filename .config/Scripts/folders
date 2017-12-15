@@ -1,3 +1,6 @@
+r	/
+e	/etc
+u	/usr
 h	~
 d	~/data/Documents
 D	~/data/Downloads
@@ -5,7 +8,6 @@ p	~/data/Pictures
 v	~/data/Videos
 m	~/data/Music
 S	~/.config/Scripts
-r	/
 cf	~/.config
 s	~/git/School-Work
 df	~/git/dotfiles
