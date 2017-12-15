@@ -11,7 +11,7 @@ m	~/data/Music
 S	~/.config/Scripts
 cf	~/.config
 s	~/git/School-Work
-df	~/git/dotfiles
+.f	~/git/dotfiles
 ws	~/git/mehalter.github.io
 cv	~/git/mehalter.github.io/resume
-b	-
+b	->/dev/null
