@@ -5,6 +5,9 @@ source ~/.vim/runtime/vimrcs/basic.vim
 source ~/.vim/runtime/vimrcs/filetypes.vim
 source ~/.vim/runtime/vimrcs/plugins_config.vim
 source ~/.vim/runtime/vimrcs/extended.vim
+source ~/.vim/vim_guides.vim
+
+let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
 " add personal pathogen plugins
 call pathogen#infect('~/.vim/pathogen/{}')
@@ -36,7 +39,8 @@ set shiftwidth=2
 set ts=2
 set sts=2
 
-imap jk <Esc>
+inoremap jw <Esc>
+inoremap wj <Esc>
 set number
 set rnu
 
