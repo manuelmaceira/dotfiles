@@ -14,7 +14,7 @@ zsh_shortcuts = ""
 home = str(Path.home()) + "/"
 
 ranger_location = home + ".config/ranger/rc.conf"
-zsh_location = home + ".zsh_shortcuts"
+zsh_location = home + ".zsh_aliases"
 
 
 # These are the labels that demarcate where the shortcuts
