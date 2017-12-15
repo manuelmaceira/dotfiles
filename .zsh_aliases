@@ -66,6 +66,8 @@ alias sc='scim'
 
 alias gohome='sudo openvpn --script-security 2 --config /home/micah/.openvpn/halter_home.ovpn'
 
+alias gsua='git submodule update --recursive --remote'
+
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
