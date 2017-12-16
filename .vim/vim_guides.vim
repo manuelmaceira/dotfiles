@@ -1,9 +1,8 @@
 "" Defining the guides
-inoremap <Space><Space> <Esc>/<++><Enter>"_c4l
-vnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
-map <Space><Space> <Esc>/<++><Enter>"_c4l
+inoremap <c-l> <Esc>/<++><Enter>"_c4l
+vnoremap <c-l> <Esc>/<++><Enter>"_c4l
+map <c-l> <Esc>/<++><Enter>"_c4l
 inoremap ;gui <++>
-inoremap <C-l> <Space><Space>
 
 "" Defining the autofills
 
