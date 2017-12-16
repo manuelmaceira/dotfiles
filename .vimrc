@@ -267,8 +267,8 @@ nnoremap <leader>mp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
 " => Commands
 """"""""""""""""""""""""""""
 " commands to retab document to different tab width
-command TTF :source ~/.vim/scripts/2to4.vim
-command FTT :source ~/.vim/scripts/4to2.vim
+command TTF :set ts=2 sts=2 noet | retab! | set ts=4 sts=4 et | retab
+command FTT :set ts=4 sts=4 noet | retab! | set ts=2 sts=2 et | retab
 
 " sudo save with :W
 command W w !sudo tee % > /dev/null
