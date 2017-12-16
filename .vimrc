@@ -5,11 +5,13 @@ call pathogen#helptags()
 """"""""""""""""""""""""""""
 " => General
 """"""""""""""""""""""""""""
+set nocompatible
 set encoding=utf8
 set history=500
 set autoread
 set so=7
 set ffs=unix,dos,mac
+set path+=**
 " 1 tab == 2 spaces
 set expandtab
 set smarttab
@@ -183,9 +185,9 @@ map 0 ^
 map <leader>pp :setlocal paste!<CR>
 
 "" Defining guides
-inoremap <C-l> <Esc>/<++><Enter>"_c4l
-vnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
-map <Space><Space> <Esc>/<++><Enter>"_c4l
+inoremap <leader><leader> <esc>/<++><Enter>"_c4l
+vnoremap <leader><leader> <esc>/<++><Enter>"_c4l
+map <leader><leader> <esc>/<++><Enter>"_c4l
 inoremap ;gui <++>
 
 " date and time shortcuts
@@ -218,8 +220,8 @@ map <C-space> ?
 map <silent> <leader><CR> :set hlsearch!<CR>
 
 " remap escape
-inoremap jw <Esc>
-inoremap wj <Esc>
+inoremap jf <esc>
+inoremap fj <esc>
 
 " spell check
 map <leader>ss :setlocal spell!<CR>
@@ -272,6 +274,9 @@ command FTT :set ts=4 sts=4 noet | retab! | set ts=2 sts=2 et | retab
 
 " sudo save with :W
 command W w !sudo tee % > /dev/null
+
+" write tags
+command! MakeTags !ctags -R .
 
 """"""""""""""""""""""""""""
 " => Autocommands
