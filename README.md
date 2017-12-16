@@ -58,4 +58,5 @@ My dotfiles for my Linux rice.
 ### Fonts
 
 - Yosemite San Francisco Font
+- Hasklig
 - Font Awesome 4.7
