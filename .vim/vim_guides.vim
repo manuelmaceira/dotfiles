@@ -1,12 +1,33 @@
 "" Defining the guides
-inoremap <c-l> <Esc>/<++><Enter>"_c4l
-vnoremap <c-l> <Esc>/<++><Enter>"_c4l
-map <c-l> <Esc>/<++><Enter>"_c4l
+inoremap <C-l> <Esc>/<++><Enter>"_c4l
+vnoremap <Space><Space> <Esc>/<++><Enter>"_c4l
+map <Space><Space> <Esc>/<++><Enter>"_c4l
 inoremap ;gui <++>
 
-"" Defining the autofills
+""""""""""""""""""""""""""""
+" => Java
+""""""""""""""""""""""""""""
+autocmd FileType java inoremap ;fr for(;<++>;<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f;i
+autocmd FileType java inoremap ;fc for(: <++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f:i
+autocmd FileType java inoremap ;wl while() {<Enter><++><Enter>}<Enter><++><Esc>3k^f)i
+autocmd FileType java inoremap ;dw do {<Enter>;<Enter>} while (<++>);<Enter><++><Esc>2k^xA
+autocmd FileType java inoremap ;if if() {<Enter><++><Enter>}<Enter><++><Esc>3k^f)i
+autocmd FileType java inoremap ;ie if() {<Enter><++><Enter>} else {<Enter><++><Enter>}<Enter><++><Esc>5k^f)i
+autocmd FileType java inoremap ;ii if() {<Enter><++><Enter>} else <++><Esc>2k^f)i
+autocmd FileType java inoremap ;pc public class  {<Enter><++><Enter>}<Esc>2k^f{hi
+autocmd FileType java inoremap ;cl class  {<Enter><++><Enter>}<Esc>2k^f{hi
+autocmd FileType java inoremap ;pf public  <++>(<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^fc2li
+autocmd FileType java inoremap ;rf private  <++>(<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^fc2li
+autocmd FileType java inoremap ;mn public static void main(String[] args) {<Enter>;<Enter>}<Enter><++><Esc>2k^xA
+autocmd FileType java inoremap ;rt return 
+autocmd FileType java inoremap ;st static 
+autocmd FileType java inoremap ;pt System.out.println();<Enter><++><Esc>k^f)i
+autocmd FileType java inoremap ;ip <Esc>?import<Enter>oimport ;<Esc>i
+autocmd FileType java nnoremap ;ip ?import<Enter>oimport ;<Esc>i
 
-"""LATEX
+""""""""""""""""""""""""""""
+" => LaTeX
+""""""""""""""""""""""""""""
 autocmd FileType tex inoremap ;fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
 autocmd FileType tex inoremap ;fi \begin{fitch}<Enter><Enter>\end{fitch}<Enter><Enter><++><Esc>3kA
 autocmd FileType tex inoremap ;exe \begin{exe}<Enter>\ex<Space><Enter>\end{exe}<Enter><Enter><++><Esc>3kA
@@ -39,12 +60,8 @@ autocmd FileType tex inoremap ;tt \texttt{}<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;bt {\blindtext}
 autocmd FileType tex inoremap ;nu $\varnothing$
 autocmd FileType tex inoremap ;col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
-"""END
-
 autocmd FileType tex inoremap ;ent \gloss{}{<++>}{<++>}<Enter><++><Esc>k0f}i
-
-
-"""Logical Symbols
+" Logical Symbols
 autocmd FileType tex inoremap ;m $$<Space><++><Esc>2T$i
 autocmd FileType tex inoremap ;M $$$$<Enter><Enter><++><Esc>2k$hi
 autocmd FileType tex inoremap ;neg {\neg}
@@ -59,8 +76,7 @@ autocmd FileType tex inoremap ;fa {\forall}
 autocmd FileType tex inoremap ;ex {\exists}
 autocmd FileType tex inoremap ;dia	{\Diamond}
 autocmd FileType tex inoremap ;box	{\Box}
-"""END
-
+" smallcaps
 autocmd Filetype tex inoremap ;nom {\textsc{nom}}
 autocmd FileType tex inoremap ;acc {\textsc{acc}}
 autocmd FileType tex inoremap ;dat {\textsc{dat}}
@@ -70,7 +86,9 @@ autocmd FileType tex inoremap ;voc {\textsc{voc}}
 autocmd FileType tex inoremap ;loc {\textsc{loc}}
 autocmd Filetype tex inoremap ;inst {\textsc{inst}}
 
-"""HTML
+""""""""""""""""""""""""""""
+" => HTML
+""""""""""""""""""""""""""""
 autocmd FileType html inoremap ;b <b></b><Space><++><Esc>FbT>i
 autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeT>i
 autocmd FileType html inoremap ;1 <h1></h1><Enter><Enter><++><Esc>2kf<i
@@ -81,15 +99,17 @@ autocmd FileType html inoremap ;a <a<Space>href=""><++></a><Space><++><Esc>F"i
 autocmd FileType html inoremap ;ul <ul><Enter><li></li><Enter></ul><Enter><Enter><++><Esc>03kf<i
 autocmd FileType html inoremap ;li <Esc>o<li></li><Esc>F>a
 autocmd FileType html inoremap ;ol <ol><Enter><li></li><Enter></ol><Enter><Enter><++><Esc>03kf<i
-"""END
 
-""".bib
+""""""""""""""""""""""""""""
+" => Bib
+""""""""""""""""""""""""""""
 autocmd FileType bib inoremap ;a @article{<Enter><Tab>author<Space>=<Space>"<++>",<Enter><Tab>year<Space>=<Space>"<++>",<Enter><Tab>title<Space>=<Space>"<++>",<Enter><Tab>journal<Space>=<Space>"<++>",<Enter><Tab>volume<Space>=<Space>"<++>",<Enter><Tab>pages<Space>=<Space>"<++>",<Enter><Tab>}<Enter><++><Esc>8kA,<Esc>i
 autocmd FileType bib inoremap ;b @book{<Enter><Tab>author<Space>=<Space>"<++>",<Enter><Tab>year<Space>=<Space>"<++>",<Enter><Tab>title<Space>=<Space>"<++>",<Enter><Tab>publisher<Space>=<Space>"<++>",<Enter><Tab>}<Enter><++><Esc>6kA,<Esc>i
 autocmd FileType bib inoremap ;c @incollection{<Enter><Tab>author<Space>=<Space>"<++>",<Enter><Tab>title<Space>=<Space>"<++>",<Enter><Tab>booktitle<Space>=<Space>"<++>",<Enter><Tab>editor<Space>=<Space>"<++>",<Enter><Tab>year<Space>=<Space>"<++>",<Enter><Tab>publisher<Space>=<Space>"<++>",<Enter><Tab>}<Enter><++><Esc>8kA,<Esc>i
-"""END
 
-"""Markdown
+""""""""""""""""""""""""""""
+" => Markdown
+""""""""""""""""""""""""""""
 autocmd Filetype markdown inoremap ;b ****<Space><++><Esc>F*hi
 autocmd Filetype markdown inoremap ;s ~~~~<Space><++><Esc>F~hi
 autocmd Filetype markdown inoremap ;e **<Space><++><Esc>F*i
@@ -100,4 +120,3 @@ autocmd Filetype markdown inoremap ;1 #<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ;2 ##<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ;3 ###<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ;l --------<Enter>
-"""END
