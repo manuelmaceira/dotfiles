@@ -82,7 +82,6 @@ set whichwrap+=<,>,h,l
 set ignorecase
 set smartcase
 set incsearch
-set hlsearch
 " no sounds on errors
 set noerrorbells
 set novisualbell
@@ -212,7 +211,7 @@ map <space> /
 map <C-space> ?
 
 " disable highlight
-map <silent> <leader><CR> :noh<CR>
+map <silent> <leader><CR> :set hlsearch!<CR>
 
 " remap escape
 inoremap jw <Esc>

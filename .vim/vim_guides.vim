@@ -26,6 +26,23 @@ autocmd FileType java inoremap ;ip <Esc>?import<Enter>oimport ;<Esc>i
 autocmd FileType java nnoremap ;ip ?import<Enter>oimport ;<Esc>i
 
 """"""""""""""""""""""""""""
+" => Python
+""""""""""""""""""""""""""""
+autocmd FileType python inoremap ;fr for  in <++>:<Enter><++><Enter><C-D><++><Esc>2k^fihi
+autocmd FileType python inoremap ;wl while():<Enter><++><Enter><C-D><++><Esc>2k^f)i
+autocmd FileType python inoremap ;we while():<Enter><++><Enter><C-D>else:<Enter><++><Enter><C-D><++><Esc>4k^f)i
+autocmd FileType python inoremap ;if if :<Enter><++><Enter><C-D><++><Esc>2k^f:i
+autocmd FileType python inoremap ;ie if :<Enter><++><Enter><C-D>else:<Enter><++><Enter><C-D><++><Esc>4k^f:i
+autocmd FileType python inoremap ;ii if :<Enter><++><Enter><C-D>el<++><Esc>2k^f:i
+autocmd FileType python inoremap ;cl class :<Enter><++><Esc>k^f:i
+autocmd FileType python inoremap ;fn def (<++>):<Enter><++><Enter><C-D><++><Esc>2k^f(i
+autocmd FileType python inoremap ;mn def main():<Enter>;<Enter><Enter><C-D>if __name__ == "__main__":<Enter>main()<Esc>3k^xA
+autocmd FileType python inoremap ;rt return 
+autocmd FileType python inoremap ;pt print()<Enter><++><Esc>k^f)i
+autocmd FileType python inoremap ;ip <Esc>?import<Enter>oimport 
+autocmd FileType python nnoremap ;ip ?import<Enter>oimport 
+
+""""""""""""""""""""""""""""
 " => LaTeX
 """"""""""""""""""""""""""""
 autocmd FileType tex inoremap ;fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
