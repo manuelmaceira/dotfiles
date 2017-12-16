@@ -42,6 +42,8 @@ autocmd FileType tex inoremap ;nu $\varnothing$
 autocmd FileType tex inoremap ;col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
 """END
 
+autocmd FileType tex inoremap ;ent \gloss{}{<++>}{<++>}<Enter><++><Esc>k0f}i
+
 
 """Logical Symbols
 autocmd FileType tex inoremap ;m $$<Space><++><Esc>2T$i

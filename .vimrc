@@ -8,6 +8,7 @@ source ~/.vim/runtime/vimrcs/extended.vim
 source ~/.vim/vim_guides.vim
 
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+autocmd FileType tex  setlocal indentexpr=
 
 " add personal pathogen plugins
 call pathogen#infect('~/.vim/pathogen/{}')
