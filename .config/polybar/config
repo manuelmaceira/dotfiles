@@ -39,20 +39,25 @@ index-sort = true
 wrapping-scroll = false
 padding = 1
 
-label-focused = %name%
+ws-icon-0 = 1;: 
+ws-icon-1 = 2;: 
+ws-icon-2 = 3;: 
+ws-icon-3 = 4;: 
+
+label-focused = %name%%icon%
 label-focused-foreground   = ${colors.foreground}
 label-focused-background   = ${colors.background}
 label-focused-padding      = ${self.padding}
 
-label-unfocused = %name%
+label-unfocused = %name%%icon%
 label-unfocused-foreground = ${colors.foreground-alt}
 label-unfocused-padding    = ${self.padding}
 
-label-visible = %name%
+label-visible = %name%%icon%
 label-visible-background   = ${self.label-focused-background}
 label-visible-padding      = ${self.padding}
 
-label-urgent = %name%
+label-urgent = %name%%icon%
 label-urgent-background    = ${colors.alert}
 label-urgent-padding       = ${self.padding}
 

@@ -92,10 +92,10 @@ bindsym $mod+d focus child
 ##############
 
 # wokspace names
-set $workspace1  "1: "
-set $workspace2  "2: "
-set $workspace3  "3: "
-set $workspace4  "4: "
+set $workspace1  "1"
+set $workspace2  "2"
+set $workspace3  "3"
+set $workspace4  "4"
 set $workspace5  "5"
 set $workspace6  "6"
 set $workspace7  "7"
@@ -164,7 +164,7 @@ for_window [instance="math"] floating enable
 for_window [instance="math"] resize set 900 650
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
-bindsym $mod+Shift+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
+bindsym $mod+Shift+b exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
 
 # start khal in floating window
 for_window [instance="cal"] floating enable
@@ -207,8 +207,11 @@ bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/script
 # start newsbeuter
 bindsym $mod+Shift+n exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "newsbeuter"
 
-# google play music
-bindsym $mod+Shift+g workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"
+# music
+bindsym $mod+Shift+g exec --no-startup-id zsh /home/micah/.config/i3/scripts/music
+bindsym $mod+Shift+y exec --no-startup-id $term -name mpsyt -e /home/micah/.config/i3/scripts/runner "mpsyt"
+bindsym $mod+Shift+m exec --no-startup-id $term -name gpymusic -e /home/micah/.config/i3/scripts/runner "gpymusic"
+bindsym $mod+Shift+semicolon exec --no-startup-id $term -name cava -e /home/micah/.config/i3/scripts/runner "cava"
 
 
 ###################
@@ -261,7 +264,7 @@ bindsym $mod+Shift+control+p exec --no-startup-id ~/.config/polybar/launch.sh
 #########################
 
 # dmenu launcher
-bindsym $mod+Shift+Return exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$inactive-bg-color' -nf '$inactive-text-color' -sb '$text-color' -sf '$inactive-bg-color' -fn 'System San Francisco Display-13'"
+bindsym $mod+Shift+Return exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
 
 # terminal
 bindsym $mod+Control+Return exec $term
@@ -275,8 +278,6 @@ bindsym $mod+Control+Return exec $term
 exec --no-startup-id $browser
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $workspace1'
-# google play music
-exec --no-startup-id i3-msg 'workspace $workspace4; exec $term -e ~/.config/i3/scripts/runner "tmuxinator music"; workspace $workspace1'
 
 # application placements
 assign [class="Google-chrome"] $workspace1
@@ -300,11 +301,13 @@ bindsym $mod+Shift+p gaps inner current minus 5
 #set $text-color          #f3f4f5
 #set $inactive-text-color #676E7D
 #set $urgent-bg-color     #E53935
-set_from_resource $bg-color 	         i3wm.color1 #f0f0f0 
-set_from_resource $inactive-bg-color   i3wm.color0 #f0f0f0 
-set_from_resource $text-color          i3wm.color5 #f0f0f0 
-set_from_resource $inactive-text-color i3wm.color4 #f0f0f0 
-set_from_resource $urgent-bg-color     i3wm.color2 #f0f0f0 
+set_from_resource $dmenu-bg-color 	   i3wm.color0 #f0f0f0
+set_from_resource $dmenu-text-color    i3wm.color5 #f0f0f0
+set_from_resource $bg-color 	         i3wm.color1 #f0f0f0
+set_from_resource $inactive-bg-color   i3wm.color7 #f0f0f0
+set_from_resource $text-color          i3wm.color5 #f0f0f0
+set_from_resource $inactive-text-color i3wm.color4 #f0f0f0
+set_from_resource $urgent-bg-color     i3wm.color2 #f0f0f0
 
 # window colors         border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          $bg-color

@@ -1,0 +1,54 @@
+{
+  "layout": "splitv",
+  "type": "con",
+  "nodes": [
+    {
+      "border": "normal",
+      "floating": "auto_off",
+      "layout": "splith",
+      "percent": 0.7,
+      "type": "con",
+      "nodes": [
+        {
+          "border": "pixel",
+          "current_border_width": 10,
+          "floating": "auto_off",
+          "name": "gpymusic",
+          "percent": 0.5,
+          "swallows": [
+             {
+               "instance": "^gpymusic$"
+             }
+          ],
+          "type": "con"
+        },
+        {
+          "border": "pixel",
+          "current_border_width": 10,
+          "floating": "auto_off",
+          "name": "mpsyt",
+          "percent": 0.5,
+          "swallows": [
+             {
+               "instance": "^mpsyt$"
+             }
+          ],
+          "type": "con"
+        }
+      ]
+    },
+    {
+      "border": "pixel",
+      "current_border_width": 10,
+      "floating": "auto_off",
+      "name": "cava",
+      "percent": 0.3,
+      "swallows": [
+         {
+           "instance": "^cava$"
+         }
+      ],
+      "type": "con"
+    }
+  ]
+}
