@@ -1,0 +1,8 @@
+#!/bin/bash
+
+layout=`i3-msg -t get_tree | jq -r 'recurse(.nodes[]) | select(.nodes[].focused == true) | .layout'`
+if [[ "$layout" == "splitv" ]]; then
+  echo ""
+else
+  echo ""
+fi

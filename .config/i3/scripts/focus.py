@@ -54,8 +54,6 @@ def main():
       i3.focus(con_id=tmp_id)
       make_unfloat(current_id)
       destroy_tmp(tmp_id)
-    else:
-      make_unfloat()
   else:
     if find_tmp(root) == None:
       create_tmp(current_id)
