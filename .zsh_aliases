@@ -59,6 +59,8 @@ alias kd='khard'
 
 alias nb='newsbeuter'
 
+alias nf='neofetch --ascii_distro arch'
+
 alias arc='aria2c'
 
 alias sc='scim'
