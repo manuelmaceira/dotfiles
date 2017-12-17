@@ -296,7 +296,7 @@ assign [class="Google Play Music Desktop Player"] $workspace4
 # LOOK & FEEL #
 ###############
 
-for_window [class="^.*"] border pixel 5
+for_window [class="^.*"] border pixel 10
 bindsym $mod+p gaps inner current plus 5
 bindsym $mod+Shift+p gaps inner current minus 5
 gaps inner 10
@@ -319,7 +319,7 @@ client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color      
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # set wallpaper
-exec_always --no-startup-id feh --bg-scale ~/data/Pictures/Wallpapers/abstract-wallpaper-2.jpg
+exec_always --no-startup-id feh --bg-scale ~/.config/wall
 
 # start compositor
 exec --no-startup-id compton -f
