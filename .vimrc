@@ -178,6 +178,11 @@ nmap <leader>k <Plug>yankstack_substitute_newer_paste
 " fugitive
 nnoremap <silent> <leader>d :Gdiff<CR>
 
+" tmuxline
+let g:tmuxline_powerline_separators = 0
+let g:tmuxline_preset = 'minimal'
+let g:tmuxline_theme = 'lightline'
+
 """"""""""""""""""""""""""""
 " => Remaps
 """"""""""""""""""""""""""""

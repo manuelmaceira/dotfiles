@@ -37,3 +37,6 @@
 [submodule ".vim/pathogen/vim-yankstack"]
 	path = .vim/pathogen/vim-yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
+[submodule ".vim/pathogen/tmuxline.vim"]
+	path = .vim/pathogen/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git
