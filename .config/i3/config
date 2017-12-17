@@ -69,7 +69,7 @@ bindsym $mod+Shift+q kill
 ##################
 
 ## split direction
-bindsym $mod+b split toggle
+bindsym $mod+s split toggle
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f exec --no-startup-id python2 ~/.config/i3/scripts/focus.py
