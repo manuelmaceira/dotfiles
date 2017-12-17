@@ -47,6 +47,7 @@ My dotfiles for my Linux rice.
   - urlview
   - mpv
   - aria2c
+  - py-wal
 
 ## Look and Feel
 

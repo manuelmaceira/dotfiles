@@ -91,13 +91,15 @@ set tm=500
 syntax enable
 set t_Co=256
 let base16colorspace=256
-if filereadable(expand("~/.vim/vimrc_background"))
-  source ~/.vim/vimrc_background
-endif
-colorscheme base16-default-dark
+"if filereadable(expand("~/.vim/vimrc_background"))
+"source ~/.vim/vimrc_background
+"endif
+"colorscheme base16-default-dark
+colorscheme wal
 
 " Status line
 set laststatus=2
+set noshowmode
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 function! HasPaste()
   if &paste

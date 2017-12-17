@@ -40,3 +40,9 @@
 [submodule ".vim/pathogen/tmuxline.vim"]
 	path = .vim/pathogen/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
+[submodule ".vim/pathogen/wal.vim"]
+	path = .vim/pathogen/wal.vim
+	url = https://github.com/dylanaraps/wal.vim.git
+[submodule ".themes/Flatabulous-wal"]
+	path = .themes/Flatabulous-wal
+	url = https://github.com/dylanaraps/Flatabulous-wal.git

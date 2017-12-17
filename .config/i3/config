@@ -261,7 +261,7 @@ bindsym $mod+Shift+control+p exec --no-startup-id ~/.config/polybar/launch.sh
 #########################
 
 # dmenu launcher
-bindsym $mod+Shift+Return exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$inactive-bg-color' -nf '$inactive-text-color' -sb '$bg-color' -sf '$text-color' -fn 'System San Francisco Display-13'"
+bindsym $mod+Shift+Return exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$inactive-bg-color' -nf '$inactive-text-color' -sb '$text-color' -sf '$inactive-bg-color' -fn 'System San Francisco Display-13'"
 
 # terminal
 bindsym $mod+Control+Return exec $term
@@ -295,11 +295,16 @@ bindsym $mod+p gaps inner current plus 5
 bindsym $mod+Shift+p gaps inner current minus 5
 
 # colors
-set $bg-color 	         #676E7D
-set $inactive-bg-color   #2f343f
-set $text-color          #f3f4f5
-set $inactive-text-color #676E7D
-set $urgent-bg-color     #E53935
+#set $bg-color 	          #676E7D
+#set $inactive-bg-color   #2f343f
+#set $text-color          #f3f4f5
+#set $inactive-text-color #676E7D
+#set $urgent-bg-color     #E53935
+set_from_resource $bg-color 	         i3wm.color1 #f0f0f0 
+set_from_resource $inactive-bg-color   i3wm.color0 #f0f0f0 
+set_from_resource $text-color          i3wm.color5 #f0f0f0 
+set_from_resource $inactive-text-color i3wm.color4 #f0f0f0 
+set_from_resource $urgent-bg-color     i3wm.color2 #f0f0f0 
 
 # window colors         border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          $bg-color
@@ -312,6 +317,7 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # set wallpaper
 exec_always --no-startup-id feh --bg-scale ~/.config/wall
+exec_always --no-startup-id wal -R
 
 # start compositor
 exec --no-startup-id compton -f
