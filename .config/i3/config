@@ -295,7 +295,7 @@ bindsym $mod+p gaps inner current plus 5
 bindsym $mod+Shift+p gaps inner current minus 5
 
 # colors
-set $bg-color 	         #4c5467
+set $bg-color 	         #676E7D
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
