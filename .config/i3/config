@@ -296,10 +296,12 @@ assign [class="Google Play Music Desktop Player"] $workspace4
 # LOOK & FEEL #
 ###############
 
-new_window pixel 3
+new_window pixel 10
+bindsym $mod+p border pixel 10
+bindsym $mod+Shift+p border pixel 3
 
 # colors
-set $bg-color 	         #2f343f
+set $bg-color 	         #414858
 set $inactive-bg-color   #2f343f
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
