@@ -278,6 +278,8 @@ bindsym $mod+Control+Return exec $term
 exec --no-startup-id $browser
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $workspace1'
+# music
+exec --no-startup-id i3-msg 'exec zsh /home/micah/.config/i3/scripts/music'
 
 # application placements
 assign [class="Google-chrome"] $workspace1

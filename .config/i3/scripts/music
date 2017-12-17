@@ -4,3 +4,4 @@ i3-msg "workspace 4; append_layout ~/.config/i3/layouts/music.json"
 i3-msg 'exec --no-startup-id urxvt -name gpymusic -e /home/micah/.config/i3/scripts/runner "gpymusic"'
 i3-msg 'exec --no-startup-id urxvt -name mpsyt -e /home/micah/.config/i3/scripts/runner "mpsyt"'
 i3-msg 'exec --no-startup-id urxvt -name cava -e /home/micah/.config/i3/scripts/runner "cava"'
+i3-msg "workspace back_and_forth"
