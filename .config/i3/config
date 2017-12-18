@@ -135,26 +135,29 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 # DROPDOWN WINDOWS #
 ####################
 
+set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
+set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
+
 # scratchpad terminal
 for_window [instance="dropdown"] floating enable
 for_window [instance="dropdown"] resize set 900 650
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
-bindsym $mod+u exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog dropdown "tmuxinator scratchpad"
+bindsym $mod+u exec $cliprog dropdown "tmuxinator scratchpad"
 
 # ranger scratchpad
 for_window [instance="files"] floating enable
 for_window [instance="files"] resize set 900 650
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
-bindsym $mod+r exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog files "ranger /home/micah"
+bindsym $mod+r exec $cliprog files "ranger /home/micah"
 
 # start mutt in floating window
 for_window [instance="email"] floating enable
 for_window [instance="email"] resize set 900 650
 for_window [instance="email"] move position center
 for_window [instance="email"] move scratchpad
-bindsym $mod+m exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog email "mutt"
+bindsym $mod+m exec $cliprog email "mutt"
 
 # browser
 bindsym $mod+w exec --no-startup-id $browser
@@ -164,54 +167,58 @@ for_window [instance="math"] floating enable
 for_window [instance="math"] resize set 900 650
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
-bindsym $mod+Shift+b exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog math "bc"
+bindsym $mod+Shift+b exec $cliprog math "bc"
 
 # start khal in floating window
 for_window [instance="cal"] floating enable
 for_window [instance="cal"] resize set 900 650
 for_window [instance="cal"] move position center
 for_window [instance="cal"] move scratchpad
-bindsym $mod+Shift+c exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog cal "ikhal"
+bindsym $mod+Shift+c exec $cliprog cal "ikhal"
 
 # start ddgr in floating window
 for_window [instance="ddgr"] floating enable
 for_window [instance="ddgr"] resize set 900 650
 for_window [instance="ddgr"] move position center
 for_window [instance="ddgr"] move scratchpad
-bindsym $mod+Shift+d exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog ddgr "ddgr -n 8"
+bindsym $mod+Shift+d exec $cliprog ddgr "ddgr -n 8"
 
 # start ddgr in floating window
 for_window [instance="weather"] floating enable
 for_window [instance="weather"] resize set 1200 800
 for_window [instance="weather"] move position center
 for_window [instance="weather"] move scratchpad
-bindsym $mod+Shift+w exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog weather "wttr && read -k1 -s"
+bindsym $mod+Shift+w exec $cliprog weather "wttr && read -k1 -s"
 
 # start glances in floating window
 for_window [instance="glances"] floating enable
 for_window [instance="glances"] resize set 1800 960
 for_window [instance="glances"] move position center
 for_window [instance="glances"] move scratchpad
-bindsym $mod+Shift+t exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog glances "glances"
+bindsym $mod+Shift+t exec $cliprog glances "glances"
 
 # rtorrent terminal
 for_window [instance="rtorrent"] floating enable
 for_window [instance="rtorrent"] resize set 1800 960
 for_window [instance="rtorrent"] move position center
 for_window [instance="rtorrent"] move scratchpad
-bindsym $mod+Shift+u exec --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog rtorrent "tmuxinator rtorrent"
+bindsym $mod+Shift+u exec $cliprog rtorrent "tmuxinator rtorrent"
 
 # start rtv
-bindsym $mod+Shift+v exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "rtv"
+bindsym $mod+Shift+v exec $runner "rtv"
 
 # start newsbeuter
-bindsym $mod+Shift+n exec --no-startup-id $term -e /home/micah/.config/i3/scripts/runner "newsbeuter"
+bindsym $mod+Shift+n exec $runner "newsbeuter"
 
 # music
 bindsym $mod+Shift+g exec --no-startup-id zsh /home/micah/.config/i3/scripts/music
 bindsym $mod+Shift+y exec --no-startup-id $term -name mpsyt -e /home/micah/.config/i3/scripts/runner "mpsyt"
 bindsym $mod+Shift+m exec --no-startup-id $term -name gpymusic -e /home/micah/.config/i3/scripts/runner "gpymusic"
 bindsym $mod+Shift+semicolon exec --no-startup-id $term -name cava -e /home/micah/.config/i3/scripts/runner "cava"
+
+# screencasting
+bindsym $mod+Insert exec --no-startup-id bash /home/micah/.config/Scripts/screencast
+bindsym $mod+Delete exec --no-startup-id killall ffmpeg & killall screenkey
 
 
 ###################
