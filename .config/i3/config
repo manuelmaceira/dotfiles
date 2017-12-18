@@ -149,8 +149,8 @@ assign [class="Google Play Music Desktop Player"] $workspace4
 ######################
 # LETTER KEYBINDINGS #
 ######################
-bindsym $mod+q               kill
-#bindsym $mod+Shift+q
+#bindsym $mod+q
+bindsym $mod+Shift+q         kill
 #bindsym $mod+Control+q
 #bindsym $mod+Shift+Control+q
 
@@ -164,8 +164,8 @@ bindsym $mod+Shift+e         exec "i3-nagbar -t warning -m 'You pressed the exit
 #bindsym $mod+Control+e
 #bindsym $mod+Shift+Control+e
 
-bindsym $mod+r               exec $cliprog files "ranger /home/micah"
-bindsym $mod+Shift+r         reload
+bindsym $mod+r
+bindsym $mod+Shift+r         exec $runner "rtv"
 #bindsym $mod+Control+r
 bindsym $mod+Shift+Control+r restart
 
@@ -260,7 +260,7 @@ bindsym $mod+Shift+c         exec $cliprog cal "ikhal"
 #bindsym $mod+Shift+Control+c
 
 #bindsym $mod+v
-bindsym $mod+Shift+v         exec $runner "rtv"
+#bindsym $mod+Shift+v
 #bindsym $mod+Control+v
 #bindsym $mod+Shift+Control+v
 
@@ -330,10 +330,10 @@ bindsym $mod+Shift+Control+bracketright exec xbacklight -inc 10
 bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
 bindsym $mod+Control+Return             exec $term
 
-bindsym $mod+Space                      focus mode_toggle
-bindsym $mod+Shift+Space                floating toggle
-bindsym $mod+Control+Space              exec "~/.config/polybar/scripts/toggleKeyboard"
-bindsym $mod+Shift+Control+Space        exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
+bindsym $mod+space                      focus mode_toggle
+bindsym $mod+Shift+space                floating toggle
+#bindsym $mod+Control+space
+bindsym $mod+Shift+Control+space        exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
 
 bindsym XF86AudioRaiseVolume            exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym XF86AudioLowerVolume            exec --no-startup-id amixer -D pulse sset Master 5%-
@@ -350,3 +350,8 @@ bindsym Shift+Print                     exec --no-startup-id scrot -u '%Y-%m-%d_
 bindsym $mod+Insert                     exec --no-startup-id bash /home/micah/.config/Scripts/screencast
 
 bindsym $mod+Delete                     exec --no-startup-id killall ffmpeg & killall screenkey
+
+bindsym $mod+Prior                      exec "~/.config/polybar/scripts/toggleKeyboard"
+
+bindsym $mod+Next                       reload
+bindsym $mod+Shift+Next                 restart
