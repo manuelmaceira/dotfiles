@@ -196,8 +196,8 @@ bindsym $mod+Shift+u         exec $cliprog rtorrent "tmuxinator rtorrent"
 
 bindsym $mod+p               gaps inner current plus 5
 bindsym $mod+Shift+p         gaps inner current minus 5
-bindsym $mod+Control+p       exec --no-startup-id ~/.config/polybar/launch.sh
-#bindsym $mod+Shift+Control+p
+#bindsym $mod+Control+p
+bindsym $mod+Shift+Control+p exec --no-startup-id ~/.config/polybar/launch.sh
 
 bindsym $mod+a               focus parent
 #bindsym $mod+Shift+a
