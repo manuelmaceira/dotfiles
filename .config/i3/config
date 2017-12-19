@@ -164,7 +164,7 @@ bindsym $mod+Shift+e         exec "i3-nagbar -t warning -m 'You pressed the exit
 #bindsym $mod+Control+e
 #bindsym $mod+Shift+Control+e
 
-bindsym $mod+r
+bindsym $mod+r               exec $cliprog files "ranger"
 bindsym $mod+Shift+r         exec $runner "rtv"
 #bindsym $mod+Control+r
 bindsym $mod+Shift+Control+r restart
