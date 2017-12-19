@@ -7,6 +7,7 @@ set $browser 'firefox'
 set $term     'urxvt'
 set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
 set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
+set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 
 ###############
@@ -146,9 +147,11 @@ assign [class="Firefox"] $workspace1
 assign [class="Skype"] $workspace3
 assign [class="Google Play Music Desktop Player"] $workspace4
 
+
 ######################
 # LETTER KEYBINDINGS #
 ######################
+
 #bindsym $mod+q
 bindsym $mod+Shift+q         kill
 #bindsym $mod+Control+q
@@ -160,14 +163,14 @@ bindsym $mod+Shift+w         exec $cliprog weather "wttr && read -k1 -s"
 #bindsym $mod+Shift+Control+w
 
 #bindsym $mod+e
-bindsym $mod+Shift+e         exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+#bindsym $mod+Shift+e
 #bindsym $mod+Control+e
 #bindsym $mod+Shift+Control+e
 
 bindsym $mod+r               exec $cliprog files "ranger"
 bindsym $mod+Shift+r         exec $runner "rtv"
 #bindsym $mod+Control+r
-bindsym $mod+Shift+Control+r restart
+#bindsym $mod+Shift+Control+r
 
 #bindsym $mod+t
 bindsym $mod+Shift+t         exec $cliprog glances "glances"
@@ -207,7 +210,7 @@ bindsym $mod+a               focus parent
 bindsym $mod+s               split toggle
 #bindsym $mod+Shift+s
 #bindsym $mod+Control+s
-bindsym $mod+Shift+Control+s exec "~/.config/i3/scripts/powersaver"
+#bindsym $mod+Shift+Control+s
 
 bindsym $mod+d               focus child
 bindsym $mod+Shift+d         exec $cliprog ddgr "ddgr -n 8"
@@ -250,7 +253,7 @@ bindsym $mod+Shift+Control+l exec --no-startup-id echo "playlist-prev" > ~/.conf
 #bindsym $mod+Shift+Control+z
 
 #bindsym $mod+x
-bindsym $mod+Shift+x         exec "~/.config/i3/scripts/lock/lock.sh ~/.config/i3/scripts/lock/lock.png"
+#bindsym $mod+Shift+x
 #bindsym $mod+Control+x
 #bindsym $mod+Shift+Control+x
 
@@ -260,7 +263,7 @@ bindsym $mod+Shift+c         exec $cliprog cal "ikhal"
 #bindsym $mod+Shift+Control+c
 
 #bindsym $mod+v
-#bindsym $mod+Shift+v
+bindsym $mod+Shift+v         exec $runner "rtv"
 #bindsym $mod+Control+v
 #bindsym $mod+Shift+Control+v
 
@@ -315,17 +318,35 @@ bindsym $mod+0       workspace $workspace10
 bindsym $mod+Shift+0 move container to workspace $workspace10
 
 
+########################
+# FUNCTION KEYBINDINGS #
+########################
+
+#bindsym $mod+F1
+#bindsym $mod+F2
+#bindsym $mod+F3
+#bindsym $mod+F4
+bindsym $mod+F5  exec "~/.config/i3/scripts/powersaver"
+#bindsym $mod+F6
+#bindsym $mod+F7
+#bindsym $mod+F8
+#bindsym $mod+F9
+#bindsym $mod+F10
+#bindsym $mod+F11
+#bindsym $mod+F12
+
+
 #####################
 # OTHER KEYBINDINGS #
 #####################
 
 bindsym $mod+Tab                        workspace back_and_forth
 
-bindsym $mod+Shift+semicolon            exec --no-startup-id $term -name cava -e /home/micah/.config/i3/scripts/runner "cava"
-
 bindsym $mod+Shift+Control+bracketleft  exec xbacklight -dec 10
 
 bindsym $mod+Shift+Control+bracketright exec xbacklight -inc 10
+
+bindsym $mod+Shift+semicolon            exec --no-startup-id $term -name cava -e /home/micah/.config/i3/scripts/runner "cava"
 
 bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
 bindsym $mod+Control+Return             exec $term
@@ -347,6 +368,8 @@ bindsym XF86MonBrightnessDown           exec xbacklight -dec 10
 bindsym Print                           exec --no-startup-id scrot '%Y-%m-%d_%H:%M:%S_screenshot.png'
 bindsym Shift+Print                     exec --no-startup-id scrot -u '%Y-%m-%d_%H:%M:%S_screenshot.png'
 
+bindsym $mod+Scroll_Lock                exec "~/.config/i3/scripts/lock/lock.sh ~/.config/i3/scripts/lock/lock.png"
+
 bindsym $mod+Insert                     exec --no-startup-id bash /home/micah/.config/Scripts/screencast
 
 bindsym $mod+Delete                     exec --no-startup-id killall ffmpeg & killall screenkey
@@ -355,3 +378,4 @@ bindsym $mod+Prior                      exec "~/.config/polybar/scripts/toggleKe
 
 bindsym $mod+Next                       reload
 bindsym $mod+Shift+Next                 restart
+  bindsym $mod+Shift+Control+Next         exec $i3exit
