@@ -288,35 +288,102 @@ bindsym $mod+Shift+Control+m exec --no-startup-id amixer -D pulse sset Master to
 # NUMBER KEYBINDINGS #
 ######################
 
-bindsym $mod+1       workspace $workspace1
-bindsym $mod+Shift+1 move container to workspace $workspace1
+bindsym $mod+1               workspace $workspace1
+bindsym $mod+Shift+1         move container to workspace $workspace1
+#bindsym $mod+Shift+Control+1
 
-bindsym $mod+2       workspace $workspace2
-bindsym $mod+Shift+2 move container to workspace $workspace2
+bindsym $mod+2               workspace $workspace2
+bindsym $mod+Shift+2         move container to workspace $workspace2
+#bindsym $mod+Shift+Control+2
 
-bindsym $mod+3       workspace $workspace3
-bindsym $mod+Shift+3 move container to workspace $workspace3
+bindsym $mod+3               workspace $workspace3
+bindsym $mod+Shift+3         move container to workspace $workspace3
+#bindsym $mod+Shift+Control+3
 
-bindsym $mod+4       workspace $workspace4
-bindsym $mod+Shift+4 move container to workspace $workspace4
+bindsym $mod+4               workspace $workspace4
+bindsym $mod+Shift+4         move container to workspace $workspace4
+#bindsym $mod+Shift+Control+4
 
-bindsym $mod+5       workspace $workspace5
-bindsym $mod+Shift+5 move container to workspace $workspace5
+bindsym $mod+5               workspace $workspace5
+bindsym $mod+Shift+5         move container to workspace $workspace5
+#bindsym $mod+Shift+Control+5
 
-bindsym $mod+6       workspace $workspace6
-bindsym $mod+Shift+6 move container to workspace $workspace6
+bindsym $mod+6               workspace $workspace6
+bindsym $mod+Shift+6         move container to workspace $workspace6
+#bindsym $mod+Shift+Control+6
 
-bindsym $mod+7       workspace $workspace7
-bindsym $mod+Shift+7 move container to workspace $workspace7
+bindsym $mod+7               workspace $workspace7
+bindsym $mod+Shift+7         move container to workspace $workspace7
+#bindsym $mod+Shift+Control+7
 
-bindsym $mod+8       workspace $workspace8
-bindsym $mod+Shift+8 move container to workspace $workspace8
+bindsym $mod+8               workspace $workspace8
+bindsym $mod+Shift+8         move container to workspace $workspace8
+#bindsym $mod+Shift+Control+8
 
-bindsym $mod+9       workspace $workspace9
-bindsym $mod+Shift+9 move container to workspace $workspace9
+bindsym $mod+9               workspace $workspace9
+bindsym $mod+Shift+9         move container to workspace $workspace9
+#bindsym $mod+Shift+Control+9
 
-bindsym $mod+0       workspace $workspace10
-bindsym $mod+Shift+0 move container to workspace $workspace10
+bindsym $mod+0               workspace $workspace10
+bindsym $mod+Shift+0         move container to workspace $workspace10
+#bindsym $mod+Shift+Control+0
+
+
+#######################
+# SPECIAL KEYBINDINGS #
+#######################
+
+#bindsym $mod+grave
+#bindsym $mod+Shift+grave
+#bindsym $mod+Shift+Control+grave
+
+#bindsym $mod+minus
+#bindsym $mod+Shift+minus
+#bindsym $mod+Shift+Control+minus
+
+#bindsym $mod+equal
+#bindsym $mod+Shift+equal
+#bindsym $mod+Shift+Control+equal
+
+bindsym $mod+Tab                        workspace back_and_forth
+#bindsym $mod+Shift+Tab
+#bindsym $mod+Shift+Control+Tab
+
+#bindsym $mod+bracketleft
+#bindsym $mod+Shift+bracketleft
+bindsym $mod+Shift+Control+bracketleft  exec xbacklight -dec 10
+
+#bindsym $mod+bracketright
+#bindsym $mod+Shift+bracketright
+bindsym $mod+Shift+Control+bracketright exec xbacklight -inc 10
+
+#bindsym $mod+backslash
+#bindsym $mod+Shift+backslash
+#bindsym $mod+Shift+Control+backslash
+
+#bindsym $mod+semicolon
+bindsym $mod+Shift+semicolon            exec --no-startup-id $term -name cava -e /home/micah/.config/i3/scripts/runner "cava"
+#bindsym $mod+Shift+Control+semicolon
+
+#bindsym $mod+apostrophe
+#bindsym $mod+Shift+apostrophe
+#bindsym $mod+Shift+Control+apostrophe
+
+bindsym $mod+Return                     exec $term
+bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
+#bindsym $mod+Shift+Control+Return
+
+#bindsym $mod+comma
+#bindsym $mod+Shift+comma
+#bindsym $mod+Shift+Control+comma
+
+#bindsym $mod+period
+#bindsym $mod+Shift+period
+#bindsym $mod+Shift+Control+period
+
+bindsym $mod+space                      focus mode_toggle
+bindsym $mod+Shift+space                floating toggle
+bindsym $mod+Shift+Control+space        exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
 
 
 ########################
@@ -324,59 +391,72 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 ########################
 
 #bindsym $mod+F1
+#bindsym $mod+Shift+F1
+
 #bindsym $mod+F2
+#bindsym $mod+Shift+F2
+
 #bindsym $mod+F3
+#bindsym $mod+Shift+F3
+
 #bindsym $mod+F4
-bindsym $mod+F5  exec "~/.config/i3/scripts/powersaver"
+#bindsym $mod+Shift+F4
+
+bindsym $mod+F5        exec "~/.config/i3/scripts/powersaver"
+#bindsym $mod+Shift+F5
+
 #bindsym $mod+F6
+#bindsym $mod+Shift+F6
+
 #bindsym $mod+F7
+#bindsym $mod+Shift+F7
+
 #bindsym $mod+F8
+#bindsym $mod+Shift+F8
+
 #bindsym $mod+F9
+#bindsym $mod+Shift+F9
+
 #bindsym $mod+F10
+#bindsym $mod+Shift+F10
+
 #bindsym $mod+F11
+#bindsym $mod+Shift+F11
+
 #bindsym $mod+F12
-
-
-#####################
-# OTHER KEYBINDINGS #
-#####################
-
-bindsym $mod+Tab                        workspace back_and_forth
-
-bindsym $mod+Shift+Control+bracketleft  exec xbacklight -dec 10
-
-bindsym $mod+Shift+Control+bracketright exec xbacklight -inc 10
-
-bindsym $mod+Shift+semicolon            exec --no-startup-id $term -name cava -e /home/micah/.config/i3/scripts/runner "cava"
-
-bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
-bindsym $mod+Control+Return             exec $term
-
-bindsym $mod+space                      focus mode_toggle
-bindsym $mod+Shift+space                floating toggle
-#bindsym $mod+Control+space
-bindsym $mod+Shift+Control+space        exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
-
-bindsym XF86AudioRaiseVolume            exec --no-startup-id amixer -D pulse sset Master 5%+
-bindsym XF86AudioLowerVolume            exec --no-startup-id amixer -D pulse sset Master 5%-
-bindsym XF86AudioMute                   exec --no-startup-id amixer -D pulse sset Master toggle
-bindsym XF86AudioPause                  exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
-bindsym XF86AudioNext                   exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
-bindsym XF86AudioPrev                   exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
-bindsym XF86MonBrightnessUp             exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown           exec xbacklight -dec 10
+#bindsym $mod+Shift+F12
 
 bindsym Print                           exec --no-startup-id scrot '%Y-%m-%d_%H:%M:%S_screenshot.png'
 bindsym Shift+Print                     exec --no-startup-id scrot -u '%Y-%m-%d_%H:%M:%S_screenshot.png'
 
 bindsym $mod+Scroll_Lock                exec "~/.config/i3/scripts/lock/lock.sh"
+#bindsym $mod+Shift+Scroll_Lock
 
 bindsym $mod+Insert                     exec --no-startup-id bash /home/micah/.config/Scripts/screencast
+#bindsym $mod+Shift+Insert
 
 bindsym $mod+Delete                     exec --no-startup-id killall ffmpeg & killall screenkey
+#bindsym $mod+Shift+Delete
 
 bindsym $mod+Prior                      exec "~/.config/polybar/scripts/toggleKeyboard"
+#bindsym $mod+Shift+Prior
 
 bindsym $mod+Next                       reload
 bindsym $mod+Shift+Next                 restart
-  bindsym $mod+Shift+Control+Next         exec $i3exit
+bindsym $mod+Shift+Control+Next         exec $i3exit
+
+
+#####################
+# MEDIA KEYBINDINGS #
+#####################
+
+bindsym XF86AudioLowerVolume            exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym XF86AudioRaiseVolume            exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym XF86AudioMute                   exec --no-startup-id amixer -D pulse sset Master toggle
+
+bindsym XF86AudioPause                  exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
+bindsym XF86AudioNext                   exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
+bindsym XF86AudioPrev                   exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
+
+bindsym XF86MonBrightnessUp             exec xbacklight -inc 10
+bindsym XF86MonBrightnessDown           exec xbacklight -dec 10
