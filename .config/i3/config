@@ -368,7 +368,7 @@ bindsym XF86MonBrightnessDown           exec xbacklight -dec 10
 bindsym Print                           exec --no-startup-id scrot '%Y-%m-%d_%H:%M:%S_screenshot.png'
 bindsym Shift+Print                     exec --no-startup-id scrot -u '%Y-%m-%d_%H:%M:%S_screenshot.png'
 
-bindsym $mod+Scroll_Lock                exec "~/.config/i3/scripts/lock/lock.sh ~/.config/i3/scripts/lock/lock.png"
+bindsym $mod+Scroll_Lock                exec "~/.config/i3/scripts/lock/lock.sh"
 
 bindsym $mod+Insert                     exec --no-startup-id bash /home/micah/.config/Scripts/screencast
 
