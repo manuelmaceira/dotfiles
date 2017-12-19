@@ -226,7 +226,7 @@ bindsym $mod+Shift+f         fullscreen toggle
 #bindsym $mod+g
 bindsym $mod+Shift+g         exec --no-startup-id zsh /home/micah/.config/i3/scripts/music
 #bindsym $mod+Control+g
-#bindsym $mod+Shift+Control+g
+bindsym $mod+Shift+Control+g exec --no-startup-id killall gpymusic & killall mpsyt & killall cava
 
 bindsym $mod+h               focus left
 bindsym $mod+Shift+h         move left
