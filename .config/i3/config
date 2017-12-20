@@ -169,7 +169,7 @@ bindsym $mod+Shift+w         exec $cliprog weather "wttr && read -k1 -s"
 #bindsym $mod+Shift+Control+e
 
 bindsym $mod+r               exec $cliprog files "ranger"
-bindsym $mod+Shift+r         exec $runner "rtv"
+#bindsym $mod+Shift+r
 #bindsym $mod+Control+r
 #bindsym $mod+Shift+Control+r
 
@@ -201,7 +201,7 @@ bindsym $mod+Shift+u         exec $cliprog rtorrent "tmuxinator rtorrent"
 bindsym $mod+p               gaps inner current plus 5
 bindsym $mod+Shift+p         gaps inner current minus 5
 #bindsym $mod+Control+p
-#bindsym $mod+Shift+Control+p
+bindsym $mod+Shift+Control+p
 
 bindsym $mod+a               focus parent
 #bindsym $mod+Shift+a
