@@ -6,7 +6,7 @@ My dotfiles for my Linux rice.
 ### Window Management
 
 - i3-gaps
-- i3lock
+- i3lock-color
 - polybar
 - j4-dmenu-desktop
 
