@@ -201,7 +201,7 @@ bindsym $mod+Shift+u         exec $cliprog rtorrent "tmuxinator rtorrent"
 bindsym $mod+p               gaps inner current plus 5
 bindsym $mod+Shift+p         gaps inner current minus 5
 #bindsym $mod+Control+p
-bindsym $mod+Shift+Control+p exec --no-startup-id ~/.config/polybar/launch.sh
+#bindsym $mod+Shift+Control+p
 
 bindsym $mod+a               focus parent
 #bindsym $mod+Shift+a
@@ -431,6 +431,9 @@ bindsym Shift+Print                     exec --no-startup-id scrot -u '%Y-%m-%d_
 
 bindsym $mod+Scroll_Lock                exec "~/.config/i3/scripts/lock/lock.sh"
 #bindsym $mod+Shift+Scroll_Lock
+
+bindsym $mod+Pause                      exec --no-startup-id ~/.config/polybar/launch.sh
+#bindsym $mod+Shift+Pause
 
 bindsym $mod+Insert                     exec --no-startup-id bash /home/micah/.config/Scripts/screencast
 #bindsym $mod+Shift+Insert
