@@ -8,6 +8,7 @@ set mail_check = "10"
 set mailcap_path = ~/.config/mutt/mailcap
 set date_format="%m/%d %I:%M"
 set index_format="%?M?+& ?%2M %2C %Z %d %-15.15F %s (%-4.4c)"
+set signature = ~/.config/mutt/signature
 
 # Threads
 set sort = 'threads'
