@@ -231,11 +231,7 @@ inoremap jf <esc>
 inoremap fj <esc>
 
 " spell check
-map <leader>ss :setlocal spell!<CR>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+map <leader>ss :setlocal spell! spelllang=en_us<CR>
 
 " better pane navigation
 map <C-h> <C-W>h
