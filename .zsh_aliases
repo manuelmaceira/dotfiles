@@ -69,6 +69,23 @@ alias gohome='sudo openvpn --script-security 2 --config /home/micah/.openvpn/hal
 
 alias gsua='git submodule update --recursive --remote'
 
+# simple pin system
+pinfile=$HOME/.pins
+alias pl='count=1
+          while read -r pin; do
+            echo "$count $(basename "$pin")"
+            (( count++ ))
+          done < $pinfile'
+alias pa='echo "$PWD" >> $pinfile
+          pl'
+pd() {
+  sed -i "$1d" "$pinfile"
+  pl
+}
+pg() {
+  cd "$(sed "$1q;d" "$pinfile")"
+}
+
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   alias ls='ls --color=auto'
