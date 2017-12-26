@@ -42,7 +42,7 @@ URxvt.iso14755: False
 URxvt.perl-ext-common: default,clipboard,matcher,url-select
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          /usr/bin/xdg-open
-URxvt.keysym.Control-u: perl:url-select:select_next
+URxvt.keysym.Control-b: perl:url-select:select_next
 
 ! Cursor
 URxvt.cursorBlink:          true
