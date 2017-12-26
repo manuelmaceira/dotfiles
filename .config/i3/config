@@ -381,6 +381,10 @@ bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --
 #bindsym $mod+Shift+period
 #bindsym $mod+Shift+Control+period
 
+#bindsym $mod+slash
+#bindsym $mod+Shift+slash
+#bindsym $mod+Shift+Control+slash
+
 bindsym $mod+space                      focus mode_toggle
 bindsym $mod+Shift+space                floating toggle
 bindsym $mod+Shift+Control+space        exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
