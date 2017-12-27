@@ -88,3 +88,6 @@
 
 # sc-im
 .scimrc
+
+# firefox
+.mozilla/firefox/mwad0hks.default/chrome

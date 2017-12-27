@@ -1,0 +1,51 @@
+@import url("file:///home/micah/.cache/wal/colors.css");
+
+:root {
+    --tab-line-color: !important;
+    --toolbar-non-lwt-bgimage: !important;
+}
+
+#tabbrowser-tabs {
+  color: var(--color4) !important;
+  background-color: var(--color0);
+}
+
+.tab-content[selected="true"] {
+  color: var(--color0) !important;
+}
+
+.tab-background[selected="true"] {
+  border: 0px !important;
+  background-color: var(--color1) !important;
+}
+
+#nav-bar {
+  color: var(--color4) !important;
+  background-color: var(--color0) !important;
+}
+
+#urlbar {
+  border: 0px !important;
+  color: var(--color5) !important;
+  background-color: var(--color0) !important;
+}
+
+.urlbar-icon {
+  color: var(--color4) !important;
+}
+
+#toolbar-menubar {
+  padding: 0px 0px !important;
+}
+
+menubar, toolbar[type="menubar"] {
+  -moz-appearance: initial !important;
+  background-color: var(--color1) !important;
+}
+
+#menubar-items {
+}
+
+menubar > menu {
+  color: var(--color0) !important;
+}
