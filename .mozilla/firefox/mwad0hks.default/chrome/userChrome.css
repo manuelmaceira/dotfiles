@@ -5,6 +5,7 @@
     --toolbar-non-lwt-bgimage: !important;
 }
 
+/* Tab Bar */
 #tabbrowser-tabs {
   color: var(--color4) !important;
   background-color: var(--color0);
@@ -19,11 +20,13 @@
   background-color: var(--color1) !important;
 }
 
+/* Nav Bar */
 #nav-bar {
   color: var(--color4) !important;
   background-color: var(--color0) !important;
 }
 
+/* URL Bar */
 #urlbar {
   border: 0px !important;
   color: var(--color5) !important;
@@ -34,6 +37,7 @@
   color: var(--color4) !important;
 }
 
+/* Menu Bar */
 #toolbar-menubar {
   padding: 0px 0px !important;
 }
@@ -41,9 +45,6 @@
 menubar, toolbar[type="menubar"] {
   -moz-appearance: initial !important;
   background-color: var(--color1) !important;
-}
-
-#menubar-items {
 }
 
 menubar > menu {
