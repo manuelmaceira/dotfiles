@@ -289,7 +289,7 @@ autocmd BufWritePost ~/git/dotfiles/.config/Scripts/folders,~/git/dotfiles/.conf
 
 " => Java
 autocmd FileType java inoremap ;fr for(;<++>;<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f;i
-autocmd FileType java inoremap ;fc for(: <++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f:i
+autocmd FileType java inoremap ;fe for(: <++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f:i
 autocmd FileType java inoremap ;wl while() {<Enter><++><Enter>}<Enter><++><Esc>3k^f)i
 autocmd FileType java inoremap ;dw do {<Enter>;<Enter>} while (<++>);<Enter><++><Esc>2k^xA
 autocmd FileType java inoremap ;if if() {<Enter><++><Enter>}<Enter><++><Esc>3k^f)i
@@ -302,7 +302,7 @@ autocmd FileType java inoremap ;rf private  <++>(<++>) {<Enter><++><Enter>}<Ente
 autocmd FileType java inoremap ;mn public static void main(String[] args) {<Enter>;<Enter>}<Enter><++><Esc>2k^xA
 autocmd FileType java inoremap ;rt return 
 autocmd FileType java inoremap ;st static 
-autocmd FileType java inoremap ;pt System.out.println();<Enter><++><Esc>k^f)i
+autocmd FileType java inoremap ;pr System.out.println();<Enter><++><Esc>k^f)i
 autocmd FileType java inoremap ;ip <Esc>?import<Enter>oimport ;<Esc>i
 autocmd FileType java nnoremap ;ip ?import<Enter>oimport ;<Esc>i
 
@@ -317,7 +317,7 @@ autocmd FileType python inoremap ;cl class :<Enter><++><Esc>k^f:i
 autocmd FileType python inoremap ;fn def (<++>):<Enter><++><Enter><C-D><++><Esc>2k^f(i
 autocmd FileType python inoremap ;mn def main():<Enter>;<Enter><Enter><C-D>if __name__ == "__main__":<Enter>main()<Esc>3k^xA
 autocmd FileType python inoremap ;rt return 
-autocmd FileType python inoremap ;pt print()<Enter><++><Esc>k^f)i
+autocmd FileType python inoremap ;pr print()<Enter><++><Esc>k^f)i
 autocmd FileType python inoremap ;ip <Esc>?import<Enter>oimport 
 autocmd FileType python nnoremap ;ip ?import<Enter>oimport 
 
