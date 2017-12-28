@@ -74,6 +74,6 @@ PATH="/opt/venvs/vdirsyncer-latest/bin/:$PATH"
 
 #BASE16_SHELL=$HOME/.config/base16-shell/
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
-(wal -r &)
+(cat ~/.cache/wal/sequences &)
 
 #neofetch --ascii_distro arch
