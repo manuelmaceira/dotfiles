@@ -1,5 +1,6 @@
 @import url("file:///home/micah/.cache/wal/colors.css");
 
+/* Global Vars */
 [uidensity="compact"]:root {
   --tabs-border: transparent !important;
   --tab-line-color: transparent !important;
@@ -26,6 +27,7 @@
   color: var(--color0) !important;
 }
 
+/* Nav Bar */
 #navigator-toolbox {
   display: contents !important;
 }
@@ -34,6 +36,7 @@
   background-color: var(--color0) !important;
 }
 
+/* URL Bar */
 .identity-box,
 #urlbar {
   border: none !important;
@@ -41,6 +44,7 @@
   background-color: var(--color0) !important;
 }
 
+/* Menu Bar */
 #toolbar-menubar {
   padding: 0px 0px !important;
 }
@@ -54,10 +58,16 @@ menubar > menu {
   color: var(--color0) !important;
 }
 
+/* Bookmarks Bar */
+#PersonalToolbar {
+  color: var(--color5) !important;
+  background-color: var(--color0) !important;
+}
+
+/* Hidden Elements */
 statuspanel[type="overLink"],
-#back-button,
-#forward-button,
+#reload-button,
 .tab-close-button,
 .tabs-newtab-button {
-  display: none !import;
+  display: none !important;
 }
