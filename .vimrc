@@ -201,7 +201,7 @@ inoremap ;gui <++>
 iab xdate <C-r>=strftime("%m/%d/%y")<CR>
 iab fdate <C-r>=strftime("%B %d, %Y")<CR>
 iab xtime <C-r>=strftime("%H:%M")<CR>
-iab stime <C-r>=strftime("%H:%M:%S")<CR>
+iab ftime <C-r>=strftime("%H:%M:%S")<CR>
 
 " Map auto complete of (, ", ', [
 vnoremap ;( <esc>`>a)<esc>`<i(<esc>
