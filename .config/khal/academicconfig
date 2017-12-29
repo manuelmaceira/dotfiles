@@ -24,6 +24,8 @@ highlight_event_days = True
     readonly = True
 
 [locale]
+default_timezone = EST
+local_timezone = EST
 timeformat = %H:%M
 dateformat = %m/%d/%Y
 longdateformat = %m/%d/%Y
