@@ -297,6 +297,7 @@ autocmd FileType java inoremap ;ie if() {<Enter><++><Enter>} else {<Enter><++><E
 autocmd FileType java inoremap ;ii if() {<Enter><++><Enter>} else <++><Esc>2k^f)i
 autocmd FileType java inoremap ;pc public class  {<Enter><++><Enter>}<Esc>2k^f{hi
 autocmd FileType java inoremap ;cl class  {<Enter><++><Enter>}<Esc>2k^f{hi
+autocmd FileType java inoremap ;fn public  <++>(<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^fc2li
 autocmd FileType java inoremap ;pf public  <++>(<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^fc2li
 autocmd FileType java inoremap ;rf private  <++>(<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^fc2li
 autocmd FileType java inoremap ;mn public static void main(String[] args) {<Enter>;<Enter>}<Enter><++><Esc>2k^xA
