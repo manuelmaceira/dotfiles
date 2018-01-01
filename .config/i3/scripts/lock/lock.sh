@@ -11,6 +11,7 @@ convert /tmp/screen.png /tmp/lock.png -gravity center -composite -matte /tmp/scr
 
 i3lock -i /tmp/screen.png \
   --radius=125 --ring-width=6 \
+  #--radius=119 --ring-width=6 \
   --insidecolor=00000000 --line-uses-inside \
   --insidevercolor=00000000 --veriftext="" \
   --insidewrongcolor=00000000 --wrongtext="" \
