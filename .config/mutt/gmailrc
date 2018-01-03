@@ -11,6 +11,8 @@ set record = /dev/null
 set mbox = "+[Gmail].All Mail"
 set postponed = "+[Gmail].Drafts"                             
 
+macro index S '<sync-mailbox><enter-command>source ~/.config/mutt/gatechrc<enter><change-folder>!<enter>'
+
 macro index i "<shell-escape>offlineimap -q -a gmail -f INBOX<enter>" "sync current inbox"
 macro index I "<shell-escape>offlineimap -q -a gmail<enter>" "sync current inbox"
 
