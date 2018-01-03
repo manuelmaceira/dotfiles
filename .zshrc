@@ -71,6 +71,7 @@ bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
 PATH="/opt/venvs/vdirsyncer-latest/bin/:$PATH"
+export NODE_PATH="/usr/local/lib/node_modules"
 
 #BASE16_SHELL=$HOME/.config/base16-shell/
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
