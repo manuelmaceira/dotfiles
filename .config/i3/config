@@ -234,7 +234,7 @@ bindsym $mod+Shift+Control+g exec --no-startup-id killall gpymusic & killall mps
 bindsym $mod+h               focus left
 bindsym $mod+Shift+h         move left
 bindsym $mod+Control+h       resize shrink width 10 px or 10 ppt
-bindsym $mod+Shift+Control+h exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
+bindsym $mod+Shift+Control+h move workspace to output left
 
 bindsym $mod+j               focus down
 bindsym $mod+Shift+j         move down
@@ -249,7 +249,7 @@ bindsym $mod+Shift+Control+k exec --no-startup-id amixer -D pulse sset Master 5%
 bindsym $mod+l               focus right
 bindsym $mod+Shift+l         move right
 bindsym $mod+Control+l       resize grow width 10 px or 10 ppt
-bindsym $mod+Shift+Control+l exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
+bindsym $mod+Shift+Control+l move workspace to output right
 
 #bindsym $mod+z
 #bindsym $mod+Shift+z
