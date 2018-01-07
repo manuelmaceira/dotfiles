@@ -148,6 +148,9 @@ assign [class="Skype"] $workspace3
 assign [class="Google Play Music Desktop Player"] $workspace4
 for_window [class="Cinnamon-settings.py"] floating enable
 
+# start dual monitor
+exec --no-startup-id ~/.config/Scripts/screen.sh d
+
 
 ######################
 # LETTER KEYBINDINGS #
@@ -159,7 +162,7 @@ bindsym $mod+Shift+q         kill
 #bindsym $mod+Shift+Control+q
 
 bindsym $mod+w               exec --no-startup-id $browser
-bindsym $mod+Shift+w         exec $cliprog weather "wttr && read -k1 -s"
+bindsym $mod+Shift+w         exec --no-startup-id $cliprog weather "wttr && read -k1 -s"
 #bindsym $mod+Control+w
 #bindsym $mod+Shift+Control+w
 
@@ -168,13 +171,13 @@ bindsym $mod+Shift+w         exec $cliprog weather "wttr && read -k1 -s"
 #bindsym $mod+Control+e
 #bindsym $mod+Shift+Control+e
 
-bindsym $mod+r               exec $cliprog files "ranger"
+bindsym $mod+r               exec --no-startup-id $cliprog files "ranger"
 #bindsym $mod+Shift+r
 #bindsym $mod+Control+r
 #bindsym $mod+Shift+Control+r
 
 #bindsym $mod+t
-bindsym $mod+Shift+t         exec $cliprog glances "glances"
+bindsym $mod+Shift+t         exec --no-startup-id $cliprog glances "glances"
 #bindsym $mod+Control+t
 #bindsym $mod+Shift+Control+t
 
@@ -183,8 +186,8 @@ bindsym $mod+Shift+y         exec --no-startup-id $term -name mpsyt -e /home/mic
 #bindsym $mod+Control+y
 #bindsym $mod+Shift+Control+y
 
-bindsym $mod+u               exec $cliprog dropdown "tmuxinator scratchpad"
-bindsym $mod+Shift+u         exec $cliprog rtorrent "tmuxinator rtorrent"
+bindsym $mod+u               exec --no-startup-id $cliprog dropdown "tmuxinator scratchpad"
+bindsym $mod+Shift+u         exec --no-startup-id $cliprog rtorrent "tmuxinator rtorrent"
 #bindsym $mod+Control+u
 #bindsym $mod+Shift+Control+u
 
@@ -214,7 +217,7 @@ bindsym $mod+s               split toggle
 #bindsym $mod+Shift+Control+s
 
 bindsym $mod+d               focus child
-bindsym $mod+Shift+d         exec $cliprog ddgr "ddgr -n 8"
+bindsym $mod+Shift+d         exec --no-startup-id $cliprog ddgr "ddgr -n 8"
 #bindsym $mod+Control+d
 #bindsym $mod+Shift+Control+d
 
@@ -259,26 +262,26 @@ bindsym $mod+Shift+Control+l exec --no-startup-id echo "playlist-prev" > ~/.conf
 #bindsym $mod+Shift+Control+x
 
 #bindsym $mod+c
-bindsym $mod+Shift+c         exec $cliprog cal "ikhal"
+bindsym $mod+Shift+c         exec --no-startup-id $cliprog cal "ikhal"
 #bindsym $mod+Control+c
 #bindsym $mod+Shift+Control+c
 
 #bindsym $mod+v
-bindsym $mod+Shift+v         exec $runner "rtv"
+bindsym $mod+Shift+v         exec --no-startup-id $runner "rtv"
 #bindsym $mod+Control+v
 #bindsym $mod+Shift+Control+v
 
 #bindsym $mod+b
-bindsym $mod+Shift+b         exec $cliprog math "bc"
+bindsym $mod+Shift+b         exec --no-startup-id $cliprog math "bc"
 #bindsym $mod+Control+b
 #bindsym $mod+Shift+Control+b
 
 #bindsym $mod+n
-bindsym $mod+Shift+n         exec $runner "newsbeuter"
+bindsym $mod+Shift+n         exec --no-startup-id $runner "newsbeuter"
 #bindsym $mod+Control+n
 #bindsym $mod+Shift+Control+n
 
-bindsym $mod+m               exec $cliprog email "mutt"
+bindsym $mod+m               exec --no-startup-id $cliprog email "mutt"
 bindsym $mod+Shift+m         exec --no-startup-id $term -name gpymusic -e /home/micah/.config/i3/scripts/runner "gpymusic"
 #bindsym $mod+Control+m
 bindsym $mod+Shift+Control+m exec --no-startup-id amixer -D pulse sset Master toggle
@@ -351,11 +354,11 @@ bindsym $mod+Tab                        workspace back_and_forth
 
 #bindsym $mod+bracketleft
 #bindsym $mod+Shift+bracketleft
-bindsym $mod+Shift+Control+bracketleft  exec xbacklight -dec 10
+bindsym $mod+Shift+Control+bracketleft  exec --no-startup-id xbacklight -dec 10
 
 #bindsym $mod+bracketright
 #bindsym $mod+Shift+bracketright
-bindsym $mod+Shift+Control+bracketright exec xbacklight -inc 10
+bindsym $mod+Shift+Control+bracketright exec --no-startup-id xbacklight -inc 10
 
 #bindsym $mod+backslash
 #bindsym $mod+Shift+backslash
@@ -369,7 +372,7 @@ bindsym $mod+Shift+semicolon            exec --no-startup-id $term -name cava -e
 #bindsym $mod+Shift+apostrophe
 #bindsym $mod+Shift+Control+apostrophe
 
-bindsym $mod+Return                     exec $term
+bindsym $mod+Return                     exec --no-startup-id $term
 bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
 #bindsym $mod+Shift+Control+Return
 
@@ -394,19 +397,19 @@ bindsym $mod+Shift+Control+space        exec --no-startup-id echo "cycle pause" 
 # FUNCTION KEYBINDINGS #
 ########################
 
-#bindsym $mod+F1
+bindsym $mod+F1        exec --no-startup-id ~/.config/Scripts/screen.sh v ; exec --no-startup-id ~/.config/polybar/launch.sh
 #bindsym $mod+Shift+F1
 
-#bindsym $mod+F2
+bindsym $mod+F2        exec --no-startup-id ~/.config/Scripts/screen.sh h ; exec --no-startup-id ~/.config/polybar/launch.sh
 #bindsym $mod+Shift+F2
 
-#bindsym $mod+F3
+bindsym $mod+F3        exec --no-startup-id ~/.config/Scripts/screen.sh d ; exec --no-startup-id ~/.config/polybar/launch.sh
 #bindsym $mod+Shift+F3
 
-#bindsym $mod+F4
+bindsym $mod+F4        exec --no-startup-id ~/.config/Scripts/screen.sh l ; exec --no-startup-id ~/.config/polybar/launch.sh
 #bindsym $mod+Shift+F4
 
-bindsym $mod+F5        exec "~/.config/i3/scripts/powersaver"
+bindsym $mod+F5        exec --no-startup-id ~/.config/i3/scripts/powersaver
 #bindsym $mod+Shift+F5
 
 #bindsym $mod+F6
@@ -433,7 +436,7 @@ bindsym $mod+F5        exec "~/.config/i3/scripts/powersaver"
 bindsym Print                           exec --no-startup-id scrot '%Y-%m-%d_%H:%M:%S_screenshot.png'
 bindsym Shift+Print                     exec --no-startup-id scrot -u '%Y-%m-%d_%H:%M:%S_screenshot.png'
 
-bindsym $mod+Scroll_Lock                exec "~/.config/i3/scripts/lock/lock.sh"
+bindsym $mod+Scroll_Lock                exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
 #bindsym $mod+Shift+Scroll_Lock
 
 bindsym $mod+Pause                      exec --no-startup-id ~/.config/polybar/launch.sh
@@ -445,7 +448,7 @@ bindsym $mod+Insert                     exec --no-startup-id bash /home/micah/.c
 bindsym $mod+Delete                     exec --no-startup-id killall ffmpeg & killall screenkey
 #bindsym $mod+Shift+Delete
 
-bindsym $mod+Prior                      exec "~/.config/polybar/scripts/toggleKeyboard"
+bindsym $mod+Prior                      exec --no-startup-id ~/.config/polybar/scripts/toggleKeyboard
 #bindsym $mod+Shift+Prior
 
 bindsym $mod+Next                       reload
@@ -465,5 +468,5 @@ bindsym XF86AudioPause                  exec --no-startup-id echo "cycle pause" 
 bindsym XF86AudioNext                   exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
 bindsym XF86AudioPrev                   exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 
-bindsym XF86MonBrightnessUp             exec xbacklight -inc 10
-bindsym XF86MonBrightnessDown           exec xbacklight -dec 10
+bindsym XF86MonBrightnessUp             exec --no-startup-id xbacklight -inc 10
+bindsym XF86MonBrightnessDown           exec --no-startup-id xbacklight -dec 10
