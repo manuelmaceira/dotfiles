@@ -53,7 +53,7 @@ My dotfiles for my Linux rice.
 
 ### Themes
 
-- arc gtk theme
+- oomox gtk theme
 - numix icon theme
 
 ### Fonts
