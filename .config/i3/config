@@ -144,7 +144,6 @@ exec_always --no-startup-id wal -R
 # application placements
 assign [class="Google-chrome"] $workspace1
 assign [class="Firefox"] $workspace1
-assign [class="Skype"] $workspace3
 assign [class="Google Play Music Desktop Player"] $workspace4
 for_window [class="Cinnamon-settings.py"] floating enable
 
