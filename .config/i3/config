@@ -211,7 +211,7 @@ bindsym $mod+a               focus parent
 #bindsym $mod+Shift+Control+a
 
 bindsym $mod+s               split toggle
-#bindsym $mod+Shift+s
+bindsym $mod+Shift+s         exec --no-startup-id python2 ~/.config/i3/scripts/workspaceswap.py
 #bindsym $mod+Control+s
 #bindsym $mod+Shift+Control+s
 
