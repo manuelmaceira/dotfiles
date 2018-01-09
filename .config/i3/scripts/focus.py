@@ -1,4 +1,4 @@
-#!/bin/python
+#!/usr/bin/python2.7
 
 import i3
 from subprocess import check_output
