@@ -9,15 +9,15 @@
 </info>
 
 <!-- ::: CONSTANTS ::: -->
-<constant name="C_titlebar" value="#0d131f" />
-<constant name="C_border_focused" value="#916978" />
-<constant name="C_border_unfocused" value="#0d131f" />
-<constant name="C_title_focused" value="#ced3db" />
-<constant name="C_title_unfocused" value="#9da3ac" />
-<constant name="C_icons_focused" value="#ced3db" />
+<constant name="C_titlebar" value="#0d0f15" />
+<constant name="C_border_focused" value="#59585C" />
+<constant name="C_border_unfocused" value="#0d0f15" />
+<constant name="C_title_focused" value="#b0bdcc" />
+<constant name="C_title_unfocused" value="#87919e" />
+<constant name="C_icons_focused" value="#b0bdcc" />
 <constant name="C_icons_focused_prelight" value="gtk:bg[SELECTED])" />
 <constant name="C_icons_focused_pressed" value="shade/gtk:bg[SELECTED]/0.8" />
-<constant name="C_icons_unfocused" value="#9da3ac" />
+<constant name="C_icons_unfocused" value="#87919e" />
 <constant name="C_icons_unfocused_prelight" value="gtk:bg[SELECTED])" />
 <constant name="C_icons_unfocused_pressed" value="shade/gtk:bg[SELECTED]/0.8" />
 
