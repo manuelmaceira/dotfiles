@@ -134,9 +134,6 @@ exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $works
 # start compositor
 exec --no-startup-id compton -f
 
-# status bar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-
 # set wallpaper and colors
 exec_always --no-startup-id feh --bg-scale ~/.config/wall
 exec_always --no-startup-id wal -R
@@ -149,6 +146,9 @@ for_window [class="Cinnamon-settings.py"] floating enable
 
 # start dual monitor
 exec --no-startup-id ~/.config/Scripts/screen.sh d
+
+# status bar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 
 ######################
