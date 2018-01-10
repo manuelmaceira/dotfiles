@@ -402,10 +402,13 @@ autocmd FileType bib inoremap ;c @incollection{<Enter><Tab>author<Space>=<Space>
 autocmd Filetype markdown inoremap ;b ****<Space><++><Esc>F*hi
 autocmd Filetype markdown inoremap ;s ~~~~<Space><++><Esc>F~hi
 autocmd Filetype markdown inoremap ;e **<Space><++><Esc>F*i
-autocmd Filetype markdown inoremap ;h ====<Space><++><Esc>F=hi
 autocmd Filetype markdown inoremap ;i ![](<++>)<Space><++><Esc>F[a
 autocmd Filetype markdown inoremap ;a [](<++>)<Space><++><Esc>F[a
+autocmd Filetype markdown inoremap ;c ```<Enter><++><Enter>```<Esc>2kA
 autocmd Filetype markdown inoremap ;1 #<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ;2 ##<Space><Enter><++><Esc>kA
 autocmd Filetype markdown inoremap ;3 ###<Space><Enter><++><Esc>kA
-autocmd Filetype markdown inoremap ;l --------<Enter>
+autocmd Filetype markdown inoremap ;4 ####<Space><Enter><++><Esc>kA
+autocmd Filetype markdown inoremap ;5 #####<Space><Enter><++><Esc>kA
+autocmd Filetype markdown inoremap ;6 ######<Space><Enter><++><Esc>kA
+autocmd Filetype markdown inoremap ;l ---<Enter>
