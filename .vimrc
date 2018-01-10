@@ -287,6 +287,9 @@ command! MakeTags !ctags -R .
 " Auto build configs on edit of certain files
 autocmd BufWritePost ~/git/dotfiles/.config/Scripts/folders,~/git/dotfiles/.config/Scripts/configs !python ~/.config/Scripts/shortcuts.py
 
+" Change tab size to 4 for markdown
+autocmd BufNewFile,BufRead *.md setlocal tabstop=4 shiftwidth=4 softtabstop=4
+
 " => Java
 autocmd FileType java inoremap ;fr for(;<++>;<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f;i
 autocmd FileType java inoremap ;fe for(: <++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f:i
