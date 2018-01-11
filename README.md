@@ -13,6 +13,7 @@ My dotfiles for my Linux rice.
 ### Command Line Applications
 
 - zsh
+- oh-my-zsh
 - urxvt
 - vim
 - tmux
