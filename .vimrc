@@ -262,9 +262,9 @@ nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
 nnoremap <leader>lp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
 
 " pandoc compile keybindings
-nnoremap <leader>ml :w<CR>:!pandoc % --latex-engine=xelatex -o %:r.pdf<CR><CR>
-nnoremap <leader>mb :w<CR>:!pandoc % --latex-engine=xelatex -t beamer -o %:r.pdf<CR>
-nnoremap <leader>mc :w<CR>:!pandoc % --latex-engine=xelatex -o %:r.pdf<CR>
+nnoremap <leader>ml :w<CR>:!pandoc % --latex-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
+nnoremap <leader>mb :w<CR>:!pandoc % --latex-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR>
+nnoremap <leader>mc :w<CR>:!pandoc % --latex-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
 nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
 nnoremap <leader>mp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
 
@@ -287,8 +287,11 @@ command! MakeTags !ctags -R .
 " Auto build configs on edit of certain files
 autocmd BufWritePost ~/git/dotfiles/.config/Scripts/folders,~/git/dotfiles/.config/Scripts/configs !python ~/.config/Scripts/shortcuts.py
 
-" Change tab size to 4 for markdown
+" Markdown Settings
+" set tab to 4
 autocmd BufNewFile,BufRead *.md setlocal tabstop=4 shiftwidth=4 softtabstop=4
+" turn on spell check
+autocmd BufNewFile,BufRead *.md setlocal spell! spelllang=en_us
 
 " => Java
 autocmd FileType java inoremap ;fr for(;<++>;<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f;i
