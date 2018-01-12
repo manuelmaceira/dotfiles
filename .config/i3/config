@@ -260,7 +260,7 @@ bindsym $mod+Shift+Control+l move workspace to output right
 #bindsym $mod+Control+x
 #bindsym $mod+Shift+Control+x
 
-#bindsym $mod+c
+bindsym $mod+c               exec --no-startup-id $runner "weechat"
 bindsym $mod+Shift+c         exec --no-startup-id $cliprog cal "ikhal"
 #bindsym $mod+Control+c
 #bindsym $mod+Shift+Control+c
