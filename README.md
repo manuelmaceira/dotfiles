@@ -9,6 +9,7 @@ My dotfiles for my Linux rice.
 - i3lock-color
 - polybar
 - j4-dmenu-desktop
+- dmenu
 
 ### Command Line Applications
 
@@ -49,12 +50,13 @@ My dotfiles for my Linux rice.
   - mpv
   - aria2c
   - py-wal
+  - oomox
 
 ## Look and Feel
 
 ### Themes
 
-- oomox gtk theme
+- wal gtk theme
 - numix icon theme
 
 ### Fonts
