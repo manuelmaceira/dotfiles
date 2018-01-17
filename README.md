@@ -42,6 +42,7 @@ My dotfiles for my Linux rice.
   - infinality
   - compton
   - scrot
+  - xclip
   - xdotool
   - base16
   - offlineimap
