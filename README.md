@@ -53,6 +53,7 @@ My dotfiles for my Linux rice.
   - aria2c
   - py-wal
   - oomox
+  - fprintd
 
 ## Look and Feel
 
