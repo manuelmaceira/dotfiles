@@ -13,9 +13,6 @@ alias -s md=vim
 alias -s tex=vim
 alias -s log="less -MN"
 
-alias yt="mpsyt"
-alias vi='vim'
-
 # aliases for Tmux
 alias tmux='tmux -2'
 alias ta='tmux attach -t'
@@ -25,13 +22,7 @@ alias tkill='tmux kill-session -t'
 alias mux='tmuxinator'
 alias tmuxlayout='tmux list-windows|sed "s/^.*\[layout \(.*\)\] @.*$/\1/"'
 
-# google calendar aliases
-alias gcal='gcalcli'
-alias gcala='gcal agenda'
-alias gcalw='gcal calw'
-alias gcalm='gcal calm'
-
-# wttr
+# weather aliases
 wttrf()
 {
   curl -H "Accept-Language: ${LANG%_*}" wttr.in/"$1"
@@ -50,27 +41,29 @@ wt()
 }
 
 # email aliases
-alias m='mutt'
-alias oimap='offlineimap'
-alias vd='vdirsyncer'
-alias vds='vdirsyncer sync'
+alias m='neomutt'
+# calendar aliases
 alias kl='khal'
 alias ikl='ikhal'
 alias kla='khal -c ~/.config/khal/academicconfig'
 alias ikla='ikhal -c ~/.config/khal/academicconfig'
+
+# addressbook aliases
 alias kd='khard'
+alias kdd='khard details'
 
-alias nb='newsbeuter'
+# sync aliases
+alias oimap='offlineimap'
+alias vd='vdirsyncer'
+alias vds='vdirsyncer sync'
 
+# various app aliases
+alias nb='newsboat'
 alias nf='neofetch'
-
+alias yt="mpsyt"
+alias vi='vim'
 alias arc='aria2c'
-
 alias sc='scim'
-
-alias gohome='sudo openvpn --script-security 2 --config /home/micah/.openvpn/halter_home.ovpn'
-
-alias gsua='git submodule update --recursive --remote'
 
 # simple pin system
 pinfile=$HOME/.pins
@@ -89,17 +82,14 @@ pg() {
   cd "$(sed "$1q;d" "$pinfile")"
 }
 
+# various utilities
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   alias ls='ls --color=auto'
-  #alias dir='dir --color=auto'
-  #alias vdir='vdir --color=auto'
-
   alias grep='grep --color=auto'
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 fi
-
 alias rm='rm'
 alias sl='ls'
 alias ll='ls -alF'
@@ -107,31 +97,28 @@ alias la='ls -A'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias speedtest='speedtest-cli'
-alias alsamixer='alsamixer -c 1'
-alias gdrive='google-drive-ocamlfuse ~/Google\ Drive/'
-alias ugdrive='sudo umount ~/Google\ Drive/'
 alias todo='vi ~/.todo'
-alias dataBackup='/home/micah/backupScript/backup.sh'
-alias dataBackupUmount='/home/micah/backupScript/backup.sh && sleep 5 && sudo umount /dev/sdd1'
 alias makescript="fc -rnl | head -1 >"
 alias histg='history | grep'
 alias cmount='mount | column -t'
 alias meminfo='free -m -l -t'
 alias psg='ps aux | grep'
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
-alias python="python3"
-alias mysql="mysql -u root -p"
-
 alias alert='notify-send --urgency=critical -i "$([ $? = 0 ] && echo terminal || echo error)" "$(cat ~/.zsh_history|tail -n1|cut -d'\'';'\'' -f2-|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+mcd() { mkdir -p "$1"; cd "$1";}
+cls() { cd "$1"; ls;}
+crun() { make "$1"; ./$1;}
+backup() { cp "$1"{,.bak};}
+md5check() { md5sum "$1" | grep "$2";}
+getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep address|egrep 'city|state|country'|awk '{print $3,$4,$5,$6,$7,$8}'|sed 's\ip address flag \\'|sed 's\My\\';}
 
+# LaTeX aliases
 txa() {
   txtemp article $1
 }
-
 txb() {
   txtemp beamer $1
 }
-
 txtemp() {
   file=$2
   if [[ $file != '' ]]; then
@@ -143,14 +130,7 @@ txtemp() {
   fi
 }
 
-getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep address|egrep 'city|state|country'|awk '{print $3,$4,$5,$6,$7,$8}'|sed 's\ip address flag \\'|sed 's\My\\';}
-mcd() { mkdir -p "$1"; cd "$1";}
-cls() { cd "$1"; ls;}
-crun() { make "$1"; ./$1;}
-backup() { cp "$1"{,.bak};}
-md5check() { md5sum "$1" | grep "$2";}
-
-#C compiling shortcuts for clang and gcc
+# C compiling shortcuts for clang and gcc
 clang() {
   if [[ $1 =~ \.c$ ]]; then
     clang-3.5 -g $1 -o ${1%%.*}; 
@@ -179,6 +159,11 @@ gcclm() {
     echo "$1 is not a c file"
   fi
 }
+
+# unused aliases
+#alias gohome='sudo openvpn --script-security 2 --config /home/micah/.openvpn/halter_home.ovpn'
+#alias dataBackup='/home/micah/backupScript/backup.sh'
+#alias dataBackupUmount='/home/micah/backupScript/backup.sh && sleep 5 && sudo umount /dev/sdd1'
 
 # DO NOT DELETE LMAO
 alias b="cd -; echo \$PWD"
