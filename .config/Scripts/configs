@@ -10,4 +10,5 @@ cfp	~/.config/polybar/config
 cfr	~/.config/ranger/rc.conf
 cft	~/.tmux.conf
 cfv	~/.vimrc
+cfx	~/.Xdefaults
 cfz	~/.zshrc
