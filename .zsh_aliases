@@ -14,6 +14,7 @@ alias -s tex=vim
 alias -s log="less -MN"
 
 alias yt="mpsyt"
+alias vi='vim'
 
 # aliases for Tmux
 alias tmux='tmux -2'
@@ -61,7 +62,7 @@ alias kd='khard'
 
 alias nb='newsbeuter'
 
-alias nf='neofetch --ascii_distro arch'
+alias nf='neofetch'
 
 alias arc='aria2c'
 
@@ -118,7 +119,6 @@ alias cmount='mount | column -t'
 alias meminfo='free -m -l -t'
 alias psg='ps aux | grep'
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
-alias katawa="/home/micah/data/Videos/Anime/Visual\ Novels/Katawa\ Shoujo-linux/Katawa\ Shoujo.sh"
 alias python="python3"
 alias mysql="mysql -u root -p"
 
@@ -138,7 +138,7 @@ txtemp() {
     if [[ ! $file =~ \.tex$ ]]; then
       file=$file.tex
     fi
-    cp ~/data/Documents/LaTeX/templates/$1.tex $file;
+    cp ~/Documents/LaTeX/templates/$1.tex $file;
     vi $file;
   fi
 }
@@ -184,18 +184,18 @@ gcclm() {
 alias b="cd -; echo \$PWD"
 alias cf="cd ~/.config; echo \$PWD"
 alias cv="cd ~/git/mehalter.github.io/resume; echo \$PWD"
-alias d="cd ~/data/Documents; echo \$PWD"
-alias D="cd ~/data/Downloads; echo \$PWD"
+alias d="cd ~/Documents; echo \$PWD"
+alias D="cd ~/Downloads; echo \$PWD"
 alias e="cd /etc; echo \$PWD"
 alias h="cd ~; echo \$PWD"
-alias m="cd ~/data/Music; echo \$PWD"
+alias m="cd ~/Music; echo \$PWD"
 alias o="cd /opt; echo \$PWD"
-alias p="cd ~/data/Pictures; echo \$PWD"
+alias p="cd ~/Pictures; echo \$PWD"
 alias r="cd /; echo \$PWD"
 alias s="cd ~/git/School-Work; echo \$PWD"
 alias S="cd ~/.config/Scripts; echo \$PWD"
 alias u="cd /usr; echo \$PWD"
-alias v="cd ~/data/Videos; echo \$PWD"
+alias v="cd ~/Videos; echo \$PWD"
 alias ws="cd ~/git/mehalter.github.io; echo \$PWD"
 alias .f="cd ~/git/dotfiles; echo \$PWD"
 alias cfa="vim ~/.zsh_aliases"
@@ -205,7 +205,7 @@ alias cfcv="vim ~/git/mehalter.github.io/resume/resume.tex"
 alias cfd="vim ~/.Xresources"
 alias cff="vim ~/.config/Scripts/folders"
 alias cfi="vim ~/.config/i3/config"
-alias cfm="vim ~/.muttrc"
+alias cfm="vim ~/.config/mutt/muttrc"
 alias cfp="vim ~/.config/polybar/config"
 alias cfr="vim ~/.config/ranger/rc.conf"
 alias cft="vim ~/.tmux.conf"

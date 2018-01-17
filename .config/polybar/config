@@ -10,9 +10,10 @@ alert          = ${xrdb:color2}
 [bar/top-bar]
 monitor = ${env:MONITOR:}
 width = 100%
-height = 22
-radius = 6.0
+height = 24
+radius = 0.0
 fixed-center = true
+tray-position = right
 
 background = ${colors.background}
 foreground = ${colors.foreground}
@@ -30,7 +31,7 @@ font-1 = FontAwesome:size=13;0
 
 modules-left = i3 music
 modules-center =
-modules-right = i3layout updates mail layout volume wlan eth powersaver battery date powermenu
+modules-right = i3layout mail volume wlan eth powersaver battery date powermenu
 
 [module/i3]
 type = internal/i3
@@ -62,27 +63,27 @@ label-urgent-padding       = ${self.padding}
 
 [module/wlan]
 type = internal/network
-interface = wlp5s0
+interface = wlp3s0
 interval = 3.0
 
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-format-connected = %{A1:cinnamon-settings network&:}<label-connected>%{A}
+format-connected = <label-connected>
 label-connected = %essid%
 
 format-disconnected-prefix = " "
 format-disconnected-prefix-foreground = ${colors.foreground-alt}
-format-disconnected = %{A1:cinnamon-settings network&:}<label-disconnected>%{A}
+format-disconnected = <label-disconnected>
 label-disconnected = Not Connected
 
 [module/eth]
 type = internal/network
-interface = enp3s0
+interface = enp0s25
 interval = 3.0
 
 format-connected-prefix = " "
 format-connected-prefix-foreground = ${colors.foreground-alt}
-format-connected = %{A1:cinnamon-settings network&:}<label-connected>%{A}
+format-connected = <label-connected>
 label-connected = %local_ip%
 
 format-disconnected =
@@ -100,7 +101,7 @@ time-alt = %H:%M:%S
 
 format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
-format = %{A3:cinnamon-settings calendar&:}<label>%{A}
+format = <label>
 label = %date% %time%
 
 [module/volume]
@@ -108,23 +109,13 @@ type = internal/volume
 
 format-volume-prefix = " "
 format-volume-prefix-foreground = ${colors.foreground-alt}
-format-volume = %{A3:cinnamon-settings sound&:}<label-volume>%{A}
+format-volume = %{A3:pavucontrol&:}<label-volume>%{A}
 label-volume = %percentage%%
 
 format-muted-prefix = " "
 format-muted-prefix-foreground = ${colors.foreground-alt}
-format-muted = %{A3:cinnamon-settings sound&:}<label-muted>%{A}
+format-muted = %{A3:pavucontrol&:}<label-muted>%{A}
 label-muted = 0%
-
-[module/layout]
-type=custom/script
-exec = /home/micah/.config/polybar/scripts/getKeyboard
-interval = 5
-
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format = %{A1:/home/micah/.config/polybar/scripts/toggleKeyboard&:}<label>%{A}
-label = %output%
 
 [module/music]
 type = custom/script
@@ -139,16 +130,7 @@ label = %output%
 type = custom/script
 exec = /home/micah/.config/polybar/scripts/mail
 interval = 5
-format-prefix = " "
-format-prefix-foreground = ${colors.foreground-alt}
-format = <label>
-label = %output%
-
-[module/updates]
-type = custom/script
-exec = /home/micah/.config/polybar/scripts/updates
-interval = 5
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format = <label>
 label = %output%
@@ -171,8 +153,8 @@ label = %output%
 
 [module/battery]
 type = internal/battery
-battery = BAT1
-adapter = ADP1
+battery = BAT0
+adapter = AC
 full-at = 98
 
 format-charging = <animation-charging> <label-charging>

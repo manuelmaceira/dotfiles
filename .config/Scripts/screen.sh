@@ -1,27 +1,37 @@
 #!/bin/bash
 
+left='HDMI-3'
+right='HDMI-2'
+laptop='LVDS-1'
+
 dual() {
-  if [[ ($(xrandr -q | grep VGA1\ con)) && ($(xrandr -q | grep HDMI1\ con)) ]]; then
-    xrandr --output VGA1 --auto --output HDMI1 --auto --right-of VGA1 --output eDP1 --off
+  if [[ ($(xrandr -q | grep $left\ con)) && ($(xrandr -q | grep $right\ con)) ]]; then
+    xrandr --output $left --auto --output $right --auto --right-of $left --output $laptop --off
   fi
 }
 
-vga() {
-  xrandr --output VGA1 --auto --output eDP1 --off  --output HDMI1 --off
+left() {
+  if [[ $(xrandr -q | grep $left\ con) ]]; then
+    xrandr --output $left --auto --output $laptop --off  --output $right --off
+  fi
 }
 
-hdmi() {
-  xrandr --output HDMI1 --auto --output eDP1 --off  --output VGA1 --off
+right() {
+  if [[ $(xrandr -q | grep $right\ con) ]]; then
+    xrandr --output $right --auto --output $laptop --off  --output $left --off
+  fi
 }
 
 laptop() {
-  xrandr --output eDP1 --auto --output VGA1 --off  --output HDMI1 --off
+  xrandr --output $laptop --auto --output $left --off  --output $right --off
 }
 
 case $1 in
   d) dual ;;
-  v) vga ;;
-  h) hdmi ;;
-  l) laptop ;;
+  l) left ;;
+  r) right ;;
+  s) laptop ;;
   *) echo "Invalid parameter"
 esac
+
+~/.config/polybar/launch.sh

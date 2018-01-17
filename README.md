@@ -16,6 +16,7 @@ My dotfiles for my Linux rice.
 - zsh
 - oh-my-zsh
 - urxvt
+- urxvt-perls
 - vim
 - tmux
 - tmuxinator

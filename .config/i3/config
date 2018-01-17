@@ -77,7 +77,7 @@ for_window [instance="files"] resize set 900 650
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
 
-# start mutt in floating window
+# start neomutt in floating window
 for_window [instance="email"] floating enable
 for_window [instance="email"] resize set 900 650
 for_window [instance="email"] move position center
@@ -109,13 +109,13 @@ for_window [instance="weather"] move scratchpad
 
 # start glances in floating window
 for_window [instance="glances"] floating enable
-for_window [instance="glances"] resize set 1800 960
+for_window [instance="glances"] resize set 1500 800
 for_window [instance="glances"] move position center
 for_window [instance="glances"] move scratchpad
 
 # rtorrent terminal
 for_window [instance="rtorrent"] floating enable
-for_window [instance="rtorrent"] resize set 1800 960
+for_window [instance="rtorrent"] resize set 1500 800
 for_window [instance="rtorrent"] move position center
 for_window [instance="rtorrent"] move scratchpad
 
@@ -128,11 +128,12 @@ for_window [instance="rtorrent"] move scratchpad
 exec --no-startup-id $browser
 # terminal
 exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $workspace1'
-# music
-#exec --no-startup-id i3-msg 'exec zsh /home/micah/.config/i3/scripts/music'
 
 # start compositor
 exec --no-startup-id compton -f
+
+# disable trackpad
+exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
 
 # set wallpaper and colors
 exec_always --no-startup-id feh --bg-scale ~/.config/wall
@@ -144,11 +145,11 @@ assign [class="Firefox"] $workspace1
 assign [class="Google Play Music Desktop Player"] $workspace3
 for_window [class="Cinnamon-settings.py"] floating enable
 
-# start dual monitor
-exec --no-startup-id ~/.config/Scripts/screen.sh d
-
 # status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# start dual monitor
+exec --no-startup-id ~/.config/Scripts/screen.sh d
 
 
 ######################
@@ -276,11 +277,11 @@ bindsym $mod+Shift+b         exec --no-startup-id $cliprog math "bc"
 #bindsym $mod+Shift+Control+b
 
 #bindsym $mod+n
-bindsym $mod+Shift+n         exec --no-startup-id $runner "newsbeuter"
+bindsym $mod+Shift+n         exec --no-startup-id $runner "newsboat"
 #bindsym $mod+Control+n
 #bindsym $mod+Shift+Control+n
 
-bindsym $mod+m               exec --no-startup-id $cliprog email "mutt"
+bindsym $mod+m               exec --no-startup-id $cliprog email "neomutt"
 bindsym $mod+Shift+m         exec --no-startup-id $term -name gpymusic -e /home/micah/.config/i3/scripts/runner "gpymusic"
 #bindsym $mod+Control+m
 bindsym $mod+Shift+Control+m exec --no-startup-id amixer -D pulse sset Master toggle
@@ -353,11 +354,11 @@ bindsym $mod+Tab                        workspace back_and_forth
 
 #bindsym $mod+bracketleft
 #bindsym $mod+Shift+bracketleft
-bindsym $mod+Shift+Control+bracketleft  exec --no-startup-id xbacklight -dec 10
+bindsym $mod+Shift+Control+bracketleft  exec --no-startup-id light -U 10
 
 #bindsym $mod+bracketright
 #bindsym $mod+Shift+bracketright
-bindsym $mod+Shift+Control+bracketright exec --no-startup-id xbacklight -inc 10
+bindsym $mod+Shift+Control+bracketright exec --no-startup-id light -A 10
 
 #bindsym $mod+backslash
 #bindsym $mod+Shift+backslash
@@ -396,16 +397,16 @@ bindsym $mod+Shift+Control+space        exec --no-startup-id echo "cycle pause" 
 # FUNCTION KEYBINDINGS #
 ########################
 
-bindsym $mod+F1        exec --no-startup-id ~/.config/Scripts/screen.sh v ; exec --no-startup-id ~/.config/polybar/launch.sh
+bindsym $mod+F1        exec --no-startup-id ~/.config/Scripts/screen.sh l
 #bindsym $mod+Shift+F1
 
-bindsym $mod+F2        exec --no-startup-id ~/.config/Scripts/screen.sh h ; exec --no-startup-id ~/.config/polybar/launch.sh
+bindsym $mod+F2        exec --no-startup-id ~/.config/Scripts/screen.sh r
 #bindsym $mod+Shift+F2
 
-bindsym $mod+F3        exec --no-startup-id ~/.config/Scripts/screen.sh d ; exec --no-startup-id ~/.config/polybar/launch.sh
+bindsym $mod+F3        exec --no-startup-id ~/.config/Scripts/screen.sh d
 #bindsym $mod+Shift+F3
 
-bindsym $mod+F4        exec --no-startup-id ~/.config/Scripts/screen.sh l ; exec --no-startup-id ~/.config/polybar/launch.sh
+bindsym $mod+F4        exec --no-startup-id ~/.config/Scripts/screen.sh s
 #bindsym $mod+Shift+F4
 
 bindsym $mod+F5        exec --no-startup-id ~/.config/i3/scripts/powersaver
@@ -429,7 +430,7 @@ bindsym $mod+F5        exec --no-startup-id ~/.config/i3/scripts/powersaver
 #bindsym $mod+F11
 #bindsym $mod+Shift+F11
 
-#bindsym $mod+F12
+bindsym $mod+F12                        exec --no-startup-id ~/.config/i3/scripts/toggletrackpad
 #bindsym $mod+Shift+F12
 
 bindsym Print                           exec --no-startup-id scrot '%Y-%m-%d_%H:%M:%S_screenshot.png'
@@ -447,7 +448,7 @@ bindsym $mod+Insert                     exec --no-startup-id bash /home/micah/.c
 bindsym $mod+Delete                     exec --no-startup-id killall ffmpeg & killall screenkey
 #bindsym $mod+Shift+Delete
 
-bindsym $mod+Prior                      exec --no-startup-id ~/.config/polybar/scripts/toggleKeyboard
+#bindsym $mod+Prior
 #bindsym $mod+Shift+Prior
 
 bindsym $mod+Next                       reload
@@ -462,10 +463,15 @@ bindsym $mod+Shift+Control+Next         exec $i3exit
 bindsym XF86AudioLowerVolume            exec --no-startup-id amixer -D pulse sset Master 5%-
 bindsym XF86AudioRaiseVolume            exec --no-startup-id amixer -D pulse sset Master 5%+
 bindsym XF86AudioMute                   exec --no-startup-id amixer -D pulse sset Master toggle
+bindsym XF86AudioMicMute           exec --no-startup-id pactl set-source-mute  $(pacmd list-sources|awk '/\* index:/{ print $3 }') toggle
 
 bindsym XF86AudioPause                  exec --no-startup-id echo "cycle pause" > ~/.config/mpv/control
 bindsym XF86AudioNext                   exec --no-startup-id echo "playlist-next" > ~/.config/mpv/control
 bindsym XF86AudioPrev                   exec --no-startup-id echo "playlist-prev" > ~/.config/mpv/control
 
-bindsym XF86MonBrightnessUp             exec --no-startup-id xbacklight -inc 10
-bindsym XF86MonBrightnessDown           exec --no-startup-id xbacklight -dec 10
+bindsym XF86MonBrightnessUp             exec --no-startup-id light -A 10
+bindsym XF86MonBrightnessDown           exec --no-startup-id light -U 10
+
+bindsym XF86ScreenSaver                 exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
+
+bindsym XF86Launch1                     exec --no-startup-id ~/.config/polybar/launch.sh

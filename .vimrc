@@ -91,10 +91,6 @@ set tm=500
 syntax enable
 set t_Co=256
 let base16colorspace=256
-"if filereadable(expand("~/.vim/vimrc_background"))
-"source ~/.vim/vimrc_background
-"endif
-"colorscheme base16-default-dark
 colorscheme wal
 
 " Status line
@@ -262,9 +258,9 @@ nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
 nnoremap <leader>lp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
 
 " pandoc compile keybindings
-nnoremap <leader>ml :w<CR>:!pandoc % --latex-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
-nnoremap <leader>mb :w<CR>:!pandoc % --latex-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR>
-nnoremap <leader>mc :w<CR>:!pandoc % --latex-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
+nnoremap <leader>ml :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
+nnoremap <leader>mb :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR>
+nnoremap <leader>mc :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
 nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
 nnoremap <leader>mp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
 
@@ -285,7 +281,7 @@ command! MakeTags !ctags -R .
 " => Autocommands
 """"""""""""""""""""""""""""
 " Auto build configs on edit of certain files
-autocmd BufWritePost ~/git/dotfiles/.config/Scripts/folders,~/git/dotfiles/.config/Scripts/configs !python ~/.config/Scripts/shortcuts.py
+autocmd BufWritePost ~/.config/Scripts/folders,~/.config/Scripts/configs !python ~/.config/Scripts/shortcuts.py
 
 " Markdown Settings
 " set tab to 4

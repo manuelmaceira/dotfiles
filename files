@@ -1,92 +1,91 @@
 # bash
-.bashrc
-.bash_aliases
+~/.bashrc
+~/.bash_aliases
 
 # zsh
-.zshrc
-.zsh_aliases
+~/.zshrc
+~/.zsh_aliases
 
 # scripts
-.config/Scripts
+~/.config/Scripts
 
 # cava
-.config/cava
+~/.config/cava
 
 # mpv
-.config/mpv/mpv.conf
+~/.config/mpv/mpv.conf
 
 # compton
-.config/compton.conf
+~/.config/compton.conf
 
 # gtk
-.config/gtk-3.0
-.gtkrc-2.0
+~/.config/gtk-3.0
+~/.gtkrc-2.0
 
 # i3
-.config/i3
+~/.config/i3
 
 #polybar
-.config/polybar
+~/.config/polybar
 
 # khal
-.config/khal
+~/.config/khal
 
 # khard
-.config/khard
+~/.config/khard
 
 # vdirsyncer
-.config/vdirsyncer/password.sh
-.config/vdirsyncer/config
+~/.config/vdirsyncer/password.sh
+~/.config/vdirsyncer/config
 
 # mutt
-.config/mutt
-.muttrc
+~/.config/mutt
 
 # offlineimap
-.offlineimap.py
-.offlineimaprc
-.offlineimapsync.sh
+~/.offlineimap.py
+~/.offlineimaprc
+~/.offlineimapsync.sh
 
 # msmtp
-.msmtprc
+~/.msmtprc
 
 # neofetch
-.config/neofetch
+~/.config/neofetch
 
 # ranger
-.config/ranger
+~/.config/ranger
 
 # rtv
-.config/rtv/rtv.cfg
-.mailcap
+~/.config/rtv/rtv.cfg
+~/.mailcap
 
 # zathura
-.config/zathura
+~/.config/zathura
 
 # rtorrent
-.rtorrent.rc
+~/.rtorrent.rc
 
-# newsbeuter
-.newsbeuter/config
-.newsbeuter/urls
+# newsboat
+~/.newsboat/config
+~/.newsboat/urls
 
 # tmux
-.tmux.conf
-.tmuxinator
+~/.tmux.conf
+~/.tmuxinator
 
 # weechat
-.weechat
+~/.weechat
 
 # vim
-.vimrc
-.vim
+~/.vimrc
+#.vim
 
 # urxvt
-.Xdefaults
-.urxvt
+~/.Xdefaults
+~/.urxvt
 
 # sc-im
-.scimrc
+~/.scimrc
 
 # firefox
-.mozilla/firefox/mwad0hks.default/chrome
+~/.mozilla/firefox/hbjvq3aa.default/chrome

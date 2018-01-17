@@ -14,7 +14,7 @@ fileext = ".ics"
 [storage gcal_remote]
 type = "google_calendar"
 token_file = "~/.config/vdirsyncer/calauth"
-client_id = "910634841614-48gren4lsaltp3cotf9lkkhf26vt3vb8.apps.googleusercontent.com"
+client_id = "134889099907-ijk4vhmahqi45dijtliga4elba8hi2e3.apps.googleusercontent.com"
 client_secret.fetch = ["command", "/home/micah/.config/vdirsyncer/password.sh"]
 
 [pair gaddr]
@@ -30,5 +30,5 @@ fileext = ".vcf"
 [storage gaddr_remote]
 type = "google_contacts"
 token_file = "~/.config/vdirsyncer/addrauth"
-client_id = "910634841614-48gren4lsaltp3cotf9lkkhf26vt3vb8.apps.googleusercontent.com"
+client_id = "134889099907-ijk4vhmahqi45dijtliga4elba8hi2e3.apps.googleusercontent.com"
 client_secret.fetch = ["command", "/home/micah/.config/vdirsyncer/password.sh"]

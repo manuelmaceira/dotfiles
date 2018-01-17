@@ -1,9 +1,0 @@
-#!/bin/bash
-
-out=$(apt-get --just-print upgrade|grep "^Inst .*$"|wc -l)
-
-if [ $out != "0" ]; then
-  echo $out
-else
-  echo ""
-fi

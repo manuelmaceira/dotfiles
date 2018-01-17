@@ -28,10 +28,10 @@ mono indicator reverse
 color index yellow default '.*' #normal email
 color index green  default "~v~(!~N)~(!~F)" #collapsed threads
 color index red  default "~T" #tagged
-#color index_author red default '.*'
-#color index_number blue default
-#color index_subject cyan default '.s'
-#color index_size green default
+color index_author red default '.*'
+color index_number blue default
+color index_subject cyan default '.s'
+color index_size green default
 color normal default default
 color body brightred default [\-\.+_a-zA-Z0-9]+@[\-\.a-zA-Z0-9]+
 color body brightblue default (https?|ftp)://[\-\.,/%~_:?&=\#a-zA-Z0-9]+
@@ -51,7 +51,9 @@ bind index R group-reply
 set query_command="khard email --parsable %s"
 bind editor <Tab> complete-query
 bind editor ^T complete
+bind index,pager a noop
 macro index,pager ac "<pipe-message>khard add-email<return>" "Add sender to Khard"
+bind index,pager s noop
 macro index,pager sc "<shell-escape>vdirsyncer sync gaddr<return>" "sync contacts"
 
 macro index Z "<shell-escape>offlineimap<enter>" "sync all mail"

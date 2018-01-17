@@ -34,4 +34,4 @@ i3lock -i /tmp/screen.png \
   --ringvercolor=${color0:1:6}ff \
   --ringwrongcolor=${color2:1:6}ff \
 
-rm /tmp/screen.png /tmp/lock.png
+rm -f /tmp/screen.png /tmp/lock.png

@@ -30,7 +30,7 @@ URxvt*font: xft:Hasklig:pixelsize=14
 URxvt*boldFont: xft:Hasklig:pixelsize=14
 
 ! Fix font space
-URxvt*letterSpace: -1
+URxvt*letterSpace: 0
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt
@@ -39,7 +39,7 @@ URxvt.scrollBar:            false
 ! Perl extensions
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
-URxvt.perl-ext-common: default,clipboard,matcher,url-select
+URxvt.perl-ext-common: default,xclipboard,matcher,url-select
 URxvt.matcher.button:       1
 URxvt.urlLauncher:          /usr/bin/xdg-open
 URxvt.keysym.Control-b: perl:url-select:select_next

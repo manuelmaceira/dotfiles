@@ -36,7 +36,7 @@ def destroy_tmp(tmp_id):
 def make_float(current_id):
   i3.focus(con_id=current_id)
   i3.floating('enable')
-  i3.resize('set 1800 960')
+  i3.resize('set 1500 800')
   i3.move('position center')
 
 def make_unfloat(current_id):

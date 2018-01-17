@@ -5,7 +5,7 @@ cfcv	~/git/mehalter.github.io/resume/resume.tex
 cfd	~/.Xresources
 cff	~/.config/Scripts/folders
 cfi	~/.config/i3/config
-cfm	~/.muttrc
+cfm	~/.config/mutt/muttrc
 cfp	~/.config/polybar/config
 cfr	~/.config/ranger/rc.conf
 cft	~/.tmux.conf
