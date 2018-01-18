@@ -37,7 +37,7 @@ URxvt.scrollStyle: rxvt
 URxvt.scrollBar:   false
 
 ! Perl extensions
-URxvt.keysym.Shift-Control-V: perl:xclipboard:paste
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755:               False
 URxvt.perl-ext-common:        default,xclipboard,matcher,url-select
 URxvt.matcher.button:         1
