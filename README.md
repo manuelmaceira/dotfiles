@@ -9,53 +9,53 @@ My dotfiles for my Linux rice.
 - i3lock-color
 - polybar
 - j4-dmenu-desktop
-- dmenu
 
 ### Command Line Applications
 
-- zsh
+- cava
+- ddgr
+- gpymusic
+- khal
+- khard
+- mps-youtube
+- neomutt
+- newsbeuter
 - oh-my-zsh
+- qutebrowser
+- ranger
+- rtorrent
+- rtv
+- sc-im
+- tmux
+- tmuxinator
 - urxvt
 - urxvt-perls
 - vim
-- tmux
-- tmuxinator
-- ranger
-- neomutt
-- khard
-- khal
 - weechat
-- gpymusic
-- cava
-- mps-youtube
-- rtv
-- newsbeuter
-- ddgr
 - zathura
-- rtorrent
-- sc-im
+- zsh
 - #### Utilities
-  - neofetch
-  - feh
-  - arandr
-  - lxappearance
-  - infinality
-  - compton
-  - scrot
-  - xclip
-  - xdotool
-  - base16
-  - offlineimap
-  - msmtp
-  - vdirsyncer
-  - urlview
-  - mpv
-  - aria2c
-  - py-wal
-  - oomox
-  - fprintd
-  - lightdm
-  - dunst
+    - arandr
+    - aria2c
+    - compton
+    - dmenu
+    - dunst
+    - feh
+    - fprintd
+    - infinality
+    - lightdm
+    - lxappearance
+    - mpv
+    - msmtp
+    - neofetch
+    - offlineimap
+    - oomox
+    - py-wal
+    - scrot
+    - urlview
+    - vdirsyncer
+    - xclip
+    - xdotool
 
 ## Look and Feel
 

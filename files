@@ -48,8 +48,11 @@
 ~/.offlineimaprc
 ~/.offlineimapsync.sh
 
-#polybar
+# polybar
 ~/.config/polybar
+
+# qutebrowser
+~/.config/qutebrowser/config.py
 
 # ranger
 ~/.config/ranger
