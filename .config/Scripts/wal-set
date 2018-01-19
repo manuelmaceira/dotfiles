@@ -16,8 +16,13 @@ reload_dunst() {
         -geometry "300x5-10+34" &
 }
 
+reload_qute() {
+  python3 /home/micah/.config/Scripts/qutebrowser_reload.py
+}
+
 main() {
     reload_dunst
+    reload_qute
 }
 
 main

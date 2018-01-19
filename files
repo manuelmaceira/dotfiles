@@ -52,7 +52,7 @@
 ~/.config/polybar
 
 # qutebrowser
-~/.config/qutebrowser/config.py
+~/.config/qutebrowser
 
 # ranger
 ~/.config/ranger
