@@ -124,11 +124,6 @@ for_window [instance="rtorrent"] move scratchpad
 # AUTORUN APPLICATIONS #
 ########################
 
-# browser
-exec --no-startup-id $browser
-# terminal
-exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $workspace1'
-
 # start compositor
 exec --no-startup-id compton -f
 
@@ -150,6 +145,11 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # start dual monitor
 exec --no-startup-id ~/.config/Scripts/screen.sh d
+
+# browser
+exec --no-startup-id $browser
+# terminal
+exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $workspace1'
 
 
 ######################
