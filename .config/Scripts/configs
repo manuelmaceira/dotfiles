@@ -7,6 +7,7 @@ cff	~/.config/Scripts/folders
 cfi	~/.config/i3/config
 cfm	~/.config/mutt/muttrc
 cfp	~/.config/polybar/config
+cfp	~/.config/qutebrowser/config.py
 cfr	~/.config/ranger/rc.conf
 cft	~/.tmux.conf
 cfv	~/.vimrc
