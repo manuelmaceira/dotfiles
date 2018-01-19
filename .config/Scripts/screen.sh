@@ -35,3 +35,4 @@ case $1 in
 esac
 
 ~/.config/polybar/launch.sh
+feh --bg-scale ~/.config/wall
