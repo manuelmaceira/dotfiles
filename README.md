@@ -55,6 +55,7 @@ My dotfiles for my Linux rice.
   - oomox
   - fprintd
   - lightdm
+  - dunst
 
 ## Look and Feel
 

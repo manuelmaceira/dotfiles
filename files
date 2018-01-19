@@ -2,21 +2,17 @@
 ~/.bashrc
 ~/.bash_aliases
 
-# zsh
-~/.zshrc
-~/.zsh_aliases
-
-# scripts
-~/.config/Scripts
-
 # cava
 ~/.config/cava
 
-# mpv
-~/.config/mpv/mpv.conf
-
 # compton
 ~/.config/compton.conf
+
+# dunst
+~/.config/dunst/dunstrc
+
+# firefox
+~/.mozilla/firefox/hbjvq3aa.default/chrome
 
 # gtk
 ~/.config/gtk-3.0
@@ -25,67 +21,73 @@
 # i3
 ~/.config/i3
 
-#polybar
-~/.config/polybar
-
 # khal
 ~/.config/khal
 
 # khard
 ~/.config/khard
 
-# vdirsyncer
-~/.config/vdirsyncer/password.sh
-~/.config/vdirsyncer/config
+# mpv
+~/.config/mpv/mpv.conf
+
+# msmtp
+~/.msmtprc
 
 # mutt
 ~/.config/mutt
+
+# neofetch
+~/.config/neofetch
+
+# newsboat
+~/.newsboat/config
+~/.newsboat/urls
 
 # offlineimap
 ~/.offlineimap.py
 ~/.offlineimaprc
 ~/.offlineimapsync.sh
 
-# msmtp
-~/.msmtprc
-
-# neofetch
-~/.config/neofetch
+#polybar
+~/.config/polybar
 
 # ranger
 ~/.config/ranger
+
+# rtorrent
+~/.rtorrent.rc
 
 # rtv
 ~/.config/rtv/rtv.cfg
 ~/.mailcap
 
-# zathura
-~/.config/zathura
+# sc-im
+~/.scimrc
 
-# rtorrent
-~/.rtorrent.rc
-
-# newsboat
-~/.newsboat/config
-~/.newsboat/urls
+# scripts
+~/.config/Scripts
 
 # tmux
 ~/.tmux.conf
 ~/.tmuxinator
 
-# weechat
-~/.weechat
-
-# vim
-~/.vimrc
-#.vim
-
 # urxvt
 ~/.Xdefaults
 ~/.urxvt
 
-# sc-im
-~/.scimrc
+# vdirsyncer
+~/.config/vdirsyncer/password.sh
+~/.config/vdirsyncer/config
 
-# firefox
-~/.mozilla/firefox/hbjvq3aa.default/chrome
+# vim
+~/.vimrc
+
+# weechat
+~/.weechat
+
+# zathura
+~/.config/zathura
+
+# zsh
+~/.zshrc
+~/.zsh_aliases
