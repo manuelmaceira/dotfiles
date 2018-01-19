@@ -3,7 +3,7 @@ set $mod Mod1
 floating_modifier $mod
 
 # set variables
-set $browser 'firefox'
+set $browser 'qutebrowser'
 set $term     'urxvt'
 set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
 set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
@@ -137,6 +137,7 @@ exec_always --no-startup-id wal -R -o /home/micah/.config/Scripts/wal-set
 # application placements
 assign [class="Google-chrome"] $workspace1
 assign [class="Firefox"] $workspace1
+assign [class="qutebrowser"] $workspace1
 assign [class="Google Play Music Desktop Player"] $workspace3
 for_window [class="Cinnamon-settings.py"] floating enable
 
