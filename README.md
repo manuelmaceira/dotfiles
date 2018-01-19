@@ -54,6 +54,7 @@ My dotfiles for my Linux rice.
   - py-wal
   - oomox
   - fprintd
+  - lightdm
 
 ## Look and Feel
 
@@ -61,6 +62,7 @@ My dotfiles for my Linux rice.
 
 - wal gtk theme
 - numix icon theme
+- lightdm-mini-greeter
 
 ### Fonts
 
