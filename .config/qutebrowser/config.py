@@ -16,6 +16,8 @@ def read_xresources(prefix):
 
 xresources = read_xresources('*')
 
+config.load_autoconfig()
+
 c.colors.completion.category.bg = xresources['*color6']
 c.colors.completion.category.fg = xresources['*color0']
 
