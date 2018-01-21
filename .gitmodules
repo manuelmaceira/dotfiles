@@ -1,48 +1,45 @@
-[submodule ".vim/pathogen/haskell-vim"]
-	path = .vim/pathogen/haskell-vim
+[submodule "vim/.vim/pathogen/haskell-vim"]
+	path = vim/.vim/pathogen/haskell-vim
 	url = https://github.com/neovimhaskell/haskell-vim.git
-[submodule ".vim/pathogen/base16-vim"]
-	path = .vim/pathogen/base16-vim
+[submodule "vim/.vim/pathogen/base16-vim"]
+	path = vim/.vim/pathogen/base16-vim
 	url = https://github.com/chriskempson/base16-vim.git
-[submodule ".vim/pathogen/tagbar"]
-	path = .vim/pathogen/tagbar
+[submodule "vim/.vim/pathogen/tagbar"]
+	path = vim/.vim/pathogen/tagbar
 	url = https://github.com/majutsushi/tagbar.git
-[submodule ".vim/pathogen/mru.vim"]
-	path = .vim/pathogen/mru.vim
+[submodule "vim/.vim/pathogen/mru.vim"]
+	path = vim/.vim/pathogen/mru.vim
 	url = https://github.com/vim-scripts/mru.vim.git
-[submodule ".vim/pathogen/bufexplorer"]
-	path = .vim/pathogen/bufexplorer
+[submodule "vim/.vim/pathogen/bufexplorer"]
+	path = vim/.vim/pathogen/bufexplorer
 	url = https://github.com/jlanzarotta/bufexplorer.git
-[submodule ".vim/pathogen/vim-zenroom2"]
-	path = .vim/pathogen/vim-zenroom2
+[submodule "vim/.vim/pathogen/vim-zenroom2"]
+	path = vim/.vim/pathogen/vim-zenroom2
 	url = https://github.com/amix/vim-zenroom2.git
-[submodule ".vim/pathogen/goyo.vim"]
-	path = .vim/pathogen/goyo.vim
+[submodule "vim/.vim/pathogen/goyo.vim"]
+	path = vim/.vim/pathogen/goyo.vim
 	url = https://github.com/junegunn/goyo.vim.git
-[submodule ".vim/pathogen/nerdtree"]
-	path = .vim/pathogen/nerdtree
+[submodule "vim/.vim/pathogen/nerdtree"]
+	path = vim/.vim/pathogen/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule ".vim/pathogen/lightline.vim"]
-	path = .vim/pathogen/lightline.vim
+[submodule "vim/.vim/pathogen/lightline.vim"]
+	path = vim/.vim/pathogen/lightline.vim
 	url = https://github.com/itchyny/lightline.vim.git
-[submodule ".vim/pathogen/syntastic"]
-	path = .vim/pathogen/syntastic
+[submodule "vim/.vim/pathogen/syntastic"]
+	path = vim/.vim/pathogen/syntastic
 	url = https://github.com/vim-syntastic/syntastic.git
-[submodule ".vim/pathogen/open_file_under_cursor.vim"]
-	path = .vim/pathogen/open_file_under_cursor.vim
+[submodule "vim/.vim/pathogen/open_file_under_cursor.vim"]
+	path = vim/.vim/pathogen/open_file_under_cursor.vim
 	url = https://github.com/amix/open_file_under_cursor.vim.git
-[submodule ".vim/pathogen/vim-fugitive"]
-	path = .vim/pathogen/vim-fugitive
+[submodule "vim/.vim/pathogen/vim-fugitive"]
+	path = vim/.vim/pathogen/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git
-[submodule ".vim/pathogen/vim-yankstack"]
-	path = .vim/pathogen/vim-yankstack
+[submodule "vim/.vim/pathogen/vim-yankstack"]
+	path = vim/.vim/pathogen/vim-yankstack
 	url = https://github.com/maxbrunsfeld/vim-yankstack.git
-[submodule ".vim/pathogen/tmuxline.vim"]
-	path = .vim/pathogen/tmuxline.vim
+[submodule "vim/.vim/pathogen/tmuxline.vim"]
+	path = vim/.vim/pathogen/tmuxline.vim
 	url = https://github.com/edkolev/tmuxline.vim.git
-[submodule ".vim/pathogen/wal.vim"]
-	path = .vim/pathogen/wal.vim
+[submodule "vim/.vim/pathogen/wal.vim"]
+	path = vim/.vim/pathogen/wal.vim
 	url = https://github.com/dylanaraps/wal.vim.git
-[submodule ".themes/Flatabulous-wal"]
-	path = .themes/Flatabulous-wal
-	url = https://github.com/dylanaraps/Flatabulous-wal.git
