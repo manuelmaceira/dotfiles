@@ -1,5 +1,5 @@
 # dotfiles
-My dotfiles for my Linux rice.
+My dotfiles for my Linux rice, managed using stow.
 
 ## Applications
 
@@ -52,6 +52,7 @@ My dotfiles for my Linux rice.
     - oomox
     - py-wal
     - scrot
+    - stow
     - urlview
     - vdirsyncer
     - xclip
