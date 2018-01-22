@@ -18,16 +18,14 @@ tray-position = right
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-border-size = 0
-
 padding-left = 0
 padding-right = 2
 
 module-margin-left = 1
 module-margin-right = 1
 
-font-0 = System San Francisco Display:size=13;0
-font-1 = FontAwesome:size=13;0
+font-0 = System San Francisco Display:size=13;2
+font-1 = FontAwesome:size=13;2
 
 modules-left = i3 music
 modules-center =
@@ -40,7 +38,7 @@ index-sort = true
 wrapping-scroll = false
 padding = 1
 
-ws-icon-0 = 1;: 
+ws-icon-0 = 1;: 
 ws-icon-1 = 2;: 
 ws-icon-2 = 3;: 
 
