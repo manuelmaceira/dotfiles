@@ -1,7 +1,7 @@
 #!/bin/bash
 
-left='HDMI-3'
-right='HDMI-2'
+left='HDMI-2'
+right='HDMI-3'
 laptop='LVDS-1'
 
 if [[ ($(xrandr -q | grep $left\ con)) && ($(xrandr -q | grep $right\ con)) ]]; then
