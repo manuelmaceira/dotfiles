@@ -16,7 +16,7 @@ text-width 80
 
 goto-next-feed no
 
-browser firefox
+browser qutebrowser
 
 bind-key j down feedlist
 bind-key j next articlelist
