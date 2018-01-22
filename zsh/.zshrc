@@ -77,4 +77,4 @@ export NODE_PATH="/usr/local/lib/node_modules"
 #[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 (cat ~/.cache/wal/sequences &)
 
-#neofetch --ascii_distro arch
+neofetch
