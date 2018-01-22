@@ -12,7 +12,8 @@ global:
       ',bp': :open -t https://buzzport.gatech.edu/cp/home/displaylogin
       ',cv': :open -t https://gatech.instructure.com/
       ',et': :open -t https://etime.gtri.gatech.edu/DeltekTC/welcome.msv
-      ',fb': :open -t facebook.com
+      ',fb': :open -t https://facebook.com
+      ',gh': :open -t https://github.com/mehalter
       ',pz': :open -t https://piazza.com
       ',wm': :open -t https://sso.gtri.gatech.edu/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fmail.gtri.gatech.edu%2fowa%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fowa%252f&wct=2016-01-29T15%3a00%3a27Z
       ',yt': :open -t https://youtube.com
