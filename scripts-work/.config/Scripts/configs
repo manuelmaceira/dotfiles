@@ -1,0 +1,11 @@
+cfa	~/.zsh_aliases
+cfb	~/.bashrc
+cfcf	~/.config/Scripts/configs
+cff	~/.config/Scripts/folders
+cfi	~/.config/i3/config
+cfp	~/.config/polybar/config
+cfr	~/.config/ranger/rc.conf
+cft	~/.tmux.conf
+cfv	~/.vimrc
+cfx	~/.Xdefaults
+cfz	~/.zshrc

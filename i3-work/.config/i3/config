@@ -1,0 +1,451 @@
+# $mod = Alt
+set $mod Mod1
+floating_modifier $mod
+
+# set variables
+set $browser 'firefox'
+set $term     'urxvt'
+set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
+set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
+set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+
+###############
+# LOOK & FEEL #
+###############
+# Set fonts
+font pango:System San Francisco Display, FontAwesome 13
+
+# set up gaps
+for_window [class="^.*"] border pixel 10
+gaps inner 15
+
+# colors
+#set $bg-color 	          #676E7D
+#set $inactive-bg-color   #2f343f
+#set $text-color          #f3f4f5
+#set $inactive-text-color #676E7D
+#set $urgent-bg-color     #E53935
+set_from_resource $dmenu-bg-color 	   i3wm.color0 #f0f0f0
+set_from_resource $dmenu-text-color    i3wm.color5 #f0f0f0
+set_from_resource $bg-color 	         i3wm.color1 #f0f0f0
+set_from_resource $inactive-bg-color   i3wm.color7 #f0f0f0
+set_from_resource $text-color          i3wm.color5 #f0f0f0
+set_from_resource $inactive-text-color i3wm.color4 #f0f0f0
+set_from_resource $urgent-bg-color     i3wm.color2 #f0f0f0
+
+# window colors         border              background         text                 indicator
+client.focused          $bg-color           $bg-color          $text-color          $bg-color
+client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
+client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
+client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color          $urgent-bg-color
+
+# hide edge borders
+hide_edge_borders both
+
+
+##############
+# WORKSPACES #
+##############
+
+# wokspace names
+set $workspace1  "1"
+set $workspace2  "2"
+set $workspace3  "3"
+set $workspace4  "4"
+set $workspace5  "5"
+set $workspace6  "6"
+set $workspace7  "7"
+set $workspace8  "8"
+set $workspace9  "9"
+set $workspace10 "10"
+
+
+####################
+# DROPDOWN WINDOWS #
+####################
+
+# scratchpad terminal
+for_window [instance="dropdown"] floating enable
+for_window [instance="dropdown"] resize set 900 650
+for_window [instance="dropdown"] move position center
+for_window [instance="dropdown"] move scratchpad
+
+# ranger scratchpad
+for_window [instance="files"] floating enable
+for_window [instance="files"] resize set 900 650
+for_window [instance="files"] move position center
+for_window [instance="files"] move scratchpad
+
+# bc scratchpad
+for_window [instance="math"] floating enable
+for_window [instance="math"] resize set 900 650
+for_window [instance="math"] move position center
+for_window [instance="math"] move scratchpad
+
+# start khal in floating window
+for_window [instance="cal"] floating enable
+for_window [instance="cal"] resize set 900 650
+for_window [instance="cal"] move position center
+for_window [instance="cal"] move scratchpad
+
+# start ddgr in floating window
+for_window [instance="weather"] floating enable
+for_window [instance="weather"] resize set 1200 800
+for_window [instance="weather"] move position center
+for_window [instance="weather"] move scratchpad
+
+# start glances in floating window
+for_window [instance="glances"] floating enable
+for_window [instance="glances"] resize set 1500 800
+for_window [instance="glances"] move position center
+for_window [instance="glances"] move scratchpad
+
+
+########################
+# AUTORUN APPLICATIONS #
+########################
+
+# start compositor
+exec --no-startup-id compton -f
+
+# set wallpaper and colors
+exec_always --no-startup-id feh --bg-scale ~/.config/wall
+exec_always --no-startup-id wal -R
+
+# application placements
+assign [class="Firefox"] $workspace1
+
+# status bar
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+
+# start dual monitor
+exec --no-startup-id ~/.config/Scripts/screen.sh d
+
+# browser
+exec --no-startup-id $browser
+# terminal
+exec --no-startup-id i3-msg 'workspace $workspace2; exec $term; workspace $workspace1'
+
+
+######################
+# LETTER KEYBINDINGS #
+######################
+
+#bindsym $mod+q
+bindsym $mod+Shift+q         kill
+#bindsym $mod+Control+q
+#bindsym $mod+Shift+Control+q
+
+bindsym $mod+w               exec --no-startup-id $browser
+bindsym $mod+Shift+w         exec --no-startup-id $cliprog weather "wttr && read -k1 -s"
+#bindsym $mod+Control+w
+#bindsym $mod+Shift+Control+w
+
+#bindsym $mod+e
+#bindsym $mod+Shift+e
+#bindsym $mod+Control+e
+#bindsym $mod+Shift+Control+e
+
+bindsym $mod+r               exec --no-startup-id $cliprog files "ranger"
+#bindsym $mod+Shift+r
+#bindsym $mod+Control+r
+#bindsym $mod+Shift+Control+r
+
+#bindsym $mod+t
+bindsym $mod+Shift+t         exec --no-startup-id $cliprog glances "glances"
+#bindsym $mod+Control+t
+#bindsym $mod+Shift+Control+t
+
+#bindsym $mod+y
+#bindsym $mod+Shift+y
+#bindsym $mod+Control+y
+#bindsym $mod+Shift+Control+y
+
+bindsym $mod+u               exec --no-startup-id $cliprog dropdown "tmuxinator scratchpad"
+#bindsym $mod+Shift+u
+#bindsym $mod+Control+u
+#bindsym $mod+Shift+Control+u
+
+#bindsym $mod+i 
+#bindsym $mod+Shift+i
+#bindsym $mod+Control+i
+#bindsym $mod+Shift+Control+i
+
+#bindsym $mod+o
+#bindsym $mod+Shift+o
+#bindsym $mod+Control+o
+#bindsym $mod+Shift+Control+o
+
+bindsym $mod+p               gaps inner current plus 5
+bindsym $mod+Shift+p         gaps inner current minus 5
+#bindsym $mod+Control+p
+#bindsym $mod+Shift+Control+p
+
+bindsym $mod+a               focus parent
+#bindsym $mod+Shift+a
+#bindsym $mod+Control+a
+#bindsym $mod+Shift+Control+a
+
+bindsym $mod+s               split toggle
+bindsym $mod+Shift+s         exec --no-startup-id python2 ~/.config/i3/scripts/workspaceswap.py
+#bindsym $mod+Control+s
+#bindsym $mod+Shift+Control+s
+
+bindsym $mod+d               focus child
+#bindsym $mod+Shift+d
+#bindsym $mod+Control+d
+#bindsym $mod+Shift+Control+d
+
+bindsym $mod+f               exec --no-startup-id python2 ~/.config/i3/scripts/focus.py
+bindsym $mod+Shift+f         fullscreen toggle
+#bindsym $mod+Control+f
+#bindsym $mod+Shift+Control+f
+
+#bindsym $mod+g
+#bindsym $mod+Shift+g
+#bindsym $mod+Control+g
+#bindsym $mod+Shift+Control+g
+
+bindsym $mod+h               focus left
+bindsym $mod+Shift+h         move left
+bindsym $mod+Control+h       resize shrink width 10 px or 10 ppt
+bindsym $mod+Shift+Control+h move workspace to output left
+
+bindsym $mod+j               focus down
+bindsym $mod+Shift+j         move down
+bindsym $mod+Control+j       resize grow height 10 px or 10 ppt
+bindsym $mod+Shift+Control+j exec --no-startup-id amixer -D pulse sset Master 5%-
+
+bindsym $mod+k               focus up
+bindsym $mod+Shift+k         move up
+bindsym $mod+Control+k       resize shrink height 10 px or 10 ppt
+bindsym $mod+Shift+Control+k exec --no-startup-id amixer -D pulse sset Master 5%+
+
+bindsym $mod+l               focus right
+bindsym $mod+Shift+l         move right
+bindsym $mod+Control+l       resize grow width 10 px or 10 ppt
+bindsym $mod+Shift+Control+l move workspace to output right
+
+#bindsym $mod+z
+#bindsym $mod+Shift+z
+#bindsym $mod+Control+z
+#bindsym $mod+Shift+Control+z
+
+#bindsym $mod+x
+#bindsym $mod+Shift+x
+#bindsym $mod+Control+x
+#bindsym $mod+Shift+Control+x
+
+bindsym $mod+c               exec --no-startup-id $runner "weechat"
+#bindsym $mod+Shift+c
+#bindsym $mod+Control+c
+#bindsym $mod+Shift+Control+c
+
+#bindsym $mod+v
+#bindsym $mod+Shift+v
+#bindsym $mod+Control+v
+#bindsym $mod+Shift+Control+v
+
+#bindsym $mod+b
+bindsym $mod+Shift+b         exec --no-startup-id $cliprog math "bc"
+#bindsym $mod+Control+b
+#bindsym $mod+Shift+Control+b
+
+#bindsym $mod+n
+#bindsym $mod+Shift+n
+#bindsym $mod+Control+n
+#bindsym $mod+Shift+Control+n
+
+#bindsym $mod+m
+#bindsym $mod+Shift+m
+#bindsym $mod+Control+m
+bindsym $mod+Shift+Control+m exec --no-startup-id amixer -D pulse sset Master toggle
+
+
+######################
+# NUMBER KEYBINDINGS #
+######################
+
+bindsym $mod+1               workspace $workspace1
+bindsym $mod+Shift+1         move container to workspace $workspace1
+#bindsym $mod+Shift+Control+1
+
+bindsym $mod+2               workspace $workspace2
+bindsym $mod+Shift+2         move container to workspace $workspace2
+#bindsym $mod+Shift+Control+2
+
+bindsym $mod+3               workspace $workspace3
+bindsym $mod+Shift+3         move container to workspace $workspace3
+#bindsym $mod+Shift+Control+3
+
+bindsym $mod+4               workspace $workspace4
+bindsym $mod+Shift+4         move container to workspace $workspace4
+#bindsym $mod+Shift+Control+4
+
+bindsym $mod+5               workspace $workspace5
+bindsym $mod+Shift+5         move container to workspace $workspace5
+#bindsym $mod+Shift+Control+5
+
+bindsym $mod+6               workspace $workspace6
+bindsym $mod+Shift+6         move container to workspace $workspace6
+#bindsym $mod+Shift+Control+6
+
+bindsym $mod+7               workspace $workspace7
+bindsym $mod+Shift+7         move container to workspace $workspace7
+#bindsym $mod+Shift+Control+7
+
+bindsym $mod+8               workspace $workspace8
+bindsym $mod+Shift+8         move container to workspace $workspace8
+#bindsym $mod+Shift+Control+8
+
+bindsym $mod+9               workspace $workspace9
+bindsym $mod+Shift+9         move container to workspace $workspace9
+#bindsym $mod+Shift+Control+9
+
+bindsym $mod+0               workspace $workspace10
+bindsym $mod+Shift+0         move container to workspace $workspace10
+#bindsym $mod+Shift+Control+0
+
+
+#######################
+# SPECIAL KEYBINDINGS #
+#######################
+
+#bindsym $mod+grave
+#bindsym $mod+Shift+grave
+#bindsym $mod+Shift+Control+grave
+
+#bindsym $mod+minus
+#bindsym $mod+Shift+minus
+#bindsym $mod+Shift+Control+minus
+
+#bindsym $mod+equal
+#bindsym $mod+Shift+equal
+#bindsym $mod+Shift+Control+equal
+
+bindsym $mod+Tab                        workspace back_and_forth
+#bindsym $mod+Shift+Tab
+#bindsym $mod+Shift+Control+Tab
+
+#bindsym $mod+bracketleft
+#bindsym $mod+Shift+bracketleft
+#bindsym $mod+Shift+Control+bracketleft
+
+#bindsym $mod+bracketright
+#bindsym $mod+Shift+bracketright
+#bindsym $mod+Shift+Control+bracketright
+
+#bindsym $mod+backslash
+#bindsym $mod+Shift+backslash
+#bindsym $mod+Shift+Control+backslash
+
+#bindsym $mod+semicolon
+#bindsym $mod+Shift+semicolon
+#bindsym $mod+Shift+Control+semicolon
+
+#bindsym $mod+apostrophe
+#bindsym $mod+Shift+apostrophe
+#bindsym $mod+Shift+Control+apostrophe
+
+bindsym $mod+Return                     exec --no-startup-id $term
+bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
+#bindsym $mod+Shift+Control+Return
+
+#bindsym $mod+comma
+#bindsym $mod+Shift+comma
+#bindsym $mod+Shift+Control+comma
+
+#bindsym $mod+period
+#bindsym $mod+Shift+period
+#bindsym $mod+Shift+Control+period
+
+#bindsym $mod+slash
+#bindsym $mod+Shift+slash
+#bindsym $mod+Shift+Control+slash
+
+bindsym $mod+space                      focus mode_toggle
+bindsym $mod+Shift+space                floating toggle
+#bindsym $mod+Shift+Control+space
+
+
+########################
+# FUNCTION KEYBINDINGS #
+########################
+
+bindsym $mod+F1        exec --no-startup-id ~/.config/Scripts/screen.sh l
+#bindsym $mod+Shift+F1
+
+bindsym $mod+F2        exec --no-startup-id ~/.config/Scripts/screen.sh r
+#bindsym $mod+Shift+F2
+
+bindsym $mod+F3        exec --no-startup-id ~/.config/Scripts/screen.sh d
+#bindsym $mod+Shift+F3
+
+#bindsym $mod+F4
+#bindsym $mod+Shift+F4
+
+bindsym $mod+F5        exec --no-startup-id ~/.config/i3/scripts/powersaver
+#bindsym $mod+Shift+F5
+
+#bindsym $mod+F6
+#bindsym $mod+Shift+F6
+
+#bindsym $mod+F7
+#bindsym $mod+Shift+F7
+
+#bindsym $mod+F8
+#bindsym $mod+Shift+F8
+
+#bindsym $mod+F9
+#bindsym $mod+Shift+F9
+
+#bindsym $mod+F10
+#bindsym $mod+Shift+F10
+
+#bindsym $mod+F11
+#bindsym $mod+Shift+F11
+
+#bindsym $mod+F12
+#bindsym $mod+Shift+F12
+
+bindsym Print                           exec --no-startup-id scrot '%Y-%m-%d_%H:%M:%S_screenshot.png'
+bindsym Shift+Print                     exec --no-startup-id scrot -u '%Y-%m-%d_%H:%M:%S_screenshot.png'
+
+bindsym $mod+Scroll_Lock                exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
+#bindsym $mod+Shift+Scroll_Lock
+
+bindsym $mod+Pause                      exec --no-startup-id ~/.config/polybar/launch.sh
+#bindsym $mod+Shift+Pause
+
+bindsym $mod+Insert                     exec --no-startup-id bash /home/micah/.config/Scripts/screencast
+#bindsym $mod+Shift+Insert
+
+bindsym $mod+Delete                     exec --no-startup-id killall ffmpeg & killall screenkey
+#bindsym $mod+Shift+Delete
+
+#bindsym $mod+Prior
+#bindsym $mod+Shift+Prior
+
+bindsym $mod+Next                       reload
+bindsym $mod+Shift+Next                 restart
+bindsym $mod+Shift+Control+Next         exec $i3exit
+
+
+#####################
+# MEDIA KEYBINDINGS #
+#####################
+
+bindsym XF86AudioLowerVolume            exec --no-startup-id amixer -D pulse sset Master 5%-
+bindsym XF86AudioRaiseVolume            exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym XF86AudioMute                   exec --no-startup-id amixer -D pulse sset Master toggle
+bindsym XF86AudioMicMute           exec --no-startup-id pactl set-source-mute  $(pacmd list-sources|awk '/\* index:/{ print $3 }') toggle
+
+#bindsym XF86AudioPause
+#bindsym XF86AudioNext
+#bindsym XF86AudioPrev
+
+#bindsym XF86MonBrightnessUp
+#bindsym XF86MonBrightnessDown
+
+bindsym XF86ScreenSaver                 exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh

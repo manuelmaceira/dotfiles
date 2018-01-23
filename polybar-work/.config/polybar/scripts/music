@@ -1,0 +1,15 @@
+#!/bin/bash
+
+if [[ -f ~/.nowplaying ]]; then
+  full=`cat ~/.nowplaying`
+  if [ "$full" != "" ]; then
+      title=`echo "$full"|cut -d '-' -f 1|cut -d ' ' -f 2-|xargs -0`
+      artist=`echo "$full"|cut -d '-' -f 2|xargs -0`
+      output=`echo "${title} by ${artist}"`
+      echo $output
+  else
+    echo ""
+  fi
+else
+  echo ""
+fi
