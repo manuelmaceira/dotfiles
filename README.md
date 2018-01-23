@@ -19,7 +19,7 @@ My dotfiles for my Linux rice, managed using stow.
 - khard
 - mps-youtube
 - neomutt
-- newsbeuter
+- newsboat
 - oh-my-zsh
 - qutebrowser
 - ranger
