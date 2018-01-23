@@ -1,0 +1,213 @@
+[colors]
+background     = ${xrdb:color0}
+background-alt = ${xrdb:color1}
+foreground     = ${xrdb:color5}
+foreground-alt = ${xrdb:color4}
+primary        = #ffb52a
+secondary      = #e60053
+alert          = ${xrdb:color2}
+
+[bar/top-bar]
+monitor = ${env:MONITOR:}
+width = 100%
+height = 24
+radius = 0.0
+fixed-center = true
+tray-position = right
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+padding-left = 0
+padding-right = 2
+
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = System San Francisco Display:size=13;-1
+font-1 = FontAwesome:size=13;-3
+
+modules-left = i3 music
+modules-center =
+modules-right = i3layout mail volume wlan eth powersaver battery date powermenu
+
+[module/i3]
+type = internal/i3
+format = <label-state>
+index-sort = true
+wrapping-scroll = false
+padding = 1
+
+ws-icon-0 = 1;: 
+ws-icon-1 = 2;: 
+ws-icon-2 = 3;: 
+ws-icon-3 = 4;: 
+
+label-focused = %name%%icon%
+label-focused-foreground   = ${colors.foreground}
+label-focused-background   = ${colors.background}
+label-focused-padding      = ${self.padding}
+
+label-unfocused = %name%%icon%
+label-unfocused-foreground = ${colors.foreground-alt}
+label-unfocused-padding    = ${self.padding}
+
+label-visible = %name%%icon%
+label-visible-background   = ${self.label-focused-background}
+label-visible-padding      = ${self.padding}
+
+label-urgent = %name%%icon%
+label-urgent-background    = ${colors.alert}
+label-urgent-padding       = ${self.padding}
+
+[module/wlan]
+type = internal/network
+interface = wlp3s0
+interval = 3.0
+
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected = <label-connected>
+label-connected = %essid%
+
+format-disconnected-prefix = " "
+format-disconnected-prefix-foreground = ${colors.foreground-alt}
+format-disconnected = <label-disconnected>
+label-disconnected = Not Connected
+
+[module/eth]
+type = internal/network
+interface = enp0s25
+interval = 3.0
+
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.foreground-alt}
+format-connected = <label-connected>
+label-connected = %local_ip%
+
+format-disconnected =
+label-disconnected = 
+
+[module/date]
+type = internal/date
+interval = 1
+
+date = " %b %d, %Y"
+date-alt = " %Y-%m-%d"
+
+time = %H:%M:%S
+time-alt = %H:%M:%S
+
+format-prefix = 
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+label = %date% %time%
+
+[module/volume]
+type = internal/volume
+
+format-volume-prefix = " "
+format-volume-prefix-foreground = ${colors.foreground-alt}
+format-volume = %{A3:pavucontrol&:}<label-volume>%{A}
+label-volume = %percentage%%
+
+format-muted-prefix = " "
+format-muted-prefix-foreground = ${colors.foreground-alt}
+format-muted = %{A3:pavucontrol&:}<label-muted>%{A}
+label-muted = 0%
+
+[module/music]
+type = custom/script
+exec = /home/micah/.config/polybar/scripts/music
+interval = 5
+format-prefix = "Now Playing: "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+label = %output%
+
+[module/mail]
+type = custom/script
+exec = /home/micah/.config/polybar/scripts/mail
+interval = 5
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+label = %output%
+
+[module/powersaver]
+type = custom/script
+exec = /home/micah/.config/polybar/scripts/powersaver
+interval = 5
+format-foreground = ${colors.foreground-alt}
+format = <label>
+label = %output%
+
+[module/i3layout]
+type = custom/script
+exec = /home/micah/.config/polybar/scripts/layout
+interval = 1
+format-foreground = ${colors.foreground-alt}
+format = <label>
+label = %output%
+
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = AC
+full-at = 98
+
+format-charging = <animation-charging> <label-charging>
+
+format-discharging = <ramp-capacity> <label-discharging>
+
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+
+[module/powermenu]
+type = custom/menu
+
+format-spacing = 1
+
+label-open = 
+label-open-foreground = ${colors.secondary}
+label-close = 
+label-close-foreground = ${colors.secondary}
+label-separator = |
+label-separator-foreground = ${colors.foreground-alt}
+
+menu-0-0 = reboot
+menu-0-0-exec = menu-open-1
+menu-0-1 = power off
+menu-0-1-exec = menu-open-2
+
+menu-1-0 = cancel
+menu-1-0-exec = menu-open-0
+menu-1-1 = reboot
+menu-1-1-exec = reboot
+
+menu-2-0 = power off
+menu-2-0-exec = shutdown -h now
+menu-2-1 = cancel
+menu-2-1-exec = menu-open-0
+
+[settings]
+screenchange-reload = true
+
+[global/wm]
+margin-top = 5
+margin-bottom = 5
