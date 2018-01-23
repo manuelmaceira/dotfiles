@@ -29,7 +29,7 @@ font-1 = FontAwesome:size=13;2
 
 modules-left = i3 music
 modules-center =
-modules-right = i3layout mail volume wlan eth powersaver battery date powermenu
+modules-right = i3layout mail volume wlan eth powersaver battery date time powermenu
 
 [module/i3]
 type = internal/i3
@@ -95,13 +95,22 @@ interval = 1
 date = " %b %d, %Y"
 date-alt = " %Y-%m-%d"
 
+format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+label = %date%
+
+[module/time]
+type = internal/date
+interval = 1
+
 time = %H:%M:%S
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format = <label>
-label = %date% %time%
+label = %time%
 
 [module/volume]
 type = internal/volume
@@ -163,18 +172,18 @@ format-discharging = <ramp-capacity> <label-discharging>
 format-full-prefix = " "
 format-full-prefix-foreground = ${colors.foreground-alt}
 
-ramp-capacity-0 = 
-ramp-capacity-1 = 
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-0 = " "
+ramp-capacity-1 = " "
+ramp-capacity-2 = " "
+ramp-capacity-3 = " "
+ramp-capacity-4 = " "
 ramp-capacity-foreground = ${colors.foreground-alt}
 
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
+animation-charging-0 = " "
+animation-charging-1 = " "
+animation-charging-2 = " "
+animation-charging-3 = " "
+animation-charging-4 = " "
 animation-charging-foreground = ${colors.foreground-alt}
 animation-charging-framerate = 750
 
