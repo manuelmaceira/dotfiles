@@ -1,0 +1,86 @@
+!-------------------------------------------------------------------------------
+! XFT Settings
+!-------------------------------------------------------------------------------
+
+xft.dpi:                    96
+xft.antialias:              true
+xft.hinting:                true
+xft.hintstyle:              hintfull
+xft.rgba:                   rgb
+
+!-------------------------------------------------------------------------------
+! URxvt settings
+!-------------------------------------------------------------------------------
+
+URxvt.termName:             xterm-256color
+!URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          false
+URxvt.tintColor:            #54487a
+URxvt.shading:              100
+URxvt.inheritPixmap:        false
+URxvt.loginShell:           true
+URxvt.saveLines:            50000
+URxvt.internalBorder:       0
+URxvt.lineSpace:            0
+
+! Fonts
+URxvt.allow_bold:           false
+URxvt*font: xft:Hasklig:pixelsize=14
+URxvt*boldFont: xft:Hasklig:pixelsize=14
+
+! Fix font space
+URxvt*letterSpace: -1
+
+! Scrollbar
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+! Perl extensions
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard,matcher,url-select
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          /usr/bin/xdg-open
+URxvt.keysym.Control-b: perl:url-select:select_next
+
+! Cursor
+URxvt.cursorBlink:          true
+URxvt.cursorColor:          #657b83
+URxvt.cursorUnderline:      false
+
+! Pointer
+URxvt.pointerBlank:         true
+
+! base16_google-dark
+*background: #1e1f21
+*foreground: white
+*fading: 0
+*fadeColor: #33393b
+*cursorColor: #93a1a1
+*pointerColorBackground: #586e75
+*pointerColorForeground: #93a1a1
+
+URxvt*color0:      	        #000000
+URxvt*color8:      	        #666666
+
+URxvt*color1:               #9e1828
+URxvt*color9:      	        #cf6171
+
+URxvt*color2:      	        #aece92
+URxvt*color10:     	        #c5f779
+
+URxvt*color3:      	        #968a38
+URxvt*color11:     	        #fff796
+
+URxvt*color4:      	        #414171
+URxvt*color12:     	        #4186be
+
+URxvt*color5:      	        #963c59
+URxvt*color13:     	        #cf9ebe
+
+URxvt*color6:      	        #418179
+URxvt*color14:     	        #71bebe
+
+URxvt*color7:      	        #bebebe
+URxvt*color15:     	        #ffffff
