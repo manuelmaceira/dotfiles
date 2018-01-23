@@ -20,6 +20,7 @@ global:
       ',wm': :open https://sso.gtri.gatech.edu/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fmail.gtri.gatech.edu%2fowa%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fowa%252f&wct=2016-01-29T15%3a00%3a27Z
       ',yt': :open https://youtube.com
       ;m: hint links spawn mpv {hint-url}
+      D: :close
       t: :open -t
   bindings.default:
     caret:
