@@ -281,7 +281,7 @@ command! MakeTags !ctags -R .
 " => Autocommands
 """"""""""""""""""""""""""""
 " Auto build configs on edit of certain files
-autocmd BufWritePost ~/dotfiles/scripts/.config/Scripts/configs,~/dotfiles/scripts/.config/Scripts/folders !python ~/.config/Scripts/shortcuts.py
+autocmd BufWritePost ~/dotfiles/scripts/.config/Scripts/configs,~/dotfiles/scripts/.config/Scripts/folders !bash ~/.config/Scripts/shortcuts.sh
 
 " Markdown Settings
 " set tab to 4
