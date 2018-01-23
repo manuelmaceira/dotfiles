@@ -273,9 +273,18 @@ global:
       <Escape>: leave-mode
   qt.args:
   - ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so
+  url.default_page: https://google.com
   url.searchengines:
-    DEFAULT: https://duckduckgo.com/?q={}
+    DEFAULT: https://google.com/search?hl=en&q={}
     aw: https://wiki.arch.org/?search={}
-    g: https://google.com/search?hl=en&q={}
+    d: https://duckduckgo.com/?q={}
     rd: https://reddit.com/r/{}
     yt: https://youtube.com/results?search_query={}
+  url.start_pages: https://google.com
+  url.yank_ignored_parameters:
+  - ref
+  - utm_source
+  - utm_medium
+  - utm_campaign
+  - utm_term
+  - utm_content
