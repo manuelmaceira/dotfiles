@@ -4,6 +4,7 @@ reload-threads 4
 download-retries 4
 download-timeout 10
 prepopulate-query-feeds yes
+external-url-viewer "urlscan"
 
 feed-sort-order title
 
@@ -32,6 +33,7 @@ bind-key l open feedlist
 bind-key l open articlelist
 bind-key u pageup all
 bind-key d pagedown all
+bind-key U show-urls
 
 confirm-exit no
 cleanup-on-quit yes
