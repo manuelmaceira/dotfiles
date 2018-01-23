@@ -340,10 +340,6 @@ autocmd FileType tex inoremap ;ul \begin{itemize}<Enter><Enter>\end{itemize}<Ent
 autocmd FileType tex inoremap ;li <Enter>\item<Space>
 autocmd FileType tex inoremap ;ref \ref{}<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
-autocmd FileType tex inoremap ;ot \begin{tableau}<Enter>\inp{<++>}<Tab>\const{<++>}<Tab><++><Enter><++><Enter>\end{tableau}<Enter><Enter><++><Esc>5kA{}<Esc>i
-autocmd FileType tex inoremap ;can \cand{}<Tab><++><Esc>T{i
-autocmd FileType tex inoremap ;con \const{}<Tab><++><Esc>T{i
-autocmd FileType tex inoremap ;v \vio{}<Tab><++><Esc>T{i
 autocmd FileType tex inoremap ;a \href{}{<++>}<Space><++><Esc>2T{i
 autocmd FileType tex inoremap ;sc \textsc{}<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;sec \section{}<Enter><Enter><++><Esc>2kf}i
@@ -396,9 +392,9 @@ autocmd FileType html inoremap ;li <Esc>o<li></li><Esc>F>a
 autocmd FileType html inoremap ;ol <ol><Enter><li></li><Enter></ol><Enter><Enter><++><Esc>03kf<i
 
 " => Bib
-autocmd FileType bib inoremap ;a @article{<Enter><Tab>author<Space>=<Space>"<++>",<Enter><Tab>year<Space>=<Space>"<++>",<Enter><Tab>title<Space>=<Space>"<++>",<Enter><Tab>journal<Space>=<Space>"<++>",<Enter><Tab>volume<Space>=<Space>"<++>",<Enter><Tab>pages<Space>=<Space>"<++>",<Enter><Tab>}<Enter><++><Esc>8kA,<Esc>i
-autocmd FileType bib inoremap ;b @book{<Enter><Tab>author<Space>=<Space>"<++>",<Enter><Tab>year<Space>=<Space>"<++>",<Enter><Tab>title<Space>=<Space>"<++>",<Enter><Tab>publisher<Space>=<Space>"<++>",<Enter><Tab>}<Enter><++><Esc>6kA,<Esc>i
-autocmd FileType bib inoremap ;c @incollection{<Enter><Tab>author<Space>=<Space>"<++>",<Enter><Tab>title<Space>=<Space>"<++>",<Enter><Tab>booktitle<Space>=<Space>"<++>",<Enter><Tab>editor<Space>=<Space>"<++>",<Enter><Tab>year<Space>=<Space>"<++>",<Enter><Tab>publisher<Space>=<Space>"<++>",<Enter><Tab>}<Enter><++><Esc>8kA,<Esc>i
+autocmd FileType bib inoremap ;a @article{,<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>title<Space>=<Space>"<++>",<Enter>journal<Space>=<Space>"<++>",<Enter>volume<Space>=<Space>"<++>",<Enter>pages<Space>=<Space>"<++>",<Enter>}<Enter><++><Esc>8kf,i
+autocmd FileType bib inoremap ;b @book{,<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>title<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>}<Enter><++><Esc>6kf,i
+autocmd FileType bib inoremap ;c @incollection{,<Enter>author<Space>=<Space>"<++>",<Enter>title<Space>=<Space>"<++>",<Enter>booktitle<Space>=<Space>"<++>",<Enter>editor<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>}<Enter><++><Esc>8kf,i
 
 " => Markdown
 autocmd Filetype markdown inoremap ;b ****<Space><++><Esc>F*hi
