@@ -10,6 +10,7 @@ export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
 export DEFAULT_USER="micah"
 export BROWSER="/usr/bin/qutebrowser"
+export LC_ALL=en_US.UTF-8
 
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTSIZE=25000
