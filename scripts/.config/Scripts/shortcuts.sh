@@ -13,7 +13,7 @@ echo "# vim: filetype=sh" > $zsh_shortcuts
 echo "# ranger shortcuts" > $ranger_shortcuts
 
 writeDirs() {
-  echo "alias $1='cd $2 && ls -a'" >> $zsh_shortcuts
+  echo "alias $1='cd $2 && ls'" >> $zsh_shortcuts
 	echo "map g$1 cd $2" >> $ranger_shortcuts
 	echo "map t$1 tab_new $2" >> $ranger_shortcuts
 	echo "map m$1 shell mv %s $2" >> $ranger_shortcuts
