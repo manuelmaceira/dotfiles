@@ -402,7 +402,7 @@ autocmd Filetype markdown inoremap ;s ~~~~<Space><++><Esc>F~hi
 autocmd Filetype markdown inoremap ;e **<Space><++><Esc>F*i
 autocmd Filetype markdown inoremap ;i ![](<++>)<Space><++><Esc>F[a
 autocmd Filetype markdown inoremap ;a [](<++>)<Space><++><Esc>F[a
-autocmd Filetype markdown inoremap ;c ```<Enter><++><Enter>```<Enter><++><Esc>3kA
+autocmd Filetype markdown inoremap ;c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA
 autocmd Filetype markdown inoremap ;1 #<Space><Enter><Enter><++><Esc>2kA
 autocmd Filetype markdown inoremap ;2 ##<Space><Enter><Enter><++><Esc>2kA
 autocmd Filetype markdown inoremap ;3 ###<Space><Enter><Enter><++><Esc>2kA
