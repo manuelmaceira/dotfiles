@@ -21,6 +21,7 @@ global:
       ',yt': :open https://youtube.com
       ;m: hint links spawn mpv {hint-url}
       D: :close
+      I: :open -p
       W: :tab-give
       t: :open -t
   bindings.default:
