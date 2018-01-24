@@ -14,6 +14,7 @@ global:
       ',et': :open https://etime.gtri.gatech.edu/DeltekTC/welcome.msv
       ',fb': :open https://facebook.com
       ',gh': :open https://github.com/mehalter
+      ',kp': :open https://keep.google.com
       ',nf': :open https://netflix.com
       ',pz': :open https://piazza.com
       ',rd': :open http://reddit.com
