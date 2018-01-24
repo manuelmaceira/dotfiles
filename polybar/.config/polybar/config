@@ -93,7 +93,7 @@ type = internal/date
 interval = 1
 
 date = %b %d, %Y
-date-alt = %m-%d=%Y
+date-alt = %m-%d-%Y
 
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
