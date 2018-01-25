@@ -50,6 +50,7 @@ My dotfiles for my Linux rice, managed using stow.
     - oomox
     - pdfpc
     - py-wal
+    - R
     - scrot
     - stow
     - urlview
