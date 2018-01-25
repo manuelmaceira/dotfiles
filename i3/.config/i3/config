@@ -435,8 +435,9 @@ bindsym $mod+F5        exec --no-startup-id ~/.config/i3/scripts/powersaver
 bindsym $mod+F12                        exec --no-startup-id ~/.config/i3/scripts/toggletrackpad
 #bindsym $mod+Shift+F12
 
-bindsym Print                           exec --no-startup-id scrot '%Y-%m-%d_%H:%M:%S_screenshot.png'
-bindsym Shift+Print                     exec --no-startup-id scrot -u '%Y-%m-%d_%H:%M:%S_screenshot.png'
+bindsym Print                           exec --no-startup-id ~/.config/i3/scripts/i3-scrot -d
+bindsym Shift+Print                     exec --no-startup-id ~/.config/i3/scripts/i3-scrot -w
+bindsym --release Control+Print         exec --no-startup-id ~/.config/i3/scripts/i3-scrot -s
 
 bindsym $mod+Scroll_Lock                exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
 #bindsym $mod+Shift+Scroll_Lock
