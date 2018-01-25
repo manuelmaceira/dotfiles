@@ -143,7 +143,7 @@ mdtemp() {
     if [[ ! $file =~ \.md$ ]]; then
       file=$file.md
     fi
-    cp ~/Documents/markdown/templates/$1.md $file;
+    cp ~/Documents/Markdown/templates/$1.md $file;
     vi $file;
   fi
 }
