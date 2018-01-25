@@ -10,7 +10,7 @@ global:
   bindings.commands:
     normal:
       ',bp': :open https://buzzport.gatech.edu/cp/home/displaylogin
-      ',cv': :open http://mehalter.com/resume.pdf
+      ',cv': :open https://gatech.instructure.com/
       ',et': :open https://etime.gtri.gatech.edu/DeltekTC/welcome.msv
       ',fb': :open https://facebook.com
       ',gh': :open https://github.com/mehalter
