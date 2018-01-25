@@ -13,7 +13,6 @@ My dotfiles for my Linux rice, managed using stow.
 ### Command Line Applications
 
 - cava
-- ddgr
 - gpymusic
 - khal
 - khard
@@ -42,7 +41,6 @@ My dotfiles for my Linux rice, managed using stow.
     - dunst
     - feh
     - fprintd
-    - infinality
     - lightdm
     - lxappearance
     - mpv
@@ -50,7 +48,9 @@ My dotfiles for my Linux rice, managed using stow.
     - neofetch
     - offlineimap
     - oomox
+    - pdfpc
     - py-wal
+    - R
     - scrot
     - stow
     - urlview

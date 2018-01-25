@@ -2,9 +2,8 @@ ZSH_THEME="agnoster"
 
 ZSH=$HOME/.oh-my-zsh
 
-plugins=(ant archlinux common-aliases cp extract git git-extras mvn python scala sbt tmux tmuxinator vi-mode wd)
+plugins=(archlinux common-aliases cp extract git git-extras python vi-mode)
 
-#export TERM="tmux-256color"
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
@@ -16,14 +15,14 @@ export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTSIZE=25000
 export HISTFILE=~/.zsh_history
 export SAVEHIST=10000
+
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 
-setopt RM_STAR_WAIT
-setopt interactivecomments
+setopt INTERACTIVECOMMENTS
 setopt CORRECT
 
 source $ZSH/oh-my-zsh.sh
@@ -65,19 +64,14 @@ zstyle ':completion:*:kill:*' horse-list always
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
-#source ~/.bin/tmuxinator.zsh
-
 # history substring search
 source $ZSH/plugins/history-substring-search/history-substring-search.zsh
 zmodload zsh/terminfo
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-PATH="/home/micah/.gem/ruby/2.5.0/bin/:/opt/venvs/vdirsyncer-latest/bin/:$PATH"
-export NODE_PATH="/usr/local/lib/node_modules"
+PATH="/home/micah/.gem/ruby/2.5.0/bin:$PATH"
 
-#BASE16_SHELL=$HOME/.config/base16-shell/
-#[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 (cat ~/.cache/wal/sequences &)
 
 neofetch

@@ -12,6 +12,7 @@ set autoread
 set so=7
 set ffs=unix,dos,mac
 set path+=**
+set spellfile=$HOME/.vim/spell/en.utf-8.add
 " 1 tab == 2 spaces
 set expandtab
 set smarttab
@@ -252,17 +253,18 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " latex compile keybindings
-nnoremap <leader>ll :w<CR>:!rubber -m xelatex --warn all %<CR><CR>
-nnoremap <leader>lc :w<CR>:!rubber -m xelatex --warn all %<CR>
-nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
-nnoremap <leader>lp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
+autocmd Filetype tex nnoremap <leader>ll :w<CR>:!rubber -m xelatex --warn all %<CR><CR>
+autocmd Filetype tex nnoremap <leader>lc :w<CR>:!rubber -m xelatex --warn all %<CR>
+autocmd Filetype tex nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+autocmd Filetype tex nnoremap <leader>lp :!pdfpc %:r.pdf<CR><CR>
 
-" pandoc compile keybindings
-nnoremap <leader>mm :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
-nnoremap <leader>mb :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR>
-nnoremap <leader>mc :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
-nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
-nnoremap <leader>mp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
+" markdown compile keybindings
+autocmd Filetype markdown nnoremap <leader>mm :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
+autocmd Filetype markdown nnoremap <leader>mb :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR>
+autocmd Filetype markdown nnoremap <leader>mc :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
+autocmd Filetype rmd nnoremap <leader>mm :w<CR>:!echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
+autocmd Filetype rmd nnoremap <leader>mc :w<CR>:!echo "require(rmarkdown); render('%')" \| R --vanilla<CR>
+autocmd Filetype markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
 
 """"""""""""""""""""""""""""
 " => Commands
@@ -285,9 +287,9 @@ autocmd BufWritePost ~/dotfiles/scripts/.config/Scripts/configs,~/dotfiles/scrip
 
 " Markdown Settings
 " set tab to 4
-autocmd BufNewFile,BufRead *.md setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd BufNewFile,BufRead *.md,*.rmd setlocal tabstop=4 shiftwidth=4 softtabstop=4
 " turn on spell check
-autocmd BufNewFile,BufRead *.md setlocal spell! spelllang=en_us
+autocmd BufNewFile,BufRead *.md,*.rmd setlocal spell! spelllang=en_us
 
 " => Java
 autocmd FileType java inoremap ;fr for(;<++>;<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f;i
@@ -397,16 +399,16 @@ autocmd FileType bib inoremap ;b @book{,<Enter>author<Space>=<Space>"<++>",<Ente
 autocmd FileType bib inoremap ;c @incollection{,<Enter>author<Space>=<Space>"<++>",<Enter>title<Space>=<Space>"<++>",<Enter>booktitle<Space>=<Space>"<++>",<Enter>editor<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>}<Enter><++><Esc>8kf,i
 
 " => Markdown
-autocmd Filetype markdown inoremap ;b ****<Space><++><Esc>F*hi
-autocmd Filetype markdown inoremap ;s ~~~~<Space><++><Esc>F~hi
-autocmd Filetype markdown inoremap ;e **<Space><++><Esc>F*i
-autocmd Filetype markdown inoremap ;i ![](<++>)<Space><++><Esc>F[a
-autocmd Filetype markdown inoremap ;a [](<++>)<Space><++><Esc>F[a
-autocmd Filetype markdown inoremap ;c ```<Enter><++><Enter>```<Enter><++><Esc>3kA
-autocmd Filetype markdown inoremap ;1 #<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown inoremap ;2 ##<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown inoremap ;3 ###<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown inoremap ;4 ####<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown inoremap ;5 #####<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown inoremap ;6 ######<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown inoremap ;l ---<Enter>
+autocmd Filetype markdown,rmd inoremap ;b ****<Space><++><Esc>F*hi
+autocmd Filetype markdown,rmd inoremap ;s ~~~~<Space><++><Esc>F~hi
+autocmd Filetype markdown,rmd inoremap ;e **<Space><++><Esc>F*i
+autocmd Filetype markdown,rmd inoremap ;i ![](<++>)<Space><++><Esc>F[a
+autocmd Filetype markdown,rmd inoremap ;a [](<++>)<Space><++><Esc>F[a
+autocmd Filetype markdown,rmd inoremap ;1 #<Space><Enter><Enter><++><Esc>2kA
+autocmd Filetype markdown,rmd inoremap ;2 ##<Space><Enter><Enter><++><Esc>2kA
+autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><Enter><++><Esc>2kA
+autocmd Filetype markdown,rmd inoremap ;4 ####<Space><Enter><Enter><++><Esc>2kA
+autocmd Filetype markdown,rmd inoremap ;5 #####<Space><Enter><Enter><++><Esc>2kA
+autocmd Filetype markdown,rmd inoremap ;6 ######<Space><Enter><Enter><++><Esc>2kA
+autocmd Filetype markdown,rmd inoremap ;l ---<Enter>
+autocmd Filetype markdown,rmd inoremap ;c ```{}<Enter><++><Enter>```<Enter><Enter><++><Esc>4k^f}i

@@ -140,6 +140,8 @@ assign [class="Firefox"] $workspace1
 assign [class="qutebrowser"] $workspace1
 assign [class="Skype"] $workspace4
 
+for_window [title="^pdfpc - present"] border none floating enable
+
 # status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
@@ -172,7 +174,7 @@ bindsym $mod+Shift+w         exec --no-startup-id $cliprog weather "wttr && read
 #bindsym $mod+Shift+Control+e
 
 bindsym $mod+r               exec --no-startup-id $cliprog files "ranger"
-#bindsym $mod+Shift+r
+bindsym $mod+Shift+r         exec --no-startup-id $cliprog math "R"
 #bindsym $mod+Control+r
 #bindsym $mod+Shift+Control+r
 
@@ -217,7 +219,7 @@ bindsym $mod+Shift+s         exec --no-startup-id python2 ~/.config/i3/scripts/w
 #bindsym $mod+Shift+Control+s
 
 bindsym $mod+d               focus child
-bindsym $mod+Shift+d         exec --no-startup-id $cliprog ddgr "ddgr -n 8"
+#bindsym $mod+Shift+d
 #bindsym $mod+Control+d
 #bindsym $mod+Shift+Control+d
 
@@ -272,7 +274,7 @@ bindsym $mod+Shift+v         exec --no-startup-id $runner "rtv"
 #bindsym $mod+Shift+Control+v
 
 #bindsym $mod+b
-bindsym $mod+Shift+b         exec --no-startup-id $cliprog math "bc"
+#bindsym $mod+Shift+b
 #bindsym $mod+Control+b
 #bindsym $mod+Shift+Control+b
 

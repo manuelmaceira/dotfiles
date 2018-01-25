@@ -125,3 +125,21 @@ c.colors.tabs.selected.odd.fg = xresources['*color0']
 c.colors.webpage.bg = xresources['*color15']
 
 c.hints.border = '1px solid ' + xresources['*color15']
+
+config.bind(',cv', ':open https://gatech.instructure.com')
+config.bind(',bp', ':open https://buzzport.gatech.edu/cp/home/displaylogin')
+config.bind(',et', ':open https://etime.gtri.gatech.edu/DeltekTC/welcome.msv')
+config.bind(',fb', ':open https://facebook.com')
+config.bind(',gh', ':open https://github.com/mehalter')
+config.bind(',kp', ':open https://keep.google.com')
+config.bind(',nf', ':open https://netflix.com')
+config.bind(',pz', ':open https://piazza.com')
+config.bind(',rd', ':open http://reddit.com')
+config.bind(',wm', ':open https://sso.gtri.gatech.edu/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fmail.gtri.gatech.edu%2fowa%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fowa%252f&wct=2016-01-29T15%3a00%3a27Z')
+config.bind(',ws', ':open http://mehalter.com')
+config.bind(',yt', ':open https://youtube.com')
+config.bind(';m', 'hint links spawn mpv {hint-url}')
+config.bind('D', ':close')
+config.bind('I', ':open -p')
+config.bind('W', ':tab-give')
+config.bind('t', ':open -t')
