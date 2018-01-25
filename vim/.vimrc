@@ -12,6 +12,7 @@ set autoread
 set so=7
 set ffs=unix,dos,mac
 set path+=**
+set spellfile=$HOME/.vim/spell/en.utf-8.add
 " 1 tab == 2 spaces
 set expandtab
 set smarttab
