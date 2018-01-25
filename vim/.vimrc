@@ -255,14 +255,14 @@ noremap <Right> <NOP>
 nnoremap <leader>ll :w<CR>:!rubber -m xelatex --warn all %<CR><CR>
 nnoremap <leader>lc :w<CR>:!rubber -m xelatex --warn all %<CR>
 nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
-nnoremap <leader>lp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
+nnoremap <leader>lp :!pdfpc %:r.pdf<CR><CR>
 
 " pandoc compile keybindings
 nnoremap <leader>mm :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
 nnoremap <leader>mb :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR>
 nnoremap <leader>mc :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
 nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
-nnoremap <leader>mp :!pdf-presenter-console -sS %:r.pdf<CR><CR>
+nnoremap <leader>mp :!pdfpc %:r.pdf<CR><CR>
 
 """"""""""""""""""""""""""""
 " => Commands

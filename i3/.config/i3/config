@@ -140,6 +140,8 @@ assign [class="Firefox"] $workspace1
 assign [class="qutebrowser"] $workspace1
 assign [class="Skype"] $workspace4
 
+for_window [title="^pdfpc - present"] border none floating enable
+
 # status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
