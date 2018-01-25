@@ -410,5 +410,4 @@ autocmd Filetype markdown,rmd inoremap ;4 ####<Space><Enter><Enter><++><Esc>2kA
 autocmd Filetype markdown,rmd inoremap ;5 #####<Space><Enter><Enter><++><Esc>2kA
 autocmd Filetype markdown,rmd inoremap ;6 ######<Space><Enter><Enter><++><Esc>2kA
 autocmd Filetype markdown,rmd inoremap ;l ---<Enter>
-autocmd Filetype markdown inoremap ;c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA
-autocmd Filetype rmd inoremap ;c ```{, echo=TRUE}<Enter><++><Enter>```<Enter><Enter><++><Esc>4k^f,i
+autocmd Filetype markdown,rmd inoremap ;c ```{}<Enter><++><Enter>```<Enter><Enter><++><Esc>4k^f}i
