@@ -174,7 +174,7 @@ bindsym $mod+Shift+w         exec --no-startup-id $cliprog weather "wttr && read
 #bindsym $mod+Shift+Control+e
 
 bindsym $mod+r               exec --no-startup-id $cliprog files "ranger"
-#bindsym $mod+Shift+r
+bindsym $mod+Shift+r         exec --no-startup-id $cliprog math "R"
 #bindsym $mod+Control+r
 #bindsym $mod+Shift+Control+r
 
@@ -274,7 +274,7 @@ bindsym $mod+Shift+v         exec --no-startup-id $runner "rtv"
 #bindsym $mod+Shift+Control+v
 
 #bindsym $mod+b
-bindsym $mod+Shift+b         exec --no-startup-id $cliprog math "bc"
+#bindsym $mod+Shift+b
 #bindsym $mod+Control+b
 #bindsym $mod+Shift+Control+b
 
