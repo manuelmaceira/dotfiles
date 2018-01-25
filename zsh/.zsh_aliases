@@ -130,6 +130,24 @@ txtemp() {
   fi
 }
 
+# Markdown aliases
+mda() {
+  mdtemp article $1
+}
+mdb() {
+  mdtemp beamer $1
+}
+mdtemp() {
+  file=$2
+  if [[ $file != '' ]]; then
+    if [[ ! $file =~ \.md$ ]]; then
+      file=$file.md
+    fi
+    cp ~/Documents/markdown/templates/$1.md $file;
+    vi $file;
+  fi
+}
+
 # C compiling shortcuts for clang and gcc
 clang() {
   if [[ $1 =~ \.c$ ]]; then
