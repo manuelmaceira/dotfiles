@@ -132,18 +132,21 @@ txtemp() {
 
 # Markdown aliases
 mda() {
-  mdtemp article $1
+  mdtemp article $1 md
 }
 mdb() {
-  mdtemp beamer $1
+  mdtemp beamer $1 md
+}
+rmda() {
+  mdtemp article $1 rmd
 }
 mdtemp() {
   file=$2
   if [[ $file != '' ]]; then
-    if [[ ! $file =~ \.md$ ]]; then
-      file=$file.md
+    if [[ ! $file =~ \.$3$ ]]; then
+      file=$file.$3
     fi
-    cp ~/Documents/Markdown/templates/$1.md $file;
+    cp ~/Documents/Markdown/templates/$1.$3 $file;
     vi $file;
   fi
 }
