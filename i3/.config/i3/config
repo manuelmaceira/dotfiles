@@ -223,8 +223,8 @@ bindsym $mod+d               focus child
 #bindsym $mod+Control+d
 #bindsym $mod+Shift+Control+d
 
-bindsym $mod+f               exec --no-startup-id python2 ~/.config/i3/scripts/focus.py
-bindsym $mod+Shift+f         fullscreen toggle
+bindsym $mod+f               fullscreen toggle
+bindsym $mod+Shift+f         exec --no-startup-id python2 ~/.config/i3/scripts/focus.py
 #bindsym $mod+Control+f
 #bindsym $mod+Shift+Control+f
 
