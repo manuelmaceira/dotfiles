@@ -10,10 +10,12 @@ global:
   bindings.commands:
     normal:
       ',bp': :open https://buzzport.gatech.edu/cp/home/displaylogin
+      ',cv': :open https://gatech.instructure.com
       ',et': :open https://etime.gtri.gatech.edu/DeltekTC/welcome.msv
       ',fb': :open https://facebook.com
       ',gh': :open https://github.com/mehalter
       ',kp': :open https://keep.google.com
+      ',ms': :open https://play.google.com/music/listen
       ',nf': :open https://netflix.com
       ',pz': :open https://piazza.com
       ',rd': :open http://reddit.com
