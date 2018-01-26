@@ -13,7 +13,8 @@ weechat.register(SCRIPT_NAME, SCRIPT_AUTHOR, SCRIPT_VERSION, SCRIPT_LICENSE, SCR
 
 
 def notify(title, subtitle, message):
-    call(["notify-send", title, subtitle + "\n" + message])
+    if (title != ""):
+        call(["notify-send", title, subtitle + "\n" + message])
 
 
 # Function that gets messages on all buffers (sorted out by given restrictions on time and tags)
