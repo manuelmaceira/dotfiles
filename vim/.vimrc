@@ -46,6 +46,7 @@ filetype plugin on
 filetype indent on
 " disable indent on latex files
 autocmd FileType tex  setlocal indentexpr=
+autocmd FileType rmd  setlocal indentexpr=
 
 " define markdown extensions
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
