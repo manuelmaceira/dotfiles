@@ -362,8 +362,8 @@ bindsym $mod+Shift+Control+bracketleft  exec --no-startup-id light -U 10
 #bindsym $mod+Shift+bracketright
 bindsym $mod+Shift+Control+bracketright exec --no-startup-id light -A 10
 
-#bindsym $mod+backslash
-#bindsym $mod+Shift+backslash
+bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'
+bindsym $mod+Shift+backslash            exec --no-startup-id networkmanager_dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'
 #bindsym $mod+Shift+Control+backslash
 
 #bindsym $mod+semicolon
@@ -477,5 +477,4 @@ bindsym XF86MonBrightnessDown           exec --no-startup-id light -U 10
 
 bindsym XF86ScreenSaver                 exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
 
-bindsym XF86Launch1                     exec --no-startup-id networkmanager_dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'
-bindsym $mod+XF86Launch1                exec --no-startup-id ~/.config/polybar/launch.sh
+bindsym XF86Launch1                exec --no-startup-id ~/.config/polybar/launch.sh

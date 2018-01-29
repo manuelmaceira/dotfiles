@@ -48,6 +48,7 @@ My dotfiles for my Linux rice, managed using stow.
     - neofetch
     - offlineimap
     - oomox
+    - pass
     - pdfpc
     - py-wal
     - R
