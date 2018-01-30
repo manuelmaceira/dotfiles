@@ -65,6 +65,9 @@ alias vi='vim'
 alias arc='aria2c'
 alias sc='scim'
 
+# pass aliases
+alias updatepass='/usr/bin/python2 /home/micah/.enpass2pass.py /home/micah/Documents/Enpass/walletx.db /home/micah/.enpass-passwd.gpg'
+
 # simple pin system
 pinfile=$HOME/.pins
 alias pl='count=1
