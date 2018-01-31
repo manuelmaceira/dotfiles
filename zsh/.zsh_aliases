@@ -66,7 +66,14 @@ alias arc='aria2c'
 alias sc='scim'
 
 # pass aliases
-alias updatepass='/usr/bin/python2 /home/micah/.enpass2pass.py /home/micah/Documents/Enpass/walletx.db /home/micah/.enpass-passwd.gpg'
+alias pshow='pass show'
+alias pedit='pass edit'
+alias pupdate='pass update -p'
+alias ptail='pass tail'
+alias ptedit='pass tailedit'
+pnew() {
+  pass cp template $1 && pass edit $1
+}
 
 # simple pin system
 pinfile=$HOME/.pins
