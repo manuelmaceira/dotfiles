@@ -336,7 +336,7 @@ bindsym $mod+Tab                        workspace back_and_forth
 #bindsym $mod+Shift+bracketright
 #bindsym $mod+Shift+Control+bracketright
 
-#bindsym $mod+backslash
+bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'
 #bindsym $mod+Shift+backslash
 #bindsym $mod+Shift+Control+backslash
 
