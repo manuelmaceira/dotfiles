@@ -49,11 +49,14 @@ My dotfiles for my Linux rice, managed using stow.
     - offlineimap
     - oomox
     - pass
+    - pass-extension-tail
+    - pass-update
     - pdfpc
     - py-wal
     - R
     - scrot
     - stow
+    - upass
     - urlview
     - vdirsyncer
     - xclip

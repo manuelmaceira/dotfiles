@@ -89,6 +89,12 @@ for_window [instance="cal"] resize set 900 650
 for_window [instance="cal"] move position center
 for_window [instance="cal"] move scratchpad
 
+# start upass in floating window
+for_window [instance="pass"] floating enable
+for_window [instance="pass"] resize set 900 650
+for_window [instance="pass"] move position center
+for_window [instance="pass"] move scratchpad
+
 # start ddgr in floating window
 for_window [instance="weather"] floating enable
 for_window [instance="weather"] resize set 1200 800
@@ -177,8 +183,8 @@ bindsym $mod+u               exec --no-startup-id $cliprog dropdown "tmuxinator 
 #bindsym $mod+Control+o
 #bindsym $mod+Shift+Control+o
 
-bindsym $mod+p               gaps inner current plus 5
-bindsym $mod+Shift+p         gaps inner current minus 5
+#bindsym $mod+p
+bindsym $mod+Shift+p         exec --no-startup-id $cliprog pass "upass"
 #bindsym $mod+Control+p
 #bindsym $mod+Shift+Control+p
 
