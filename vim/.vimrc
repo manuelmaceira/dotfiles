@@ -253,19 +253,19 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" latex compile keybindings
-autocmd Filetype tex nnoremap <leader>ll :w<CR>:!rubber -m xelatex --warn all %<CR><CR>
-autocmd Filetype tex nnoremap <leader>lc :w<CR>:!rubber -m xelatex --warn all %<CR>
-autocmd Filetype tex nnoremap <leader>lv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
-autocmd Filetype tex nnoremap <leader>lp :!pdfpc %:r.pdf<CR><CR>
-
-" markdown compile keybindings
+" tex compile keybindings
+autocmd Filetype tex nnoremap <leader>mm :w<CR>:!rubber -m xelatex --warn all %<CR><CR>
+autocmd Filetype tex nnoremap <leader>mc :w<CR>:!rubber -m xelatex --warn all %<CR>
+autocmd Filetype tex nnoremap <leader>mp :!pdfpc %:r.pdf<CR><CR>
+" md compile keybindings
 autocmd Filetype markdown nnoremap <leader>mm :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
 autocmd Filetype markdown nnoremap <leader>mb :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR>
 autocmd Filetype markdown nnoremap <leader>mc :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
+" rmd compile keybindings
 autocmd Filetype rmd nnoremap <leader>mm :w<CR>:!echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
 autocmd Filetype rmd nnoremap <leader>mc :w<CR>:!echo "require(rmarkdown); render('%')" \| R --vanilla<CR>
-autocmd Filetype markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+" compiled doc viewing keybindings
+autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
 
 """"""""""""""""""""""""""""
 " => Commands
