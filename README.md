@@ -41,6 +41,7 @@ My dotfiles for my Linux rice, managed using stow.
     - dunst
     - feh
     - fprintd
+    - gnupg
     - lightdm
     - lxappearance
     - mpv
