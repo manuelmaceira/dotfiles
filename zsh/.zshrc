@@ -2,7 +2,7 @@ ZSH_THEME="agnoster"
 
 ZSH=$HOME/.oh-my-zsh
 
-plugins=(archlinux common-aliases cp extract git git-extras python vi-mode)
+plugins=(common-aliases cp extract git git-extras vi-mode)
 
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
