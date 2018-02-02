@@ -29,7 +29,7 @@ font-1 = FontAwesome:size=13;2
 
 modules-left = i3 music
 modules-center =
-modules-right = i3layout mail volume wlan eth powersaver battery date time powermenu
+modules-right = i3layout updates mail volume wlan eth powersaver battery date time powermenu
 
 [module/i3]
 type = internal/i3
@@ -139,6 +139,15 @@ type = custom/script
 exec = /home/micah/.config/polybar/scripts/mail
 interval = 5
 format-prefix = " "
+format-prefix-foreground = ${colors.foreground-alt}
+format = <label>
+label = %output%
+
+[module/updates]
+type = custom/script
+exec = /home/micah/.config/polybar/scripts/updates
+interval = 600
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format = <label>
 label = %output%
