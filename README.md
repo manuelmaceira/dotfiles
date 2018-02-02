@@ -62,6 +62,7 @@ My dotfiles for my Linux rice, managed using stow.
     - vdirsyncer
     - xclip
     - xdotool
+    - yay
 
 ## Look and Feel
 
