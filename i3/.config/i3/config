@@ -8,6 +8,10 @@ set $term     'urxvt'
 set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
 set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
 set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+set $smallwidth 900
+set $smallheight 650
+set $bigwidth 1500
+set $bigheight 800
 
 
 ###############
@@ -67,37 +71,37 @@ set $workspace10 "10"
 
 # scratchpad terminal
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 900 650
+for_window [instance="dropdown"] resize set $smallwidth $smallheight
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 
 # ranger scratchpad
 for_window [instance="files"] floating enable
-for_window [instance="files"] resize set 900 650
+for_window [instance="files"] resize set $smallwidth $smallheight
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
 
 # start neomutt in floating window
 for_window [instance="email"] floating enable
-for_window [instance="email"] resize set 900 650
+for_window [instance="email"] resize set $smallwidth $smallheight
 for_window [instance="email"] move position center
 for_window [instance="email"] move scratchpad
 
 # bc scratchpad
 for_window [instance="math"] floating enable
-for_window [instance="math"] resize set 900 650
+for_window [instance="math"] resize set $smallwidth $smallheight
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
 
 # start khal in floating window
 for_window [instance="cal"] floating enable
-for_window [instance="cal"] resize set 900 650
+for_window [instance="cal"] resize set $smallwidth $smallheight
 for_window [instance="cal"] move position center
 for_window [instance="cal"] move scratchpad
 
 # start upass in floating window
 for_window [instance="pass"] floating enable
-for_window [instance="pass"] resize set 900 650
+for_window [instance="pass"] resize set $smallwidth $smallheight
 for_window [instance="pass"] move position center
 for_window [instance="pass"] move scratchpad
 
@@ -109,13 +113,13 @@ for_window [instance="weather"] move scratchpad
 
 # start glances in floating window
 for_window [instance="glances"] floating enable
-for_window [instance="glances"] resize set 1500 800
+for_window [instance="glances"] resize set $bigwidth $bigheight
 for_window [instance="glances"] move position center
 for_window [instance="glances"] move scratchpad
 
 # rtorrent terminal
 for_window [instance="rtorrent"] floating enable
-for_window [instance="rtorrent"] resize set 1500 800
+for_window [instance="rtorrent"] resize set $bigwidth $bigheight
 for_window [instance="rtorrent"] move position center
 for_window [instance="rtorrent"] move scratchpad
 
@@ -477,4 +481,4 @@ bindsym XF86MonBrightnessDown           exec --no-startup-id light -U 10
 
 bindsym XF86ScreenSaver                 exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
 
-bindsym XF86Launch1                exec --no-startup-id ~/.config/polybar/launch.sh
+bindsym XF86Launch1                     exec --no-startup-id ~/.config/polybar/launch.sh
