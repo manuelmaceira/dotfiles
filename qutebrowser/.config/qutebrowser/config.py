@@ -126,7 +126,8 @@ c.colors.webpage.bg = xresources['*color15']
 
 c.hints.border = '1px solid ' + xresources['*color15']
 
-c.url.searchengines["DEFAULT"] = "https://wiki.archlinux.org/?search={}"
+c.url.searchengines["DEFAULT"] = "https://www.google.com/search?hl=en&q={}"
+c.url.searchengines["g"] = "https://www.google.com/search?hl=en&q={}"
 c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
 c.url.searchengines["d"] = "https://duckduckgo.com/?q={}"
 c.url.searchengines["rd"] = "https://reddit.com/r/{}"
