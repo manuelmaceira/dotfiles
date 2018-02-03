@@ -126,6 +126,12 @@ c.colors.webpage.bg = xresources['*color15']
 
 c.hints.border = '1px solid ' + xresources['*color15']
 
+c.url.searchengines["DEFAULT"] = "https://wiki.archlinux.org/?search={}"
+c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
+c.url.searchengines["d"] = "https://duckduckgo.com/?q={}"
+c.url.searchengines["rd"] = "https://reddit.com/r/{}"
+c.url.searchengines["yt"] = "https://youtube.com/results?search_query={}"
+
 config.bind(',cv', ':open https://gatech.instructure.com')
 config.bind(',bp', ':open https://buzzport.gatech.edu/cp/home/displaylogin')
 config.bind(',et', ':open https://etime.gtri.gatech.edu/DeltekTC/welcome.msv')

@@ -276,12 +276,18 @@ global:
       y: prompt-accept yes
     register:
       <Escape>: leave-mode
+  editor.command:
+  - gvim
+  - -f
+  - '{file}'
+  - -c
+  - normal {line}G{column0}l
   qt.args:
   - ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so
   url.default_page: https://google.com
   url.searchengines:
     DEFAULT: https://google.com/search?hl=en&q={}
-    aw: https://wiki.arch.org/?search={}
+    aw: https://wiki.archlinux.org/?search={}
     d: https://duckduckgo.com/?q={}
     rd: https://reddit.com/r/{}
     yt: https://youtube.com/results?search_query={}
