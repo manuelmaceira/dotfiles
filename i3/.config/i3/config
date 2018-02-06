@@ -105,7 +105,13 @@ for_window [instance="pass"] resize set $smallwidth $smallheight
 for_window [instance="pass"] move position center
 for_window [instance="pass"] move scratchpad
 
-# start ddgr in floating window
+# start ncpamixer in floating window
+for_window [instance="audio"] floating enable
+for_window [instance="audio"] resize set $smallwidth $smallheight
+for_window [instance="audio"] move position center
+for_window [instance="audio"] move scratchpad
+
+# start weather in floating window
 for_window [instance="weather"] floating enable
 for_window [instance="weather"] resize set 1200 800
 for_window [instance="weather"] move position center
@@ -213,7 +219,7 @@ bindsym $mod+Shift+p         exec --no-startup-id $cliprog pass "upass"
 #bindsym $mod+Shift+Control+p
 
 bindsym $mod+a               focus parent
-#bindsym $mod+Shift+a
+bindsym $mod+Shift+a         exec --no-startup-id $cliprog audio "ncpamixer"
 #bindsym $mod+Control+a
 #bindsym $mod+Shift+Control+a
 

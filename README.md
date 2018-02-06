@@ -46,6 +46,7 @@ My dotfiles for my Linux rice, managed using stow.
     - lxappearance
     - mpv
     - msmtp
+    - ncpamixer
     - neofetch
     - offlineimap
     - oomox
