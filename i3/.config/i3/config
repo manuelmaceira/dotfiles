@@ -129,6 +129,11 @@ for_window [instance="rtorrent"] resize set $bigwidth $bigheight
 for_window [instance="rtorrent"] move position center
 for_window [instance="rtorrent"] move scratchpad
 
+# webcam dropdown
+for_window [title="video0 - mpv"] floating enable
+for_window [title="video0 - mpv"] sticky enable
+for_window [title="video0 - mpv"] border none
+
 
 ########################
 # AUTORUN APPLICATIONS #
@@ -448,6 +453,7 @@ bindsym $mod+F12                        exec --no-startup-id ~/.config/i3/script
 bindsym Print                           exec --no-startup-id ~/.config/i3/scripts/i3-scrot -d
 bindsym Shift+Print                     exec --no-startup-id ~/.config/i3/scripts/i3-scrot -w
 bindsym --release Control+Print         exec --no-startup-id ~/.config/i3/scripts/i3-scrot -s
+bindsym  Shift+Control+Print               exec --no-startup-id ~/.config/i3/scripts/camtoggle
 
 bindsym $mod+Scroll_Lock                exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
 #bindsym $mod+Shift+Scroll_Lock
