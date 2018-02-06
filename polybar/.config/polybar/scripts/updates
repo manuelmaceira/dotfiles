@@ -1,9 +1,0 @@
-#!/bin/bash
-
-aur=$(yay -Pu|wc -l)
-
-if [[ $aur != '0' ]]; then
-  echo $aur
-else
-  echo ''
-fi
