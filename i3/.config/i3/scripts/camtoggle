@@ -6,4 +6,4 @@ else
   cam=/dev/video0
 fi
 
-pkill -f /dev/video || mpv --no-osc --no-input-default-bindings --geometry=-0-0 --autofit=30% $cam
+pkill -f /dev/video || mpv --no-osc --no-input-default-bindings --geometry=-10-10 --autofit=30% $cam
