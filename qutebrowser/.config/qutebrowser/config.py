@@ -133,8 +133,9 @@ c.url.searchengines["d"] = "https://duckduckgo.com/?q={}"
 c.url.searchengines["rd"] = "https://reddit.com/r/{}"
 c.url.searchengines["yt"] = "https://youtube.com/results?search_query={}"
 
-config.bind(',cv', ':open https://gatech.instructure.com')
+config.bind(',az', ':open https://amazon.com')
 config.bind(',bp', ':open https://buzzport.gatech.edu/cp/home/displaylogin')
+config.bind(',cv', ':open https://gatech.instructure.com')
 config.bind(',et', ':open https://etime.gtri.gatech.edu/DeltekTC/welcome.msv')
 config.bind(',fb', ':open https://facebook.com')
 config.bind(',gh', ':open https://github.com/mehalter')
