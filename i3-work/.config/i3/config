@@ -28,7 +28,7 @@ gaps inner 15
 #set $urgent-bg-color     #E53935
 set_from_resource $dmenu-bg-color 	   i3wm.color0 #f0f0f0
 set_from_resource $dmenu-text-color    i3wm.color5 #f0f0f0
-set_from_resource $bg-color 	         i3wm.color7 #f0f0f0
+set_from_resource $bg-color 	         i3wm.color1 #f0f0f0
 set_from_resource $inactive-bg-color   i3wm.color0 #f0f0f0
 set_from_resource $text-color          i3wm.color5 #f0f0f0
 set_from_resource $inactive-text-color i3wm.color4 #f0f0f0
