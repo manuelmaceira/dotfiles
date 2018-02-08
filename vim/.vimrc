@@ -205,13 +205,15 @@ iab ftime <C-r>=strftime("%H:%M:%S")<CR>
 vnoremap ;( <esc>`>a)<esc>`<i(<esc>
 vnoremap ;[ <esc>`>a]<esc>`<i[<esc>
 vnoremap ;{ <esc>`>a}<esc>`<i{<esc>
-vnoremap ;" <esc>`>a"<esc>`<i"<esc>
 vnoremap ;' <esc>`>a'<esc>`<i'<esc>
+vnoremap ;" <esc>`>a"<esc>`<i"<esc>
+vnoremap ;` <esc>`>a`<esc>`<i`<esc>
 inoremap ;( ()<esc>i
 inoremap ;[ []<esc>i
 inoremap ;{ {<esc>o}<esc>O
 inoremap ;' ''<esc>i
 inoremap ;" ""<esc>i
+inoremap ;` ``<esc>i
 
 " search highlighted in visual mode
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
