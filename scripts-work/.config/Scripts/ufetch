@@ -12,9 +12,7 @@ kernel="$(uname -sr)"
 uptime="$(uptime -p | sed 's/up //')"
 packages="$(dpkg -l | wc -l)"
 shell="$(basename ${SHELL})"
-if [ -z "${WM}" ]; then
-	WM=$DESKTOP_SESSION
-fi
+DE=$DESKTOP_SESSION
 
 ## DEFINE COLORS
 
@@ -47,6 +45,6 @@ ${fc}  |  /    |  ${lc}KERNEL:    ${ic}${kernel}${rc}
 ${fc}  |  ${sc}\\___-   ${lc}UPTIME:    ${ic}${uptime}${rc}
 ${sc}  -_         ${lc}PACKAGES:  ${ic}${packages}${rc}
 ${sc}    --_      ${lc}SHELL:     ${ic}${shell}${rc}
-${fc}             ${lc}WM:        ${ic}${WM}${rc}
+${fc}             ${lc}DE:        ${ic}${DE}${rc}
 
 EOF
