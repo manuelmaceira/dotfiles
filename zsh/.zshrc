@@ -16,6 +16,8 @@ export HISTSIZE=25000
 export HISTFILE=~/.zsh_history
 export SAVEHIST=10000
 
+export QSYS_ROOTDIR="/home/micah/intelFPGA_lite/17.1/quartus/sopc_builder/bin"
+
 setopt INC_APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_SPACE
