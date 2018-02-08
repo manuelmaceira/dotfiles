@@ -21,7 +21,7 @@ set $bigheight 800
 font pango:System San Francisco Display, FontAwesome 13
 
 # set up gaps
-for_window [class="^.*"] border pixel 10
+for_window [class="^.*"] border pixel 5
 gaps inner 15
 
 # colors
@@ -33,7 +33,7 @@ gaps inner 15
 set_from_resource $dmenu-bg-color 	   i3wm.color0 #f0f0f0
 set_from_resource $dmenu-text-color    i3wm.color5 #f0f0f0
 set_from_resource $bg-color 	         i3wm.color1 #f0f0f0
-set_from_resource $inactive-bg-color   i3wm.color7 #f0f0f0
+set_from_resource $inactive-bg-color   i3wm.color0 #f0f0f0
 set_from_resource $text-color          i3wm.color5 #f0f0f0
 set_from_resource $inactive-text-color i3wm.color4 #f0f0f0
 set_from_resource $urgent-bg-color     i3wm.color2 #f0f0f0
@@ -117,11 +117,11 @@ for_window [instance="weather"] resize set 1200 800
 for_window [instance="weather"] move position center
 for_window [instance="weather"] move scratchpad
 
-# start glances in floating window
-for_window [instance="glances"] floating enable
-for_window [instance="glances"] resize set $bigwidth $bigheight
-for_window [instance="glances"] move position center
-for_window [instance="glances"] move scratchpad
+# start tasks in floating window
+for_window [instance="tasks"] floating enable
+for_window [instance="tasks"] resize set $bigwidth $bigheight
+for_window [instance="tasks"] move position center
+for_window [instance="tasks"] move scratchpad
 
 # rtorrent terminal
 for_window [instance="rtorrent"] floating enable
@@ -199,7 +199,7 @@ bindsym $mod+Shift+r         exec --no-startup-id $cliprog math "R"
 #bindsym $mod+Shift+Control+r
 
 #bindsym $mod+t
-bindsym $mod+Shift+t         exec --no-startup-id $cliprog glances "glances"
+bindsym $mod+Shift+t         exec --no-startup-id $cliprog tasks "htop"
 #bindsym $mod+Control+t
 #bindsym $mod+Shift+Control+t
 
