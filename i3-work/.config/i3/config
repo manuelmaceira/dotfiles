@@ -17,7 +17,7 @@ set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you rea
 font pango:System San Francisco Display, FontAwesome 13
 
 # set up gaps
-for_window [class="^.*"] border pixel 6
+for_window [class="^.*"] border pixel 5
 gaps inner 15
 
 # colors
