@@ -121,6 +121,7 @@ exec_always --no-startup-id wal -R
 
 # application placements
 assign [class="Firefox"] $workspace1
+assign [class="qutebrowser"] $workspace1
 
 # status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
