@@ -72,8 +72,8 @@ zmodload zsh/terminfo
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
-PATH="/home/micah/.gem/ruby/2.5.0/bin:$PATH"
+PATH="/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin:$PATH"
 
 (cat ~/.cache/wal/sequences &)
 
-neofetch
+ufetch
