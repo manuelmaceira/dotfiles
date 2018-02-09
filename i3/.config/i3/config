@@ -22,7 +22,7 @@ font pango:System San Francisco Display, FontAwesome 13
 
 # set up gaps
 for_window [class="^.*"] border pixel 5
-gaps inner 15
+gaps inner 20
 
 # colors
 #set $bg-color 	          #676E7D
