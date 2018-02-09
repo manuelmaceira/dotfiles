@@ -12,7 +12,7 @@ set $smallwidth 900
 set $smallheight 650
 set $bigwidth 1500
 set $bigheight 800
-set $defaultgaps 20
+set $defaultgaps 25
 
 
 ###############

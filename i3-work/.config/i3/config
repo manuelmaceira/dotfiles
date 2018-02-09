@@ -8,7 +8,7 @@ set $term     'urxvt'
 set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
 set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
 set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
-set $defaultgaps 20
+set $defaultgaps 25
 
 
 ###############
