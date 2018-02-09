@@ -113,7 +113,7 @@ for_window [instance="glances"] move scratchpad
 ########################
 
 # start compositor
-exec --no-startup-id compton -f
+exec --no-startup-id compton
 
 # set wallpaper and colors
 exec_always --no-startup-id feh --bg-scale ~/.config/wall
