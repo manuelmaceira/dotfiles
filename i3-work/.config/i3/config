@@ -68,31 +68,31 @@ set $workspace10 "10"
 
 # scratchpad terminal
 for_window [instance="dropdown"] floating enable
-for_window [instance="dropdown"] resize set 900 650
+for_window [instance="dropdown"] resize set 900 640
 for_window [instance="dropdown"] move position center
 for_window [instance="dropdown"] move scratchpad
 
 # ranger scratchpad
 for_window [instance="files"] floating enable
-for_window [instance="files"] resize set 900 650
+for_window [instance="files"] resize set 900 640
 for_window [instance="files"] move position center
 for_window [instance="files"] move scratchpad
 
 # R scratchpad
 for_window [instance="math"] floating enable
-for_window [instance="math"] resize set 900 650
+for_window [instance="math"] resize set 900 640
 for_window [instance="math"] move position center
 for_window [instance="math"] move scratchpad
 
 # start khal in floating window
 for_window [instance="cal"] floating enable
-for_window [instance="cal"] resize set 900 650
+for_window [instance="cal"] resize set 900 640
 for_window [instance="cal"] move position center
 for_window [instance="cal"] move scratchpad
 
 # start upass in floating window
 for_window [instance="pass"] floating enable
-for_window [instance="pass"] resize set 900 650
+for_window [instance="pass"] resize set 900 640
 for_window [instance="pass"] move position center
 for_window [instance="pass"] move scratchpad
 
