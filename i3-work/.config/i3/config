@@ -8,6 +8,7 @@ set $term     'urxvt'
 set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
 set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
 set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+set $defaultgaps 20
 
 
 ###############
@@ -18,7 +19,7 @@ font pango:System San Francisco Display, FontAwesome 13
 
 # set up gaps
 for_window [class="^.*"] border pixel 5
-gaps inner 20
+gaps inner $defaultgaps
 
 # colors
 #set $bg-color 	          #676E7D
@@ -313,6 +314,7 @@ bindsym $mod+Shift+9         move container to workspace $workspace9
 bindsym $mod+0               workspace $workspace10
 bindsym $mod+Shift+0         move container to workspace $workspace10
 #bindsym $mod+Shift+Control+0
+bindsym $mod+Control+0       gaps inner current set $defaultgaps
 
 
 #######################
@@ -326,10 +328,12 @@ bindsym $mod+Shift+0         move container to workspace $workspace10
 #bindsym $mod+minus
 #bindsym $mod+Shift+minus
 #bindsym $mod+Shift+Control+minus
+bindsym $mod+Control+minus             gaps inner current plus 5
 
 #bindsym $mod+equal
 #bindsym $mod+Shift+equal
 #bindsym $mod+Shift+Control+equal
+bindsym $mod+Control+equal             gaps inner current minus 5
 
 bindsym $mod+Tab                        workspace back_and_forth
 #bindsym $mod+Shift+Tab
