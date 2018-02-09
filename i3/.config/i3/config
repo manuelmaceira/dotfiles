@@ -240,7 +240,7 @@ bindsym $mod+Shift+s         exec --no-startup-id python2 ~/.config/i3/scripts/w
 #bindsym $mod+Shift+Control+s
 
 bindsym $mod+d               focus child
-#bindsym $mod+Shift+d
+bindsym $mod+Shift+d         exec --no-startup-id zsh /home/micah/.config/i3/scripts/dirty
 #bindsym $mod+Control+d
 #bindsym $mod+Shift+Control+d
 
