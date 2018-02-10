@@ -128,12 +128,13 @@ c.hints.border = '1px solid ' + xresources['*color15']
 
 c.content.geolocation = False
 
-c.url.searchengines["DEFAULT"] = "https://www.google.com/search?hl=en&q={}"
-c.url.searchengines["g"] = "https://www.google.com/search?hl=en&q={}"
 c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
+c.url.searchengines["az"] = "https://www.amazon.com/s/?field-keywords={}"
 c.url.searchengines["d"] = "https://duckduckgo.com/?q={}"
+c.url.searchengines["g"] = "https://www.google.com/search?hl=en&q={}"
 c.url.searchengines["rd"] = "https://reddit.com/r/{}"
 c.url.searchengines["yt"] = "https://youtube.com/results?search_query={}"
+c.url.searchengines["DEFAULT"] = c.url.searchengines["g"]
 
 config.bind(',az', ':open https://amazon.com')
 config.bind(',bp', ':open https://buzzport.gatech.edu/cp/home/displaylogin')
