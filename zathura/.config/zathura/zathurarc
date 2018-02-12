@@ -1,1 +1,5 @@
 set window-title-basename true
+set recolor true
+set selection-clipboard clipboard
+
+include /home/micah/.cache/wal/colors-zathurarc
