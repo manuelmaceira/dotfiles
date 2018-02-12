@@ -115,7 +115,8 @@ alias meminfo='free -m -l -t'
 alias psg='ps aux | grep'
 alias ipinfo="curl ifconfig.me && curl ifconfig.me/host"
 alias alert='notify-send -i "$([ $? = 0 ] && echo terminal || echo error)" "$(cat ~/.zsh_history|tail -n1|cut -d'\'';'\'' -f2-|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
-mcd() { mkdir -p "$1"; cd "$1";}
+alias fuck='sudo /usr/bin/zsh -c "$(fc -ln -1)"'
+mcd() { mkdir -p -- "$@"; cd -- "$@";}
 cls() { cd "$1"; ls;}
 crun() { make "$1"; ./$1;}
 backup() { cp "$1"{,.bak};}
