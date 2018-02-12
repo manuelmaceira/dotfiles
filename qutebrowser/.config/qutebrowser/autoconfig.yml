@@ -277,11 +277,11 @@ global:
     register:
       <Escape>: leave-mode
   editor.command:
-  - gvim
-  - -f
-  - '{file}'
-  - -c
-  - normal {line}G{column0}l
+  - urxvt
+  - -e
+  - /home/micah/.config/i3/scripts/runner
+  - vim
+  - '{}'
   qt.args:
   - ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so
   url.default_page: https://google.com
