@@ -4,6 +4,7 @@ cfcf	~/.config/Scripts/configs
 cff	~/.config/Scripts/folders
 cfi	~/.config/i3/config
 cfp	~/.config/polybar/config
+cfq	~/.config/qutebrowser/config.py
 cfr	~/.config/ranger/rc.conf
 cft	~/.tmux.conf
 cfv	~/.vimrc
