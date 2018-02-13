@@ -2,9 +2,10 @@
 status_path = "~/.config/vdirsyncer/status/"
 
 [pair gcal]
-a = "gcal_local"
-b = "gcal_remote"
+a = "gcal_remote"
+b = "gcal_local"
 collections = ["from a", "from b"]
+conflict_resolution = "a wins"
 
 [storage gcal_local]
 type = "filesystem"
@@ -16,11 +17,13 @@ type = "google_calendar"
 token_file = "~/.config/vdirsyncer/calauth"
 client_id = "134889099907-ijk4vhmahqi45dijtliga4elba8hi2e3.apps.googleusercontent.com"
 client_secret.fetch = ["command", "/home/micah/.config/vdirsyncer/password.sh"]
+read_only = true
 
 [pair gaddr]
 a = "gaddr_local"
 b = "gaddr_remote"
 collections = ["from a", "from b"]
+conflict_resolution = "b wins"
 
 [storage gaddr_local]
 type = "filesystem"
