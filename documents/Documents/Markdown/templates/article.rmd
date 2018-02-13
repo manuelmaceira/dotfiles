@@ -1,0 +1,9 @@
+---
+title: <++>
+date: <++>
+author: Micah Halter
+output: pdf_document
+bibliography: /home/micah/Documents/LaTeX/bibliography.bib
+---
+
+<++>
