@@ -9,9 +9,10 @@ set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
 set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
 set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 set $smallwidth 900
-set $smallheight 650
+set $smallheight 640
 set $bigwidth 1500
 set $bigheight 800
+set $defaultgaps 25
 
 
 ###############
@@ -22,7 +23,7 @@ font pango:System San Francisco Display, FontAwesome 13
 
 # set up gaps
 for_window [class="^.*"] border pixel 5
-gaps inner 15
+gaps inner $defaultgaps
 
 # colors
 #set $bg-color 	          #676E7D
@@ -106,10 +107,10 @@ for_window [instance="pass"] move position center
 for_window [instance="pass"] move scratchpad
 
 # start ncpamixer in floating window
-for_window [instance="audio"] floating enable
-for_window [instance="audio"] resize set $smallwidth $smallheight
-for_window [instance="audio"] move position center
-for_window [instance="audio"] move scratchpad
+for_window [instance="ncpamixer"] floating enable
+for_window [instance="ncpamixer"] resize set $smallwidth $smallheight
+for_window [instance="ncpamixer"] move position center
+for_window [instance="ncpamixer"] move scratchpad
 
 # start weather in floating window
 for_window [instance="weather"] floating enable
@@ -145,7 +146,7 @@ for_window [title="video1 - mpv"] border none
 ########################
 
 # start compositor
-exec --no-startup-id compton -f
+exec --no-startup-id compton
 
 # disable trackpad
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
@@ -229,7 +230,7 @@ bindsym $mod+Shift+p         exec --no-startup-id $cliprog pass "upass"
 #bindsym $mod+Shift+Control+p
 
 bindsym $mod+a               focus parent
-bindsym $mod+Shift+a         exec --no-startup-id $cliprog audio "ncpamixer"
+bindsym $mod+Shift+a         exec --no-startup-id $cliprog ncpamixer "ncpamixer"
 #bindsym $mod+Control+a
 #bindsym $mod+Shift+Control+a
 
@@ -239,7 +240,7 @@ bindsym $mod+Shift+s         exec --no-startup-id python2 ~/.config/i3/scripts/w
 #bindsym $mod+Shift+Control+s
 
 bindsym $mod+d               focus child
-#bindsym $mod+Shift+d
+bindsym $mod+Shift+d         exec --no-startup-id zsh /home/micah/.config/i3/scripts/dirty
 #bindsym $mod+Control+d
 #bindsym $mod+Shift+Control+d
 
@@ -352,6 +353,7 @@ bindsym $mod+Shift+9         move container to workspace $workspace9
 bindsym $mod+0               workspace $workspace10
 bindsym $mod+Shift+0         move container to workspace $workspace10
 #bindsym $mod+Shift+Control+0
+bindsym $mod+Control+0       gaps inner current set $defaultgaps
 
 
 #######################
@@ -365,10 +367,12 @@ bindsym $mod+Shift+0         move container to workspace $workspace10
 #bindsym $mod+minus
 #bindsym $mod+Shift+minus
 #bindsym $mod+Shift+Control+minus
+bindsym $mod+Control+minus              gaps inner current plus 5
 
 #bindsym $mod+equal
 #bindsym $mod+Shift+equal
 #bindsym $mod+Shift+Control+equal
+bindsym $mod+Control+equal              gaps inner current minus 5
 
 bindsym $mod+Tab                        workspace back_and_forth
 #bindsym $mod+Shift+Tab

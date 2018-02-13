@@ -1,4 +1,5 @@
 [Default Applications]
+x-scheme-handler/mailto=mutt.desktop
 x-scheme-handler/http=qutebrowser.desktop
 x-scheme-handler/https=qutebrowser.desktop
 x-scheme-handler/ftp=qutebrowser.desktop

@@ -1,0 +1,7 @@
+#!/bin/bash
+
+i3-msg "workspace 2"
+i3-msg "append_layout ~/.config/i3/layouts/dirty.json"
+i3-msg 'exec --no-startup-id urxvt -name asciiquarium -e /home/micah/.config/i3/scripts/runner "asciiquarium"'
+i3-msg 'exec --no-startup-id urxvt -name cmatrix -e /home/micah/.config/i3/scripts/runner "cmatrix"'
+i3-msg 'exec --no-startup-id urxvt -name urxvt'

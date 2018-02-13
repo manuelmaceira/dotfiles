@@ -126,12 +126,17 @@ c.colors.webpage.bg = xresources['*color15']
 
 c.hints.border = '1px solid ' + xresources['*color15']
 
-c.url.searchengines["DEFAULT"] = "https://www.google.com/search?hl=en&q={}"
-c.url.searchengines["g"] = "https://www.google.com/search?hl=en&q={}"
+c.content.geolocation = False
+
+c.editor.command = ['urxvt', '-e', '/home/micah/.config/i3/scripts/runner', 'vim', '{}']
+
 c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
+c.url.searchengines["az"] = "https://www.amazon.com/s/?field-keywords={}"
 c.url.searchengines["d"] = "https://duckduckgo.com/?q={}"
+c.url.searchengines["g"] = "https://www.google.com/search?hl=en&q={}"
 c.url.searchengines["rd"] = "https://reddit.com/r/{}"
 c.url.searchengines["yt"] = "https://youtube.com/results?search_query={}"
+c.url.searchengines["DEFAULT"] = c.url.searchengines["g"]
 
 config.bind(',az', ':open https://amazon.com')
 config.bind(',bp', ':open https://buzzport.gatech.edu/cp/home/displaylogin')
@@ -148,7 +153,9 @@ config.bind(',ts', ':open http://tsquare.gatech.edu')
 config.bind(',wm', ':open https://sso.gtri.gatech.edu/adfs/ls/?wa=wsignin1.0&wtrealm=https%3a%2f%2fmail.gtri.gatech.edu%2fowa%2f&wctx=rm%3d0%26id%3dpassive%26ru%3d%252fowa%252f&wct=2016-01-29T15%3a00%3a27Z')
 config.bind(',ws', ':open http://mehalter.com')
 config.bind(',yt', ':open https://youtube.com')
+
 config.bind(';m', 'hint links spawn mpv {hint-url}')
+
 config.bind('D', ':close')
 config.bind('I', ':open -p')
 config.bind('W', ':tab-give')
