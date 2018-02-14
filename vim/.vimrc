@@ -255,12 +255,6 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" disable hjkl keys
-noremap h <NOP>
-noremap j <NOP>
-noremap k <NOP>
-noremap l <NOP>
-
 " tex compile keybindings
 autocmd Filetype tex nnoremap <leader>mm :w<CR>:!rubber -m xelatex --warn all %<CR><CR>
 autocmd Filetype tex nnoremap <leader>mc :w<CR>:!rubber -m xelatex --warn all %<CR>
