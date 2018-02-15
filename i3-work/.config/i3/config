@@ -102,11 +102,11 @@ for_window [instance="weather"] resize set 1200 800
 for_window [instance="weather"] move position center
 for_window [instance="weather"] move scratchpad
 
-# start glances in floating window
-for_window [instance="glances"] floating enable
-for_window [instance="glances"] resize set 1500 800
-for_window [instance="glances"] move position center
-for_window [instance="glances"] move scratchpad
+# start tasks in floating window
+for_window [instance="tasks"] floating enable
+for_window [instance="tasks"] resize set 1500 800
+for_window [instance="tasks"] move position center
+for_window [instance="tasks"] move scratchpad
 
 
 ########################
@@ -115,6 +115,9 @@ for_window [instance="glances"] move scratchpad
 
 # start compositor
 exec --no-startup-id compton
+
+# alternating layout script
+exec --no-startup-id ~/.config/i3/scripts/alternating_layouts.py
 
 # set wallpaper and colors
 exec_always --no-startup-id feh --bg-scale ~/.config/wall
@@ -161,7 +164,7 @@ bindsym $mod+Shift+r         exec --no-startup-id $cliprog math "R"
 #bindsym $mod+Shift+Control+r
 
 #bindsym $mod+t
-bindsym $mod+Shift+t         exec --no-startup-id $cliprog glances "glances"
+bindsym $mod+Shift+t         exec --no-startup-id $cliprog tasks "htop"
 #bindsym $mod+Control+t
 #bindsym $mod+Shift+Control+t
 
