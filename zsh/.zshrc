@@ -1,8 +1,6 @@
-ZSH_THEME="agnoster"
-
-ZSH=$HOME/.oh-my-zsh
-
-plugins=(common-aliases cp extract git git-extras vi-mode)
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
@@ -27,13 +25,13 @@ setopt HIST_VERIFY
 setopt INTERACTIVECOMMENTS
 setopt CORRECT
 
-source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 source ~/.zsh_shortcuts
 
 # terminal vim
 export KEYTIMEOUT=10
-bindkey -M viins 'jk' vi-cmd-mode
+bindkey -M viins 'fj' vi-cmd-mode
+bindkey -M viins 'jf' vi-cmd-mode
 bindkey -M viins '^a' vi-beginning-of-line
 bindkey -M viins '^e' vi-end-of-line
 bindkey -M viins '^k' kill-line
@@ -65,12 +63,6 @@ zstyle ':completion:*:kill:*' horse-list always
 # use caching
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
-
-# history substring search
-source $ZSH/plugins/history-substring-search/history-substring-search.zsh
-zmodload zsh/terminfo
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 PATH="/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin:$PATH"
 
