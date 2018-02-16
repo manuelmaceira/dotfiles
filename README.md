@@ -19,7 +19,6 @@ My dotfiles for my Linux rice, managed using stow.
 - mps-youtube
 - neomutt
 - newsboat
-- oh-my-zsh
 - qutebrowser
 - ranger
 - rtorrent
@@ -54,6 +53,7 @@ My dotfiles for my Linux rice, managed using stow.
     - pass-extension-tail
     - pass-update
     - pdfpc
+    - prezto
     - py-wal
     - R
     - scrot
