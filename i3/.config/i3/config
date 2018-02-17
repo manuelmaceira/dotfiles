@@ -248,7 +248,7 @@ bindsym $mod+Shift+d         exec --no-startup-id zsh /home/micah/.config/i3/scr
 #bindsym $mod+Shift+Control+d
 
 bindsym $mod+f               fullscreen toggle
-bindsym $mod+Shift+f         exec --no-startup-id python2 ~/.config/i3/scripts/focus.py
+bindsym $mod+Shift+f         exec --no-startup-id firefox
 #bindsym $mod+Control+f
 #bindsym $mod+Shift+Control+f
 
