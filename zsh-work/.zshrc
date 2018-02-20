@@ -1,10 +1,8 @@
-ZSH_THEME="agnoster"
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
 
-ZSH=$HOME/.oh-my-zsh
 
-plugins=(ant archlinux common-aliases cp extract git git-extras mvn python scala sbt tmux tmuxinator vi-mode wd)
-
-#export TERM="tmux-256color"
 export EDITOR="vim"
 export USE_EDITOR=$EDITOR
 export VISUAL=$EDITOR
@@ -22,11 +20,9 @@ setopt HIST_IGNORE_SPACE
 setopt HIST_REDUCE_BLANKS
 setopt HIST_VERIFY
 
-setopt RM_STAR_WAIT
 setopt interactivecomments
 setopt CORRECT
 
-source $ZSH/oh-my-zsh.sh
 source ~/.zsh_aliases
 source ~/.zsh_shortcuts
 
@@ -65,19 +61,9 @@ zstyle ':completion:*:kill:*' horse-list always
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
-#source ~/.bin/tmuxinator.zsh
-
-# history substring search
-source $ZSH/plugins/history-substring-search/history-substring-search.zsh
-zmodload zsh/terminfo
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
-
 PATH="/home/micah/.npm-global/:/home/micah/qutebrowser/bin/:/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin/:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
-#BASE16_SHELL=$HOME/.config/base16-shell/
-#[ -n "$PS1" ] && [ -s $BASE16_SHELL/profile_helper.sh ] && eval "$($BASE16_SHELL/profile_helper.sh)"
 (cat ~/.cache/wal/sequences &)
 
 ufetch
