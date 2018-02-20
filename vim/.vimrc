@@ -13,6 +13,7 @@ set so=7
 set ffs=unix,dos,mac
 set path+=**
 set spellfile=$HOME/.vim/spell/en.utf-8.add
+set thesaurus+=$HOME/.vim/spell/mthesaur.txt
 " 1 tab == 2 spaces
 set expandtab
 set smarttab
