@@ -18,6 +18,9 @@ xresources = read_xresources('*')
 
 config.load_autoconfig()
 
+c.statusbar.hide = True
+c.tabs.show = 'multiple'
+
 c.colors.completion.category.bg = xresources['*color6']
 c.colors.completion.category.fg = xresources['*color0']
 
