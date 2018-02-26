@@ -3,6 +3,7 @@
 """"""""""""""""""""""""""""
 
 call plug#begin('~/.config/nvim/plugged-remote')
+Plug 'w0rp/ale'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/goyo.vim'
@@ -10,7 +11,7 @@ Plug 'neovimhaskell/haskell-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'vim-scripts/mru.vim'
 Plug 'roxma/ncm-clang'
-Plug 'neomake/neomake'
+"Plug 'neomake/neomake'
 Plug 'scrooloose/nerdtree'
 Plug 'roxma/nvim-completion-manager'
 Plug 'amix/open_file_under_cursor.vim'
@@ -188,26 +189,17 @@ let g:lightline = {
       \ 'subseparator': { 'left': ' ', 'right': ' ' }
       \ }
 
-" Neomake
+" ALE
 function! MyOnBattery()
   return readfile('/sys/class/power_supply/AC/online') == ['0']
 endfunction
 
 if MyOnBattery()
-  call neomake#configure#automake('w')
-else
-  call neomake#configure#automake('nw', 750)
+  let g:ale_lint_on_text_changed = 'never'
 endif
 
-let g:neomake_java_javac_maker = {
-        \ 'errorformat': 
-            \ '%E%f:%l: %trror: %m,' .
-            \ '%W%f:%l: %tarning: %m,' .
-            \ '%E%f:%l: %m,'. 
-            \ '%Z%p^,'.
-            \ '%-G%.%#',
-        \ }
-let g:neomake_java_enabled_makers = ['javac']
+let g:ale_sign_error = '✘'
+let g:ale_sign_warning = '⚠'
 
 " nvim completion manager
 set shortmess+=c
