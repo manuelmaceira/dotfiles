@@ -18,6 +18,7 @@ My dotfiles for my Linux rice, managed using stow.
 - khard
 - mps-youtube
 - neomutt
+- neovim
 - newsboat
 - qutebrowser
 - ranger
@@ -28,7 +29,6 @@ My dotfiles for my Linux rice, managed using stow.
 - tmuxinator
 - urxvt
 - urxvt-perls
-- vim
 - weechat
 - zathura
 - zsh
