@@ -18,9 +18,6 @@ xresources = read_xresources('*')
 
 config.load_autoconfig()
 
-c.statusbar.hide = True
-c.tabs.show = 'multiple'
-
 c.colors.completion.category.bg = xresources['*color6']
 c.colors.completion.category.fg = xresources['*color0']
 
@@ -129,6 +126,9 @@ c.colors.webpage.bg = xresources['*color15']
 
 c.hints.border = '1px solid ' + xresources['*color15']
 
+c.statusbar.hide = True
+c.tabs.show = 'switching'
+
 c.content.geolocation = False
 
 c.editor.command = ['urxvt', '-e', '/home/micah/.config/i3/scripts/runner', 'nvim', '{}']
@@ -163,3 +163,5 @@ config.bind('D', ':close')
 config.bind('I', ':open -p')
 config.bind('W', ':tab-give')
 config.bind('t', ':open -t')
+config.bind('xb', ':config-cycle statusbar.hide')
+config.bind('xt', ':config-cycle tabs.show multiple switching')
