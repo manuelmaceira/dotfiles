@@ -190,13 +190,13 @@ let g:lightline = {
       \ }
 
 " ALE
-function! MyOnBattery()
-  return readfile('/sys/class/power_supply/AC/online') == ['0']
-endfunction
-
-if MyOnBattery()
-  let g:ale_lint_on_text_changed = 'never'
-endif
+"function! MyOnBattery()
+"  return readfile('/sys/class/power_supply/AC/online') == ['0']
+"endfunction
+"
+"if MyOnBattery()
+"  let g:ale_lint_on_text_changed = 'never'
+"endif
 
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
