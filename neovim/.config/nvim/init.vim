@@ -107,6 +107,7 @@ set whichwrap+=<,>,h,l
 set ignorecase
 set smartcase
 set incsearch
+set icm=nosplit
 " no sounds on errors
 set noerrorbells
 set novisualbell
