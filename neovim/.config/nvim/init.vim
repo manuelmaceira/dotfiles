@@ -8,6 +8,7 @@ Plug 'skywind3000/asyncrun.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/goyo.vim'
+Plug 'rhysd/vim-grammarous'
 Plug 'neovimhaskell/haskell-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'vim-scripts/mru.vim'
@@ -227,6 +228,14 @@ augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 let g:pandoc#syntax#conceal#use = 1
+
+" grammarous
+nmap ]g <Plug>(grammarous-move-to-next-error)
+nmap [g <Plug>(grammarous-move-to-previous-error)
+nmap <leader>gf <Plug>(grammarous-fixit)
+nmap <leader>gr <Plug>(grammarous-remove-error)
+nmap <leader>gc <Plug>(grammarous-close-info-window)
+nmap <leader>go <Plug>(grammarous-open-info-window)
 
 """"""""""""""""""""""""""""
 " => Remaps
