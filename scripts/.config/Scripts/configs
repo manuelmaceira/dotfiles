@@ -10,6 +10,6 @@ cfp	~/.config/polybar/config
 cfq	~/.config/qutebrowser/config.py
 cfr	~/.config/ranger/rc.conf
 cft	~/.tmux.conf
-cfv	~/.vimrc
+cfv	~/.config/nvim/init.vim
 cfx	~/.Xdefaults
 cfz	~/.zshrc
