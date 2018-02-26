@@ -238,6 +238,9 @@ nmap <leader>gr <Plug>(grammarous-remove-error)
 nmap <leader>gc <Plug>(grammarous-close-info-window)
 nmap <leader>go <Plug>(grammarous-open-info-window)
 
+" AsyncRun
+map <leader>qf :call asyncrun#quickfix_toggle(8)<CR>
+
 """"""""""""""""""""""""""""
 " => Remaps
 """"""""""""""""""""""""""""
@@ -312,17 +315,14 @@ noremap <Right> <NOP>
 
 " tex compile keybindings
 autocmd Filetype tex nnoremap <leader>mm :w<CR>:AsyncRun rubber -m xelatex --warn all %<CR><CR>
-autocmd Filetype tex nnoremap <leader>mc :w<CR>:!rubber -m xelatex --warn all %<CR>
-autocmd Filetype tex nnoremap <leader>mp :AsyncRun pdfpc %:r.pdf<CR><CR>
 " md compile keybindings
 autocmd Filetype markdown nnoremap <leader>mm :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
 autocmd Filetype markdown nnoremap <leader>mb :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR><CR>
-autocmd Filetype markdown nnoremap <leader>mc :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
 " rmd compile keybindings
 autocmd Filetype rmd nnoremap <leader>mm :w<CR>:AsyncRun echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
-autocmd Filetype rmd nnoremap <leader>mc :w<CR>:!echo "require(rmarkdown); render('%')" \| R --vanilla<CR>
 " compiled doc viewing keybindings
 autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+autocmd Filetype tex,markdown nnoremap <leader>mp :!pdfpc %:r.pdf<CR><CR>
 
 """"""""""""""""""""""""""""
 " => Commands
