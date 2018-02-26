@@ -322,7 +322,7 @@ autocmd Filetype markdown nnoremap <leader>mc :w<CR>:!pandoc % --pdf-engine=xela
 autocmd Filetype rmd nnoremap <leader>mm :w<CR>:AsyncRun echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
 autocmd Filetype rmd nnoremap <leader>mc :w<CR>:!echo "require(rmarkdown); render('%')" \| R --vanilla<CR>
 " compiled doc viewing keybindings
-autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :AsyncRun zathura -- %:r.pdf &> /dev/null &<CR><CR>
+autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
 
 """"""""""""""""""""""""""""
 " => Commands
