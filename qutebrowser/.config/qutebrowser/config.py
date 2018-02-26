@@ -131,7 +131,7 @@ c.hints.border = '1px solid ' + xresources['*color15']
 
 c.content.geolocation = False
 
-c.editor.command = ['urxvt', '-e', '/home/micah/.config/i3/scripts/runner', 'vim', '{}']
+c.editor.command = ['urxvt', '-e', '/home/micah/.config/i3/scripts/runner', 'nvim', '{}']
 
 c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
 c.url.searchengines["az"] = "https://www.amazon.com/s/?field-keywords={}"

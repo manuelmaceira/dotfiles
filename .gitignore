@@ -7,3 +7,6 @@
 
 # spl files
 **/*.spl
+
+# neovim plugins
+**/plugged-remote/
