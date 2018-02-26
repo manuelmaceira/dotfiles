@@ -149,7 +149,7 @@ for_window [title="video1 - mpv"] border none
 exec --no-startup-id compton
 
 # alternating layout script
-exec --no-startup-id ~/.config/i3/scripts/alternating_layouts.py
+#exec --no-startup-id ~/.config/i3/scripts/alternating_layouts.py
 
 # disable trackpad
 exec --no-startup-id xinput set-prop "SynPS/2 Synaptics TouchPad" "Device Enabled" 0
