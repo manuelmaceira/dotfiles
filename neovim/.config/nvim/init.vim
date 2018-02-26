@@ -232,6 +232,8 @@ let g:pandoc#syntax#conceal#use = 1
 " grammarous
 nmap ]g <Plug>(grammarous-move-to-next-error)
 nmap [g <Plug>(grammarous-move-to-previous-error)
+nmap <leader>gg :GrammarousCheck<CR>
+nmap <leader>gq :GrammarousReset<CR>
 nmap <leader>gf <Plug>(grammarous-fixit)
 nmap <leader>gr <Plug>(grammarous-remove-error)
 nmap <leader>gc <Plug>(grammarous-close-info-window)
