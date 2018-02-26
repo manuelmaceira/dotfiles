@@ -227,7 +227,6 @@ let g:tmuxline_theme = 'lightline'
 augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
-let g:pandoc#syntax#conceal#use = 1
 
 " grammarous
 nmap ]g <Plug>(grammarous-move-to-next-error)
