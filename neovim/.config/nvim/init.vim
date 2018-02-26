@@ -4,6 +4,7 @@
 
 call plug#begin('~/.config/nvim/plugged-remote')
 Plug 'w0rp/ale'
+Plug 'skywind3000/asyncrun.vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/goyo.vim'
@@ -14,6 +15,8 @@ Plug 'roxma/ncm-clang'
 Plug 'scrooloose/nerdtree'
 Plug 'roxma/nvim-completion-manager'
 Plug 'amix/open_file_under_cursor.vim'
+Plug 'vim-pandoc/vim-pandoc-syntax'
+Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'majutsushi/tagbar'
 Plug 'edkolev/tmuxline.vim'
 Plug 'dylanaraps/wal.vim'
@@ -22,6 +25,7 @@ Plug 'amix/vim-zenroom2'
 
 Plug '~/.config/nvim/plugged-local/custom-vim'
 call plug#end()
+
 
 """"""""""""""""""""""""""""
 " => General
@@ -218,6 +222,12 @@ let g:tmuxline_powerline_separators = 0
 let g:tmuxline_preset = 'minimal'
 let g:tmuxline_theme = 'lightline'
 
+" pandoc
+augroup pandoc_syntax
+  au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+augroup END
+let g:pandoc#syntax#conceal#use = 1
+
 """"""""""""""""""""""""""""
 " => Remaps
 """"""""""""""""""""""""""""
@@ -291,18 +301,18 @@ noremap <Left> <NOP>
 noremap <Right> <NOP>
 
 " tex compile keybindings
-autocmd Filetype tex nnoremap <leader>mm :w<CR>:!rubber -m xelatex --warn all %<CR><CR>
+autocmd Filetype tex nnoremap <leader>mm :w<CR>:AsyncRun rubber -m xelatex --warn all %<CR><CR>
 autocmd Filetype tex nnoremap <leader>mc :w<CR>:!rubber -m xelatex --warn all %<CR>
-autocmd Filetype tex nnoremap <leader>mp :!pdfpc %:r.pdf<CR><CR>
+autocmd Filetype tex nnoremap <leader>mp :AsyncRun pdfpc %:r.pdf<CR><CR>
 " md compile keybindings
-autocmd Filetype markdown nnoremap <leader>mm :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
-autocmd Filetype markdown nnoremap <leader>mb :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR>
+autocmd Filetype markdown nnoremap <leader>mm :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
+autocmd Filetype markdown nnoremap <leader>mb :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR><CR>
 autocmd Filetype markdown nnoremap <leader>mc :w<CR>:!pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR>
 " rmd compile keybindings
-autocmd Filetype rmd nnoremap <leader>mm :w<CR>:!echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
+autocmd Filetype rmd nnoremap <leader>mm :w<CR>:AsyncRun echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
 autocmd Filetype rmd nnoremap <leader>mc :w<CR>:!echo "require(rmarkdown); render('%')" \| R --vanilla<CR>
 " compiled doc viewing keybindings
-autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :AsyncRun zathura -- %:r.pdf &> /dev/null &<CR><CR>
 
 """"""""""""""""""""""""""""
 " => Commands
