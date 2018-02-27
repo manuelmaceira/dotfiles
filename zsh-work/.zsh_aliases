@@ -5,12 +5,12 @@ ZSHDIR=~/.oh-my-zsh
 TMUXINATORDIR=~/.tmuxinator
 
 # default applications
-alias -s c=vim
-alias -s cpp=vim
-alias -s py=vim
-alias -s java=vim
-alias -s md=vim
-alias -s tex=vim
+alias -s c=nvim
+alias -s cpp=nvim
+alias -s py=nvim
+alias -s java=nvim
+alias -s md=nvim
+alias -s tex=nvim
 alias -s log="less -MN"
 
 # aliases for Tmux
@@ -61,7 +61,8 @@ alias vds='vdirsyncer sync'
 alias nb='newsboat'
 alias nf='neofetch'
 alias yt="mpsyt"
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
 alias arc='aria2c'
 alias sc='scim'
 
@@ -93,7 +94,7 @@ pg() {
 }
 
 # various utilities
-alias glv="git log --graph --pretty=format:'%h - %d %s (%cr) <%an>' | vim -R -c 'set filetype=git nowrap' -"
+alias glv="git log --graph --pretty=format:'%h - %d %s (%cr) <%an>' | nvim -R -c 'set filetype=git nowrap' -"
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
   alias ls='ls --color=auto'
@@ -108,7 +109,7 @@ alias la='ls -A'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias speedtest='speedtest-cli'
-alias todo='vi ~/.todo'
+alias todo='nvim ~/.todo'
 alias makescript="fc -rnl | head -1 >"
 alias histg='history | grep'
 alias cmount='mount | column -t'
@@ -137,7 +138,7 @@ txtemp() {
       file=$file.tex
     fi
     cp ~/Documents/LaTeX/templates/$1.tex $file;
-    vi $file;
+    nvim $file;
   fi
 }
 
@@ -158,7 +159,7 @@ mdtemp() {
       file=$file.$3
     fi
     cp ~/Documents/Markdown/templates/$1.$3 $file;
-    vi $file;
+    nvim $file;
   fi
 }
 
