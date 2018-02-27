@@ -196,7 +196,11 @@ let g:lightline = {
 
 " ALE
 function! MyOnBattery()
-  return readfile('/sys/class/power_supply/AC/online') == ['0']
+  if filereadable('/sys/class/power_supply/AC/online')
+    return readfile('/sys/class/power_supply/AC/online') == ['0']
+  else
+    return 0
+  endif
 endfunction
 if MyOnBattery()
   let g:ale_lint_on_text_changed = 'never'
