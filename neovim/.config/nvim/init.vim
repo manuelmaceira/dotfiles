@@ -298,6 +298,12 @@ inoremap fj <esc>
 " spell check
 map <leader>ss :setlocal spell! spelllang=en_us<CR>
 
+" better incrementing/decrementing
+noremap + <C-a>
+noremap - <C-x>
+xnoremap + g<C-a>
+xnoremap - g<C-x>
+
 " better pane navigation
 map <C-h> <C-W>h
 map <C-j> <C-W>j
