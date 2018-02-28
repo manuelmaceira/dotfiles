@@ -127,7 +127,7 @@ c.colors.webpage.bg = xresources['*color15']
 c.hints.border = '1px solid ' + xresources['*color15']
 
 c.statusbar.hide = True
-c.tabs.show = 'switching'
+c.tabs.show = 'multiple'
 
 c.content.geolocation = False
 
