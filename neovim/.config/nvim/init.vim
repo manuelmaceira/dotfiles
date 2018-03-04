@@ -31,10 +31,6 @@ call plug#end()
 """"""""""""""""""""""""""""
 " => General
 """"""""""""""""""""""""""""
-set nocompatible
-set encoding=utf8
-set history=500
-set autoread
 set so=7
 set ffs=unix,dos,mac
 set path+=**
@@ -42,7 +38,6 @@ set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
 set thesaurus+=$HOME/.config/nvim/spell/mthesaur.txt
 " 1 tab == 2 spaces
 set expandtab
-set smarttab
 set shiftwidth=2
 set ts=2
 set sts=2
@@ -57,7 +52,6 @@ set noswapfile
 set lbr
 set tw=500
 " smart indenting
-set ai
 set si
 set wrap
 " go to last position on open
@@ -69,8 +63,6 @@ try
 catch
 endtry
 
-filetype plugin on
-filetype indent on
 " disable indent on latex files
 autocmd FileType tex  setlocal indentexpr=
 autocmd FileType rmd  setlocal indentexpr=
@@ -95,22 +87,18 @@ set lazyredraw
 set magic
 set showmatch
 set mat=2
-" set folds
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2  
 set foldcolumn=2
-" wildmenu
 set wildmenu
 set wildignore=*.o,*~,*.pyc,*/.gi/*,*/.hg/*,*/.cvn/*,*/.DS_Store
 " backspace functionality
-set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 " search
 set ignorecase
 set smartcase
-set incsearch
 set icm=nosplit
 " no sounds on errors
 set noerrorbells
@@ -118,13 +106,11 @@ set novisualbell
 set t_vb=
 set tm=500
 " Colorscheme
-syntax enable
 set t_Co=256
 let base16colorspace=256
 colorscheme wal
 
 " Status line
-set laststatus=2
 set noshowmode
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 function! HasPaste()
@@ -259,7 +245,7 @@ map <leader>pp :setlocal paste!<CR>
 inoremap <leader><leader> <esc>/<++><Enter>"_c4l
 vnoremap <leader><leader> <esc>/<++><Enter>"_c4l
 map <leader><leader> <esc>/<++><Enter>"_c4l
-inoremap ;gui <++>
+inoremap ;mk <++>
 
 " date and time shortcuts
 iab xdate <C-r>=strftime("%m/%d/%y")<CR>
