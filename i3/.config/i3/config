@@ -223,7 +223,7 @@ bindsym $mod+Shift+u         exec --no-startup-id $cliprog rtorrent "tmuxinator 
 #bindsym $mod+Shift+Control+i
 
 #bindsym $mod+o
-#bindsym $mod+Shift+o
+bindsym $mod+Shift+o         exec --no-startup-id /home/micah/.config/Scripts/vim-anywhere.sh
 #bindsym $mod+Control+o
 #bindsym $mod+Shift+Control+o
 
