@@ -9,7 +9,7 @@ external-url-viewer "urlscan"
 feed-sort-order title
 
 color info default default
-color listnormal_unread yellow default
+color listnormal yellow default
 color listfocus blue default bold
 color listfocus_unread blue default bold
 
