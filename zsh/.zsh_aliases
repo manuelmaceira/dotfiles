@@ -101,6 +101,8 @@ if [ -x /usr/bin/dircolors ]; then
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 fi
+alias vgamirror='xrandr --output LVDS-1 --auto --output VGA-1 --auto --same-as LVDS-1'
+alias vgaoff='xrandr --output LVDS-1 --auto --output VGA-1 --off'
 alias chmox='chmod +x'
 alias maketags='ctags -R .'
 alias glv="git log --graph --pretty=format:'%h - %d %s (%cr) <%an>' | nvim -R -c 'set filetype=git nowrap' -"
