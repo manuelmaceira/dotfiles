@@ -18,9 +18,9 @@ hdmi() {
 }
 
 case $1 in
-  r) dual ;;
+  d) dual ;;
   l) vga ;;
-  h) hdmi ;;
+  r) hdmi ;;
   *) echo "Invalid parameter"
 esac
 
