@@ -18,6 +18,7 @@ Plug 'roxma/nvim-completion-manager'
 Plug 'amix/open_file_under_cursor.vim'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
+Plug 'dhruvasagar/vim-table-mode'
 Plug 'majutsushi/tagbar'
 Plug 'edkolev/tmuxline.vim'
 Plug 'dylanaraps/wal.vim'
@@ -129,13 +130,14 @@ endfunction
 " Nerd Tree
 let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
-let NERDTreeIgnore=['\.pyc$','__pycache__']
+let NERDTreeIgnore=['\.pyc$','__pycache__', '\.asm', '\.o']
 let g:NERDTreeWinSize=35
 map <leader>nn :NERDTreeToggle<CR>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<CR>
 
 " Tagbar
+let g:tagbar_sort = 0
 nmap <leader>bb :TagbarToggle<CR>
 
 " IDE Mode (enable tagbar and nerd tree)
