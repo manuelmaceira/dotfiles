@@ -83,6 +83,7 @@ set ruler
 set number
 set rnu
 set breakindent showbreak=..
+set fillchars+=vert:│
 set hid
 set lazyredraw
 set magic
@@ -109,7 +110,7 @@ set tm=500
 " Colorscheme
 set t_Co=256
 let base16colorspace=256
-colorscheme wal
+colorscheme custom-wal
 
 " Status line
 set noshowmode
@@ -132,6 +133,8 @@ let g:NERDTreeWinPos = "left"
 let NERDTreeShowHidden=0
 let NERDTreeIgnore=['\.pyc$','__pycache__', '\.asm', '\.o']
 let g:NERDTreeWinSize=35
+" autoclose nerdtree if its the last buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 map <leader>nn :NERDTreeToggle<CR>
 map <leader>nb :NERDTreeFromBookmark<Space>
 map <leader>nf :NERDTreeFind<CR>
@@ -314,6 +317,19 @@ noremap <Up> <NOP>
 noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
+
+" terminal remaps
+tnoremap <leader><ESC> <C-\><C-n>
+tnoremap <C-h> <C-\><C-n><C-w>h
+tnoremap <C-j> <C-\><C-n><C-w>j
+tnoremap <C-k> <C-\><C-n><C-w>k
+tnoremap <C-l> <C-\><C-n><C-w>l
+autocmd BufEnter term://* startinsert
+autocmd TermOpen * setlocal nonumber norelativenumber
+map <leader>ww :belowright split<CR>:resize 10<CR>:terminal<CR>i
+
+" move split to new tab and close tab binding
+nmap to :tab sp<CR>
 
 " tex compile keybindings
 autocmd Filetype tex nnoremap <leader>mm :w<CR>:AsyncRun rubber -m xelatex --warn all %<CR><CR>
