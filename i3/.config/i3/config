@@ -26,18 +26,13 @@ for_window [class="^.*"] border pixel 5
 gaps inner $defaultgaps
 
 # colors
-#set $bg-color 	          #676E7D
-#set $inactive-bg-color   #2f343f
-#set $text-color          #f3f4f5
-#set $inactive-text-color #676E7D
-#set $urgent-bg-color     #E53935
-set_from_resource $dmenu-bg-color 	   i3wm.color0 #f0f0f0
-set_from_resource $dmenu-text-color    i3wm.color5 #f0f0f0
-set_from_resource $bg-color 	         i3wm.color1 #f0f0f0
-set_from_resource $inactive-bg-color   i3wm.color0 #f0f0f0
-set_from_resource $text-color          i3wm.color5 #f0f0f0
-set_from_resource $inactive-text-color i3wm.color4 #f0f0f0
-set_from_resource $urgent-bg-color     i3wm.color2 #f0f0f0
+set_from_resource $dmenu-bg-color 	   i3wm.color0 #2f343f
+set_from_resource $dmenu-text-color    i3wm.color5 #f3f4f5
+set_from_resource $bg-color 	         i3wm.color1 #676E7D
+set_from_resource $inactive-bg-color   i3wm.color0 #2f343f
+set_from_resource $text-color          i3wm.color5 #f3f4f5
+set_from_resource $inactive-text-color i3wm.color4 #676E7D
+set_from_resource $urgent-bg-color     i3wm.color2 #E53935
 
 # window colors         border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          $bg-color
