@@ -5,24 +5,20 @@
 call plug#begin('~/.config/nvim/plugged-remote')
 Plug 'w0rp/ale'
 Plug 'skywind3000/asyncrun.vim'
-Plug 'jlanzarotta/bufexplorer'
 Plug 'tpope/vim-fugitive'
 Plug 'junegunn/goyo.vim'
 Plug 'rhysd/vim-grammarous'
-Plug 'neovimhaskell/haskell-vim'
 Plug 'itchyny/lightline.vim'
 Plug 'vim-scripts/mru.vim'
 Plug 'roxma/ncm-clang'
 Plug 'scrooloose/nerdtree'
 Plug 'roxma/nvim-completion-manager'
-Plug 'amix/open_file_under_cursor.vim'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'majutsushi/tagbar'
 Plug 'edkolev/tmuxline.vim'
 Plug 'dylanaraps/wal.vim'
-Plug 'maxbrunsfeld/vim-yankstack'
 Plug 'amix/vim-zenroom2'
 
 Plug '~/.config/nvim/plugged-local/custom-vim'
@@ -148,13 +144,6 @@ nmap <leader>i :TagbarToggle<CR>:NERDTreeToggle<CR>:wincmd p<CR>
 let MRU_Max_Entries = 400
 map <leader>f :MRU<CR>
 
-" bufExplorer
-let g:bufExplorerDefaultHelp=0
-let g:bufExplorerShowRelativePath=1
-let g:bufExplorerFindActive=1
-let g:bufExplorerSortBy='name'
-map <leader>o :BufExplorer<CR>
-
 " goyo and zenroom2
 let g:goyo_width=100
 let g:goyo_margin_top=2
@@ -208,10 +197,6 @@ inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
-" yankstack
-nmap <leader>j <Plug>yankstack_substitute_older_paste
-nmap <leader>k <Plug>yankstack_substitute_newer_paste
-
 " fugitive
 nnoremap <silent> <leader>d :Gdiff<CR>
 
@@ -255,6 +240,11 @@ iab xdate <C-r>=strftime("%m/%d/%y")<CR>
 iab fdate <C-r>=strftime("%B %d, %Y")<CR>
 iab xtime <C-r>=strftime("%H:%M")<CR>
 iab ftime <C-r>=strftime("%H:%M:%S")<CR>
+
+" Buffer navigation
+map <leader>o :ls<CR>:b
+" tab goes to last buffer
+map <TAB> <C-^>
 
 " Map auto complete of (, ", ', [
 vnoremap ;( <esc>`>a)<esc>`<i(<esc>
