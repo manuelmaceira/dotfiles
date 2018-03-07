@@ -52,8 +52,6 @@ set noswapfile
 " linebreak at 500 characters
 set lbr
 set tw=500
-" smart indenting
-set si
 set wrap
 " go to last position on open
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
