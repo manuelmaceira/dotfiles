@@ -141,6 +141,7 @@ c.url.searchengines["rd"] = "https://reddit.com/r/{}"
 c.url.searchengines["yt"] = "https://youtube.com/results?search_query={}"
 c.url.searchengines["DEFAULT"] = c.url.searchengines["g"]
 
+config.bind(',al', ':open https://www.reddit.com/me/m/alllinux/new')
 config.bind(',az', ':open https://amazon.com')
 config.bind(',bp', ':open https://buzzport.gatech.edu/cp/home/displaylogin')
 config.bind(',cv', ':open https://gatech.instructure.com')
