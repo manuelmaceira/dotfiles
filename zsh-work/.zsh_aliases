@@ -131,6 +131,9 @@ txa() {
 txb() {
   txtemp beamer $1
 }
+txm() {
+  txtemp mla $1
+}
 txtemp() {
   file=$2
   if [[ $file != '' ]]; then
