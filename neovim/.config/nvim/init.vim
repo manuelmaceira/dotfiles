@@ -269,7 +269,7 @@ map <space> /
 map <C-space> ?
 
 " disable highlight
-map <silent> <leader><CR> :set hlsearch!<CR>
+map <silent> <CR> :set hlsearch!<CR>
 
 " remap escape
 inoremap jf <esc>
