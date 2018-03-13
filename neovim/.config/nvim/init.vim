@@ -105,6 +105,7 @@ set tm=500
 set t_Co=256
 let base16colorspace=256
 colorscheme custom-wal
+set cole=2
 
 " Status line
 set noshowmode
