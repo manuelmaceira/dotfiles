@@ -133,6 +133,8 @@ c.content.geolocation = False
 
 c.editor.command = ['urxvt', '-e', '/home/micah/.config/i3/scripts/runner', 'nvim', '{}']
 
+c.qt.args = ['ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so', 'disable-seccomp-filter-sandbox']
+
 c.url.searchengines["aw"] = "https://wiki.archlinux.org/?search={}"
 c.url.searchengines["az"] = "https://www.amazon.com/s/?field-keywords={}"
 c.url.searchengines["d"] = "https://duckduckgo.com/?q={}"

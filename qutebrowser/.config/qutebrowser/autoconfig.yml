@@ -284,7 +284,8 @@ global:
   - '{}'
   qt.args:
   - ppapi-widevine-path=/usr/lib/qt/plugins/ppapi/libwidevinecdmadapter.so
-  statusbar.hide: true
+  - disable-seccomp-filter-sandbox
+  statusbar.hide: false
   tabs.show: multiple
   url.default_page: https://google.com
   url.searchengines:
