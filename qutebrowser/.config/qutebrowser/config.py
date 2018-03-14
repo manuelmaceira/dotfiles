@@ -163,6 +163,8 @@ config.bind(',yt', ':open https://youtube.com')
 
 config.bind(';m', 'hint links spawn mpv {hint-url}')
 
+config.bind('J', ':tab-prev')
+config.bind('K', ':tab-next')
 config.bind('D', ':close')
 config.bind('I', ':open -p')
 config.bind('W', ':tab-give')
