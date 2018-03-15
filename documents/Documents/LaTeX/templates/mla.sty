@@ -25,7 +25,7 @@
 \bibliography{bibliography.bib}
 \setlength{\bibhang}{0.5in}
 \defbibheading{bibliography}[\bibname]{\newpage{}\centering{} #1}
-\renewcommand{\cite}[2]{\ (\textcite{#1}\ifthenelse{\equal{#2}{}}{}{\ #2})}
+\renewcommand{\cite}[2][]{\ (\textcite{#2}\ifthenelse{\equal{#1}{}}{}{\ #1})}
 \emergencystretch=1em
 \setlength{\parindent}{0.5in}
 
