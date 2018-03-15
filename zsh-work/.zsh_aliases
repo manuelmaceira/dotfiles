@@ -132,7 +132,8 @@ txb() {
   txtemp beamer $1
 }
 txm() {
-  txtemp mla $1
+  cp ~/Documents/LaTeX/templates/mla.sty .;
+  txtemp mla $1;
 }
 txtemp() {
   file=$2
