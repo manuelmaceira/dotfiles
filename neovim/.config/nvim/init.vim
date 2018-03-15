@@ -399,6 +399,7 @@ autocmd FileType tex inoremap ;em \emph{}<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;bf \textbf{}<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;it \textit{}<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;ct \textcite{}<Space><++><Esc>T{i
+autocmd FileType tex inoremap ;mt ~\cite{}{<++>}<++><Esc>T{;i
 autocmd FileType tex inoremap ;cp \parencite{}<Space><++><Esc>T{i
 autocmd FileType tex inoremap ;glos {\gll<Space><++><Space>\\<Enter><++><Space>\\<Enter>\trans{``<++>''}}<Esc>2k2bcw
 autocmd FileType tex inoremap ;x \begin{xlist}<Enter>\ex<Space><Enter>\end{xlist}<Esc>kA<Space>
