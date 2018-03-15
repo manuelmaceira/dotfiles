@@ -7,6 +7,8 @@
 \usepackage[OT1]{fontenc} 
 \usepackage[letterpaper]{geometry}
 \geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
+\usepackage{datetime}
+\newdateformat{datef}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
 \usepackage{setspace}
 \linespread{2}
 \usepackage{fancyhdr}
@@ -46,7 +48,7 @@
 \@first\ \@last \\
 \@prof \\
 \@class \\
-\today{}
+\datef\@date
 \endgroup
 \begin{nscenter}
 \@title
