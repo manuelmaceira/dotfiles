@@ -3,6 +3,7 @@
 \usepackage[american]{babel}
 \usepackage{csquotes}
 \usepackage{times}
+\usepackage{ifthen}
 \usepackage[OT1]{fontenc} 
 \usepackage[letterpaper]{geometry}
 \geometry{top=1.0in, bottom=1.0in, left=1.0in, right=1.0in}
@@ -21,8 +22,10 @@
 \setlength{\headheight}{14.5pt}
 \setlength{\headsep}{0.333in}
 \usepackage[style=mla,backend=biber,hyperref=false]{biblatex}
+\setlength{\bibhang}{0.5in}
 \bibliography{bibliography.bib}
 \defbibheading{bibliography}[\bibname]{\newpage{}\centering{} #1}
+\renewcommand{\cite}[2]{\ (\textcite{#1}\ifthenelse{\equal{#2}{}}{}{\ #2})}
 
 \newcommand{\first}{<++>}
 \newcommand{\last} {<++>}
@@ -40,6 +43,7 @@
 \begin{center}
 <++>
 \end{center}
+\setlength{\parindent}{0.5in}
 
 <++>
 
