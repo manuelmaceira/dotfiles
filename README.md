@@ -38,8 +38,10 @@ My dotfiles for my Linux rice, managed using stow.
     - compton
     - dmenu
     - dunst
+    - fd
     - feh
     - fprintd
+    - fzf
     - gnupg
     - lightdm
     - lxappearance
