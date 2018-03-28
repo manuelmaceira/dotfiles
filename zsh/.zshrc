@@ -64,6 +64,10 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 PATH="/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin:$PATH"
 
+# enable fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPS="--extended"
+
 (cat ~/.cache/wal/sequences &)
 
 ufetch

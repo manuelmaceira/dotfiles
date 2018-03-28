@@ -6,12 +6,12 @@ call plug#begin('~/.config/nvim/plugged-remote')
 Plug 'w0rp/ale'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'tpope/vim-fugitive'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
 Plug 'rhysd/vim-grammarous'
 Plug 'itchyny/lightline.vim'
-Plug 'vim-scripts/mru.vim'
 Plug 'roxma/ncm-clang'
-Plug 'scrooloose/nerdtree'
 Plug 'roxma/nvim-completion-manager'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
@@ -123,27 +123,16 @@ endfunction
 " => Plugins
 """"""""""""""""""""""""""""
 
-" Nerd Tree
-let g:NERDTreeWinPos = "left"
-let NERDTreeShowHidden=0
-let NERDTreeIgnore=['\.pyc$','__pycache__', '\.asm', '\.o']
-let g:NERDTreeWinSize=35
-" autoclose nerdtree if its the last buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <leader>nn :NERDTreeToggle<CR>
-map <leader>nb :NERDTreeFromBookmark<Space>
-map <leader>nf :NERDTreeFind<CR>
+" FZF
+map <leader>ff :FZF<CR>
+map <leader>mm :Marks<CR>
+map <leader>ww :Windows<CR>
+map <leader>bb :Buffers<CR>
+map <leader>hh :History<CR>
 
 " Tagbar
 let g:tagbar_sort = 0
-nmap <leader>bb :TagbarToggle<CR>
-
-" IDE Mode (enable tagbar and nerd tree)
-nmap <leader>i :TagbarToggle<CR>:NERDTreeToggle<CR>:wincmd p<CR>
-
-" MRU
-let MRU_Max_Entries = 400
-map <leader>f :MRU<CR>
+nmap <leader>i :TagbarToggle<CR>
 
 " goyo and zenroom2
 let g:goyo_width=100
@@ -315,7 +304,7 @@ tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
 autocmd BufEnter term://* startinsert
 autocmd TermOpen * setlocal nonumber norelativenumber
-map <leader>ww :belowright split<CR>:resize 10<CR>:terminal<CR>i
+map <leader>tt :belowright split<CR>:resize 10<CR>:terminal<CR>i
 
 " move split to new tab and close tab binding
 nmap to :tab sp<CR>
