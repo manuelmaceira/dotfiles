@@ -81,7 +81,6 @@ set breakindent showbreak=..
 set fillchars+=vert:│
 set hidden
 set lazyredraw
-set magic
 set showmatch
 set matchtime=2
 set foldmethod=indent
