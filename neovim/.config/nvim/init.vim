@@ -88,7 +88,6 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2  
 set foldcolumn=2
-set wildmenu
 set wildignore=*.o,*~,*.pyc,*/.gi/*,*/.hg/*,*/.cvn/*,*/.DS_Store
 " backspace functionality
 set whichwrap+=<,>,h,l
