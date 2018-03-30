@@ -42,7 +42,7 @@ set langmenu=en
 set nobackup
 set nowritebackup
 set noswapfile
-" linebreak at 500 characters
+" linebreak at 80 characters
 set linebreak
 set textwidth=80
 set wrap
