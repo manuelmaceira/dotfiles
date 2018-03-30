@@ -25,29 +25,31 @@ call plug#end()
 """"""""""""""""""""""""""""
 " => General
 """"""""""""""""""""""""""""
-set so=7
-set ffs=unix,dos,mac
+set scrolloff=7
+set fileformats=unix,dos,mac
 set path+=**
 set spellfile=$HOME/.config/nvim/spell/en.utf-8.add
 set thesaurus+=$HOME/.config/nvim/spell/mthesaur.txt
 " 1 tab == 2 spaces
 set expandtab
 set shiftwidth=2
-set ts=2
-set sts=2
+set tabstop=2
+set softtabstop=2
 " language
 let $LANG='en'
 set langmenu=en
 " no backups
 set nobackup
-set nowb
+set nowritebackup
 set noswapfile
 " linebreak at 500 characters
-set lbr
-set tw=500
+set linebreak
+set textwidth=80
 set wrap
 " go to last position on open
-au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+augroup startup
+  autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+augroup END
 " persistent undo
 try
   set undodir=~/.undodir
@@ -56,15 +58,17 @@ catch
 endtry
 
 " disable indent on latex files
-autocmd FileType tex  setlocal indentexpr=
-autocmd FileType rmd  setlocal indentexpr=
+augroup markup
+  autocmd FileType tex  setlocal indentexpr=
+  autocmd FileType rmd  setlocal indentexpr=
+augroup END
 
 " define markdown extensions
 let g:vimwiki_ext2syntax = {'.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 
 " define leader key
-let mapleader = ","
-let g:mapleader = ","
+let mapleader = " "
+let g:mapleader = " "
 
 
 """"""""""""""""""""""""""""
@@ -72,14 +76,14 @@ let g:mapleader = ","
 """"""""""""""""""""""""""""
 set ruler
 set number
-set rnu
+set relativenumber
 set breakindent showbreak=..
 set fillchars+=vert:│
-set hid
+set hidden
 set lazyredraw
 set magic
 set showmatch
-set mat=2
+set matchtime=2
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
@@ -92,17 +96,17 @@ set whichwrap+=<,>,h,l
 " search
 set ignorecase
 set smartcase
-set icm=nosplit
+set inccommand=nosplit
 " no sounds on errors
 set noerrorbells
 set novisualbell
 set t_vb=
-set tm=500
+set timeoutlen=500
 " Colorscheme
 set t_Co=256
 let base16colorspace=256
 colorscheme custom-wal
-set cole=2
+set conceallevel=2
 
 " Status line
 set noshowmode
@@ -232,9 +236,9 @@ map 0 ^
 map <leader>pp :setlocal paste!<CR>
 
 "" Defining guides
-inoremap <leader><leader> <esc>/<++><Enter>"_c4l
-vnoremap <leader><leader> <esc>/<++><Enter>"_c4l
-map <leader><leader> <esc>/<++><Enter>"_c4l
+inoremap <leader><CR> <esc>/<++><CR>"_c4l
+vnoremap <leader><CR> <esc>/<++><CR>"_c4l
+map <leader><CR> <esc>/<++><CR>"_c4l
 inoremap ;mk <++>
 
 " date and time shortcuts
@@ -266,10 +270,6 @@ inoremap ;` ``<esc>i
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 
-" space to search
-map <space> /
-map <C-space> ?
-
 " disable highlight
 map <silent> <CR> :set hlsearch!<CR>
 
@@ -300,13 +300,15 @@ map <leader>t<leader> :tabnext<CR>
 " go to last tab
 let g:lasttab = 1
 nmap <leader>tl :exe "tabn ".g:lasttab<CR>
-au TabLeave * let g:lasttab = tabpagenr()
+augroup tabs
+  autocmd TabLeave * let g:lasttab = tabpagenr()
+augroup END
 
-" disable arrow keys
-noremap <Up> <NOP>
-noremap <Down> <NOP>
-noremap <Left> <NOP>
-noremap <Right> <NOP>
+" use arrow keys to resize
+nnoremap <Up> :resize +5<CR>
+nnoremap <Down> :resize -5<CR>
+nnoremap <Left> :vertical resize -5<CR>
+nnoremap <Right> :vertical resize +5<CR>
 
 " terminal remaps
 tnoremap <leader><ESC> <C-\><C-n>
@@ -314,23 +316,27 @@ tnoremap <C-h> <C-\><C-n><C-w>h
 tnoremap <C-j> <C-\><C-n><C-w>j
 tnoremap <C-k> <C-\><C-n><C-w>k
 tnoremap <C-l> <C-\><C-n><C-w>l
-autocmd BufEnter term://* startinsert
-autocmd TermOpen * setlocal nonumber norelativenumber
+augroup term
+  autocmd BufEnter term://* startinsert
+  autocmd TermOpen * setlocal nonumber norelativenumber
+augroup END
 map <leader>tt :belowright split<CR>:resize 10<CR>:terminal<CR>i
 
 " move split to new tab and close tab binding
 nmap to :tab sp<CR>
 
-" tex compile keybindings
-autocmd Filetype tex nnoremap <leader>mm :w<CR>:AsyncRun rubber -m xelatex --warn all %<CR><CR>
-" md compile keybindings
-autocmd Filetype markdown nnoremap <leader>mm :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
-autocmd Filetype markdown nnoremap <leader>mb :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR><CR>
-" rmd compile keybindings
-autocmd Filetype rmd nnoremap <leader>mm :w<CR>:AsyncRun echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
-" compiled doc viewing keybindings
-autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
-autocmd Filetype tex,markdown nnoremap <leader>mp :!pdfpc %:r.pdf<CR><CR>
+augroup markup
+  " tex compile keybindings
+  autocmd Filetype tex nnoremap <leader>mm :w<CR>:AsyncRun rubber -m xelatex --warn all %<CR><CR>
+  " md compile keybindings
+  autocmd Filetype markdown nnoremap <leader>mm :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
+  autocmd Filetype markdown nnoremap <leader>mb :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR><CR>
+  " rmd compile keybindings
+  autocmd Filetype rmd nnoremap <leader>mm :w<CR>:AsyncRun echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
+  " compiled doc viewing keybindings
+  autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+  autocmd Filetype tex,markdown nnoremap <leader>mp :!pdfpc %:r.pdf<CR><CR>
+augroup END
 
 """"""""""""""""""""""""""""
 " => Commands
@@ -349,134 +355,144 @@ command! MakeTags !ctags -R .
 " => Autocommands
 """"""""""""""""""""""""""""
 " Auto build configs on edit of certain files
-autocmd BufWritePost ~/dotfiles/scripts/.config/Scripts/configs,~/dotfiles/scripts/.config/Scripts/folders !bash ~/.config/Scripts/shortcuts.sh
+augroup shortcuts
+  autocmd BufWritePost ~/dotfiles/scripts/.config/Scripts/configs,~/dotfiles/scripts/.config/Scripts/folders !bash ~/.config/Scripts/shortcuts.sh
+augroup END
 
 " Markdown Settings
-" set tab to 4
-autocmd BufNewFile,BufRead *.md,*.rmd setlocal tabstop=4 shiftwidth=4 softtabstop=4
-" turn on spell check
-autocmd BufNewFile,BufRead *.md,*.rmd setlocal spell! spelllang=en_us
+augroup markup
+  " set tab to 4
+  autocmd BufNewFile,BufRead *.md,*.rmd setlocal tabstop=4 shiftwidth=4 softtabstop=4
+  " turn on spell check
+  autocmd BufNewFile,BufRead *.md,*.rmd setlocal spell! spelllang=en_us
+augroup END
 
 " => Java
-autocmd FileType java inoremap ;fr for(;<++>;<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f;i
-autocmd FileType java inoremap ;fe for(: <++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^f:i
-autocmd FileType java inoremap ;wl while() {<Enter><++><Enter>}<Enter><++><Esc>3k^f)i
-autocmd FileType java inoremap ;dw do {<Enter>;<Enter>} while (<++>);<Enter><++><Esc>2k^xA
-autocmd FileType java inoremap ;if if() {<Enter><++><Enter>}<Enter><++><Esc>3k^f)i
-autocmd FileType java inoremap ;ie if() {<Enter><++><Enter>} else {<Enter><++><Enter>}<Enter><++><Esc>5k^f)i
-autocmd FileType java inoremap ;ii if() {<Enter><++><Enter>} else <++><Esc>2k^f)i
-autocmd FileType java inoremap ;pc public class  {<Enter><++><Enter>}<Esc>2k^f{hi
-autocmd FileType java inoremap ;cl class  {<Enter><++><Enter>}<Esc>2k^f{hi
-autocmd FileType java inoremap ;fn public  <++>(<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^fc2li
-autocmd FileType java inoremap ;pf public  <++>(<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^fc2li
-autocmd FileType java inoremap ;rf private  <++>(<++>) {<Enter><++><Enter>}<Enter><++><Esc>3k^fc2li
-autocmd FileType java inoremap ;mn public static void main(String[] args) {<Enter>;<Enter>}<Enter><++><Esc>2k^xA
-autocmd FileType java inoremap ;rt return 
-autocmd FileType java inoremap ;st static 
-autocmd FileType java inoremap ;pr System.out.println();<Enter><++><Esc>k^f)i
-autocmd FileType java inoremap ;ip <Esc>?import<Enter>oimport ;<Esc>i
-autocmd FileType java nnoremap ;ip ?import<Enter>oimport ;<Esc>i
+augroup java
+  autocmd FileType java inoremap ;fr for(;<++>;<++>) {<CR><++><CR>}<CR><++><Esc>3k^f;i
+  autocmd FileType java inoremap ;fe for(: <++>) {<CR><++><CR>}<CR><++><Esc>3k^f:i
+  autocmd FileType java inoremap ;wl while() {<CR><++><CR>}<CR><++><Esc>3k^f)i
+  autocmd FileType java inoremap ;dw do {<CR>;<CR>} while (<++>);<CR><++><Esc>2k^xA
+  autocmd FileType java inoremap ;if if() {<CR><++><CR>}<CR><++><Esc>3k^f)i
+  autocmd FileType java inoremap ;ie if() {<CR><++><CR>} else {<CR><++><CR>}<CR><++><Esc>5k^f)i
+  autocmd FileType java inoremap ;ii if() {<CR><++><CR>} else <++><Esc>2k^f)i
+  autocmd FileType java inoremap ;pc public class  {<CR><++><CR>}<Esc>2k^f{hi
+  autocmd FileType java inoremap ;cl class  {<CR><++><CR>}<Esc>2k^f{hi
+  autocmd FileType java inoremap ;fn public  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
+  autocmd FileType java inoremap ;pf public  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
+  autocmd FileType java inoremap ;rf private  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
+  autocmd FileType java inoremap ;mn public static void main(String[] args) {<CR>;<CR>}<CR><++><Esc>2k^xA
+  autocmd FileType java inoremap ;rt return 
+  autocmd FileType java inoremap ;st static 
+  autocmd FileType java inoremap ;pr System.out.println();<CR><++><Esc>k^f)i
+  autocmd FileType java inoremap ;ip <Esc>?import<CR>oimport ;<Esc>i
+  autocmd FileType java nnoremap ;ip ?import<CR>oimport ;<Esc>i
+augroup END
 
 " => Python
-autocmd FileType python inoremap ;fr for  in <++>:<Enter><++><Enter><C-D><++><Esc>2k^fihi
-autocmd FileType python inoremap ;wl while():<Enter><++><Enter><C-D><++><Esc>2k^f)i
-autocmd FileType python inoremap ;we while():<Enter><++><Enter><C-D>else:<Enter><++><Enter><C-D><++><Esc>4k^f)i
-autocmd FileType python inoremap ;if if :<Enter><++><Enter><C-D><++><Esc>2k^f:i
-autocmd FileType python inoremap ;ie if :<Enter><++><Enter><C-D>else:<Enter><++><Enter><C-D><++><Esc>4k^f:i
-autocmd FileType python inoremap ;ii if :<Enter><++><Enter><C-D>el<++><Esc>2k^f:i
-autocmd FileType python inoremap ;cl class :<Enter><++><Esc>k^f:i
-autocmd FileType python inoremap ;fn def (<++>):<Enter><++><Enter><C-D><++><Esc>2k^f(i
-autocmd FileType python inoremap ;mn def main():<Enter>;<Enter><Enter><C-D>if __name__ == "__main__":<Enter>main()<Esc>3k^xA
-autocmd FileType python inoremap ;rt return 
-autocmd FileType python inoremap ;pr print()<Enter><++><Esc>k^f)i
-autocmd FileType python inoremap ;ip <Esc>?import<Enter>oimport 
-autocmd FileType python nnoremap ;ip ?import<Enter>oimport 
+augroup python
+  autocmd FileType python inoremap ;fr for  in <++>:<CR><++><CR><C-D><++><Esc>2k^fihi
+  autocmd FileType python inoremap ;wl while():<CR><++><CR><C-D><++><Esc>2k^f)i
+  autocmd FileType python inoremap ;we while():<CR><++><CR><C-D>else:<CR><++><CR><C-D><++><Esc>4k^f)i
+  autocmd FileType python inoremap ;if if :<CR><++><CR><C-D><++><Esc>2k^f:i
+  autocmd FileType python inoremap ;ie if :<CR><++><CR><C-D>else:<CR><++><CR><C-D><++><Esc>4k^f:i
+  autocmd FileType python inoremap ;ii if :<CR><++><CR><C-D>el<++><Esc>2k^f:i
+  autocmd FileType python inoremap ;cl class :<CR><++><Esc>k^f:i
+  autocmd FileType python inoremap ;fn def (<++>):<CR><++><CR><C-D><++><Esc>2k^f(i
+  autocmd FileType python inoremap ;mn def main():<CR>;<CR><CR><C-D>if __name__ == "__main__":<CR>main()<Esc>3k^xA
+  autocmd FileType python inoremap ;rt return 
+  autocmd FileType python inoremap ;pr print()<CR><++><Esc>k^f)i
+  autocmd FileType python inoremap ;ip <Esc>?import<CR>oimport 
+  autocmd FileType python nnoremap ;ip ?import<CR>oimport 
+augroup END
 
 " => LaTeX
-autocmd FileType tex inoremap ;fr \begin{frame}<Enter>\frametitle{}<Enter><Enter><++><Enter><Enter>\end{frame}<Enter><Enter><++><Esc>6kf}i
-autocmd FileType tex inoremap ;fi \begin{fitch}<Enter><Enter>\end{fitch}<Enter><Enter><++><Esc>3kA
-autocmd FileType tex inoremap ;exe \begin{exe}<Enter>\ex<Space><Enter>\end{exe}<Enter><Enter><++><Esc>3kA
-autocmd FileType tex inoremap ;em \emph{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ;bf \textbf{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ;it \textit{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ;ct \textcite{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ;cm ~\cite{}<++><Esc>T{i
-autocmd FileType tex inoremap ;cp \parencite{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ;glos {\gll<Space><++><Space>\\<Enter><++><Space>\\<Enter>\trans{``<++>''}}<Esc>2k2bcw
-autocmd FileType tex inoremap ;x \begin{xlist}<Enter>\ex<Space><Enter>\end{xlist}<Esc>kA<Space>
-autocmd FileType tex inoremap ;ol \begin{enumerate}<Enter><Enter>\end{enumerate}<Enter><Enter><++><Esc>3kA\item<Space>
-autocmd FileType tex inoremap ;ul \begin{itemize}<Enter><Enter>\end{itemize}<Enter><Enter><++><Esc>3kA\item<Space>
-autocmd FileType tex inoremap ;li <Enter>\item<Space>
-autocmd FileType tex inoremap ;ref \ref{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ;tab \begin{tabular}<Enter><++><Enter>\end{tabular}<Enter><Enter><++><Esc>4kA{}<Esc>i
-autocmd FileType tex inoremap ;a \href{}{<++>}<Space><++><Esc>2T{i
-autocmd FileType tex inoremap ;sc \textsc{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ;sec \section{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap ;ssec \subsection{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap ;sssec \subsubsection{}<Enter><Enter><++><Esc>2kf}i
-autocmd FileType tex inoremap ;st <Esc>F{i*<Esc>f}i
-autocmd FileType tex inoremap ;beg \begin{%DELRN%}<Enter><++><Enter>\end{%DELRN%}<Enter><Enter><++><Esc>4kfR:MultipleCursorsFind<Space>%DELRN%<Enter>c
-autocmd FileType tex inoremap ;up <Esc>/usepackage<Enter>o\usepackage{}<Esc>i
-autocmd FileType tex nnoremap ;up /usepackage<Enter>o\usepackage{}<Esc>i
-autocmd FileType tex inoremap ;tt \texttt{}<Space><++><Esc>T{i
-autocmd FileType tex inoremap ;bt {\blindtext}
-autocmd FileType tex inoremap ;nu $\varnothing$
-autocmd FileType tex inoremap ;col \begin{columns}[T]<Enter>\begin{column}{.5\textwidth}<Enter><Enter>\end{column}<Enter>\begin{column}{.5\textwidth}<Enter><++><Enter>\end{column}<Enter>\end{columns}<Esc>5kA
-autocmd FileType tex inoremap ;ent \gloss{}{<++>}{<++>}<Enter><++><Esc>k0f}i
-" Logical Symbols
-autocmd FileType tex inoremap ;m $$<Space><++><Esc>2T$i
-autocmd FileType tex inoremap ;M $$$$<Enter><Enter><++><Esc>2k$hi
-autocmd FileType tex inoremap ;neg {\neg}
-autocmd FileType tex inoremap ;V {\vee}
-autocmd FileType tex inoremap ;or {\vee}
-autocmd FileType tex inoremap ;L {\wedge}
-autocmd FileType tex inoremap ;and {\wedge}
-autocmd FileType tex inoremap ;ra {\rightarrow}
-autocmd FileType tex inoremap ;la {\leftarrow}
-autocmd FileType tex inoremap ;lra {\leftrightarrow}
-autocmd FileType tex inoremap ;fa {\forall}
-autocmd FileType tex inoremap ;ex {\exists}
-autocmd FileType tex inoremap ;dia	{\Diamond}
-autocmd FileType tex inoremap ;box	{\Box}
-" smallcaps
-autocmd Filetype tex inoremap ;nom {\textsc{nom}}
-autocmd FileType tex inoremap ;acc {\textsc{acc}}
-autocmd FileType tex inoremap ;dat {\textsc{dat}}
-autocmd FileType tex inoremap ;gen {\textsc{gen}}
-autocmd FileType tex inoremap ;abl {\textsc{abl}}
-autocmd FileType tex inoremap ;voc {\textsc{voc}}
-autocmd FileType tex inoremap ;loc {\textsc{loc}}
-autocmd Filetype tex inoremap ;inst {\textsc{inst}}
-
-" => HTML
-autocmd FileType html inoremap ;b <b></b><Space><++><Esc>FbT>i
-autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeT>i
-autocmd FileType html inoremap ;1 <h1></h1><Enter><Enter><++><Esc>2kf<i
-autocmd FileType html inoremap ;2 <h2></h2><Enter><Enter><++><Esc>2kf<i
-autocmd FileType html inoremap ;3 <h3></h3><Enter><Enter><++><Esc>2kf<i
-autocmd FileType html inoremap ;p <p></p><Enter><Enter><++><Esc>02kf>a
-autocmd FileType html inoremap ;a <a<Space>href=""><++></a><Space><++><Esc>F"i
-autocmd FileType html inoremap ;ul <ul><Enter><li></li><Enter></ul><Enter><Enter><++><Esc>03kf<i
-autocmd FileType html inoremap ;li <Esc>o<li></li><Esc>F>a
-autocmd FileType html inoremap ;ol <ol><Enter><li></li><Enter></ol><Enter><Enter><++><Esc>03kf<i
-
-" => Bib
-autocmd FileType bib inoremap ;a @article{,<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>title<Space>=<Space>"<++>",<Enter>journal<Space>=<Space>"<++>",<Enter>volume<Space>=<Space>"<++>",<Enter>pages<Space>=<Space>"<++>",<Enter>}<Enter><++><Esc>8kf,i
-autocmd FileType bib inoremap ;b @book{,<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>title<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>}<Enter><++><Esc>6kf,i
-autocmd FileType bib inoremap ;c @incollection{,<Enter>author<Space>=<Space>"<++>",<Enter>title<Space>=<Space>"<++>",<Enter>booktitle<Space>=<Space>"<++>",<Enter>editor<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>}<Enter><++><Esc>8kf,i
-
-" => Markdown
-autocmd Filetype markdown,rmd inoremap ;b ****<Space><++><Esc>F*hi
-autocmd Filetype markdown,rmd inoremap ;s ~~~~<Space><++><Esc>F~hi
-autocmd Filetype markdown,rmd inoremap ;e **<Space><++><Esc>F*i
-autocmd Filetype markdown,rmd inoremap ;i ![](<++>)<Space><++><Esc>F[a
-autocmd Filetype markdown,rmd inoremap ;a [](<++>)<Space><++><Esc>F[a
-autocmd Filetype markdown,rmd inoremap ;1 #<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown,rmd inoremap ;2 ##<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown,rmd inoremap ;3 ###<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown,rmd inoremap ;4 ####<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown,rmd inoremap ;5 #####<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown,rmd inoremap ;6 ######<Space><Enter><Enter><++><Esc>2kA
-autocmd Filetype markdown,rmd inoremap ;l ---<Enter>
-autocmd Filetype markdown inoremap ;c ```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA
-autocmd Filetype rmd inoremap ;c ```{, eval = FALSE}<Enter><++><Enter>```<Enter><Enter><++><Esc>4k^f,i
+augroup markup
+  autocmd FileType tex inoremap ;fr \begin{frame}<CR>\frametitle{}<CR><CR><++><CR><CR>\end{frame}<CR><CR><++><Esc>6kf}i
+  autocmd FileType tex inoremap ;fi \begin{fitch}<CR><CR>\end{fitch}<CR><CR><++><Esc>3kA
+  autocmd FileType tex inoremap ;exe \begin{exe}<CR>\ex<Space><CR>\end{exe}<CR><CR><++><Esc>3kA
+  autocmd FileType tex inoremap ;em \emph{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap ;bf \textbf{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap ;it \textit{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap ;ct \textcite{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap ;cm ~\cite{}<++><Esc>T{i
+  autocmd FileType tex inoremap ;cp \parencite{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap ;glos {\gll<Space><++><Space>\\<CR><++><Space>\\<CR>\trans{``<++>''}}<Esc>2k2bcw
+  autocmd FileType tex inoremap ;x \begin{xlist}<CR>\ex<Space><CR>\end{xlist}<Esc>kA<Space>
+  autocmd FileType tex inoremap ;ol \begin{enumerate}<CR><CR>\end{enumerate}<CR><CR><++><Esc>3kA\item<Space>
+  autocmd FileType tex inoremap ;ul \begin{itemize}<CR><CR>\end{itemize}<CR><CR><++><Esc>3kA\item<Space>
+  autocmd FileType tex inoremap ;li <CR>\item<Space>
+  autocmd FileType tex inoremap ;ref \ref{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap ;tab \begin{tabular}<CR><++><CR>\end{tabular}<CR><CR><++><Esc>4kA{}<Esc>i
+  autocmd FileType tex inoremap ;a \href{}{<++>}<Space><++><Esc>2T{i
+  autocmd FileType tex inoremap ;sc \textsc{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap ;sec \section{}<CR><CR><++><Esc>2kf}i
+  autocmd FileType tex inoremap ;ssec \subsection{}<CR><CR><++><Esc>2kf}i
+  autocmd FileType tex inoremap ;sssec \subsubsection{}<CR><CR><++><Esc>2kf}i
+  autocmd FileType tex inoremap ;st <Esc>F{i*<Esc>f}i
+  autocmd FileType tex inoremap ;beg \begin{%DELRN%}<CR><++><CR>\end{%DELRN%}<CR><CR><++><Esc>4kfR:MultipleCursorsFind<Space>%DELRN%<CR>c
+  autocmd FileType tex inoremap ;up <Esc>/usepackage<CR>o\usepackage{}<Esc>i
+  autocmd FileType tex nnoremap ;up /usepackage<CR>o\usepackage{}<Esc>i
+  autocmd FileType tex inoremap ;tt \texttt{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap ;bt {\blindtext}
+  autocmd FileType tex inoremap ;nu $\varnothing$
+  autocmd FileType tex inoremap ;col \begin{columns}[T]<CR>\begin{column}{.5\textwidth}<CR><CR>\end{column}<CR>\begin{column}{.5\textwidth}<CR><++><CR>\end{column}<CR>\end{columns}<Esc>5kA
+  autocmd FileType tex inoremap ;ent \gloss{}{<++>}{<++>}<CR><++><Esc>k0f}i
+  " Logical Symbols
+  autocmd FileType tex inoremap ;m $$<Space><++><Esc>2T$i
+  autocmd FileType tex inoremap ;M $$$$<CR><CR><++><Esc>2k$hi
+  autocmd FileType tex inoremap ;neg {\neg}
+  autocmd FileType tex inoremap ;V {\vee}
+  autocmd FileType tex inoremap ;or {\vee}
+  autocmd FileType tex inoremap ;L {\wedge}
+  autocmd FileType tex inoremap ;and {\wedge}
+  autocmd FileType tex inoremap ;ra {\rightarrow}
+  autocmd FileType tex inoremap ;la {\leftarrow}
+  autocmd FileType tex inoremap ;lra {\leftrightarrow}
+  autocmd FileType tex inoremap ;fa {\forall}
+  autocmd FileType tex inoremap ;ex {\exists}
+  autocmd FileType tex inoremap ;dia	{\Diamond}
+  autocmd FileType tex inoremap ;box	{\Box}
+  " smallcaps
+  autocmd Filetype tex inoremap ;nom {\textsc{nom}}
+  autocmd FileType tex inoremap ;acc {\textsc{acc}}
+  autocmd FileType tex inoremap ;dat {\textsc{dat}}
+  autocmd FileType tex inoremap ;gen {\textsc{gen}}
+  autocmd FileType tex inoremap ;abl {\textsc{abl}}
+  autocmd FileType tex inoremap ;voc {\textsc{voc}}
+  autocmd FileType tex inoremap ;loc {\textsc{loc}}
+  autocmd Filetype tex inoremap ;inst {\textsc{inst}}
+  
+  " => HTML
+  autocmd FileType html inoremap ;b <b></b><Space><++><Esc>FbT>i
+  autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeT>i
+  autocmd FileType html inoremap ;1 <h1></h1><CR><CR><++><Esc>2kf<i
+  autocmd FileType html inoremap ;2 <h2></h2><CR><CR><++><Esc>2kf<i
+  autocmd FileType html inoremap ;3 <h3></h3><CR><CR><++><Esc>2kf<i
+  autocmd FileType html inoremap ;p <p></p><CR><CR><++><Esc>02kf>a
+  autocmd FileType html inoremap ;a <a<Space>href=""><++></a><Space><++><Esc>F"i
+  autocmd FileType html inoremap ;ul <ul><CR><li></li><CR></ul><CR><CR><++><Esc>03kf<i
+  autocmd FileType html inoremap ;li <Esc>o<li></li><Esc>F>a
+  autocmd FileType html inoremap ;ol <ol><CR><li></li><CR></ol><CR><CR><++><Esc>03kf<i
+  
+  " => Bib
+  autocmd FileType bib inoremap ;a @article{,<CR>author<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>journal<Space>=<Space>"<++>",<CR>volume<Space>=<Space>"<++>",<CR>pages<Space>=<Space>"<++>",<CR>}<CR><++><Esc>8kf,i
+  autocmd FileType bib inoremap ;b @book{,<CR>author<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>publisher<Space>=<Space>"<++>",<CR>}<CR><++><Esc>6kf,i
+  autocmd FileType bib inoremap ;c @incollection{,<CR>author<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>booktitle<Space>=<Space>"<++>",<CR>editor<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>publisher<Space>=<Space>"<++>",<CR>}<CR><++><Esc>8kf,i
+  
+  " => Markdown
+  autocmd Filetype markdown,rmd inoremap ;b ****<Space><++><Esc>F*hi
+  autocmd Filetype markdown,rmd inoremap ;s ~~~~<Space><++><Esc>F~hi
+  autocmd Filetype markdown,rmd inoremap ;e **<Space><++><Esc>F*i
+  autocmd Filetype markdown,rmd inoremap ;i ![](<++>)<Space><++><Esc>F[a
+  autocmd Filetype markdown,rmd inoremap ;a [](<++>)<Space><++><Esc>F[a
+  autocmd Filetype markdown,rmd inoremap ;1 #<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap ;2 ##<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap ;3 ###<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap ;4 ####<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap ;5 #####<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap ;6 ######<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap ;l ---<CR>
+  autocmd Filetype markdown inoremap ;c ```<CR><++><CR>```<CR><CR><++><Esc>4kA
+  autocmd Filetype rmd inoremap ;c ```{, eval = FALSE}<CR><++><CR>```<CR><CR><++><Esc>4k^f,i
+augroup END
