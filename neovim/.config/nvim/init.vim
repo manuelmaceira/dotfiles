@@ -111,7 +111,7 @@ set conceallevel=2
 " Status line
 set noshowmode
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-function! HasPaste()
+function! HasPaste() abort
   if &paste
     return 'PASTE MODE  '
   endif
@@ -164,7 +164,7 @@ let g:lightline = {
       \ }
 
 " ALE
-function! MyOnBattery()
+function! MyOnBattery() abort
   if filereadable('/sys/class/power_supply/AC/online')
     return readfile('/sys/class/power_supply/AC/online') == ['0']
   else
@@ -178,7 +178,7 @@ let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'
 let g:ale_java_javac_classpath="lib/*"
 command JCP let g:ale_java_javac_classpath="lib/*"
-function! JCP(path)
+function! JCP(path) abort
   let g:ale_java_javac_classpath="lib/*:" . a:path
 endfunction
 
@@ -213,7 +213,7 @@ let g:netrw_winsize = 20
 map <leader>nn :call ToggleNetrw()<CR>
 let g:NetrwIsOpen=0
 
-function! ToggleNetrw()
+function! ToggleNetrw() abort
     if g:NetrwIsOpen
         let i = bufnr("$")
         while (i >= 1)
