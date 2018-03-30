@@ -125,13 +125,14 @@ endfunction
 
 " FZF
 map <leader>ff :FZF<CR>
-map <leader>mm :Marks<CR>
-map <leader>ww :Windows<CR>
-map <leader>bb :Buffers<CR>
-map <leader>hh :History<CR>
+map <leader>fm :Marks<CR>
+map <leader>fw :Windows<CR>
+map <leader>fb :Buffers<CR>
+map <leader>fh :History<CR>
+map <leader>fg :Tags<CR>
+map <leader>ft :BTags<CR>
 
 " Tagbar
-let g:tagbar_sort = 0
 nmap <leader>i :TagbarToggle<CR>
 
 " goyo and zenroom2
