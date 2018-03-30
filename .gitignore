@@ -10,3 +10,4 @@
 
 # neovim plugins
 **/plugged-remote/
+*.netrwhist
