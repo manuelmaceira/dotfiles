@@ -43,6 +43,7 @@ My dotfiles for my Linux rice, managed using stow.
     - fprintd
     - fzf
     - gnupg
+    - highlight
     - lightdm
     - lxappearance
     - mpv
@@ -57,6 +58,7 @@ My dotfiles for my Linux rice, managed using stow.
     - pdfpc
     - prezto
     - py-wal
+    - pygmentize
     - R
     - scrot
     - stow
