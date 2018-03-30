@@ -9,17 +9,14 @@ Plug 'tpope/vim-fugitive'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'rhysd/vim-grammarous'
 Plug 'itchyny/lightline.vim'
-Plug 'roxma/ncm-clang'
 Plug 'roxma/nvim-completion-manager'
+Plug 'roxma/ncm-clang'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'dhruvasagar/vim-table-mode'
-Plug 'majutsushi/tagbar'
 Plug 'edkolev/tmuxline.vim'
 Plug 'dylanaraps/wal.vim'
-Plug 'amix/vim-zenroom2'
 
 Plug '~/.config/nvim/plugged-local/custom-vim'
 call plug#end()
@@ -134,10 +131,7 @@ map <leader>fh :History<CR>
 map <leader>fg :Tags<CR>
 map <leader>ft :BTags<CR>
 
-" Tagbar
-nmap <leader>i :TagbarToggle<CR>
-
-" goyo and zenroom2
+" goyo
 let g:goyo_width=100
 let g:goyo_margin_top=2
 let g:goyo_margin_bottom=2
@@ -202,16 +196,6 @@ let g:tmuxline_theme = 'lightline'
 augroup pandoc_syntax
   au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
-
-" grammarous
-nmap ]g <Plug>(grammarous-move-to-next-error)
-nmap [g <Plug>(grammarous-move-to-previous-error)
-nmap <leader>gg :GrammarousCheck<CR>
-nmap <leader>gq :GrammarousReset<CR>
-nmap <leader>gf <Plug>(grammarous-fixit)
-nmap <leader>gr <Plug>(grammarous-remove-error)
-nmap <leader>gc <Plug>(grammarous-close-info-window)
-nmap <leader>go <Plug>(grammarous-open-info-window)
 
 " AsyncRun
 map <leader>qf :call asyncrun#quickfix_toggle(8)<CR>
