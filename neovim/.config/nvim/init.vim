@@ -3,20 +3,22 @@
 """"""""""""""""""""""""""""
 
 call plug#begin('~/.config/nvim/plugged-remote')
-Plug 'w0rp/ale'
-Plug 'skywind3000/asyncrun.vim'
-Plug 'tpope/vim-fugitive'
+Plug 'dhruvasagar/vim-table-mode'
+Plug 'dylanaraps/wal.vim'
+Plug 'edkolev/tmuxline.vim'
+Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/goyo.vim'
-Plug 'itchyny/lightline.vim'
-Plug 'roxma/nvim-completion-manager'
 Plug 'roxma/ncm-clang'
+Plug 'roxma/nvim-completion-manager'
+Plug 'skywind3000/asyncrun.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-surround'
 Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
-Plug 'dhruvasagar/vim-table-mode'
-Plug 'edkolev/tmuxline.vim'
-Plug 'dylanaraps/wal.vim'
+Plug 'vim-scripts/ReplaceWithRegister'
+Plug 'w0rp/ale'
 
 Plug '~/.config/nvim/plugged-local/custom-vim'
 call plug#end()
