@@ -210,7 +210,6 @@ let g:netrw_altv = 1
 let g:netrw_winsize = 20
 map <leader>nn :call ToggleNetrw()<CR>
 let g:NetrwIsOpen=0
-
 function! ToggleNetrw() abort
     if g:NetrwIsOpen
         let i = bufnr("$")
@@ -342,6 +341,10 @@ augroup END
 " commands to retab document to different tab width
 command TTF :set ts=2 sts=2 noet | retab! | set ts=4 sts=4 et | retab
 command FTT :set ts=4 sts=4 noet | retab! | set ts=2 sts=2 et | retab
+
+" toggle colorcolumn
+command! ToggleColorcolumn :let &colorcolumn = &colorcolumn == '' ? &textwidth : ''
+map <leader>cc :ToggleColorcolumn<CR>
 
 " sudo save with :W
 command W w !sudo tee % > /dev/null
