@@ -86,7 +86,7 @@ set matchtime=2
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
-set foldlevel=2  
+set foldlevel=2
 set foldcolumn=2
 set wildignore=*.o,*~,*.pyc,*/.gi/*,*/.hg/*,*/.cvn/*,*/.DS_Store
 " backspace functionality
@@ -216,7 +216,7 @@ function! ToggleNetrw() abort
         let i = bufnr("$")
         while (i >= 1)
             if (getbufvar(i, "&filetype") == "netrw")
-                silent exe "bwipeout " . i 
+                silent exe "bwipeout " . i
             endif
             let i-=1
         endwhile
@@ -352,6 +352,17 @@ command! MakeTags !ctags -R .
 """"""""""""""""""""""""""""
 " => Autocommands
 """"""""""""""""""""""""""""
+" Auto remove whitespace
+function! StripWhitespace() abort
+  let pos = getcurpos()
+  %s/\s\+$//e " EOL
+  %s#\($\n\s*\)\+\%$##e " EOF
+  cal setpos('.', pos)
+endfunction
+augroup whitespace
+  autocmd BufWritePre * call StripWhitespace()
+augroup END
+
 " Auto build configs on edit of certain files
 augroup shortcuts
   autocmd BufWritePost ~/dotfiles/scripts/.config/Scripts/configs,~/dotfiles/scripts/.config/Scripts/folders !bash ~/.config/Scripts/shortcuts.sh
@@ -380,8 +391,8 @@ augroup java
   autocmd FileType java inoremap ;pf public  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
   autocmd FileType java inoremap ;rf private  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
   autocmd FileType java inoremap ;mn public static void main(String[] args) {<CR>;<CR>}<CR><++><Esc>2k^xA
-  autocmd FileType java inoremap ;rt return 
-  autocmd FileType java inoremap ;st static 
+  autocmd FileType java inoremap ;rt return
+  autocmd FileType java inoremap ;st static
   autocmd FileType java inoremap ;pr System.out.println();<CR><++><Esc>k^f)i
   autocmd FileType java inoremap ;ip <Esc>?import<CR>oimport ;<Esc>i
   autocmd FileType java nnoremap ;ip ?import<CR>oimport ;<Esc>i
@@ -398,10 +409,10 @@ augroup python
   autocmd FileType python inoremap ;cl class :<CR><++><Esc>k^f:i
   autocmd FileType python inoremap ;fn def (<++>):<CR><++><CR><C-D><++><Esc>2k^f(i
   autocmd FileType python inoremap ;mn def main():<CR>;<CR><CR><C-D>if __name__ == "__main__":<CR>main()<Esc>3k^xA
-  autocmd FileType python inoremap ;rt return 
+  autocmd FileType python inoremap ;rt return
   autocmd FileType python inoremap ;pr print()<CR><++><Esc>k^f)i
-  autocmd FileType python inoremap ;ip <Esc>?import<CR>oimport 
-  autocmd FileType python nnoremap ;ip ?import<CR>oimport 
+  autocmd FileType python inoremap ;ip <Esc>?import<CR>oimport
+  autocmd FileType python nnoremap ;ip ?import<CR>oimport
 augroup END
 
 " => LaTeX
@@ -460,7 +471,7 @@ augroup markup
   autocmd FileType tex inoremap ;voc {\textsc{voc}}
   autocmd FileType tex inoremap ;loc {\textsc{loc}}
   autocmd Filetype tex inoremap ;inst {\textsc{inst}}
-  
+
   " => HTML
   autocmd FileType html inoremap ;b <b></b><Space><++><Esc>FbT>i
   autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeT>i
@@ -472,12 +483,12 @@ augroup markup
   autocmd FileType html inoremap ;ul <ul><CR><li></li><CR></ul><CR><CR><++><Esc>03kf<i
   autocmd FileType html inoremap ;li <Esc>o<li></li><Esc>F>a
   autocmd FileType html inoremap ;ol <ol><CR><li></li><CR></ol><CR><CR><++><Esc>03kf<i
-  
+
   " => Bib
   autocmd FileType bib inoremap ;a @article{,<CR>author<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>journal<Space>=<Space>"<++>",<CR>volume<Space>=<Space>"<++>",<CR>pages<Space>=<Space>"<++>",<CR>}<CR><++><Esc>8kf,i
   autocmd FileType bib inoremap ;b @book{,<CR>author<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>publisher<Space>=<Space>"<++>",<CR>}<CR><++><Esc>6kf,i
   autocmd FileType bib inoremap ;c @incollection{,<CR>author<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>booktitle<Space>=<Space>"<++>",<CR>editor<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>publisher<Space>=<Space>"<++>",<CR>}<CR><++><Esc>8kf,i
-  
+
   " => Markdown
   autocmd Filetype markdown,rmd inoremap ;b ****<Space><++><Esc>F*hi
   autocmd Filetype markdown,rmd inoremap ;s ~~~~<Space><++><Esc>F~hi
