@@ -1,6 +1,6 @@
 b	-
 cf	~/.config
-cv	~/Documents/mehalter.github.io/resume
+cv	~/Documents/mehalter.gitlab.io/resume
 d	~/Documents
 D	~/Downloads
 e	/etc
@@ -13,6 +13,6 @@ s	~/Documents/School-Work
 S	~/.config/Scripts
 u	/usr
 v	~/Videos
-ws	~/Documents/mehalter.github.io
+ws	~/Documents/mehalter.gitlab.io
 wp	~/Pictures/wallpapers
 .f	~/dotfiles
