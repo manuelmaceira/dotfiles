@@ -235,9 +235,9 @@ map 0 ^
 map <leader>pp :setlocal paste!<CR>
 
 "" Defining guides
-inoremap <leader><CR> <esc>/<++><CR>"_c4l
-vnoremap <leader><CR> <esc>/<++><CR>"_c4l
-map <leader><CR> <esc>/<++><CR>"_c4l
+inoremap ,, <esc>/<++><CR>"_c4l
+vnoremap <leader><leader> <esc>/<++><CR>"_c4l
+map <leader><leader> <esc>/<++><CR>"_c4l
 inoremap ;mk <++>
 
 " date and time shortcuts
