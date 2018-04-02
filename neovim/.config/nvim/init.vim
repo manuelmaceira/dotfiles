@@ -198,7 +198,7 @@ let g:tmuxline_theme = 'lightline'
 
 " pandoc
 augroup pandoc_syntax
-  au! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
+  autocmd! BufNewFile,BufFilePre,BufRead *.md set filetype=markdown.pandoc
 augroup END
 
 " AsyncRun
@@ -241,10 +241,11 @@ map <leader><leader> <esc>/<++><CR>"_c4l
 inoremap ;mk <++>
 
 " date and time shortcuts
-iab xdate <C-r>=strftime("%m/%d/%y")<CR>
-iab fdate <C-r>=strftime("%B %d, %Y")<CR>
-iab xtime <C-r>=strftime("%H:%M")<CR>
-iab ftime <C-r>=strftime("%H:%M:%S")<CR>
+iabbrev xdate <C-r>=strftime("%m/%d/%y")<CR>
+iabbrev fdate <C-r>=strftime("%B %d, %Y")<CR>
+iabbrev xtime <C-r>=strftime("%H:%M")<CR>
+iabbrev ftime <C-r>=strftime("%H:%M:%S")<CR>
+
 
 " Buffer navigation
 map <leader>o :ls<CR>:b
