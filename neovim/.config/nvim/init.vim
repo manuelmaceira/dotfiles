@@ -49,9 +49,9 @@ set langmenu=en
 set nobackup
 set nowritebackup
 set noswapfile
-" linebreak at 80 characters
+" linebreak at 500 characters
 set linebreak
-set textwidth=80
+set textwidth=500
 set wrap
 " go to last position on open
 augroup startup
@@ -351,7 +351,7 @@ command TTF :set ts=2 sts=2 noet | retab! | set ts=4 sts=4 et | retab
 command FTT :set ts=4 sts=4 noet | retab! | set ts=2 sts=2 et | retab
 
 " toggle colorcolumn
-command! ToggleColorcolumn :let &colorcolumn = &colorcolumn == '' ? &textwidth : ''
+command! ToggleColorcolumn :let &colorcolumn = &colorcolumn == '' ? 80 : ''
 map <leader>cc :ToggleColorcolumn<CR>
 
 " sudo save with :W
@@ -383,6 +383,8 @@ augroup END
 augroup markup
   " set tab to 4
   autocmd BufNewFile,BufRead *.md,*.rmd setlocal tabstop=4 shiftwidth=4 softtabstop=4
+  " set word wrap
+  autocmd BufNewFile,BufRead *.md,*.rmd setlocal textwidth=80
   " turn on spell check
   autocmd BufNewFile,BufRead *.md,*.rmd setlocal spell! spelllang=en_us
 augroup END
