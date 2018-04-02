@@ -14,6 +14,7 @@ My dotfiles for my Linux rice, managed using stow.
 
 - cava
 - gpymusic
+- htop
 - khal
 - khard
 - mps-youtube
