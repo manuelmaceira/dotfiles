@@ -1,7 +1,7 @@
 cfa	~/.zsh_aliases
 cfb	~/.bashrc
 cfcf	~/.config/Scripts/configs
-cfcv	~/Documents/mehalter.gitlab.io/resume/resume.tex
+cfcv	~/Documents/mehalter.gitlab.io/public/resume/resume.tex
 cfd	~/.Xresources
 cff	~/.config/Scripts/folders
 cfi	~/.config/i3/config
