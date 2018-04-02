@@ -353,6 +353,9 @@ command FTT :set ts=4 sts=4 noet | retab! | set ts=2 sts=2 et | retab
 " toggle colorcolumn
 command! ToggleColorcolumn :let &colorcolumn = &colorcolumn == '' ? 80 : ''
 map <leader>cc :ToggleColorcolumn<CR>
+" toggle colorcolumn
+command! ToggleConceal :let &conceallevel = &conceallevel == '2' ? 0 : 2
+map <leader>cl :ToggleConceal<CR>
 
 " sudo save with :W
 command W w !sudo tee % > /dev/null
