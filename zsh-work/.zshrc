@@ -64,6 +64,12 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 PATH="/home/micah/.npm-global/:/home/micah/qutebrowser/bin/:/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin/:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
+# enable fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+export FZF_DEFAULT_OPS="--extended"
+export FZF_DEFAULT_COMMAND="fd --type f"
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+
 (cat ~/.cache/wal/sequences &)
 
 ufetch
