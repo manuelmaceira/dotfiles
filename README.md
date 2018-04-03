@@ -33,7 +33,7 @@ My dotfiles for my Linux rice, managed using stow.
 - weechat
 - zathura
 - zsh
-- #### Utilities
+- Utilities
     - arandr
     - aria2c
     - compton
