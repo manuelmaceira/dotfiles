@@ -44,7 +44,7 @@ set tabstop=2
 set softtabstop=2
 " set listchars
 set list
-set listchars=tab:→\ ,trail:·
+set listchars=tab:→\ ,trail:·,extends:›,precedes:‹,nbsp:␣
 " language
 let $LANG='en'
 set langmenu=en
