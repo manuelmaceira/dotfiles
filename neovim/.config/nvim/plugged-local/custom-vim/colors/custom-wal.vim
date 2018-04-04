@@ -17,7 +17,7 @@ let g:colors_name = 'custom-wal'
 
 " set t_Co=16
 highlight Normal ctermbg=NONE ctermfg=7
-highlight NonText ctermbg=1 ctermfg=0
+highlight NonText ctermbg=0 ctermfg=4
 highlight Comment ctermbg=NONE ctermfg=8
 highlight Constant ctermbg=NONE ctermfg=3
 highlight Error ctermbg=1 ctermfg=7
