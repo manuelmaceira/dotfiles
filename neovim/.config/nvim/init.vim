@@ -42,6 +42,9 @@ set expandtab
 set shiftwidth=2
 set tabstop=2
 set softtabstop=2
+" set listchars
+set list
+set listchars=tab:→\ ,trail:·
 " language
 let $LANG='en'
 set langmenu=en
@@ -84,7 +87,7 @@ let g:mapleader = " "
 set ruler
 set number
 set relativenumber
-set breakindent showbreak=..
+set showbreak=↪\  breakindent
 set fillchars+=vert:│
 set hidden
 set lazyredraw
@@ -351,8 +354,17 @@ command TTF :set ts=2 sts=2 noet | retab! | set ts=4 sts=4 et | retab
 command FTT :set ts=4 sts=4 noet | retab! | set ts=2 sts=2 et | retab
 
 " toggle colorcolumn
-command! ToggleColorcolumn :let &colorcolumn = &colorcolumn == '' ? 80 : ''
-map <leader>cc :ToggleColorcolumn<CR>
+let s:activatedcc=0
+function! ToggleColorcolumn()
+  if s:activatedcc == 0
+    let s:activatedcc=1
+    match ColorColumn '\%81v'
+  else
+    let s:activatedcc=0
+    match none
+  endif
+endfunction
+map <leader>cc :call ToggleColorcolumn()<CR>
 " toggle colorcolumn
 command! ToggleConceal :let &conceallevel = &conceallevel == '2' ? 0 : 2
 map <leader>cl :ToggleConceal<CR>
