@@ -165,7 +165,7 @@ for_window [title="^pdfpc - present"] border none floating enable
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # start dual monitor
-exec --no-startup-id ~/.config/Scripts/screen.sh d
+exec --no-startup-id ~/.config/Scripts/screen.sh -l HDMI-2 HDMI-3
 
 # browser
 exec --no-startup-id $browser
@@ -212,7 +212,7 @@ bindsym $mod+Shift+u         exec --no-startup-id $cliprog rtorrent "tmuxinator 
 #bindsym $mod+Control+u
 #bindsym $mod+Shift+Control+u
 
-#bindsym $mod+i 
+#bindsym $mod+i
 #bindsym $mod+Shift+i
 #bindsym $mod+Control+i
 #bindsym $mod+Shift+Control+i
@@ -421,16 +421,16 @@ bindsym $mod+Shift+Control+space        exec --no-startup-id echo "cycle pause" 
 # FUNCTION KEYBINDINGS #
 ########################
 
-bindsym $mod+F1        exec --no-startup-id ~/.config/Scripts/screen.sh l
+bindsym $mod+F1        exec --no-startup-id ~/.config/Scripts/screen.sh HDMI-2
 #bindsym $mod+Shift+F1
 
-bindsym $mod+F2        exec --no-startup-id ~/.config/Scripts/screen.sh r
+bindsym $mod+F2        exec --no-startup-id ~/.config/Scripts/screen.sh HDMI-3
 #bindsym $mod+Shift+F2
 
-bindsym $mod+F3        exec --no-startup-id ~/.config/Scripts/screen.sh d
+bindsym $mod+F3        exec --no-startup-id ~/.config/Scripts/screen.sh -r HDMI-3 HDMI-2
 #bindsym $mod+Shift+F3
 
-bindsym $mod+F4        exec --no-startup-id ~/.config/Scripts/screen.sh s
+bindsym $mod+F4        exec --no-startup-id ~/.config/Scripts/screen.sh LVDS-1
 #bindsym $mod+Shift+F4
 
 bindsym $mod+F5        exec --no-startup-id ~/.config/i3/scripts/powersaver
