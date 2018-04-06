@@ -288,7 +288,7 @@ bindsym $mod+Shift+c         exec --no-startup-id $cliprog cal "ikhal"
 #bindsym $mod+Shift+Control+c
 
 #bindsym $mod+v
-bindsym $mod+Shift+v         exec --no-startup-id $runner "rtv"
+bindsym $mod+Shift+v         exec --no-startup-id $runner "rtv --no-flash"
 #bindsym $mod+Control+v
 #bindsym $mod+Shift+Control+v
 
