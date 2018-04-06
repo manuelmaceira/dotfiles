@@ -101,6 +101,8 @@ if [ -x /usr/bin/dircolors ]; then
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 fi
+alias pipupdate='pip list --outdated --format=freeze|cut -d = -f 1|xargs -n1 sudo -H pip install -U'
+alias pip3update='pip3 list --outdated --format=freeze|cut -d = -f 1|xargs -n1 sudo -H pip3 install -U'
 alias vgamirror='xrandr --output LVDS-1 --auto --output VGA-1 --auto --same-as LVDS-1'
 alias vgaoff='xrandr --output LVDS-1 --auto --output VGA-1 --off'
 alias chmox='chmod +x'
@@ -175,28 +177,28 @@ mdtemp() {
 # C compiling shortcuts for clang and gcc
 clang() {
   if [[ $1 =~ \.c$ ]]; then
-    clang-3.5 -g $1 -o ${1%%.*}; 
+    clang-3.5 -g $1 -o ${1%%.*};
   else
     echo "$1 is not a c file"
   fi
 }
 clanglm() {
   if [[ $1 =~ \.c$ ]]; then
-    clang-3.5 -g $1 -o ${1%%.*} -lm; 
+    clang-3.5 -g $1 -o ${1%%.*} -lm;
   else
     echo "$1 is not a c file"
   fi
 }
 gccc() {
   if [[ $1 =~ \.c$ ]]; then
-    gcc -std=c99 -Wall -pedantic -Wextra -Werror -O2 -g $1 -o ${1%%.*}; 
+    gcc -std=c99 -Wall -pedantic -Wextra -Werror -O2 -g $1 -o ${1%%.*};
   else
     echo "$1 is not a c file"
   fi
 }
 gcclm() {
   if [[ $1 =~ \.c$ ]]; then
-    gcc -std=c99 -g $1 -o ${1%%.*} -lm; 
+    gcc -std=c99 -g $1 -o ${1%%.*} -lm;
   else
     echo "$1 is not a c file"
   fi
