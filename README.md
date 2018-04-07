@@ -57,6 +57,7 @@ My dotfiles for my Linux rice, managed using stow.
     - pass-extension-tail
     - pass-update
     - pdfpc
+    + picon
     - prezto
     - py-wal
     - pygmentize

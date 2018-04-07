@@ -239,6 +239,8 @@ endfunction
 """"""""""""""""""""""""""""
 " => Remaps
 """"""""""""""""""""""""""""
+map <leader>pw :Picon<CR><CR>
+
 map 0 ^
 map <leader>pp :setlocal paste!<CR>
 
@@ -374,6 +376,9 @@ command W w !sudo tee % > /dev/null
 
 " write tags
 command! MakeTags !ctags -R .
+
+" picon python worksheet
+command! Picon exe 'normal m`'|silent! undojoin|exe '%!picon -a'|exe 'normal ``'
 
 """"""""""""""""""""""""""""
 " => Autocommands
