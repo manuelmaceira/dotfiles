@@ -6,7 +6,9 @@ call plug#begin('~/.config/nvim/plugged-remote')
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'dylanaraps/wal.vim'
 Plug 'edkolev/tmuxline.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'glts/vim-textobj-comment'
+Plug 'honza/vim-snippets'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
@@ -16,6 +18,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'kana/vim-textobj-line'
 Plug 'roxma/ncm-clang'
 Plug 'roxma/nvim-completion-manager'
+Plug 'SirVer/ultisnips'
 Plug 'skywind3000/asyncrun.vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -71,6 +74,11 @@ endtry
 augroup markup
   autocmd FileType tex  setlocal indentexpr=
   autocmd FileType rmd  setlocal indentexpr=
+augroup END
+
+" disable tab character showing in golang
+augroup golang
+  autocmd FileType go  setlocal listchars=tab:\ \ ,trail:·,extends:›,precedes:‹,nbsp:␣
 augroup END
 
 " define markdown extensions
@@ -195,6 +203,9 @@ set shortmess+=c
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+" UltiSnips
+let g:UltiSnipsExpandTrigger="<c-l>"
 
 " fugitive
 nnoremap <silent> <leader>d :Gdiff<CR>
