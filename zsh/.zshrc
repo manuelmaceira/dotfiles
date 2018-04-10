@@ -9,6 +9,7 @@ export DEFAULT_USER="micah"
 export BROWSER="/usr/bin/qutebrowser"
 export LC_ALL=en_US.UTF-8
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
+export GOPATH="/home/micah/go"
 
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTSIZE=25000
@@ -63,7 +64,7 @@ zstyle ':completion:*:kill:*' horse-list always
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
-PATH="/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin:$PATH"
+PATH="/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin:/home/micah/go/bin:$PATH"
 
 # enable fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
