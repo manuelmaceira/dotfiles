@@ -201,11 +201,6 @@ endfunction
 " nvim completion manager
 set shortmess+=c
 inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-" UltiSnips
-let g:UltiSnipsExpandTrigger="<c-l>"
 
 " fugitive
 nnoremap <silent> <leader>d :Gdiff<CR>
