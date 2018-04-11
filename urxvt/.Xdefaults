@@ -26,7 +26,7 @@ URxvt.lineSpace:      0
 
 ! Fonts
 URxvt.allow_bold: true
-URxvt*font:       xft:Hasklig:pixelsize=14
+URxvt*font:       xft:Hasklig:pixelsize=14, xft:Noto Emoji
 URxvt*boldFont:   xft:Hasklig:pixelsize=14
 
 ! Fix font space
