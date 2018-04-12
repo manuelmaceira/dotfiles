@@ -9,6 +9,8 @@ export VISUAL=$EDITOR
 export DEFAULT_USER="micah"
 export BROWSER="/home/micah/qutebrowser/bin/qutebrowser"
 export LC_ALL=en_US.UTF-8
+export GOROOT='/usr/local/go'
+export GOPATH='/home/micah/go'
 
 export HISTIGNORE="&:ls:[bf]g:exit:reset:clear:cd:cd ..:cd.."
 export HISTSIZE=25000
@@ -61,7 +63,7 @@ zstyle ':completion:*:kill:*' horse-list always
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
-PATH="/home/micah/.npm-global/:/home/micah/qutebrowser/bin/:/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin/:$PATH"
+PATH="/home/micah/go/bin:/usr/local/go/bin:/home/micah/.npm-global/:/home/micah/qutebrowser/bin/:/home/micah/.config/Scripts/:/home/micah/.gem/ruby/2.5.0/bin/:$PATH"
 export NODE_PATH="/usr/local/lib/node_modules"
 
 # enable fzf
