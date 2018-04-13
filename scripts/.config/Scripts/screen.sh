@@ -13,7 +13,7 @@ showusage() {
 disablerest() {
   xrandr -q|grep '\bconnected\b'|cut -d' ' -f1|while read line; do
     if [[ ("$line" != "$middle") && ("$line" != "$left") && ("$line" != "$right") ]]; then
-      xrandr --output $line --off
+      cmd="$cmd --output $line --off"
     fi
   done
 }
@@ -40,16 +40,17 @@ done
 shift $((OPTIND - 1))
 
 middle="$1"
+cmd="xrandr "
 
 if [[ ("$middle" != "") && ($(xrandr -q |grep $middle\ con)) ]]; then
-  xrandr --output $middle --auto
+  cmd="$cmd --output $middle --auto"
 
   if [[ ("$left" != "") && ($(xrandr -q |grep $left\ con)) ]]; then
-    xrandr --output $left --auto --left-of $middle
+    cmd="$cmd --output $left --auto --left-of $middle"
   fi
 
   if [[ ("$right" != "") && ($(xrandr -q |grep $right\ con)) ]]; then
-    xrandr --output $right --auto --right-of $middle
+    cmd="$cmd --output $right --auto --right-of $middle"
   fi
 
   disablerest
@@ -58,11 +59,18 @@ else
 
   disablerest
 
-  xrandr --output $left --off
-  xrandr --output $right --off
+  if [[ ("$left" != "") && ($(xrandr -q |grep $left\ con)) ]]; then
+    cmd="$cmd --output $left --off"
+  fi
 
-  xrandr --output LVDS-1 --auto
+  if [[ ("$right" != "") && ($(xrandr -q |grep $right\ con)) ]]; then
+    cmd="$cmd --output $right --off"
+  fi
+
+  cmd="$cmd --output LVDS-1 --auto"
 fi
+
+eval $cmd
 
 ~/.config/polybar/launch.sh
 feh --bg-scale ~/.config/wall
