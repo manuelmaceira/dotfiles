@@ -102,7 +102,7 @@ if [ -x /usr/bin/dircolors ]; then
   alias egrep='egrep --color=auto'
 fi
 alias pip='pip3'
-alias pipupdate='pip list --outdated --format=freeze|cut -d = -f 1|xargs -n1 sudo -H pip install -U'
+alias pipupdate='pip3 list --outdated --format=freeze|cut -d = -f 1|xargs -n1 sudo -H pip3 install -U'
 alias vgamirror='xrandr --output LVDS-1 --auto --output VGA-1 --auto --same-as LVDS-1'
 alias vgaoff='xrandr --output LVDS-1 --auto --output VGA-1 --off'
 alias chmox='chmod +x'
