@@ -262,9 +262,6 @@ iabbrev fdate <C-r>=strftime("%B %d, %Y")<CR>
 iabbrev xtime <C-r>=strftime("%H:%M")<CR>
 iabbrev ftime <C-r>=strftime("%H:%M:%S")<CR>
 
-
-" Buffer navigation
-map <leader>o :ls<CR>:b
 " tab goes to last buffer
 map <TAB> <C-^>
 
@@ -343,15 +340,15 @@ nmap to :tab sp<CR>
 
 augroup markup
   " tex compile keybindings
-  autocmd Filetype tex nnoremap <leader>mm :w<CR>:AsyncRun rubber -m xelatex --warn all %<CR><CR>
+  autocmd Filetype tex nnoremap <buffer> <leader>mm :w<CR>:AsyncRun rubber -m xelatex --warn all %<CR><CR>
   " md compile keybindings
-  autocmd Filetype markdown nnoremap <leader>mm :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
-  autocmd Filetype markdown nnoremap <leader>mb :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR><CR>
+  autocmd Filetype markdown nnoremap <buffer> <leader>mm :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -o %:r.pdf<CR><CR>
+  autocmd Filetype markdown nnoremap <buffer> <leader>mb :w<CR>:AsyncRun pandoc % --pdf-engine=xelatex --variable urlcolor=blue -t beamer -o %:r.pdf<CR><CR>
   " rmd compile keybindings
-  autocmd Filetype rmd nnoremap <leader>mm :w<CR>:AsyncRun echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
+  autocmd Filetype rmd nnoremap <buffer> <leader>mm :w<CR>:AsyncRun echo "require(rmarkdown); render('%')" \| R --vanilla<CR><CR>
   " compiled doc viewing keybindings
-  autocmd Filetype tex,markdown,rmd nnoremap <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
-  autocmd Filetype tex,markdown nnoremap <leader>mp :!pdfpc %:r.pdf<CR><CR>
+  autocmd Filetype tex,markdown,rmd nnoremap <buffer> <leader>mv :!zathura -- %:r.pdf &> /dev/null &<CR><CR>
+  autocmd Filetype tex,markdown nnoremap <buffer> <leader>mp :!pdfpc %:r.pdf<CR><CR>
 augroup END
 
 """"""""""""""""""""""""""""
@@ -381,7 +378,7 @@ map <leader>cl :ToggleConceal<CR>
 command W w !sudo tee % > /dev/null
 
 " write tags
-command! MakeTags !ctags -R .
+command! MakeTags AsyncRun ctags -R .
 
 " picon python worksheet
 command! Picon exe 'normal m`'|silent! undojoin|exe '%!picon -a'|exe 'normal ``'
@@ -417,130 +414,130 @@ augroup END
 
 " => Java
 augroup java
-  autocmd FileType java inoremap ;fr for(;<++>;<++>) {<CR><++><CR>}<CR><++><Esc>3k^f;i
-  autocmd FileType java inoremap ;fe for(: <++>) {<CR><++><CR>}<CR><++><Esc>3k^f:i
-  autocmd FileType java inoremap ;wl while() {<CR><++><CR>}<CR><++><Esc>3k^f)i
-  autocmd FileType java inoremap ;dw do {<CR>;<CR>} while (<++>);<CR><++><Esc>2k^xA
-  autocmd FileType java inoremap ;if if() {<CR><++><CR>}<CR><++><Esc>3k^f)i
-  autocmd FileType java inoremap ;ie if() {<CR><++><CR>} else {<CR><++><CR>}<CR><++><Esc>5k^f)i
-  autocmd FileType java inoremap ;ii if() {<CR><++><CR>} else <++><Esc>2k^f)i
-  autocmd FileType java inoremap ;pc public class  {<CR><++><CR>}<Esc>2k^f{hi
-  autocmd FileType java inoremap ;cl class  {<CR><++><CR>}<Esc>2k^f{hi
-  autocmd FileType java inoremap ;fn public  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
-  autocmd FileType java inoremap ;pf public  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
-  autocmd FileType java inoremap ;rf private  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
-  autocmd FileType java inoremap ;mn public static void main(String[] args) {<CR>;<CR>}<CR><++><Esc>2k^xA
-  autocmd FileType java inoremap ;rt return
-  autocmd FileType java inoremap ;st static
-  autocmd FileType java inoremap ;pr System.out.println();<CR><++><Esc>k^f)i
-  autocmd FileType java inoremap ;ip <Esc>?import<CR>oimport ;<Esc>i
-  autocmd FileType java nnoremap ;ip ?import<CR>oimport ;<Esc>i
+  autocmd FileType java inoremap <buffer> ;fr for(;<++>;<++>) {<CR><++><CR>}<CR><++><Esc>3k^f;i
+  autocmd FileType java inoremap <buffer> ;fe for(: <++>) {<CR><++><CR>}<CR><++><Esc>3k^f:i
+  autocmd FileType java inoremap <buffer> ;wl while() {<CR><++><CR>}<CR><++><Esc>3k^f)i
+  autocmd FileType java inoremap <buffer> ;dw do {<CR>;<CR>} while (<++>);<CR><++><Esc>2k^xA
+  autocmd FileType java inoremap <buffer> ;if if() {<CR><++><CR>}<CR><++><Esc>3k^f)i
+  autocmd FileType java inoremap <buffer> ;ie if() {<CR><++><CR>} else {<CR><++><CR>}<CR><++><Esc>5k^f)i
+  autocmd FileType java inoremap <buffer> ;ii if() {<CR><++><CR>} else <++><Esc>2k^f)i
+  autocmd FileType java inoremap <buffer> ;pc public class  {<CR><++><CR>}<Esc>2k^f{hi
+  autocmd FileType java inoremap <buffer> ;cl class  {<CR><++><CR>}<Esc>2k^f{hi
+  autocmd FileType java inoremap <buffer> ;fn public  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
+  autocmd FileType java inoremap <buffer> ;pf public  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
+  autocmd FileType java inoremap <buffer> ;rf private  <++>(<++>) {<CR><++><CR>}<CR><++><Esc>3k^fc2li
+  autocmd FileType java inoremap <buffer> ;mn public static void main(String[] args) {<CR>;<CR>}<CR><++><Esc>2k^xA
+  autocmd FileType java inoremap <buffer> ;rt return
+  autocmd FileType java inoremap <buffer> ;st static
+  autocmd FileType java inoremap <buffer> ;pr System.out.println();<CR><++><Esc>k^f)i
+  autocmd FileType java inoremap <buffer> ;ip <Esc>?import<CR>oimport ;<Esc>i
+  autocmd FileType java nnoremap <buffer> ;ip ?import<CR>oimport ;<Esc>i
 augroup END
 
 " => Python
 augroup python
-  autocmd FileType python inoremap ;fr for  in <++>:<CR><++><CR><C-D><++><Esc>2k^fihi
-  autocmd FileType python inoremap ;wl while():<CR><++><CR><C-D><++><Esc>2k^f)i
-  autocmd FileType python inoremap ;we while():<CR><++><CR><C-D>else:<CR><++><CR><C-D><++><Esc>4k^f)i
-  autocmd FileType python inoremap ;if if :<CR><++><CR><C-D><++><Esc>2k^f:i
-  autocmd FileType python inoremap ;ie if :<CR><++><CR><C-D>else:<CR><++><CR><C-D><++><Esc>4k^f:i
-  autocmd FileType python inoremap ;ii if :<CR><++><CR><C-D>el<++><Esc>2k^f:i
-  autocmd FileType python inoremap ;cl class :<CR><++><Esc>k^f:i
-  autocmd FileType python inoremap ;fn def (<++>):<CR><++><CR><C-D><++><Esc>2k^f(i
-  autocmd FileType python inoremap ;mn def main():<CR>;<CR><CR><C-D>if __name__ == "__main__":<CR>main()<Esc>3k^xA
-  autocmd FileType python inoremap ;rt return
-  autocmd FileType python inoremap ;pr print()<CR><++><Esc>k^f)i
-  autocmd FileType python inoremap ;ip <Esc>?import<CR>oimport
-  autocmd FileType python nnoremap ;ip ?import<CR>oimport
+  autocmd FileType python inoremap <buffer> ;fr for  in <++>:<CR><++><CR><C-D><++><Esc>2k^fihi
+  autocmd FileType python inoremap <buffer> ;wl while():<CR><++><CR><C-D><++><Esc>2k^f)i
+  autocmd FileType python inoremap <buffer> ;we while():<CR><++><CR><C-D>else:<CR><++><CR><C-D><++><Esc>4k^f)i
+  autocmd FileType python inoremap <buffer> ;if if :<CR><++><CR><C-D><++><Esc>2k^f:i
+  autocmd FileType python inoremap <buffer> ;ie if :<CR><++><CR><C-D>else:<CR><++><CR><C-D><++><Esc>4k^f:i
+  autocmd FileType python inoremap <buffer> ;ii if :<CR><++><CR><C-D>el<++><Esc>2k^f:i
+  autocmd FileType python inoremap <buffer> ;cl class :<CR><++><Esc>k^f:i
+  autocmd FileType python inoremap <buffer> ;fn def (<++>):<CR><++><CR><C-D><++><Esc>2k^f(i
+  autocmd FileType python inoremap <buffer> ;mn def main():<CR>;<CR><CR><C-D>if __name__ == "__main__":<CR>main()<Esc>3k^xA
+  autocmd FileType python inoremap <buffer> ;rt return
+  autocmd FileType python inoremap <buffer> ;pr print()<CR><++><Esc>k^f)i
+  autocmd FileType python inoremap <buffer> ;ip <Esc>?import<CR>oimport
+  autocmd FileType python nnoremap <buffer> ;ip ?import<CR>oimport
 augroup END
 
 " => LaTeX
 augroup markup
-  autocmd FileType tex inoremap ;fr \begin{frame}<CR>\frametitle{}<CR><CR><++><CR><CR>\end{frame}<CR><CR><++><Esc>6kf}i
-  autocmd FileType tex inoremap ;fi \begin{fitch}<CR><CR>\end{fitch}<CR><CR><++><Esc>3kA
-  autocmd FileType tex inoremap ;exe \begin{exe}<CR>\ex<Space><CR>\end{exe}<CR><CR><++><Esc>3kA
-  autocmd FileType tex inoremap ;em \emph{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;bf \textbf{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;it \textit{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;ct \textcite{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;cm ~\cite{}<++><Esc>T{i
-  autocmd FileType tex inoremap ;cp \parencite{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;glos {\gll<Space><++><Space>\\<CR><++><Space>\\<CR>\trans{``<++>''}}<Esc>2k2bcw
-  autocmd FileType tex inoremap ;x \begin{xlist}<CR>\ex<Space><CR>\end{xlist}<Esc>kA<Space>
-  autocmd FileType tex inoremap ;ol \begin{enumerate}<CR><CR>\end{enumerate}<CR><CR><++><Esc>3kA\item<Space>
-  autocmd FileType tex inoremap ;ul \begin{itemize}<CR><CR>\end{itemize}<CR><CR><++><Esc>3kA\item<Space>
-  autocmd FileType tex inoremap ;li <CR>\item<Space>
-  autocmd FileType tex inoremap ;ref \ref{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;tab \begin{tabular}<CR><++><CR>\end{tabular}<CR><CR><++><Esc>4kA{}<Esc>i
-  autocmd FileType tex inoremap ;a \href{}{<++>}<Space><++><Esc>2T{i
-  autocmd FileType tex inoremap ;sc \textsc{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;sec \section{}<CR><CR><++><Esc>2kf}i
-  autocmd FileType tex inoremap ;ssec \subsection{}<CR><CR><++><Esc>2kf}i
-  autocmd FileType tex inoremap ;sssec \subsubsection{}<CR><CR><++><Esc>2kf}i
-  autocmd FileType tex inoremap ;st <Esc>F{i*<Esc>f}i
-  autocmd FileType tex inoremap ;beg \begin{%DELRN%}<CR><++><CR>\end{%DELRN%}<CR><CR><++><Esc>4kfR:MultipleCursorsFind<Space>%DELRN%<CR>c
-  autocmd FileType tex inoremap ;up <Esc>/usepackage<CR>o\usepackage{}<Esc>i
-  autocmd FileType tex nnoremap ;up /usepackage<CR>o\usepackage{}<Esc>i
-  autocmd FileType tex inoremap ;tt \texttt{}<Space><++><Esc>T{i
-  autocmd FileType tex inoremap ;bt {\blindtext}
-  autocmd FileType tex inoremap ;nu $\varnothing$
-  autocmd FileType tex inoremap ;col \begin{columns}[T]<CR>\begin{column}{.5\textwidth}<CR><CR>\end{column}<CR>\begin{column}{.5\textwidth}<CR><++><CR>\end{column}<CR>\end{columns}<Esc>5kA
-  autocmd FileType tex inoremap ;ent \gloss{}{<++>}{<++>}<CR><++><Esc>k0f}i
+  autocmd FileType tex inoremap <buffer> ;fr \begin{frame}<CR>\frametitle{}<CR><CR><++><CR><CR>\end{frame}<CR><CR><++><Esc>6kf}i
+  autocmd FileType tex inoremap <buffer> ;fi \begin{fitch}<CR><CR>\end{fitch}<CR><CR><++><Esc>3kA
+  autocmd FileType tex inoremap <buffer> ;exe \begin{exe}<CR>\ex<Space><CR>\end{exe}<CR><CR><++><Esc>3kA
+  autocmd FileType tex inoremap <buffer> ;em \emph{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;bf \textbf{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;it \textit{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;ct \textcite{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;cm ~\cite{}<++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;cp \parencite{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;glos {\gll<Space><++><Space>\\<CR><++><Space>\\<CR>\trans{``<++>''}}<Esc>2k2bcw
+  autocmd FileType tex inoremap <buffer> ;x \begin{xlist}<CR>\ex<Space><CR>\end{xlist}<Esc>kA<Space>
+  autocmd FileType tex inoremap <buffer> ;ol \begin{enumerate}<CR><CR>\end{enumerate}<CR><CR><++><Esc>3kA\item<Space>
+  autocmd FileType tex inoremap <buffer> ;ul \begin{itemize}<CR><CR>\end{itemize}<CR><CR><++><Esc>3kA\item<Space>
+  autocmd FileType tex inoremap <buffer> ;li <CR>\item<Space>
+  autocmd FileType tex inoremap <buffer> ;ref \ref{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;tab \begin{tabular}<CR><++><CR>\end{tabular}<CR><CR><++><Esc>4kA{}<Esc>i
+  autocmd FileType tex inoremap <buffer> ;a \href{}{<++>}<Space><++><Esc>2T{i
+  autocmd FileType tex inoremap <buffer> ;sc \textsc{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;sec \section{}<CR><CR><++><Esc>2kf}i
+  autocmd FileType tex inoremap <buffer> ;ssec \subsection{}<CR><CR><++><Esc>2kf}i
+  autocmd FileType tex inoremap <buffer> ;sssec \subsubsection{}<CR><CR><++><Esc>2kf}i
+  autocmd FileType tex inoremap <buffer> ;st <Esc>F{i*<Esc>f}i
+  autocmd FileType tex inoremap <buffer> ;beg \begin{%DELRN%}<CR><++><CR>\end{%DELRN%}<CR><CR><++><Esc>4kfR:MultipleCursorsFind<Space>%DELRN%<CR>c
+  autocmd FileType tex inoremap <buffer> ;up <Esc>/usepackage<CR>o\usepackage{}<Esc>i
+  autocmd FileType tex nnoremap <buffer> ;up /usepackage<CR>o\usepackage{}<Esc>i
+  autocmd FileType tex inoremap <buffer> ;tt \texttt{}<Space><++><Esc>T{i
+  autocmd FileType tex inoremap <buffer> ;bt {\blindtext}
+  autocmd FileType tex inoremap <buffer> ;nu $\varnothing$
+  autocmd FileType tex inoremap <buffer> ;col \begin{columns}[T]<CR>\begin{column}{.5\textwidth}<CR><CR>\end{column}<CR>\begin{column}{.5\textwidth}<CR><++><CR>\end{column}<CR>\end{columns}<Esc>5kA
+  autocmd FileType tex inoremap <buffer> ;ent \gloss{}{<++>}{<++>}<CR><++><Esc>k0f}i
   " Logical Symbols
-  autocmd FileType tex inoremap ;m $$<Space><++><Esc>2T$i
-  autocmd FileType tex inoremap ;M $$$$<CR><CR><++><Esc>2k$hi
-  autocmd FileType tex inoremap ;neg {\neg}
-  autocmd FileType tex inoremap ;V {\vee}
-  autocmd FileType tex inoremap ;or {\vee}
-  autocmd FileType tex inoremap ;L {\wedge}
-  autocmd FileType tex inoremap ;and {\wedge}
-  autocmd FileType tex inoremap ;ra {\rightarrow}
-  autocmd FileType tex inoremap ;la {\leftarrow}
-  autocmd FileType tex inoremap ;lra {\leftrightarrow}
-  autocmd FileType tex inoremap ;fa {\forall}
-  autocmd FileType tex inoremap ;ex {\exists}
-  autocmd FileType tex inoremap ;dia	{\Diamond}
-  autocmd FileType tex inoremap ;box	{\Box}
+  autocmd FileType tex inoremap <buffer> ;m $$<Space><++><Esc>2T$i
+  autocmd FileType tex inoremap <buffer> ;M $$$$<CR><CR><++><Esc>2k$hi
+  autocmd FileType tex inoremap <buffer> ;neg {\neg}
+  autocmd FileType tex inoremap <buffer> ;V {\vee}
+  autocmd FileType tex inoremap <buffer> ;or {\vee}
+  autocmd FileType tex inoremap <buffer> ;L {\wedge}
+  autocmd FileType tex inoremap <buffer> ;and {\wedge}
+  autocmd FileType tex inoremap <buffer> ;ra {\rightarrow}
+  autocmd FileType tex inoremap <buffer> ;la {\leftarrow}
+  autocmd FileType tex inoremap <buffer> ;lra {\leftrightarrow}
+  autocmd FileType tex inoremap <buffer> ;fa {\forall}
+  autocmd FileType tex inoremap <buffer> ;ex {\exists}
+  autocmd FileType tex inoremap <buffer> ;dia	{\Diamond}
+  autocmd FileType tex inoremap <buffer> ;box	{\Box}
   " smallcaps
-  autocmd Filetype tex inoremap ;nom {\textsc{nom}}
-  autocmd FileType tex inoremap ;acc {\textsc{acc}}
-  autocmd FileType tex inoremap ;dat {\textsc{dat}}
-  autocmd FileType tex inoremap ;gen {\textsc{gen}}
-  autocmd FileType tex inoremap ;abl {\textsc{abl}}
-  autocmd FileType tex inoremap ;voc {\textsc{voc}}
-  autocmd FileType tex inoremap ;loc {\textsc{loc}}
-  autocmd Filetype tex inoremap ;inst {\textsc{inst}}
+  autocmd Filetype tex inoremap <buffer> ;nom {\textsc{nom}}
+  autocmd FileType tex inoremap <buffer> ;acc {\textsc{acc}}
+  autocmd FileType tex inoremap <buffer> ;dat {\textsc{dat}}
+  autocmd FileType tex inoremap <buffer> ;gen {\textsc{gen}}
+  autocmd FileType tex inoremap <buffer> ;abl {\textsc{abl}}
+  autocmd FileType tex inoremap <buffer> ;voc {\textsc{voc}}
+  autocmd FileType tex inoremap <buffer> ;loc {\textsc{loc}}
+  autocmd Filetype tex inoremap <buffer> ;inst {\textsc{inst}}
 
   " => HTML
-  autocmd FileType html inoremap ;b <b></b><Space><++><Esc>FbT>i
-  autocmd FileType html inoremap ;i <em></em><Space><++><Esc>FeT>i
-  autocmd FileType html inoremap ;1 <h1></h1><CR><CR><++><Esc>2kf<i
-  autocmd FileType html inoremap ;2 <h2></h2><CR><CR><++><Esc>2kf<i
-  autocmd FileType html inoremap ;3 <h3></h3><CR><CR><++><Esc>2kf<i
-  autocmd FileType html inoremap ;p <p></p><CR><CR><++><Esc>02kf>a
-  autocmd FileType html inoremap ;a <a<Space>href=""><++></a><Space><++><Esc>F"i
-  autocmd FileType html inoremap ;ul <ul><CR><li></li><CR></ul><CR><CR><++><Esc>03kf<i
-  autocmd FileType html inoremap ;li <Esc>o<li></li><Esc>F>a
-  autocmd FileType html inoremap ;ol <ol><CR><li></li><CR></ol><CR><CR><++><Esc>03kf<i
+  autocmd FileType html inoremap <buffer> ;b <b></b><Space><++><Esc>FbT>i
+  autocmd FileType html inoremap <buffer> ;i <em></em><Space><++><Esc>FeT>i
+  autocmd FileType html inoremap <buffer> ;1 <h1></h1><CR><CR><++><Esc>2kf<i
+  autocmd FileType html inoremap <buffer> ;2 <h2></h2><CR><CR><++><Esc>2kf<i
+  autocmd FileType html inoremap <buffer> ;3 <h3></h3><CR><CR><++><Esc>2kf<i
+  autocmd FileType html inoremap <buffer> ;p <p></p><CR><CR><++><Esc>02kf>a
+  autocmd FileType html inoremap <buffer> ;a <a<Space>href=""><++></a><Space><++><Esc>F"i
+  autocmd FileType html inoremap <buffer> ;ul <ul><CR><li></li><CR></ul><CR><CR><++><Esc>03kf<i
+  autocmd FileType html inoremap <buffer> ;li <Esc>o<li></li><Esc>F>a
+  autocmd FileType html inoremap <buffer> ;ol <ol><CR><li></li><CR></ol><CR><CR><++><Esc>03kf<i
 
   " => Bib
-  autocmd FileType bib inoremap ;a @article{,<CR>author<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>journal<Space>=<Space>"<++>",<CR>volume<Space>=<Space>"<++>",<CR>pages<Space>=<Space>"<++>",<CR>}<CR><++><Esc>8kf,i
-  autocmd FileType bib inoremap ;b @book{,<CR>author<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>publisher<Space>=<Space>"<++>",<CR>}<CR><++><Esc>6kf,i
-  autocmd FileType bib inoremap ;c @incollection{,<CR>author<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>booktitle<Space>=<Space>"<++>",<CR>editor<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>publisher<Space>=<Space>"<++>",<CR>}<CR><++><Esc>8kf,i
+  autocmd FileType bib inoremap <buffer> ;a @article{,<CR>author<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>journal<Space>=<Space>"<++>",<CR>volume<Space>=<Space>"<++>",<CR>pages<Space>=<Space>"<++>",<CR>}<CR><++><Esc>8kf,i
+  autocmd FileType bib inoremap <buffer> ;b @book{,<CR>author<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>publisher<Space>=<Space>"<++>",<CR>}<CR><++><Esc>6kf,i
+  autocmd FileType bib inoremap <buffer> ;c @incollection{,<CR>author<Space>=<Space>"<++>",<CR>title<Space>=<Space>"<++>",<CR>booktitle<Space>=<Space>"<++>",<CR>editor<Space>=<Space>"<++>",<CR>year<Space>=<Space>"<++>",<CR>publisher<Space>=<Space>"<++>",<CR>}<CR><++><Esc>8kf,i
 
   " => Markdown
-  autocmd Filetype markdown,rmd inoremap ;b ****<Space><++><Esc>F*hi
-  autocmd Filetype markdown,rmd inoremap ;s ~~~~<Space><++><Esc>F~hi
-  autocmd Filetype markdown,rmd inoremap ;e **<Space><++><Esc>F*i
-  autocmd Filetype markdown,rmd inoremap ;i ![](<++>)<Space><++><Esc>F[a
-  autocmd Filetype markdown,rmd inoremap ;a [](<++>)<Space><++><Esc>F[a
-  autocmd Filetype markdown,rmd inoremap ;1 #<Space><CR><CR><++><Esc>2kA
-  autocmd Filetype markdown,rmd inoremap ;2 ##<Space><CR><CR><++><Esc>2kA
-  autocmd Filetype markdown,rmd inoremap ;3 ###<Space><CR><CR><++><Esc>2kA
-  autocmd Filetype markdown,rmd inoremap ;4 ####<Space><CR><CR><++><Esc>2kA
-  autocmd Filetype markdown,rmd inoremap ;5 #####<Space><CR><CR><++><Esc>2kA
-  autocmd Filetype markdown,rmd inoremap ;6 ######<Space><CR><CR><++><Esc>2kA
-  autocmd Filetype markdown,rmd inoremap ;l ---<CR>
-  autocmd Filetype markdown inoremap ;c ```<CR><++><CR>```<CR><CR><++><Esc>4kA
-  autocmd Filetype rmd inoremap ;c ```{, eval = FALSE}<CR><++><CR>```<CR><CR><++><Esc>4k^f,i
+  autocmd Filetype markdown,rmd inoremap <buffer> ;b ****<Space><++><Esc>F*hi
+  autocmd Filetype markdown,rmd inoremap <buffer> ;s ~~~~<Space><++><Esc>F~hi
+  autocmd Filetype markdown,rmd inoremap <buffer> ;e **<Space><++><Esc>F*i
+  autocmd Filetype markdown,rmd inoremap <buffer> ;i ![](<++>)<Space><++><Esc>F[a
+  autocmd Filetype markdown,rmd inoremap <buffer> ;a [](<++>)<Space><++><Esc>F[a
+  autocmd Filetype markdown,rmd inoremap <buffer> ;1 #<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap <buffer> ;2 ##<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap <buffer> ;3 ###<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap <buffer> ;4 ####<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap <buffer> ;5 #####<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap <buffer> ;6 ######<Space><CR><CR><++><Esc>2kA
+  autocmd Filetype markdown,rmd inoremap <buffer> ;l ---<CR>
+  autocmd Filetype markdown inoremap <buffer> ;c ```<CR><++><CR>```<CR><CR><++><Esc>4kA
+  autocmd Filetype rmd inoremap <buffer> ;c ```{, eval = FALSE}<CR><++><CR>```<CR><CR><++><Esc>4k^f,i
 augroup END
