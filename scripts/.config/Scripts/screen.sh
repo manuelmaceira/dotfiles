@@ -11,11 +11,13 @@ showusage() {
 }
 
 disablerest() {
-  xrandr -q|grep '\bconnected\b'|cut -d' ' -f1|while read line; do
+  cmd=$1
+  while read line; do
     if [[ ("$line" != "$middle") && ("$line" != "$left") && ("$line" != "$right") ]]; then
       cmd="$cmd --output $line --off"
     fi
-  done
+  done <<< $(xrandr -q|grep '\bconnected\b'|cut -d' ' -f1)
+  echo "$cmd"
 }
 
 while getopts "l:r:h" opt; do
@@ -53,7 +55,7 @@ if [[ ("$middle" != "") && ($(xrandr -q |grep $middle\ con)) ]]; then
     cmd="$cmd --output $right --auto --right-of $middle"
   fi
 
-  disablerest
+  cmd=$(disablerest "$cmd")
 else
   echo "Falling back to only laptop display" 1>&2
 
