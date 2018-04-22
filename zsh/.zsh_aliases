@@ -7,7 +7,6 @@ TMUXINATORDIR=~/.tmuxinator
 # default applications
 alias -s c=nvim
 alias -s cpp=nvim
-alias -s py=nvim
 alias -s java=nvim
 alias -s md=nvim
 alias -s tex=nvim
