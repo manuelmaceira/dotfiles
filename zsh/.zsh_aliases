@@ -102,18 +102,14 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 alias pip='pip3'
 alias pipupdate='pip3 list --outdated --format=freeze|cut -d = -f 1|xargs -n1 sudo -H pip3 install -U'
-alias vgamirror='xrandr --output LVDS-1 --auto --output VGA-1 --auto --same-as LVDS-1'
-alias vgaoff='xrandr --output LVDS-1 --auto --output VGA-1 --off'
 alias chmox='chmod +x'
 alias maketags='ctags -R .'
 alias glv="git log --graph --pretty=format:'%h - %d %s (%cr) <%an>' | nvim -R -c 'set filetype=git nowrap' -"
-alias rm='rm'
 alias sl='ls'
 alias ll='ls -alF'
 alias la='ls -A'
 alias ..='cd ..'
 alias ...='cd ../..'
-alias speedtest='speedtest-cli'
 alias todo='vi ~/.todo.md'
 alias makescript="fc -rnl | head -1 >"
 alias histg='history | grep'
@@ -128,7 +124,6 @@ cls() { cd "$1"; ls;}
 crun() { make "$1"; ./$1;}
 backup() { cp "$1"{,.bak};}
 md5check() { md5sum "$1" | grep "$2";}
-getlocation() { lynx -dump http://www.ip-adress.com/ip_tracer/?QRY=$1|grep address|egrep 'city|state|country'|awk '{print $3,$4,$5,$6,$7,$8}'|sed 's\ip address flag \\'|sed 's\My\\';}
 
 # LaTeX aliases
 txa() {
@@ -173,21 +168,7 @@ mdtemp() {
   fi
 }
 
-# C compiling shortcuts for clang and gcc
-clang() {
-  if [[ $1 =~ \.c$ ]]; then
-    clang-3.5 -g $1 -o ${1%%.*};
-  else
-    echo "$1 is not a c file"
-  fi
-}
-clanglm() {
-  if [[ $1 =~ \.c$ ]]; then
-    clang-3.5 -g $1 -o ${1%%.*} -lm;
-  else
-    echo "$1 is not a c file"
-  fi
-}
+# C compiling shortcuts for gcc
 gccc() {
   if [[ $1 =~ \.c$ ]]; then
     gcc -std=c99 -Wall -pedantic -Wextra -Werror -O2 -g $1 -o ${1%%.*};
