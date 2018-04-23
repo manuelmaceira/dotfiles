@@ -1,15 +1,15 @@
 #Change these for your Gmail:
 
-set realname = "Micah Halter"                                  
+set realname = "Micah Halter"
 set from = "micah@mehalter.com"
 set mbox_type = Maildir
 set sendmail = "/usr/bin/msmtp -a gmail"
 set folder = "~/.Mail/Gmail"
 
-set spoolfile = "+INBOX"                                      
+set spoolfile = "+INBOX"
 set record = /dev/null
-set mbox = "+[Gmail].All Mail"
-set postponed = "+[Gmail].Drafts"                             
+set mbox = "+[Gmail].other"
+set postponed = "+[Gmail].Drafts"
 
 macro index S '<sync-mailbox><enter-command>source ~/.config/mutt/gatechrc<enter><change-folder>!<enter>'
 

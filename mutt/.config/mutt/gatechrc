@@ -1,15 +1,15 @@
 #Change these for your gatech Outlook 365:
 
-set realname = "Micah Halter"                                  
+set realname = "Micah Halter"
 set from = "mehalter@gatech.edu"
 set mbox_type = Maildir
 set sendmail = "/usr/bin/msmtp -a gatech"
 set folder = "~/.Mail/Gatech"
 
 
-set spoolfile = "+INBOX"                                      
+set spoolfile = "+INBOX"
 set record = "+Sent Items"
-set postponed = "+Drafts"                             
+set postponed = "+Drafts"
 
 macro index S '<sync-mailbox><enter-command>source ~/.config/mutt/gmailrc<enter><change-folder>!<enter>'
 

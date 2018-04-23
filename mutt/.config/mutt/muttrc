@@ -44,7 +44,7 @@ bind index d half-down
 bind index u half-up
 bind index D delete-message
 bind index U undelete-message
-bind index F search 
+bind index F search
 bind index R group-reply
 
 # address book settings
@@ -60,4 +60,3 @@ macro index Z "<shell-escape>offlineimap<enter>" "sync all mail"
 
 macro index,pager \cu "<pipe-message> urlscan<Enter>" "call urlscan to extract URLs out of a message"
 macro attach,compose \cu "<pipe-entry> urlscan<Enter>" "call urlscan to extract URLs out of a message"
-
