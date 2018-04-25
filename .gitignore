@@ -11,3 +11,6 @@
 # neovim plugins
 **/plugged-remote/
 *.netrwhist
+
+# mpv control file
+mpv/.config/mpv/control
