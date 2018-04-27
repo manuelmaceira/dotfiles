@@ -57,6 +57,9 @@ alias vd='vdirsyncer'
 alias vds='vdirsyncer sync'
 
 # various app aliases
+alias t='python ~/.t/t.py --task-dir ~/.tasks --list tasks'
+alias tf='python ~/.t/t.py --task-dir ~/.tasks --list tasks -f'
+alias te='python ~/.t/t.py --task-dir ~/.tasks --list tasks -e'
 alias nb='newsboat'
 alias nf='neofetch'
 alias yt="mpsyt"
