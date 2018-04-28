@@ -33,7 +33,7 @@ documentation on the custom bindings that have been added to these applications
 - [tmux](https://github.com/tmux/tmux)
 - [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 - urxvt
-- urxvt-perls
+- [urxvt-perls](https://github.com/muennich/urxvt-perls)
 - [weechat](https://github.com/weechat/weechat)
 - [zathura](https://github.com/pwmt/zathura)
 - zsh
