@@ -462,7 +462,7 @@ bindsym Shift+Print                     exec --no-startup-id ~/.config/i3/script
 bindsym --release Control+Print         exec --no-startup-id ~/.config/i3/scripts/i3-scrot -s
 bindsym  Shift+Control+Print               exec --no-startup-id ~/.config/i3/scripts/camtoggle
 
-bindsym $mod+Scroll_Lock                exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
+bindsym $mod+Scroll_Lock                exec --no-startup-id ~/.config/Scripts/lock/lock.sh
 #bindsym $mod+Shift+Scroll_Lock
 
 bindsym $mod+Pause                      exec --no-startup-id ~/.config/polybar/launch.sh
@@ -498,6 +498,6 @@ bindsym XF86AudioPrev                   exec --no-startup-id echo "playlist-prev
 bindsym XF86MonBrightnessUp             exec --no-startup-id light -A 10
 bindsym XF86MonBrightnessDown           exec --no-startup-id light -U 10
 
-bindsym XF86ScreenSaver                 exec --no-startup-id ~/.config/i3/scripts/lock/lock.sh
+bindsym XF86ScreenSaver                 exec --no-startup-id ~/.config/Scripts/lock/lock.sh
 
 bindsym XF86Launch1                     exec --no-startup-id ~/.config/polybar/launch.sh

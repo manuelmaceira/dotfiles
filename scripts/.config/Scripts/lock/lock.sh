@@ -2,8 +2,8 @@
 
 lockwidth=256
 lockheight=256
-. /home/micah/.cache/wal/colors.sh
-convert /home/micah/.config/i3/scripts/lock/lock.png -fuzz 50% -fill "$color4" -opaque "#30AF91" /tmp/lock.png
+. ~/.cache/wal/colors.sh
+convert ~/.config/Scripts/lock/lock.png -fuzz 50% -fill "$color4" -opaque "#30AF91" /tmp/lock.png
 convert /tmp/lock.png -fuzz 10% -fill "$color0" -opaque "#FFFFFF" /tmp/lock.png
 convert /tmp/lock.png -resize "$lockwidth"x"$lockheight" /tmp/lock.png
 
