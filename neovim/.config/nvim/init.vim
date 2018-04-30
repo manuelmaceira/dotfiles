@@ -27,8 +27,6 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'vim-scripts/ReplaceWithRegister'
 Plug 'w0rp/ale'
-
-Plug '~/.config/nvim/plugged-local/custom-vim'
 call plug#end()
 
 
@@ -121,7 +119,7 @@ set timeoutlen=500
 " Colorscheme
 set t_Co=256
 let base16colorspace=256
-colorscheme custom-wal
+colorscheme wal
 set conceallevel=2
 
 " Status line
@@ -159,7 +157,7 @@ nnoremap <silent> <leader>z :Goyo<CR>
 
 " lightline
 let g:lightline = {
-      \ 'colorscheme': 'pywal',
+      \ 'colorscheme': 'wal',
       \ 'active': {
       \   'left': [ ['mode', 'paste'],
       \             ['fugitive', 'readonly', 'filename', 'modified'] ],

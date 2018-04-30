@@ -1,8 +1,8 @@
 set default-bg "{background}"
 set default-fg "{foreground}"
 
-set statusbar-bg "{color1}"
-set statusbar-fg "{color0}"
+set statusbar-bg "{foreground}"
+set statusbar-fg "{background}"
 
 set inputbar-bg "{background}"
 set inputbar-fg "{foreground}"
