@@ -87,5 +87,5 @@ documentation on the custom bindings that have been added to these applications
 
 - [Yosemite San Francisco
   Font](https://github.com/supermarin/YosemiteSanFranciscoFont)
-- [Hasklig](https://github.com/i-tu/Hasklig)
+- [Terminux](http://terminus-font.sourceforge.net/)
 - [Font Awesome 4.7](https://fontawesome.com/v4.7.0/)
