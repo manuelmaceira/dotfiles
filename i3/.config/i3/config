@@ -13,13 +13,14 @@ set $smallheight 640
 set $bigwidth 1500
 set $bigheight 800
 set $defaultgaps 25
+set $dmenu-font 'xos4 Terminus-14'
 
 
 ###############
 # LOOK & FEEL #
 ###############
 # Set fonts
-font pango:System San Francisco Display, FontAwesome 13
+font pango:xos4 Terminus 14
 
 # set up gaps
 for_window [class="^.*"] border pixel 5
@@ -384,8 +385,8 @@ bindsym $mod+Shift+Control+bracketleft  exec --no-startup-id light -U 10
 #bindsym $mod+Shift+bracketright
 bindsym $mod+Shift+Control+bracketright exec --no-startup-id light -A 10
 
-bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'
-bindsym $mod+Shift+backslash            exec --no-startup-id networkmanager_dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'
+bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn $dmenu-font
+bindsym $mod+Shift+backslash            exec --no-startup-id networkmanager_dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn $dmenu-font
 #bindsym $mod+Shift+Control+backslash
 
 #bindsym $mod+semicolon
@@ -397,7 +398,7 @@ bindsym $mod+Shift+semicolon            exec --no-startup-id $term -name cava -e
 #bindsym $mod+Shift+Control+apostrophe
 
 bindsym $mod+Return                     exec --no-startup-id $term
-bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
+bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn $dmenu-font"
 #bindsym $mod+Shift+Control+Return
 
 #bindsym $mod+comma
