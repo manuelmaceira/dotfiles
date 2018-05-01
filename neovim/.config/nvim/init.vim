@@ -277,6 +277,9 @@ inoremap ;' ''<esc>i
 inoremap ;" ""<esc>i
 inoremap ;` ``<esc>i
 
+" auto closing tags
+inoremap </ </<C-x><C-o><C-n><CR>
+
 " search highlighted in visual mode
 vnoremap <silent> * :<C-u>call VisualSelection('', '')<CR>/<C-R>=@/<CR><CR>
 vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
