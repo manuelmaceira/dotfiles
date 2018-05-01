@@ -1,6 +1,8 @@
 # dotfiles
 My dotfiles for my Linux rice, managed using stow.
 
+![Desktop Preview](preview.png)
+
 Check out the [wiki](https://gitlab.com/mehalter/dotfiles/wikis/home) for
 documentation on the custom bindings that have been added to these applications
 
