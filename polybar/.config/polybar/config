@@ -26,7 +26,7 @@ font-1 = Wuncon Siji:size=14;2
 
 modules-left = i3 music
 modules-center =
-modules-right = i3layout mail volume wlan eth powersaver battery date time powermenu
+modules-right = mail volume wlan eth powersaver battery date time i3layout powermenu
 
 [module/i3]
 type = internal/i3
