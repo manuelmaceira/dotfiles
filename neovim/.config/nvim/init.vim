@@ -120,6 +120,7 @@ set timeoutlen=500
 set t_Co=256
 let base16colorspace=256
 colorscheme wal
+hi Conceal ctermbg=NONE ctermfg=6 cterm=underline
 set conceallevel=2
 
 " Status line
