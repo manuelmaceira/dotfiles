@@ -6,13 +6,13 @@
 reload_dunst() {
     pkill dunst
     dunst \
-        -lb "${color1:-#FFFFFF}" \
-        -nb "${color1:-#FFFFFF}" \
-        -cb "${color1:-#FFFFFF}" \
-        -lf "${color0:-#000000}" \
-        -bf "${color0:-#000000}" \
-        -cf "${color0:-#000000}" \
-        -nf "${color0:-#000000}" \
+        -lb "${background:-#FFFFFF}" \
+        -nb "${background:-#FFFFFF}" \
+        -cb "${background:-#FFFFFF}" \
+        -lf "${foreground:-#000000}" \
+        -bf "${foreground:-#000000}" \
+        -cf "${foreground:-#000000}" \
+        -nf "${foreground:-#000000}" \
         -geometry "300x5-10+34" &
 }
 
