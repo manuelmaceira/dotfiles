@@ -1,7 +1,7 @@
 #!/bin/bash
 
-if [[ -e /dev/video1 ]]; then
-  cam=/dev/video1
+if [[ -e /dev/video2 ]]; then
+  cam=/dev/video2
 else
   cam=/dev/video0
 fi
