@@ -26,11 +26,11 @@ URxvt.lineSpace:            0
 
 ! Fonts
 URxvt.allow_bold:           false
-URxvt*font: xft:Hasklig:pixelsize=14
-URxvt*boldFont: xft:Hasklig:pixelsize=14
+URxvt*font: xft:Terminus:pixelsize=14,-wuncon-siji-medium-r-normal--10-100-75-75-c-80-iso10646-1
+URxvt*boldFont: xft:Terminus:pixelsize=14
 
 ! Fix font space
-URxvt*letterSpace: -1
+URxvt*letterSpace: 0
 
 ! Scrollbar
 URxvt.scrollStyle:          rxvt

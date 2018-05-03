@@ -9,31 +9,27 @@ set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
 set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
 set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 set $defaultgaps 25
+set $dmenu-font 'Terminus-14'
 
 
 ###############
 # LOOK & FEEL #
 ###############
 # Set fonts
-font pango:System San Francisco Display, FontAwesome 13
+font pango:Terminus, FontAwesome 13
 
 # set up gaps
 for_window [class="^.*"] border pixel 5
 gaps inner $defaultgaps
 
 # colors
-#set $bg-color 	          #676E7D
-#set $inactive-bg-color   #2f343f
-#set $text-color          #f3f4f5
-#set $inactive-text-color #676E7D
-#set $urgent-bg-color     #E53935
-set_from_resource $dmenu-bg-color 	   i3wm.color0 #f0f0f0
-set_from_resource $dmenu-text-color    i3wm.color5 #f0f0f0
-set_from_resource $bg-color 	         i3wm.color1 #f0f0f0
-set_from_resource $inactive-bg-color   i3wm.color0 #f0f0f0
-set_from_resource $text-color          i3wm.color5 #f0f0f0
-set_from_resource $inactive-text-color i3wm.color4 #f0f0f0
-set_from_resource $urgent-bg-color     i3wm.color2 #f0f0f0
+set_from_resource $dmenu-bg-color 	   i3wm.background #2f343f
+set_from_resource $dmenu-text-color    i3wm.foreground #f3f4f5
+set_from_resource $bg-color 	         i3wm.foreground #676E7D
+set_from_resource $inactive-bg-color   i3wm.background #2f343f
+set_from_resource $text-color          i3wm.foreground #f3f4f5
+set_from_resource $inactive-text-color i3wm.foreground #676E7D
+set_from_resource $urgent-bg-color     i3wm.color1 #E53935
 
 # window colors         border              background         text                 indicator
 client.focused          $bg-color           $bg-color          $text-color          $bg-color
@@ -178,7 +174,7 @@ bindsym $mod+u               exec --no-startup-id $cliprog dropdown "tmuxinator 
 #bindsym $mod+Control+u
 #bindsym $mod+Shift+Control+u
 
-#bindsym $mod+i 
+#bindsym $mod+i
 #bindsym $mod+Shift+i
 #bindsym $mod+Control+i
 #bindsym $mod+Shift+Control+i
@@ -350,7 +346,7 @@ bindsym $mod+Tab                        workspace back_and_forth
 #bindsym $mod+Shift+bracketright
 #bindsym $mod+Shift+Control+bracketright
 
-bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'
+bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn $dmenu-font
 #bindsym $mod+Shift+backslash
 #bindsym $mod+Shift+Control+backslash
 
@@ -363,7 +359,7 @@ bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$d
 #bindsym $mod+Shift+Control+apostrophe
 
 bindsym $mod+Return                     exec --no-startup-id $term
-bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn 'System San Francisco Display-13'"
+bindsym $mod+Shift+Return               exec --no-startup-id j4-dmenu-desktop --dmenu="dmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn $dmenu-font"
 #bindsym $mod+Shift+Control+Return
 
 #bindsym $mod+comma
