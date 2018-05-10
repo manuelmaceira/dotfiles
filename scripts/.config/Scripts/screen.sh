@@ -59,7 +59,9 @@ if [[ ("$middle" != "") && ($(xrandr -q |grep $middle\ con)) ]]; then
 else
   echo "Falling back to only laptop display" 1>&2
 
-  disablerest
+  middle="LVDS-1"
+
+  cmd=$(disablerest "$cmd")
 
   if [[ ("$left" != "") && ($(xrandr -q |grep $left\ con)) ]]; then
     cmd="$cmd --output $left --off"

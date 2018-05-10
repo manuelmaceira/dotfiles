@@ -1,0 +1,1 @@
+SUBSYSTEM=="usb", ACTION=="add|remove", ENV{DEVTYPE}=="usb_device", ENV{PRODUCT}=="17ef/100a/0", RUN+="/home/micah/.config/Scripts/dock.sh"
