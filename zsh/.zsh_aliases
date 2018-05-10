@@ -105,6 +105,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 alias pip='pip3'
 alias pipupdate='pip3 list --outdated --format=freeze|cut -d = -f 1|xargs -n1 sudo -H pip3 install -U'
+alias Rupdate='Rscript -e '"'"'update.packages(checkBuilt=TRUE, ask=FALSE, repos="https://cran.rstudio.com")'"'"
 alias chmox='chmod +x'
 alias maketags='ctags -R .'
 alias glv="git log --graph --pretty=format:'%h - %d %s (%cr) <%an>' | nvim -R -c 'set filetype=git nowrap' -"
