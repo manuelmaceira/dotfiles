@@ -1,0 +1,12 @@
+[Unit]
+Description=Lock the screen on resume from suspend
+Before=suspend.target
+
+[Service]
+User=micah
+Type=forking
+Environment=DISPLAY=:0
+ExecStart=/home/micah/.config/Scripts/lock/lock.sh
+
+[Install]
+WantedBy=suspend.target
