@@ -4,15 +4,15 @@ yay: base
 	makepkg -si
 
 base:
-	sudo pacman -S gcc gdb zsh git
-	sudo pacman -S python python-pip python2
-	sudo pacman -S texlive-most biber
-	sudo pacman -S asciiquarium cmatrix
-	sudo pacman -S vim neovim python-neovim
-	sudo pacman -S i3-gaps
+	sudo pacman -Sy gcc gdb zsh git
+	sudo pacman -Sy python python-pip python2
+	sudo pacman -Sy texlive-most biber
+	sudo pacman -Sy asciiquarium cmatrix
+	sudo pacman -Sy vim neovim python-neovim
+	sudo pacman -Sy i3-gaps
 
 aur: yay
-	yay --answeredit None --answerclean -S i3lock-color-git
+	yay --answeredit None --answerclean All -Sy i3lock-color-git
 
 dirs:
 	mkdir -p ~/.tasks
