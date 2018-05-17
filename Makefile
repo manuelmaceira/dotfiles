@@ -245,7 +245,6 @@ stow-base: update
 		systemd \
 		t \
 		tmux \
-		udev \
 		urlview \
 		urxvt \
 		vdirsyncer \
