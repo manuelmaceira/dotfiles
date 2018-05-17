@@ -10,7 +10,7 @@ update:
 packages: pacman arch yay aur
 
 pacman:
-	mv pacman/etc/pacman.conf /etc/pacman.conf
+	sudo mv pacman/etc/pacman.conf /etc/pacman.conf
 
 yay: arch
 	git clone https://aur.archlinux.org/yay.git /tmp/yay
@@ -18,7 +18,7 @@ yay: arch
 	makepkg -si
 
 arch: pacman
-	pacman -Sy --needed --noconfirm \
+	sudo pacman -Sy --needed --noconfirm \
 		alsa-utils \
 		aria2 \
 		asciinema \
@@ -147,10 +147,10 @@ arch: pacman
 		zathura \
 		zathura-pdf-poppler \
 		zsh
-	systemctl enable tlp.service
-	systemctl enable tlp-sleep.service
-	systemctl enable org.cups.cupsd.service
-	systemctl start org.cups.cupsd.service
+	sudo systemctl enable tlp.service
+	sudo systemctl enable tlp-sleep.service
+	sudo systemctl enable org.cups.cupsd.service
+	sudo systemctl start org.cups.cupsd.service
 	chsh -s /bin/zsh $(USER)
 
 aur: yay
@@ -210,10 +210,10 @@ stow-work: stow-base
 
 root-config: yay
 	mv systemd/etc/systemd/system/* /etc/systemd/system/
-	systemctl enable wakelock.service
-	systemctl enable powertop.service
-	systemctl start wakelock.service
-	systemctl start powertop.service
+	sudo systemctl enable wakelock.service
+	sudo systemctl enable powertop.service
+	sudo systemctl start wakelock.service
+	sudo systemctl start powertop.service
 
 stow-base: update
 	stow -S \
