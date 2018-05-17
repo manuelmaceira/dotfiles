@@ -1,4 +1,4 @@
-install: arch yay dirs stow
+install: arch yay aur dirs stow
 
 update:
 	git pull
@@ -13,13 +13,14 @@ yay: arch
 	makepkg -si
 
 arch:
-	pacman -Sy --noconfirm gcc gdb zsh git
-	pacman -Sy --noconfirm python python-pip python2
-	pacman -Sy --noconfirm texlive-most biber
-	pacman -Sy --noconfirm asciiquarium cmatrix
-	pacman -Sy --noconfirm vim neovim python-neovim
-	pacman -Sy --noconfirm i3-gaps
-	pacman -Sy --noconfirm asciinema
+	pacman -Sy gcc gdb zsh git
+	pacman -Sy xorg-server xorg-xinit
+	pacman -Sy i3-gaps
+	pacman -Sy python python-pip python2
+	pacman -Sy texlive-most biber
+	pacman -Sy asciiquarium cmatrix
+	pacman -Sy vim neovim python-neovim
+	pacman -Sy asciinema
 
 aur: yay
 	yay --answeredit None --answerclean All -Sy i3lock-color-git
@@ -42,7 +43,6 @@ stow-work: stow-base
 stow-root: arch
 	stow -t / udev
 	stow -t / systemd
-	stow -t / lightdm
 	udevadm control --reload
 	systemctl enable wakelock.service
 	systemctl enable powertop.service
@@ -60,7 +60,6 @@ stow-base: update
 	stow gtk
 	stow khal
 	stow khard
-	stow lightdm
 	#stow mozilla # requires changing folder name
 	stow mpv
 	stow msmtp
@@ -88,5 +87,7 @@ stow-base: update
 	stow wal
 	stow weechat
 	stow xdgopen
+	stow xinit
 	stow zathura
+	stow zsh
 	mkdir -p ~/.tasks
