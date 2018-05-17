@@ -149,7 +149,9 @@ arch: pacman
 		zsh
 	systemctl enable tlp.service
 	systemctl enable tlp-sleep.service
-	chsh -s /bin/zsh $USER
+	systemctl enable org.cups.cupsd.service
+	systemctl start org.cups.cupsd.service
+	chsh -s /bin/zsh $(USER)
 
 aur: yay
 	yay --answeredit None --answerclean All -Sy \
