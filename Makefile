@@ -18,6 +18,7 @@ yay: arch
 	(cd /tmp/yay && makepkg -si)
 
 arch: pacman
+	mkdir -p ~/Documents ~/Downloads ~/Music ~/Pictures ~/Videos
 	sudo pacman -Sy --needed --noconfirm \
 		alsa-utils \
 		aria2 \
