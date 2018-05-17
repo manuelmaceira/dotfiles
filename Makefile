@@ -1,11 +1,11 @@
-install: arch yay aur dirs stow
+install: packages stow
 
 update:
 	git pull
 	git submodule init
 	git submodule update --remote
 
-dirs:
+packages: arch yay aur
 
 yay: arch
 	git clone https://aur.archlinux.org/yay.git /tmp/yay
@@ -13,79 +13,240 @@ yay: arch
 	makepkg -si
 
 arch:
-	pacman -Sy gcc gdb zsh git
-	pacman -Sy xorg-server xorg-xinit
-	pacman -Sy i3-gaps
-	pacman -Sy python python-pip python2
-	pacman -Sy texlive-most biber
-	pacman -Sy asciiquarium cmatrix
-	pacman -Sy vim neovim python-neovim
-	pacman -Sy asciinema
+	pacman -Sy \
+		alsa-utils \
+		aria2 \
+		asciinema \
+		asciiquarium \
+		ascpi_call-dkms \
+		biber \
+		cmatrix \
+		compton \
+		cronie \
+		ctags \
+		cups \
+		cups-pdf \
+		dhclient \
+		dialog \
+		dmenu \
+		docker \
+		dunst \
+		exfat-utils \
+		fd \
+		feh \
+		firefox \
+		gcc-fortran \
+		gdb \
+		gimp \
+		git \
+		gparted \
+		htop \
+		i3-gaps \
+		imagemagick \
+		intel-ucode \
+		jdk8-openjdk \
+		jq \
+		lib32-fontconfig \
+		lib32-gtk2 \
+		lib32-libcanberra \
+		lib32-libpng12 \
+		lib32-libudev0-shim \
+		lib32-libxft \
+		lib32-libxt \
+		lib32-libxtst \
+		libkeybinder3 \
+		libmicrodns \
+		libpng12 \
+		libreoffice-fresh \
+		lxappearance \
+		mps-youtube \
+		mpv \
+		msmtp \
+		neofetch \
+		neomutt \
+		neovim \
+		network-manager-applet \
+		networkmanager \
+		ntp \
+		openssh \
+		pandoc \
+		pandoc-citeproc \
+		pass \
+		pavucontrol \
+		pdfpc \
+		perl-anyevent-i3 \
+		powertop \
+		projectm-pulseaudio \
+		pulseaudio \
+		pulseaudio-alsa \
+		pygmentize \
+		python \
+		python-dateutil \
+		python-i3-py \
+		python-jedi \
+		python-neovim \
+		python-pip \
+		python-pyicu \
+		python-pytz \
+		python-setproctitle \
+		python-urwid \
+		python-virtualenv \
+		python-vobject \
+		python-websocket-client \
+		python2 \
+		python2-crypto \
+		python2-i3-py \
+		python2-pyparsing \
+		python2-websocket-client \
+		qutebrowser \
+		r \
+		ranger \
+		reiserfsprogs \
+		rhash \
+		rtorrent \
+		rubber \
+		ruby \
+		rxvt-unicode \
+		scrot \
+		smartmontools \
+		stow \
+		tcl \
+		terminus-font \
+		texlive-core \
+		texlive-fontsextra \
+		texlive-science \
+		the_silver_searcher \
+		tidy \
+		tk \
+		tlp \
+		tmux \
+		translate-shell \
+		upower \
+		urxvt-perls \
+		vagrant \
+		vim \
+		virtualbox \
+		vlc \
+		w3m \
+		weechat \
+		wget \
+		wicd \
+		wireless_tools \
+		wpa_supplicant \
+		xclip \
+		xdotool \
+		xf86-video-vesa \
+		xmlstarlet \
+		xorg-server \
+		xorg-xinit \
+		zathura \
+		zathura-pdf-poppler \
+		zsh
+	systemctl enable tlp.service
+	systemctl enable tlp-sleep.service
 
 aur: yay
-	yay --answeredit None --answerclean All -Sy i3lock-color-git
-	yay --answeredit None --answerclean All -Sy polybar
+	yay --answeredit None --answerclean All -Sy \
+		aurutils \
+		brother-dcp7065dn \
+		cava \
+		enpass-bin \
+		envypn-font \
+		i3lock-color-git \
+		j4-dmenu-desktop-git \
+		jmtpfs \
+		libfprint-git \
+		light \
+		manget2torrent-git \
+		ncpamixer \
+		networkmanager-dmenu-git \
+		numix-icon-theme-git \
+		oomox-git \
+		otf-hasklig \
+		pass-extension-tail \
+		pass-update \
+		pdftk \
+		polybar \
+		powerline-fonts-git \
+		python2-pysqlcipher \
+		python-milkshake \
+		python-pywal \
+		qt5-webengine-widevine \
+		sc-im \
+		siji-git \
+		skypeforlinux-stable-bin \
+		tamzen-font-git \
+		tcllib \
+		tilp \
+		upass \
+		urlscan \
+		urlview \
+		vdirsyncer-git \
+		virtualbox-ext-oracle
 
 stow: stow-base stow-root
-	stow i3
-	stow polybar
-	stow ranger
-	stow scripts
-	stow zsh
+	stow -S \
+		i3 \
+		polybar \
+		ranger \
+		scripts \
+		zsh
 
 stow-work: stow-base
-	stow i3-work
-	stow polybar-work
-	stow ranger-work
-	stow scripts-work
-	stow zsh-work
+	stow -S \
+		i3-work \
+		polybar-work \
+		ranger-work \
+		scripts-work \
+		zsh-work
 
 stow-root: arch
-	stow -t / systemd
+	stow -t / -S \
+		systemd \
+		pacman
 	systemctl enable wakelock.service
 	systemctl enable powertop.service
 	systemctl start wakelock.service
 	systemctl start powertop.service
 
 stow-base: update
-	stow bash
-	stow cava
-	stow compton
-	stow ctags
-	stow documents
-	stow dunst
-	stow gnupg
-	stow gtk
-	stow khal
-	stow khard
-	#stow mozilla # requires changing folder name
-	stow mpv
-	stow msmtp
-	stow mutt
-	stow ncpamixer
-	stow neofetch
-	stow neovim
-	stow newsboat
-	stow offlineimap
-	stow pacman
-	stow pass
-	stow qutebrowser
-	stow readline
-	stow rtorrent
-	stow rtv
-	stow scim
-	stow ssh
-	stow systemd
-	stow t
-	stow tmux
-	stow udev
-	stow urlview
-	stow urxvt
-	stow vdirsyncer
-	stow wal
-	stow weechat
-	stow xdgopen
-	stow xinit
-	stow zathura
-	stow zsh
-	mkdir -p ~/.tasks
+	stow -S \
+		bash \
+		cava \
+		compton \
+		ctags \
+		documents \
+		dunst \
+		gnupg \
+		gtk \
+		khal \
+		khard \
+		mpv \
+		msmtp \
+		mutt \
+		ncpamixer \
+		neofetch \
+		neovim \
+		newsboat \
+		offlineimap \
+		pass \
+		qutebrowser \
+		readline \
+		rtorrent \
+		rtv \
+		scim \
+		ssh \
+		systemd \
+		t \
+		tmux \
+		udev \
+		urlview \
+		urxvt \
+		vdirsyncer \
+		wal \
+		weechat \
+		xdgopen \
+		xinit \
+		zathura \
+		zsh
+		mkdir -p ~/.tasks \
