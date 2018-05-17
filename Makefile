@@ -41,9 +41,7 @@ stow-work: stow-base
 	stow zsh-work
 
 stow-root: arch
-	stow -t / udev
 	stow -t / systemd
-	udevadm control --reload
 	systemctl enable wakelock.service
 	systemctl enable powertop.service
 	systemctl start wakelock.service
