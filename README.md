@@ -52,7 +52,6 @@ documentation on the custom bindings that have been added to these applications
     - [fzf](https://github.com/junegunn/fzf)
     - [gnupg](https://github.com/gpg/gnupg)
     - highlight
-    - [lightdm](https://github.com/CanonicalLtd/lightdm)
     - lxappearance
     - [mpv](https://github.com/mpv-player/mpv)
     - msmtp
@@ -83,7 +82,6 @@ documentation on the custom bindings that have been added to these applications
 
 - wal gtk theme
 - [numix icon theme](https://github.com/numixproject/numix-icon-theme)
-- [lightdm-mini-greeter](https://github.com/prikhi/lightdm-mini-greeter)
 
 ### Fonts
 
