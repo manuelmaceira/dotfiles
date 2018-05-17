@@ -15,7 +15,7 @@ pacman:
 yay: arch
 	sudo rm -rf /tmp/yay
 	git clone https://aur.archlinux.org/yay.git /tmp/yay
-	cd /tmp/yay && makepkg -si
+	(cd /tmp/yay && makepkg -si)
 
 arch: pacman
 	sudo pacman -Sy --needed --noconfirm \
