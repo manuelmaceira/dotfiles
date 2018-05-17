@@ -5,20 +5,23 @@ update:
 	git submodule init
 	git submodule update --remote
 
-packages: arch yay aur
+packages: pacman arch yay aur
+
+pacman:
+	mv pacman/etc/pacman.conf /etc/pacman.conf
 
 yay: arch
 	git clone https://aur.archlinux.org/yay.git /tmp/yay
 	cd /tmp/yay
 	makepkg -si
 
-arch:
+arch: pacman
 	pacman -Sy \
 		alsa-utils \
 		aria2 \
 		asciinema \
 		asciiquarium \
-		ascpi_call-dkms \
+		acpi_call-dkms \
 		biber \
 		cmatrix \
 		compton \
@@ -184,7 +187,7 @@ aur: yay
 		vdirsyncer-git \
 		virtualbox-ext-oracle
 
-stow: stow-base stow-root
+stow: stow-base root-config
 	stow -S \
 		i3 \
 		polybar \
@@ -200,10 +203,8 @@ stow-work: stow-base
 		scripts-work \
 		zsh-work
 
-stow-root: arch
-	stow -t / -S \
-		systemd \
-		pacman
+root-config: yay
+	mv systemd/etc/systemd/system/* /etc/systemd/system/
 	systemctl enable wakelock.service
 	systemctl enable powertop.service
 	systemctl start wakelock.service
