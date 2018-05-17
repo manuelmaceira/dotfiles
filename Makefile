@@ -18,7 +18,7 @@ yay: arch
 	makepkg -si
 
 arch: pacman
-	pacman -Sy \
+	pacman -Sy --noconfirm \
 		alsa-utils \
 		aria2 \
 		asciinema \
