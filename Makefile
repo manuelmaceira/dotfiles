@@ -1,3 +1,5 @@
+USER=micah
+
 install: packages stow
 
 update:
@@ -147,6 +149,7 @@ arch: pacman
 		zsh
 	systemctl enable tlp.service
 	systemctl enable tlp-sleep.service
+	chsh -s /bin/zsh $USER
 
 aur: yay
 	yay --answeredit None --answerclean All -Sy \
