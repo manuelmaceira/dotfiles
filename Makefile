@@ -165,7 +165,7 @@ aur: yay
 		jmtpfs \
 		libfprint-git \
 		light \
-		manget2torrent-git \
+		magnet2torrent-git \
 		ncpamixer \
 		networkmanager-dmenu-git \
 		numix-icon-theme-git \
@@ -177,7 +177,7 @@ aur: yay
 		polybar \
 		powerline-fonts-git \
 		python2-pysqlcipher \
-		python-milkshake \
+		python-milksnake \
 		python-pywal \
 		qt5-webengine-widevine \
 		sc-im \
