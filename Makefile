@@ -13,6 +13,7 @@ pacman:
 	sudo mv pacman/etc/pacman.conf /etc/pacman.conf
 
 yay: arch
+	rm -rf /tmp/yay
 	git clone https://aur.archlinux.org/yay.git /tmp/yay
 	cd /tmp/yay
 	makepkg -si
