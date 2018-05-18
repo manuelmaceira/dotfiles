@@ -156,6 +156,8 @@ arch: pacman
 	# start tlp
 	sudo systemctl enable tlp.service
 	sudo systemctl enable tlp-sleep.service
+	sudo systemctl start tlp.service
+	sudo systemctl start tlp-sleep.service
 	# start cups
 	sudo systemctl enable org.cups.cupsd.service
 	sudo systemctl enable cups-browsed.service
@@ -163,10 +165,10 @@ arch: pacman
 	sudo systemctl start cups-browsed.service
 	# start cronie
 	sudo systemctl enable cronie.service
-	sudo systemctl enable cronie.service
+	sudo systemctl start cronie.service
 	# start ntp
 	sudo systemctl enable ntpd.service
-	sudo systemctl enable ntpd.service
+	sudo systemctl start ntpd.service
 	# change shell to zsh
 	chsh -s /bin/zsh $(USER)
 
