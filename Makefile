@@ -3,6 +3,7 @@ USER=micah
 install: packages stow
 
 update:
+	# fully update git repository
 	git pull
 	git submodule init
 	git submodule update --remote
@@ -10,14 +11,18 @@ update:
 packages: pacman arch yay aur
 
 pacman:
+	# place pacman config
 	sudo mv pacman/etc/pacman.conf /etc/pacman.conf
 
 yay: arch
+	# install yay aur helper
 	sudo rm -rf /tmp/yay
 	git clone https://aur.archlinux.org/yay.git /tmp/yay
 	(cd /tmp/yay && makepkg -si)
+	sudo rm -rf /tmp/yay
 
 arch: pacman
+	# create home folders
 	mkdir -p ~/Documents ~/Downloads ~/Music ~/Pictures ~/Videos
 	sudo pacman -Sy --needed --noconfirm \
 		alsa-utils \
@@ -148,13 +153,17 @@ arch: pacman
 		zathura \
 		zathura-pdf-poppler \
 		zsh
+	# start tlp
 	sudo systemctl enable tlp.service
 	sudo systemctl enable tlp-sleep.service
+	# start cups
 	sudo systemctl enable org.cups.cupsd.service
 	sudo systemctl start org.cups.cupsd.service
+	# change shell to zsh
 	chsh -s /bin/zsh $(USER)
 
 aur: yay
+	# install all aur packages
 	yay --answeredit None --answerclean All -Sy \
 		aurutils \
 		brother-dcp7065dn \
@@ -193,7 +202,12 @@ aur: yay
 		vdirsyncer-git \
 		virtualbox-ext-oracle
 
-stow: stow-base root-config
+stow: stow-base personal-configs root-config stow-post
+
+stow-work: stow-base work-configs stow-post
+
+personal-configs: stow-base root-config
+	# stow personal configs
 	stow -S \
 		i3 \
 		polybar \
@@ -201,7 +215,8 @@ stow: stow-base root-config
 		scripts \
 		zsh
 
-stow-work: stow-base
+work-configs: stow-base
+	# stow work configs
 	stow -S \
 		i3-work \
 		polybar-work \
@@ -210,13 +225,15 @@ stow-work: stow-base
 		zsh-work
 
 root-config: yay
-	mv systemd/etc/systemd/system/* /etc/systemd/system/
+	# copy and start custom systemd services
+	sudo mv systemd/etc/systemd/system/* /etc/systemd/system/
 	sudo systemctl enable wakelock.service
 	sudo systemctl enable powertop.service
 	sudo systemctl start wakelock.service
 	sudo systemctl start powertop.service
 
 stow-base: update
+	# stow all
 	stow -S \
 		bash \
 		cava \
@@ -255,7 +272,12 @@ stow-base: update
 		xinit \
 		zathura \
 		zsh
+
+stow-post:
+	# create folder for t task manager
 	mkdir -p ~/.tasks
+	# neovim vim-plug initialization
 	nvim +'PlugInstall --sync' +qa
+	# set wallpaper and run pywal
 	cp default-wall.jpg ~/.config/wall
 	wal -g -c -i ~/.config/wall -o ~/.config/Scripts/wal-set
