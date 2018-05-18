@@ -255,4 +255,6 @@ stow-base: update
 		xinit \
 		zathura \
 		zsh
-		mkdir -p ~/.tasks \
+	mkdir -p ~/.tasks
+	cp default-wall.jpg ~/.config/wall
+	wal -g -c -i ~/.config/wall -o ~/.config/Scripts/wal-set
