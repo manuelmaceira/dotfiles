@@ -256,5 +256,6 @@ stow-base: update
 		zathura \
 		zsh
 	mkdir -p ~/.tasks
+	nvim +'PlugInstall --sync' +qa
 	cp default-wall.jpg ~/.config/wall
 	wal -g -c -i ~/.config/wall -o ~/.config/Scripts/wal-set
