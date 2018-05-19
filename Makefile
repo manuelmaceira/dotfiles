@@ -12,7 +12,7 @@ packages: pacman arch yay aur
 
 pacman:
 	# place pacman config
-	sudo mv pacman/etc/pacman.conf /etc/pacman.conf
+	sudo cp pacman/etc/pacman.conf /etc/pacman.conf
 
 yay: arch
 	# install yay aur helper
@@ -134,9 +134,7 @@ arch: pacman
 		translate-shell \
 		upower \
 		urxvt-perls \
-		vagrant \
 		vim \
-		virtualbox \
 		vlc \
 		w3m \
 		weechat \
@@ -175,7 +173,6 @@ arch: pacman
 aur: yay
 	# install all aur packages
 	yay --answeredit None --answerclean All -Sy \
-		aurutils \
 		brother-dcp7065dn \
 		cava \
 		enpass-bin \
@@ -183,7 +180,6 @@ aur: yay
 		i3lock-color-git \
 		j4-dmenu-desktop-git \
 		jmtpfs \
-		libfprint-git \
 		light \
 		magnet2torrent-git \
 		ncpamixer \
@@ -193,10 +189,8 @@ aur: yay
 		otf-hasklig \
 		pass-extension-tail \
 		pass-update \
-		pdftk \
 		polybar \
 		powerline-fonts-git \
-		python2-pysqlcipher \
 		python-milksnake \
 		python-pywal \
 		qt5-webengine-widevine \
@@ -210,13 +204,12 @@ aur: yay
 		urlscan \
 		urlview \
 		vdirsyncer-git \
-		virtualbox-ext-oracle
 
 stow: stow-base personal-configs root-config stow-post
 
 stow-work: stow-base work-configs stow-post
 
-personal-configs: stow-base root-config
+personal-configs: stow-base
 	# stow personal configs
 	stow -S \
 		i3 \
@@ -236,7 +229,7 @@ work-configs: stow-base
 
 root-config:
 	# copy and start custom systemd services
-	sudo mv systemd/etc/systemd/system/* /etc/systemd/system/
+	sudo cp systemd-root/etc/systemd/system/* /etc/systemd/system/
 	sudo systemctl enable wakelock.service
 	sudo systemctl enable powertop.service
 	sudo systemctl start wakelock.service
