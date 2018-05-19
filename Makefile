@@ -234,7 +234,7 @@ work-configs: stow-base
 		scripts-work \
 		zsh-work
 
-root-config: yay
+root-config:
 	# copy and start custom systemd services
 	sudo mv systemd/etc/systemd/system/* /etc/systemd/system/
 	sudo systemctl enable wakelock.service
