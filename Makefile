@@ -1,5 +1,7 @@
 USER=micah
 
+.PHONY: install update packages pacman yay arch aur stow stow-work person-configs work-configs root-config stow-base stow-post
+
 install: packages stow
 
 update:
