@@ -32,6 +32,7 @@ modules-right = mail volume wlan eth powersaver battery date time i3layout power
 type = internal/i3
 format = <label-state>
 index-sort = true
+pin-workspaces = true
 wrapping-scroll = false
 padding = 1
 
