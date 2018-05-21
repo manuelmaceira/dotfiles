@@ -7,8 +7,9 @@ install: packages stow
 update:
 	# fully update git repository
 	git pull
-	git submodule init
+	git submodule update --init --recursive
 	git submodule update --remote
+	git -C ~/dotfiles/zsh/.zprezto checkout master
 
 packages: pacman arch yay aur
 
@@ -268,6 +269,7 @@ stow-base: update
 		systemd \
 		t \
 		tmux \
+		tmuxinator \
 		urlview \
 		urxvt \
 		vdirsyncer \
