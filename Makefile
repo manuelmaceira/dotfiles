@@ -1,6 +1,6 @@
 USER=micah
 
-.PHONY: install update packages pacman yay arch aur stow stow-work person-configs work-configs root-config stow-base stow-post
+.PHONY: install update packages pacman yay arch aur stow stow-work person-configs work-configs root-config stow-pre stow-base stow-post
 
 install: packages stow
 
@@ -238,7 +238,12 @@ root-config:
 	sudo systemctl start wakelock.service
 	sudo systemctl start powertop.service
 
-stow-base: update
+stow-pre:
+	# remove configs that will already exist
+	-mv ~/.bashrc ~/.bashrc.bak
+	-mv ~/.config/cava ~/.config/cava.bak
+
+stow-base: update stow-pre
 	# stow all
 	stow -S \
 		bash \
