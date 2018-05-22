@@ -20,13 +20,13 @@ pacman:
 yay: arch
 	# install yay aur helper
 	rm -rf /tmp/yay
-	git clone https://aur.archlinux.org/yay.git /tmp/yay
+	sudo -u $(USER) git clone https://aur.archlinux.org/yay.git /tmp/yay
 	(cd /tmp/yay && sudo -u $(USER) makepkg -si)
 	rm -rf /tmp/yay
 
 arch: pacman
 	# create home folders
-	sudo -u $(USER) mkdir -p ~/Documents ~/Downloads ~/Music ~/Pictures ~/Videos
+	sudo -u $(USER) mkdir -p /home/$(USER)/Documents /home/$(USER)/Downloads /home/$(USER)/Music /home/$(USER)/Pictures /home/$(USER)/Videos
 	pacman -Sy --needed --noconfirm \
 		alsa-utils \
 		aria2 \
@@ -212,6 +212,7 @@ r-packages:
 	Rscript -e "install.packages(c('bindr', 'DiagrammeR', 'knitr', 'reticulate', 'rmarkdown'), repos='https://cran.rstudio.com')"
 
 pip-packages:
+	pip install --upgrade pip
 	pip install \
 		gpymusic \
 		khal \
