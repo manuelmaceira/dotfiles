@@ -1,6 +1,6 @@
 USER=micah
 
-.PHONY: install update packages pacman yay arch aur stow stow-work person-configs work-configs root-config stow-pre stow-base stow-post
+.PHONY: install update packages pacman yay arch aur r-packages pip-packages stow stow-work person-configs work-configs root-config stow-pre stow-base stow-post
 
 install: packages stow
 
@@ -9,25 +9,25 @@ update:
 	git pull
 	git submodule update --init --recursive
 	git submodule update --remote
-	git -C ~/dotfiles/zsh/.zprezto checkout master
+	git -C /home/$(USER)/dotfiles/zsh/.zprezto checkout master
 
-packages: pacman arch yay aur
+packages: pacman arch yay aur r-packages pip-packages
 
 pacman:
 	# place pacman config
-	sudo cp pacman/etc/pacman.conf /etc/pacman.conf
+	cp pacman/etc/pacman.conf /etc/pacman.conf
 
 yay: arch
 	# install yay aur helper
-	sudo rm -rf /tmp/yay
+	rm -rf /tmp/yay
 	git clone https://aur.archlinux.org/yay.git /tmp/yay
-	(cd /tmp/yay && makepkg -si)
-	sudo rm -rf /tmp/yay
+	(cd /tmp/yay && sudo -u $(USER) makepkg -si)
+	rm -rf /tmp/yay
 
 arch: pacman
 	# create home folders
-	mkdir -p ~/Documents ~/Downloads ~/Music ~/Pictures ~/Videos
-	sudo pacman -Sy --needed --noconfirm \
+	sudo -u $(USER) mkdir -p ~/Documents ~/Downloads ~/Music ~/Pictures ~/Videos
+	pacman -Sy --needed --noconfirm \
 		alsa-utils \
 		aria2 \
 		asciinema \
@@ -155,27 +155,27 @@ arch: pacman
 		zathura-pdf-poppler \
 		zsh
 	# start tlp
-	sudo systemctl enable tlp.service
-	sudo systemctl enable tlp-sleep.service
-	sudo systemctl start tlp.service
-	sudo systemctl start tlp-sleep.service
+	systemctl enable tlp.service
+	systemctl enable tlp-sleep.service
+	systemctl start tlp.service
+	systemctl start tlp-sleep.service
 	# start cups
-	sudo systemctl enable org.cups.cupsd.service
-	sudo systemctl enable cups-browsed.service
-	sudo systemctl start org.cups.cupsd.service
-	sudo systemctl start cups-browsed.service
+	systemctl enable org.cups.cupsd.service
+	systemctl enable cups-browsed.service
+	systemctl start org.cups.cupsd.service
+	systemctl start cups-browsed.service
 	# start cronie
-	sudo systemctl enable cronie.service
-	sudo systemctl start cronie.service
+	systemctl enable cronie.service
+	systemctl start cronie.service
 	# start ntp
-	sudo systemctl enable ntpd.service
-	sudo systemctl start ntpd.service
+	systemctl enable ntpd.service
+	systemctl start ntpd.service
 	# change shell to zsh
 	chsh -s /bin/zsh $(USER)
 
 aur: yay
 	# install all aur packages
-	yay --answeredit None --answerclean All -Sy \
+	sudo -u $(USER) yay --answeredit None --answerclean All -Sy \
 		brother-dcp7065dn \
 		cava \
 		enpass-bin \
@@ -208,13 +208,24 @@ aur: yay
 		urlview \
 		vdirsyncer-git \
 
+r-packages:
+	Rscript -e "install.packages(c('bindr', 'DiagrammeR', 'knitr', 'reticulate', 'rmarkdown'), repos='https://cran.rstudio.com')"
+
+pip-packages:
+	pip install \
+		gpymusic \
+		khal \
+		khard \
+		picon \
+		rtv
+
 stow: stow-base personal-configs root-config stow-post
 
 stow-work: stow-base work-configs stow-post
 
 personal-configs: stow-base
 	# stow personal configs
-	stow -S \
+	sudo -u $(USER) stow -S \
 		i3 \
 		polybar \
 		ranger \
@@ -223,7 +234,7 @@ personal-configs: stow-base
 
 work-configs: stow-base
 	# stow work configs
-	stow -S \
+	sudo -u $(USER) stow -S \
 		i3-work \
 		polybar-work \
 		ranger-work \
@@ -232,20 +243,20 @@ work-configs: stow-base
 
 root-config:
 	# copy and start custom systemd services
-	sudo cp systemd-root/etc/systemd/system/* /etc/systemd/system/
-	sudo systemctl enable wakelock.service
-	sudo systemctl enable powertop.service
-	sudo systemctl start wakelock.service
-	sudo systemctl start powertop.service
+	cp systemd-root/etc/systemd/system/* /etc/systemd/system/
+	systemctl enable wakelock.service
+	systemctl enable powertop.service
+	systemctl start wakelock.service
+	systemctl start powertop.service
 
 stow-pre:
 	# remove configs that will already exist
-	-mv ~/.bashrc ~/.bashrc.bak
-	-mv ~/.config/cava ~/.config/cava.bak
+	-[ -e /home/$(USER)/.bashrc ] && mv /home/$(USER)/.bashrc /home/$(USER)/.bashrc.bak
+	-[ -e /home/$(USER)/.config/cava ] && mv /home/$(USER)/.config/cava /home/$(USER)/.config/cava.bak
 
 stow-base: update stow-pre
 	# stow all
-	stow -S \
+	sudo -u $(USER) stow -S \
 		bash \
 		cava \
 		compton \
@@ -287,9 +298,9 @@ stow-base: update stow-pre
 
 stow-post:
 	# create folder for t task manager
-	mkdir -p ~/.tasks
+	sudo -u $(USER) mkdir -p /home/$(USER)/.tasks
 	# neovim vim-plug initialization
-	nvim +'PlugInstall --sync' +qa
+	sudo -u $(USER) nvim +'PlugInstall --sync' +qa
 	# set wallpaper and run pywal
-	cp default-wall.jpg ~/.config/wall
-	wal -g -c -i ~/.config/wall -o ~/.config/Scripts/wal-set
+	sudo -u $(USER) cp default-wall.jpg ~/.config/wall
+	sudo -u $(USER) wal -g -c -i ~/.config/wall -o ~/.config/Scripts/wal-set
