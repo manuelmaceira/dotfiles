@@ -254,6 +254,8 @@ stow-pre:
 	# remove configs that will already exist
 	-[ -L /home/$(USER)/.bashrc ] && mv /home/$(USER)/.bashrc /home/$(USER)/.bashrc.bak
 	-[ -L /home/$(USER)/.config/cava ] && mv /home/$(USER)/.config/cava /home/$(USER)/.config/cava.bak
+	# create folder that might not be created yet for configs
+	sudo -u $(USER) mkdir -p /home/$(USER)/.local/share/applications /home/$(USER)/.config
 
 stow-base: update stow-pre
 	# stow all
