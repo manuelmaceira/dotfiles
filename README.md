@@ -6,6 +6,30 @@ My dotfiles for my Linux rice, managed using stow.
 Check out the [wiki](https://gitlab.com/mehalter/dotfiles/wikis/home) for
 documentation on the custom bindings that have been added to these applications
 
+## Installation
+
+I have included a Makefile for this project that will take a fresh Arch Linux
+installation and install all the packages necessary and configure them to run my
+Linux rice.
+
+### Prerequisites
+
++ Arch installed with `base` and `base-devel`
++ A network connection
++ A regular, non-root user set up with `sudo` permissions
++ Packages
+    + `git`
+
+### Installing
+
+`~$ git clone https://gitlab.com/mehalter/dotfiles.git ~/dotfiles`
+
+`~$ cd ~/dotfiles`
+
+`~$ sudo make install`
+
+`~$ reboot`
+
 ## Applications
 
 ### Window Management
