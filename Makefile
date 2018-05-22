@@ -252,8 +252,8 @@ root-config:
 
 stow-pre:
 	# remove configs that will already exist
-	-[ -e /home/$(USER)/.bashrc ] && mv /home/$(USER)/.bashrc /home/$(USER)/.bashrc.bak
-	-[ -e /home/$(USER)/.config/cava ] && mv /home/$(USER)/.config/cava /home/$(USER)/.config/cava.bak
+	-[ -L /home/$(USER)/.bashrc ] && mv /home/$(USER)/.bashrc /home/$(USER)/.bashrc.bak
+	-[ -L /home/$(USER)/.config/cava ] && mv /home/$(USER)/.config/cava /home/$(USER)/.config/cava.bak
 
 stow-base: update stow-pre
 	# stow all
