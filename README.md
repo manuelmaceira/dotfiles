@@ -22,13 +22,12 @@ Linux rice.
 
 ### Installing
 
-`~$ git clone https://gitlab.com/mehalter/dotfiles.git ~/dotfiles`
-
-`~$ cd ~/dotfiles`
-
-`~$ sudo make install`
-
-`~$ reboot`
+```console
+~$ git clone https://gitlab.com/mehalter/dotfiles.git ~/dotfiles
+~$ cd ~/dotfiles
+~$ sudo make install
+~$ reboot
+```
 
 ## Applications
 
