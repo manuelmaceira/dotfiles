@@ -26,6 +26,7 @@ setopt interactivecomments
 setopt CORRECT
 
 source ~/.zsh_aliases
+[ -f ~/.zsh_localaliases ] && source ~/.zsh_localaliases
 source ~/.zsh_shortcuts
 
 # terminal vim
