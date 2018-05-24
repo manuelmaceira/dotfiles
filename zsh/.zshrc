@@ -83,8 +83,7 @@ if [ ! -d ~/.tasks ]; then
   mkdir -p ~/.tasks;
 fi
 
-# make sure pins file exists
-[ ! -f ~/.pins ] && touch ~/.pins
+[ -f ~/.config/Scripts/pins.sh ] && source ~/.config/Scripts/pins.sh
 
 (cat ~/.cache/wal/sequences &)
 

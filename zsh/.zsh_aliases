@@ -78,28 +78,6 @@ pnew() {
   pass cp template $1 && pass edit $1
 }
 
-# # simple pin system
-# pinfile=$HOME/.pins
-# alias pl='count=1
-#           while read -r pin; do
-#             echo "$count $(basename "$pin")"
-#             (( count++ ))
-#           done < $pinfile'
-# alias pa='echo "$PWD" >> $pinfile
-#           pl'
-# pd() {
-#   sed -i "$1d" "$pinfile"
-#   pl
-# }
-# pg() {
-#   cd "$(sed "$1q;d" "$pinfile")"
-# }
-#
-alias pl="goto -l"
-alias pg="goto"
-alias pa="goto -r"
-alias pd="goto -u"
-
 # various utilities
 if [ -x /usr/bin/dircolors ]; then
   test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"

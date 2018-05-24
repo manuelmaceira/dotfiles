@@ -79,42 +79,6 @@ pnew() {
   pass cp template $1 && pass edit $1
 }
 
-# simple pin system
-pinfile=$HOME/.pins
-alias pl='while read -r pin; do
-            key=`awk -F "\t" '"'"'{print $1}'"'"' <<< $pin`
-            folder=`awk -F "\t" '"'"'{print $2}'"'"' <<< $pin`
-            echo -e "$key\t-- $folder"
-          done < $pinfile'
-pa() {
-  if [ "$1" != "" ] && ! grep -Pq "^$1\t" $pinfile; then
-    echo -e "$1\t$PWD" >> $pinfile
-    pl
-  fi
-}
-pd() {
-  if [ "$1" != "" ] && grep -Pq "^$1\t" $pinfile; then
-    sed -i "/^$1\t/d" "$pinfile"
-    pl
-  fi
-}
-pg() {
-  if [ "$1" != "" ] && grep -Pq "^$1\t" $pinfile; then
-    cd `sed "s/^$1\t\(.*\)$/\1/;t;d" $pinfile`
-    ls
-  fi
-}
-_complete_pins_zsh() {
-  local all_aliases=()
-  while IFS= read -r line; do
-    all_aliases+=("$line")
-  done <<< "$(sed -e 's/\t/:/g' $pinfile 2>/dev/null)"
-
-  _describe -t aliases 'pinned aliases:' all_aliases && return 0
-}
-compdef _complete_pins_zsh pg
-compdef _complete_pins_zsh pd
-
 # various utilities
 alias glv="git log --graph --pretty=format:'%h - %d %s (%cr) <%an>' | nvim -R -c 'set filetype=git nowrap' -"
 if [ -x /usr/bin/dircolors ]; then
