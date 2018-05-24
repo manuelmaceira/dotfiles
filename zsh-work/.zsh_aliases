@@ -58,6 +58,9 @@ alias vd='vdirsyncer'
 alias vds='vdirsyncer sync'
 
 # various app aliases
+alias t='python ~/.t/t.py --task-dir ~/.tasks --list tasks'
+alias tf='python ~/.t/t.py --task-dir ~/.tasks --list tasks -f'
+alias te='python ~/.t/t.py --task-dir ~/.tasks --list tasks -e'
 alias nb='newsboat'
 alias nf='neofetch'
 alias yt="mpsyt"
@@ -78,20 +81,39 @@ pnew() {
 
 # simple pin system
 pinfile=$HOME/.pins
-alias pl='count=1
-          while read -r pin; do
-            echo "$count $(basename "$pin")"
-            (( count++ ))
+alias pl='while read -r pin; do
+            key=`awk -F "\t" '"'"'{print $1}'"'"' <<< $pin`
+            folder=`awk -F "\t" '"'"'{print $2}'"'"' <<< $pin`
+            echo -e "$key\t-- $folder"
           done < $pinfile'
-alias pa='echo "$PWD" >> $pinfile
-          pl'
+pa() {
+  if [ "$1" != "" ] && ! grep -Pq "^$1\t" $pinfile; then
+    echo -e "$1\t$PWD" >> $pinfile
+    pl
+  fi
+}
 pd() {
-  sed -i "$1d" "$pinfile"
-  pl
+  if [ "$1" != "" ] && grep -Pq "^$1\t" $pinfile; then
+    sed -i "/^$1\t/d" "$pinfile"
+    pl
+  fi
 }
 pg() {
-  cd "$(sed "$1q;d" "$pinfile")"
+  if [ "$1" != "" ] && grep -Pq "^$1\t" $pinfile; then
+    cd `sed "s/^$1\t\(.*\)$/\1/;t;d" $pinfile`
+    ls
+  fi
 }
+_complete_pins_zsh() {
+  local all_aliases=()
+  while IFS= read -r line; do
+    all_aliases+=("$line")
+  done <<< "$(sed -e 's/\t/:/g' $pinfile 2>/dev/null)"
+
+  _describe -t aliases 'pinned aliases:' all_aliases && return 0
+}
+compdef _complete_pins_zsh pg
+compdef _complete_pins_zsh pd
 
 # various utilities
 alias glv="git log --graph --pretty=format:'%h - %d %s (%cr) <%an>' | nvim -R -c 'set filetype=git nowrap' -"
@@ -102,6 +124,8 @@ if [ -x /usr/bin/dircolors ]; then
   alias fgrep='fgrep --color=auto'
   alias egrep='egrep --color=auto'
 fi
+alias cp='cp'
+alias mv='mv'
 alias rm='rm'
 alias sl='ls'
 alias ll='ls -alF'
@@ -170,28 +194,28 @@ mdtemp() {
 # C compiling shortcuts for clang and gcc
 clang() {
   if [[ $1 =~ \.c$ ]]; then
-    clang-3.5 -g $1 -o ${1%%.*}; 
+    clang-3.5 -g $1 -o ${1%%.*};
   else
     echo "$1 is not a c file"
   fi
 }
 clanglm() {
   if [[ $1 =~ \.c$ ]]; then
-    clang-3.5 -g $1 -o ${1%%.*} -lm; 
+    clang-3.5 -g $1 -o ${1%%.*} -lm;
   else
     echo "$1 is not a c file"
   fi
 }
 gccc() {
   if [[ $1 =~ \.c$ ]]; then
-    gcc -std=c99 -Wall -pedantic -Wextra -Werror -O2 -g $1 -o ${1%%.*}; 
+    gcc -std=c99 -Wall -pedantic -Wextra -Werror -O2 -g $1 -o ${1%%.*};
   else
     echo "$1 is not a c file"
   fi
 }
 gcclm() {
   if [[ $1 =~ \.c$ ]]; then
-    gcc -std=c99 -g $1 -o ${1%%.*} -lm; 
+    gcc -std=c99 -g $1 -o ${1%%.*} -lm;
   else
     echo "$1 is not a c file"
   fi

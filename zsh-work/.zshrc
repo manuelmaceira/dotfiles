@@ -72,8 +72,27 @@ export FZF_DEFAULT_OPS="--extended"
 export FZF_DEFAULT_COMMAND="fd --type f"
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
+# enable goto
+if [ -f ~/.config/goto/goto.sh ]; then
+  [ ! -f ~/.goto ] && touch ~/.goto
+  source ~/.config/goto/goto.sh
+fi
+
+# make sure tasks folder exists for t
+if [ ! -d ~/.tasks ]; then
+  mkdir -p ~/.tasks;
+fi
+
+# make sure pins file exists
+[ ! -f ~/.pins ] && touch ~/.pins
+
 export DBSTRING="postgres://postgres:postgres@localhost/postgres?sslmode=disable"
 
 (cat ~/.cache/wal/sequences &)
 
 ufetch
+if [ $(t|wc -l) -gt 0 ]; then
+  echo "Tasks:"
+  t
+  echo ""
+fi
