@@ -5,7 +5,7 @@ alias pl='if [ -f $pinfile ]; then
               key=`awk -F "\t" '"'"'{print $1}'"'"' <<< $pin`
               folder=`awk -F "\t" '"'"'{print $2}'"'"' <<< $pin`
               echo -e "$key\t-- $folder"
-            done < $pinfile
+            done < $pinfile | column -t
           fi'
 pa() {
   if [ "$1" != "" ] && ([ ! -f $pinfile ] || ! grep -Pq "^$1\t" $pinfile); then
