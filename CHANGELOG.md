@@ -11,6 +11,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - This CHANGELOG file to track changes in the project over time.
 
+### Changed
+
+- Moved all pip packages that you can to pacman and aur equivalent packages for
+  less messy updating through pacman
+- Refreshed command line pinning script
+
 ## [0.1.1] - 2018-05-22
 
 ### Added
