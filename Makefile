@@ -153,6 +153,7 @@ arch: pacman
 		xmlstarlet \
 		xorg-server \
 		xorg-xinit \
+		youtube-dl \
 		zathura \
 		zathura-pdf-poppler \
 		zsh
