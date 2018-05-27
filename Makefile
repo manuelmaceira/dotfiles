@@ -60,6 +60,8 @@ arch: pacman
 		intel-ucode \
 		jdk8-openjdk \
 		jq \
+		khal \
+		khard \
 		lib32-fontconfig \
 		lib32-gtk2 \
 		lib32-libcanberra \
@@ -197,6 +199,7 @@ aur: yay
 		python-milksnake \
 		python-pywal \
 		qt5-webengine-widevine \
+		rtv-git \
 		sc-im \
 		siji-git \
 		skypeforlinux-stable-bin \
@@ -215,10 +218,7 @@ pip-packages:
 	pip install --upgrade pip
 	pip install \
 		gpymusic \
-		khal \
-		khard \
-		picon \
-		rtv
+		picon
 
 stow: stow-base personal-configs root-config stow-post
 
