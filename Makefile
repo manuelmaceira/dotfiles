@@ -104,6 +104,7 @@ arch: pacman
 		python-pip \
 		python-pyicu \
 		python-pytz \
+		python-pywal \
 		python-setproctitle \
 		python-urwid \
 		python-virtualenv \
@@ -198,7 +199,6 @@ aur: yay
 		polybar \
 		powerline-fonts-git \
 		python-milksnake \
-		python-pywal \
 		qt5-webengine-widevine \
 		rtv-git \
 		sc-im \
