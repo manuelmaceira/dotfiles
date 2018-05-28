@@ -1,6 +1,6 @@
 # set up antigen plugin manager
-if [ -f ~/.antigen/antigen.zsh ]; then
-  source ~/.antigen/antigen.zsh
+if [ -f /usr/share/zsh/share/antigen.zsh ]; then
+  source /usr/share/zsh/share/antigen.zsh
   antigen use prezto
   antigen bundle git
   antigen bundle mafredri/zsh-async

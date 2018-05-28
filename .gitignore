@@ -16,6 +16,6 @@
 mpv/.config/mpv/control
 
 #antigen
-!antigen/.antigen/
-antigen/.antigen/*
-!antigen/.antigen/antigen.zsh
+!zsh-work/.antigen/
+zsh-work/.antigen/*
+!zsh-work/.antigen/antigen.zsh

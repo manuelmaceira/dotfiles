@@ -180,6 +180,7 @@ arch: pacman
 aur: yay
 	# install all aur packages
 	sudo -u $(USER) yay --answeredit None --answerclean All -Sy \
+		antigen-git \
 		brother-dcp7065dn \
 		cava \
 		enpass-bin \
@@ -261,7 +262,6 @@ stow-pre:
 stow-base: update stow-pre
 	# stow all
 	sudo -u $(USER) stow -S \
-		antigen \
 		bash \
 		cava \
 		compton \
