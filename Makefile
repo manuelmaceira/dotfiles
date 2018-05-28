@@ -261,6 +261,7 @@ stow-pre:
 stow-base: update stow-pre
 	# stow all
 	sudo -u $(USER) stow -S \
+		antigen \
 		bash \
 		cava \
 		compton \

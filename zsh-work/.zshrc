@@ -1,5 +1,35 @@
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+# set up antigen plugin manager
+if [ -f ~/.antigen/antigen.zsh ]; then
+  source ~/.antigen/antigen.zsh
+  antigen use prezto
+  antigen bundle git
+  antigen bundle mafredri/zsh-async
+  antigen bundle sindresorhus/pure
+  antigen apply
+
+  # terminal vim
+  export KEYTIMEOUT=10
+  bindkey -M viins 'fj' vi-cmd-mode
+  bindkey -M viins 'jf' vi-cmd-mode
+  bindkey -M viins '^a' vi-beginning-of-line
+  bindkey -M viins '^e' vi-end-of-line
+  bindkey -M viins '^k' kill-line
+  bindkey '^r' history-incremental-search-backward
+
+  # completion selection by menu for kill
+  zstyle ':completion:*:*:kill:*' menu yes select
+  zstyle ':completion:*:kill:*' horse-list always
+  zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
+  zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
+
+  # tab completion for PIDs
+  zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm,command -w -w"
+  zstyle ':completion:*:*:kill:*' menu yes select
+  zstyle ':completion:*:kill:*' horse-list always
+
+  # use caching
+  zstyle ':completion:*' use-cache on
+  zstyle ':completion:*' cache-path ~/.zsh/cache
 fi
 
 
@@ -28,32 +58,6 @@ setopt CORRECT
 source ~/.zsh_aliases
 [ -f ~/.zsh_localaliases ] && source ~/.zsh_localaliases
 source ~/.zsh_shortcuts
-
-# terminal vim
-export KEYTIMEOUT=10
-bindkey -M viins 'jk' vi-cmd-mode
-bindkey -M viins '^a' vi-beginning-of-line
-bindkey -M viins '^e' vi-end-of-line
-bindkey -M viins '^k' kill-line
-bindkey '^r' history-incremental-search-backward
-
-# show which vim mode we are in
-precmd() { RPROMPT="" }
-zle-keymap-select() {
-  RPROMPT=""
-  [[ $KEYMAP = vicmd ]] && RPROMPT="(COMMAND MODE)"
-  () { return $__prompt_status }
-  zle reset-prompt
-}
-zle-line-init() { typeset -g __prompt_status="$?" }
-zle -N zle-keymap-select
-zle -N zle-line-init
-
-# completion selection by menu for kill
-zstyle ':completion:*:*:kill:*' menu yes select
-zstyle ':completion:*:kill:*' horse-list always
-zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
-zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 
 # tab completion for PIDs
 zstyle ':completion:*:*:*:*:processes' command "ps -u `whoami` -o pid,user,comm,command -w -w"

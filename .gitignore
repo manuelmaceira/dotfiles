@@ -14,3 +14,8 @@
 
 # mpv control file
 mpv/.config/mpv/control
+
+#antigen
+!antigen/.antigen/
+antigen/.antigen/*
+!antigen/.antigen/antigen.zsh
