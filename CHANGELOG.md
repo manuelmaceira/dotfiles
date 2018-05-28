@@ -39,5 +39,5 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
   to put the necessary configuration files in place to get up and running with
   my Linux rice.
 
-[Unreleased]: https://gitlab.com/mehalter/dotfiles/compare/v0.1.1...HEAD
-[0.1.1]: https://gitlab.com/mehalter/dotfiles/compare/v0.1.0...v0.1.1
+[Unreleased]: ../../compare/v0.1.1...HEAD
+[0.1.1]: ../../compare/v0.1.0...v0.1.1
