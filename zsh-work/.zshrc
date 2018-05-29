@@ -2,7 +2,9 @@
 if [ -f ~/.antigen/antigen.zsh ]; then
   source ~/.antigen/antigen.zsh
   antigen use prezto
-  antigen bundle git
+  antigen bundle sorin-ionescu/prezto modules/git
+  antigen bundle sorin-ionescu/prezto modules/utility
+  antigen bundle sorin-ionescu/prezto modules/completion
   antigen bundle mafredri/zsh-async
   antigen bundle sindresorhus/pure
   antigen apply
