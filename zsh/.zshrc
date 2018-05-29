@@ -90,6 +90,6 @@ fi
 ufetch
 if [ $(t|wc -l) -gt 0 ]; then
   echo "Tasks:"
-  t
+  echo `t`
   echo ""
 fi

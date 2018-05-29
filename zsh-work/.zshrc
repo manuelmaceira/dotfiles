@@ -99,6 +99,6 @@ export DBSTRING="postgres://postgres:postgres@localhost/postgres?sslmode=disable
 ufetch
 if [ $(t|wc -l) -gt 0 ]; then
   echo "Tasks:"
-  t
+  echo `t`
   echo ""
 fi
