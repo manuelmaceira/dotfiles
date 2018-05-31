@@ -1,6 +1,0 @@
-[submodule "zsh/.zprezto"]
-	path = zsh/.zprezto
-	url = https://github.com/sorin-ionescu/prezto.git
-[submodule "t/.t"]
-	path = t/.t
-	url = https://github.com/sjl/t.git
