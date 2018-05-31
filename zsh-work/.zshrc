@@ -85,11 +85,6 @@ if [ -f ~/.config/goto/goto.sh ]; then
   source ~/.config/goto/goto.sh
 fi
 
-# make sure tasks folder exists for t
-if [ ! -d ~/.tasks ]; then
-  mkdir -p ~/.tasks;
-fi
-
 [ -f ~/.config/Scripts/pins.sh ] && source ~/.config/Scripts/pins.sh
 [ -f ~/.config/Scripts/tasks.sh ] && source ~/.config/Scripts/tasks.sh
 
@@ -98,8 +93,8 @@ export DBSTRING="postgres://postgres:postgres@localhost/postgres?sslmode=disable
 (cat ~/.cache/wal/sequences &)
 
 ufetch
-if [ $(t|wc -l) -gt 0 ]; then
+if [ $(tl|wc -l) -gt 0 ]; then
   echo "Tasks:"
-  echo "$(t)"
+  echo "$(tl)"
   echo ""
 fi

@@ -8,7 +8,7 @@ alias tl='if [ -f $taskfile ]; then
             done < $taskfile | column -t -s :
           fi'
 
-ta() {
+tn() {
   if [ "$1" != "" ]; then
     touch $taskfile
     echo -e "$@" >> $taskfile
