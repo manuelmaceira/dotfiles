@@ -4,8 +4,8 @@ alias pl='if [ -f $pinfile ]; then
             while read -r pin; do
               key=`awk -F "\t" '"'"'{print $1}'"'"' <<< $pin`
               folder=`awk -F "\t" '"'"'{print $2}'"'"' <<< $pin`
-              echo -e "$key\t-- $folder"
-            done < $pinfile | column -t
+              echo -e "$key:-- $folder"
+            done < $pinfile | column -t -s :
           fi'
 
 pa() {
