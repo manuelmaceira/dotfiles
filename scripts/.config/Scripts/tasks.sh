@@ -25,6 +25,7 @@ td() {
   done
   delstr="${del[@]}"
   sed -i "${delstr// /d;}d" "$taskfile"
+  tl
 }
 
 te() {
