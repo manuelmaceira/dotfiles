@@ -30,7 +30,7 @@ pg() {
   fi
 }
 
-_complete_goto_bash() {
+_complete_pins_bash() {
   local cur="${COMP_WORDS[$COMP_CWORD]}" prev
 
   if [ "$COMP_CWORD" -eq "1" ]; then
@@ -59,8 +59,8 @@ _complete_pins_zsh() {
 }
 
 if [ -n "${BASH_VERSION}" ]; then
-  complete -F _complete_goto_bash pg
-  complete -F _complete_goto_bash pd
+  complete -F _complete_pins_bash pg
+  complete -F _complete_pins_bash pd
 elif [ -n "${ZSH_VERSION}" ]; then
   compdef _complete_pins_zsh pg
   compdef _complete_pins_zsh pd

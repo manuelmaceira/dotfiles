@@ -17,10 +17,14 @@ tn() {
 }
 
 td() {
-  if [ "$1" -le "$(wc -l < $taskfile)" ]; then
-    sed -i "$1d" "$taskfile"
-    tl
-  fi
+  del=()
+  for row in "$@"; do
+    if [ "$row" -le "$(wc -l < $taskfile)" ]; then
+      del+=("$row")
+    fi
+  done
+  delstr="${del[@]}"
+  sed -i "${delstr// /d;}d" "$taskfile"
 }
 
 te() {
@@ -34,7 +38,7 @@ te() {
   fi
 }
 
-_complete_goto_bash() {
+_complete_tasks_bash() {
   local cur="${COMP_WORDS[$COMP_CWORD]}" prev
 
   if [ "$COMP_CWORD" -eq "1" ]; then
@@ -67,8 +71,8 @@ _complete_goto_bash() {
   fi
 }
 
-_complete_pins_zsh() {
-  if [ ${#words[@]} -eq 2 ]; then
+_complete_tasks_zsh() {
+  if [ ${#words[@]} -eq 2 ] || ([ ${#words[@]} -gt 2 ] && [ ${words[1]} = td ]); then
     local all_aliases=()
     while IFS= read -r line; do
       all_aliases+=("$line")
@@ -79,7 +83,7 @@ _complete_pins_zsh() {
 }
 
 if [ -n "${BASH_VERSION}" ]; then
-  complete -F _complete_goto_bash td te
+  complete -F _complete_tasks_bash td te
 elif [ -n "${ZSH_VERSION}" ]; then
-  compdef _complete_pins_zsh td te
+  compdef _complete_tasks_zsh td te
 fi

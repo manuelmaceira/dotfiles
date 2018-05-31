@@ -34,7 +34,7 @@ te() {
   fi
 }
 
-_complete_goto_bash() {
+_complete_tasks_bash() {
   local cur="${COMP_WORDS[$COMP_CWORD]}" prev
 
   if [ "$COMP_CWORD" -eq "1" ]; then
@@ -67,7 +67,7 @@ _complete_goto_bash() {
   fi
 }
 
-_complete_pins_zsh() {
+_complete_tasks_zsh() {
   if [ ${#words[@]} -eq 2 ]; then
     local all_aliases=()
     while IFS= read -r line; do
@@ -79,7 +79,7 @@ _complete_pins_zsh() {
 }
 
 if [ -n "${BASH_VERSION}" ]; then
-  complete -F _complete_goto_bash td te
+  complete -F _complete_tasks_bash td te
 elif [ -n "${ZSH_VERSION}" ]; then
-  compdef _complete_pins_zsh td te
+  compdef _complete_tasks_zsh td te
 fi
