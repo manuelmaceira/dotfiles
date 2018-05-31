@@ -54,7 +54,6 @@ Linux rice.
 - [rtorrent](https://github.com/rakshasa/rtorrent)
 - [rtv](https://github.com/michael-lazar/rtv)
 - [sc-im](https://github.com/andmarti1424/sc-im)
-+ [t](https://github.com/sjl/t)
 - [tmux](https://github.com/tmux/tmux)
 - [tmuxinator](https://github.com/tmuxinator/tmuxinator)
 - urxvt
@@ -64,6 +63,7 @@ Linux rice.
 - zsh
 - [zprezto](https://github.com/sorin-ionescu/prezto)
 - Utilities
+    - [antigen](https://github.com/zsh-users/antigen)
     - [arandr](https://github.com/haad/arandr)
     - [aria2c](https://github.com/aria2/aria2)
     - [compton](https://github.com/chjj/compton)

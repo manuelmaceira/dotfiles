@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 - This CHANGELOG file to track changes in the project over time.
 - Antigen plugin manager for zsh
+- Created simple task manager with bash and zsh completion
 
 ### Changed
 
