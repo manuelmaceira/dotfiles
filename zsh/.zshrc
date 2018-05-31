@@ -79,6 +79,7 @@ if [ -f ~/.config/goto/goto.sh ]; then
 fi
 
 [ -f ~/.config/Scripts/pins.sh ] && source ~/.config/Scripts/pins.sh
+
 [ -f ~/.config/Scripts/tasks.sh ] && source ~/.config/Scripts/tasks.sh
 
 (cat ~/.cache/wal/sequences &)

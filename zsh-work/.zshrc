@@ -86,6 +86,7 @@ if [ -f ~/.config/goto/goto.sh ]; then
 fi
 
 [ -f ~/.config/Scripts/pins.sh ] && source ~/.config/Scripts/pins.sh
+
 [ -f ~/.config/Scripts/tasks.sh ] && source ~/.config/Scripts/tasks.sh
 
 export DBSTRING="postgres://postgres:postgres@localhost/postgres?sslmode=disable"

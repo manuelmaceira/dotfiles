@@ -17,10 +17,15 @@ tn() {
 }
 
 td() {
-  if [ "$1" -le "$(wc -l < $taskfile)" ]; then
-    sed -i "$1d" "$taskfile"
-    tl
-  fi
+  del=()
+  for row in "$@"; do
+    if [ "$row" -le "$(wc -l < $taskfile)" ]; then
+      del+=("$row")
+    fi
+  done
+  delstr="${del[@]}"
+  sed -i "${delstr// /d;}d" "$taskfile"
+  tl
 }
 
 te() {
@@ -68,7 +73,7 @@ _complete_tasks_bash() {
 }
 
 _complete_tasks_zsh() {
-  if [ ${#words[@]} -eq 2 ]; then
+  if [ ${#words[@]} -eq 2 ] || ([ ${#words[@]} -gt 2 ] && [ ${words[1]} = td ]); then
     local all_aliases=()
     while IFS= read -r line; do
       all_aliases+=("$line")
