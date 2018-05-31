@@ -23,6 +23,17 @@ td() {
   fi
 }
 
+te() {
+  if [ "$1" -le "$(wc -l < $taskfile)" ]; then
+    if [ "$#" -eq 2 ] && [[ ${2} =~ ^(/[a-zA-Z0-9[:blank:]-]+){2}/$ ]]; then
+      sed -i "$1s$2" $taskfile
+    else
+      sed -i "$1s/.*/${*:2}/" $taskfile
+    fi
+    tl
+  fi
+}
+
 _complete_goto_bash() {
   local cur="${COMP_WORDS[$COMP_CWORD]}" prev
 
@@ -63,12 +74,12 @@ _complete_pins_zsh() {
       all_aliases+=("$line")
     done <<< "$(sed = $taskfile | sed 'N;s/\n/:/' 2>/dev/null)"
 
-    _describe -t aliases 'pinned aliases:' all_aliases && return 0
+    _describe -t aliases 'tasks:' all_aliases && return 0
   fi
 }
 
 if [ -n "${BASH_VERSION}" ]; then
-  complete -F _complete_goto_bash td
+  complete -F _complete_goto_bash td te
 elif [ -n "${ZSH_VERSION}" ]; then
-  compdef _complete_pins_zsh td
+  compdef _complete_pins_zsh td te
 fi
