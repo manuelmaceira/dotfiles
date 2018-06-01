@@ -23,6 +23,13 @@ pd() {
   fi
 }
 
+pe() {
+  if [ "$1" != "" ] && grep -Pq "^$1\t" $pinfile; then
+    sed -i "s~^$1\t.*~$1\t$PWD~" "$pinfile"
+    pl
+  fi
+}
+
 pg() {
   if [ "$1" != "" ] && grep -Pq "^$1\t" $pinfile; then
     cd `sed "s/^$1\t\(.*\)$/\1/;t;d" $pinfile`
@@ -61,7 +68,9 @@ _complete_pins_zsh() {
 if [ -n "${BASH_VERSION}" ]; then
   complete -F _complete_pins_bash pg
   complete -F _complete_pins_bash pd
+  complete -F _complete_pins_bash pe
 elif [ -n "${ZSH_VERSION}" ]; then
   compdef _complete_pins_zsh pg
   compdef _complete_pins_zsh pd
+  compdef _complete_pins_zsh pe
 fi
