@@ -84,7 +84,9 @@ _complete_tasks_zsh() {
 }
 
 if [ -n "${BASH_VERSION}" ]; then
-  complete -F _complete_tasks_bash td te
+  complete -F _complete_tasks_bash td
+  complete -F _complete_tasks_bash te
 elif [ -n "${ZSH_VERSION}" ]; then
-  compdef _complete_tasks_zsh td te
+  compdef _complete_tasks_zsh td
+  compdef _complete_tasks_zsh te
 fi
