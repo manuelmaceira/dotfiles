@@ -85,7 +85,6 @@ Linux rice.
     - [pass-extension-tail](https://github.com/palortoff/pass-extension-tail)
     - [pass-update](https://github.com/roddhjav/pass-update)
     - [pdfpc](https://github.com/pdfpc/pdfpc)
-    + [picon](https://github.com/gokcehan/picon)
     - [py-wal](https://github.com/dylanaraps/pywal)
     - pygmentize
     - R

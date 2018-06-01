@@ -219,8 +219,7 @@ r-packages:
 pip-packages:
 	pip install --upgrade pip
 	pip install \
-		gpymusic \
-		picon
+		gpymusic
 
 stow: stow-base personal-configs root-config stow-post
 
