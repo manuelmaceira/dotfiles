@@ -1,0 +1,10 @@
+#!/bin/bash
+
+bookmarks=$1
+format=$2
+action=$3
+
+chosen=$(sed -n 's/^\([^:]*\):.*$/\1/p' $bookmarks|dmenu $2)
+
+expanded=$(sed -n "s/^${chosen}:\(.*\)$/\1/p" $bookmarks)
+[ "$expanded" != "" ] && $action $expanded

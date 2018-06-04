@@ -9,7 +9,7 @@ set $cliprog --no-startup-id zsh /home/micah/.config/i3/scripts/cliprog
 set $runner  --no-startup-id urxvt -e /home/micah/.config/i3/scripts/runner
 set $i3exit  "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 set $defaultgaps 25
-set $dmenu-font 'Terminus-14'
+set $dmenu-font Terminus-14
 
 
 ###############
@@ -254,7 +254,7 @@ bindsym $mod+Shift+v         exec --no-startup-id $runner "rtv --no-flash"
 #bindsym $mod+Control+v
 #bindsym $mod+Shift+Control+v
 
-#bindsym $mod+b
+bindsym $mod+b               exec --no-startup-id ~/.config/Scripts/dmenuexpand ~/.config/Scripts/bookmarks "-i -nb $dmenu-bg-color -nf $dmenu-text-color -sb $dmenu-text-color -sf $dmenu-bg-color -fn $dmenu-font" $browser
 #bindsym $mod+Shift+b
 #bindsym $mod+Control+b
 #bindsym $mod+Shift+Control+b
@@ -346,7 +346,7 @@ bindsym $mod+Tab                        workspace back_and_forth
 #bindsym $mod+Shift+bracketright
 #bindsym $mod+Shift+Control+bracketright
 
-bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn $dmenu-font
+bindsym $mod+backslash                  exec --no-startup-id passmenu -i -nb '$dmenu-bg-color' -nf '$dmenu-text-color' -sb '$dmenu-text-color' -sf '$dmenu-bg-color' -fn '$dmenu-font'
 #bindsym $mod+Shift+backslash
 #bindsym $mod+Shift+Control+backslash
 
