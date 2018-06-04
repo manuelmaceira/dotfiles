@@ -1,6 +1,6 @@
 # simple task system
 taskfile=$HOME/.tasks
-alias tl='if [ -f $taskfile ]; then
+alias t='if [ -f $taskfile ]; then
             count=1
             while read -r task; do
               echo -e "$count:-- $task"
@@ -12,7 +12,7 @@ tn() {
   if [ "$1" != "" ]; then
     touch $taskfile
     echo -e "$@" >> $taskfile
-    tl
+    t
   fi
 }
 
@@ -25,7 +25,7 @@ td() {
   done
   delstr="${del[@]}"
   sed -i "${delstr// /d;}d" "$taskfile"
-  tl
+  t
 }
 
 te() {
@@ -35,7 +35,7 @@ te() {
     else
       sed -i "$1s/.*/${*:2}/" $taskfile
     fi
-    tl
+    t
   fi
 }
 

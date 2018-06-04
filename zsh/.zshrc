@@ -85,8 +85,8 @@ fi
 (cat ~/.cache/wal/sequences &)
 
 ufetch
-if [ $(tl|wc -l) -gt 0 ]; then
+if [ $(t|wc -l) -gt 0 ]; then
   echo "Tasks:"
-  echo "$(tl)"
+  echo "$(t)"
   echo ""
 fi
