@@ -1,10 +1,11 @@
 #!/bin/bash
 
-bookmarks=$1
-format=$2
-action=$3
+lookup=$1
+action=$2
+format=$3
+font=$4
 
-chosen=$(sed -n 's/^\([^:]*\):.*$/\1/p' $bookmarks|dmenu $2)
+chosen=$(sed -n 's/^\([^:]*\):.*$/\1/p' $lookup|dmenu $format -fn "$font")
 
-expanded=$(sed -n "s/^${chosen}:\(.*\)$/\1/p" $bookmarks)
+expanded=$(sed -n "s/^${chosen}:\(.*\)$/\1/p" $lookup)
 [ "$expanded" != "" ] && $action $expanded
