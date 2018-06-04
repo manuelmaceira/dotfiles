@@ -262,6 +262,9 @@ iabbrev ftime <C-r>=strftime("%H:%M:%S")<CR>
 " tab goes to last buffer
 map <TAB> <C-^>
 
+" insert tab with Shift-Tab
+inoremap <S-Tab> <C-V><Tab>
+
 " Map auto complete of (, ", ', [
 vnoremap ;( <esc>`>a)<esc>`<i(<esc>
 vnoremap ;[ <esc>`>a]<esc>`<i[<esc>
