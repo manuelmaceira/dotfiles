@@ -21,7 +21,7 @@ URxvt.shading:              100
 URxvt.inheritPixmap:        false
 URxvt.loginShell:           true
 URxvt.saveLines:            50000
-URxvt.internalBorder:       0
+URxvt.internalBorder:       10
 URxvt.lineSpace:            0
 
 ! Fonts
