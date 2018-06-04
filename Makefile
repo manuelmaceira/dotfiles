@@ -285,6 +285,7 @@ stow-base: update stow-pre
 		rtorrent \
 		rtv \
 		scim \
+		scripts-shared \
 		ssh \
 		systemd \
 		t \

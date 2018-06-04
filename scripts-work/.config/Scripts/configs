@@ -9,5 +9,5 @@ cfr	~/.config/ranger/rc.conf
 cft	~/.tmux.conf
 cfv	~/.config/nvim/init.vim
 cfx	~/.Xdefaults
-cfw	~/.config/Scripts/bookmarks
+cfw	~/.bookmarks
 cfz	~/.zshrc

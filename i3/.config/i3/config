@@ -293,7 +293,7 @@ bindsym $mod+Shift+v         exec --no-startup-id $runner "rtv --no-flash"
 #bindsym $mod+Control+v
 #bindsym $mod+Shift+Control+v
 
-bindsym $mod+b               exec --no-startup-id ~/.config/Scripts/dmenuexpand ~/.config/Scripts/bookmarks $browser "-i -nb $dmenu-bg-color -nf $dmenu-text-color -sb $dmenu-text-color -sf $dmenu-bg-color" "$dmenu-font"
+bindsym $mod+b               exec --no-startup-id ~/.config/Scripts/dmenuexpand ~/.bookmarks $browser "-i -nb $dmenu-bg-color -nf $dmenu-text-color -sb $dmenu-text-color -sf $dmenu-bg-color" "$dmenu-font"
 #bindsym $mod+Shift+b
 #bindsym $mod+Control+b
 #bindsym $mod+Shift+Control+b

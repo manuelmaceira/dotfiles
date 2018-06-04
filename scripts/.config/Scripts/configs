@@ -11,6 +11,6 @@ cfq	~/.config/qutebrowser/config.py
 cfr	~/.config/ranger/rc.conf
 cft	~/.tmux.conf
 cfv	~/.config/nvim/init.vim
-cfw	~/.config/Scripts/bookmarks
+cfw	~/.bookmarks
 cfx	~/.Xdefaults
 cfz	~/.zshrc
